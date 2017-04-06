@@ -1,0 +1,22 @@
+// Add our overrides as necessary
+{
+	'extends': 'airbnb-base',
+	'rules': {
+		'no-param-reassign': 'off',
+		'comma-dangle': 'off',
+		'no-confusing-arrow': 'off',
+		'prefer-rest-params': 'off',
+		'no-use-before-define': ['error', 'nofunc'],
+		'no-tabs': 'off',
+		'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+		'indent': ['error', 'tab', { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
+		'import/extensions': ['error', 'always', {
+			js: 'never',
+			jsx: 'never',
+			mjs: 'never',
+		}],
+		'new-cap': 'off',
+		'brace-style': ['error', 'stroustrup', { 'allowSingleLine': true }],
+		'arrow-parens': ['error', 'always'],
+	}
+}

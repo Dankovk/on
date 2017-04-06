@@ -1,0 +1,18 @@
+{
+	"name": "@one/textfield",
+	"description": "The static One component for a text input field",
+	"version": "0.1.0",
+	"license": "UNLICENSED",
+	"one": {
+		"type": "static",
+		"pattern": "atom",
+		"templateEngine": "hbs"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"dependencies": {
+
+	}
+}
