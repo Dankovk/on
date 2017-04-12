@@ -4,9 +4,9 @@
 	"version": "0.1.0",
 	"license": "UNLICENSED",
 	"one": {
-		"type": "ng",
-		"pattern": "atom",
-		"templateEngine": "hbs"
+		"name": "button",
+		"type": "angular",
+		"pattern": "atom"
 	},
 	"repository": {
 		"type": "git",

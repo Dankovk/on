@@ -4,9 +4,9 @@
 	"version": "0.1.0",
 	"license": "UNLICENSED",
 	"one": {
+		"name": "textfield",
 		"type": "static",
-		"pattern": "atom",
-		"templateEngine": "hbs"
+		"pattern": "atom"
 	},
 	"repository": {
 		"type": "git",

@@ -5,6 +5,7 @@ dist
 logs
 *.log
 npm-debug.log*
+lerna-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
@@ -27,7 +28,10 @@ jspm_packages/
 # Typescript v1 declaration files
 typings/
 
-# Optional npm cache directory
+# .awcache
+.awcache
+
+# npm cache directory
 .npm
 
 # Optional eslint cache

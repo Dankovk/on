@@ -35,11 +35,31 @@ most important concepts of this being:
 * Releases always coming from `master`, built out of the `develop` branch
 * Features are developed first in their own feature branches, then merged back to `develop` once completed
 
+We use nearly all of the default settings, _except_ for using "v" for a tag prefix
+
+```
+Which branch should be used for bringing forth production releases?
+   - master
+Branch name for production releases: [master] 
+Branch name for "next release" development: [develop] 
+
+How to name your supporting branch prefixes?
+Feature branches? [feature/] 
+Release branches? [release/] 
+Hotfix branches? [hotfix/] 
+Support branches? [support/] 
+Version tag prefix? [] v
+```
+
 These [extensions](https://github.com/nvie/gitflow) are very handy.
 
 ## Bugs / Issues
 
 **One** and other Entrada projects keep detailed bugs/issues in the repository "Issues" area.
+
+When opening an issue:
+
+* Always put the package name first in the issue title—e.g. (\@one/theatre)
 
 ## Inspiration and Prior Art
 

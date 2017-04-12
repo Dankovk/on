@@ -49,7 +49,8 @@ const moleculeStaticTheatreDestPath = path.join(componentStaticTheatreDestPath, 
 
 // Theatre
 const theatrePath = 'theatre';
-const theatreAssetPath = path.join(theatrePath, '/**/*.{js,css,html,ts}');
+// const theatreAssetPath = path.join(theatrePath, '/**/*.{js,css,html,ts}');
+const theatreAssetPath = path.join(theatrePackagePath, 'src/*.json');
 const theatreStylePath = path.join(theatrePath, '/style');
 const theatreTemplatePath = path.join(theatrePath, '/templates');
 const theatreStyleSrcPath = path.join(theatreStylePath, '/**/*.scss');
@@ -398,7 +399,7 @@ export function buildTheatre(cb) {
 //  serve
 // ));
 // export { theatre };
-const theatre = gulp.series(cleanTheatre, buildTheatre);
+const theatre = gulp.series(cleanTheatre, copyTheatre, buildTheatre);
 export { theatre };
 
 
