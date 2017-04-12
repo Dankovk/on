@@ -59,7 +59,7 @@ These [extensions](https://github.com/nvie/gitflow) are very handy.
 
 When opening an issue:
 
-* Always put the package name first in the issue title—e.g. (\@one/theatre)
+* Always put the package name first in the issue title—e.g. (@​one/theatre)
 
 ## Inspiration and Prior Art
 
