@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'one-app',
-  templateUrl: 'src/app/app.component.html'
+	selector: 'one-app',
+	templateUrl: 'src/app/app.component.html'
 })
 export class AppComponent {
-  constructor() {}
+	name: string = 'Angular2';
 
-  name: string = 'Angular2';
+	constructor() {}
 }

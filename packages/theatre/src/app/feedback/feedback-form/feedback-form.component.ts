@@ -6,18 +6,18 @@ import { of } from 'rxjs/observable/of';
 import { IAppState } from '../../store/root.types';
 
 @Component({
-  selector: 'zoo-feedback-form',
-  templateUrl: './feedback-form.component.html',
-  styleUrls: [ './feedback-form.component.css' ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+	selector: 'zoo-feedback-form',
+	templateUrl: './feedback-form.component.html',
+	styleUrls: [ './feedback-form.component.css' ],
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FeedbackFormComponent {
-  readonly MAX_COMMENT_CHARS = 300;
-  readonly charsLeft$: Observable<number>;
+	readonly MAX_COMMENT_CHARS = 300;
+	readonly charsLeft$: Observable<number>;
 
-  constructor(store: NgRedux<IAppState>) {
-    this.charsLeft$ = store.select<string>(['feedback', 'comments'])
-      .map(comments => comments || '')
-      .map(comments => this.MAX_COMMENT_CHARS - comments.length);
-  }
+	constructor(store: NgRedux<IAppState>) {
+		this.charsLeft$ = store.select<string>(['feedback', 'comments'])
+			.map(comments => comments || '')
+			.map(comments => this.MAX_COMMENT_CHARS - comments.length);
+	}
 }

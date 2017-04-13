@@ -6,15 +6,15 @@ import { FeedbackFormComponent } from './feedback-form/feedback-form.component';
 import { StoreModule } from '../store/store.module';
 
 @NgModule({
-  declarations: [ FeedbackFormComponent ],
-  providers: [ ],
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    NgReduxFormModule,
-    StoreModule,
-  ],
-  exports: [ FeedbackFormComponent ],
+	declarations: [ FeedbackFormComponent ],
+	providers: [ ],
+	imports: [
+		CommonModule,
+		FormsModule,
+		ReactiveFormsModule,
+		NgReduxFormModule,
+		StoreModule,
+	],
+	exports: [ FeedbackFormComponent ],
 })
 export class FeedbackModule {}

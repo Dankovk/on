@@ -7,8 +7,8 @@ import { CoreModule } from '../core/core.module';
 import { StoreModule } from '../store/store.module';
 
 @NgModule({
-  declarations: [LionPageComponent],
-  exports: [LionPageComponent],
-  imports: [AnimalModule, CoreModule, StoreModule, CommonModule],
+	declarations: [LionPageComponent],
+	exports: [LionPageComponent],
+	imports: [AnimalModule, CoreModule, StoreModule, CommonModule],
 })
 export class LionModule {}

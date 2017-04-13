@@ -11,23 +11,23 @@ import { AnimalService } from './animal.service';
 
 @Injectable()
 export class AnimalEpics {
-  constructor(
-    private service: AnimalService,
-    private actions: AnimalActions,
-  ) {}
+	constructor(
+		private service: AnimalService,
+		private actions: AnimalActions,
+	) {}
 
-  public createEpic(animalType: AnimalType) {
-    return createEpicMiddleware(this.createLoadAnimalEpic(animalType));
-  }
+	public createEpic(animalType: AnimalType) {
+		return createEpicMiddleware(this.createLoadAnimalEpic(animalType));
+	}
 
-  private createLoadAnimalEpic(animalType) {
-    return action$ => action$
-      .ofType(AnimalActions.LOAD_STARTED)
-      .filter(({ meta }) => meta.animalType === animalType)
-      .switchMap(a => this.service.getAll(animalType)
-        .map(data => this.actions.loadSucceeded(animalType, data))
-        .catch(response => of(this.actions.loadFailed(animalType, {
-          status: '' + response.status,
-        }))));
-  }
+	private createLoadAnimalEpic(animalType) {
+		return action$ => action$
+			.ofType(AnimalActions.LOAD_STARTED)
+			.filter(({ meta }) => meta.animalType === animalType)
+			.switchMap(a => this.service.getAll(animalType)
+				.map(data => this.actions.loadSucceeded(animalType, data))
+				.catch(response => of(this.actions.loadFailed(animalType, {
+					status: '' + response.status,
+				}))));
+	}
 }

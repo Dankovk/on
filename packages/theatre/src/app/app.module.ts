@@ -18,20 +18,20 @@ import { appRoutes } from './app.routes';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [
-    RouterModule.forRoot(appRoutes),
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    NgReduxModule,
-    NgReduxRouterModule,
-    AnimalModule,
-    ElephantModule,
-    LionModule,
-    FeedbackModule,
-    StoreModule,
-  ],
-  bootstrap: [AppComponent]
+	declarations: [AppComponent],
+	imports: [
+		RouterModule.forRoot(appRoutes),
+		BrowserModule,
+		FormsModule,
+		HttpModule,
+		NgReduxModule,
+		NgReduxRouterModule,
+		AnimalModule,
+		ElephantModule,
+		LionModule,
+		FeedbackModule,
+		StoreModule,
+	],
+	bootstrap: [AppComponent]
 })
 export class AppModule {}

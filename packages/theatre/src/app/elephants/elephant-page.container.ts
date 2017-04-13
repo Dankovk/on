@@ -15,25 +15,25 @@ import { IAppState } from '../store/root.types';
  * but not all containers need to be page-level components.
  */
 @Component({
-  template: `
-    <zoo-animal-list
-      animalsName="Elephants"
-      [animals]="animals$"
-      [loading]="loading$"
-      [error]="error$">
-    </zoo-animal-list>
-  `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
+	template: `
+		<zoo-animal-list
+			animalsName="Elephants"
+			[animals]="animals$"
+			[loading]="loading$"
+			[error]="error$">
+		</zoo-animal-list>
+	`,
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ElephantPageComponent {
-  // Get elephant-related data out of the Redux store as observables.
-  @select(['elephants', 'items']) readonly animals$: Observable<any[]>;
-  @select(['elephants', 'loading']) readonly loading$: Observable<boolean>;
-  @select(['elephants', 'error']) readonly error$: Observable<any>;
+	// Get elephant-related data out of the Redux store as observables.
+	@select(['elephants', 'items']) readonly animals$: Observable<any[]>;
+	@select(['elephants', 'loading']) readonly loading$: Observable<boolean>;
+	@select(['elephants', 'error']) readonly error$: Observable<any>;
 
-  constructor(
-    ngRedux: NgRedux<IAppState>,
-    actions: AnimalActions) {
-    ngRedux.dispatch(actions.loadAnimals(ANIMAL_TYPES.ELEPHANT));
-  }
+	constructor(
+		ngRedux: NgRedux<IAppState>,
+		actions: AnimalActions) {
+		ngRedux.dispatch(actions.loadAnimals(ANIMAL_TYPES.ELEPHANT));
+	}
 }

@@ -7,8 +7,8 @@ import { CoreModule } from '../core/core.module';
 import { StoreModule } from '../store/store.module';
 
 @NgModule({
-  declarations: [ElephantPageComponent],
-  exports: [ElephantPageComponent],
-  imports: [AnimalModule, CoreModule, StoreModule, CommonModule],
+	declarations: [ElephantPageComponent],
+	exports: [ElephantPageComponent],
+	imports: [AnimalModule, CoreModule, StoreModule, CommonModule],
 })
 export class ElephantModule {}

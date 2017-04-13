@@ -6,12 +6,12 @@ import { AnimalEpics } from '../animals/animal.epics';
 
 @Injectable()
 export class RootEpics {
-  constructor(private animalEpics: AnimalEpics) {}
+	constructor(private animalEpics: AnimalEpics) {}
 
-  public createEpics() {
-    return [
-      this.animalEpics.createEpic(ANIMAL_TYPES.ELEPHANT),
-      this.animalEpics.createEpic(ANIMAL_TYPES.LION),
-    ];
-  }
+	public createEpics() {
+		return [
+			this.animalEpics.createEpic(ANIMAL_TYPES.ELEPHANT),
+			this.animalEpics.createEpic(ANIMAL_TYPES.LION),
+		];
+	}
 }

@@ -19,29 +19,29 @@ import { rootReducer } from './root.reducer';
 import { RootEpics } from './root.epics';
 
 @NgModule({
-  imports: [NgReduxModule, NgReduxRouterModule],
-  providers: [RootEpics],
+	imports: [NgReduxModule, NgReduxRouterModule],
+	providers: [RootEpics],
 })
 export class StoreModule {
-  constructor(
-    public store: NgRedux<IAppState>,
-    devTools: DevToolsExtension,
-    ngReduxRouter: NgReduxRouter,
-    rootEpics: RootEpics,
-  ) {
-    // Tell Redux about our reducers and epics. If the Redux DevTools
-    // chrome extension is available in the browser, tell Redux about
-    // it too.
-    store.configureStore(
-      rootReducer,
-      {},
-      [ createLogger(), ...rootEpics.createEpics() ],
-      devTools.isEnabled() ? [ devTools.enhancer() ] : []);
+	constructor(
+		public store: NgRedux<IAppState>,
+		devTools: DevToolsExtension,
+		ngReduxRouter: NgReduxRouter,
+		rootEpics: RootEpics,
+	) {
+		// Tell Redux about our reducers and epics. If the Redux DevTools
+		// chrome extension is available in the browser, tell Redux about
+		// it too.
+		store.configureStore(
+			rootReducer,
+			{},
+			[ createLogger(), ...rootEpics.createEpics() ],
+			devTools.isEnabled() ? [ devTools.enhancer() ] : []);
 
-    // Enable syncing of Angular router state with our Redux store.
-    ngReduxRouter.initialize();
+		// Enable syncing of Angular router state with our Redux store.
+		ngReduxRouter.initialize();
 
-    // Enable syncing of Angular form state with our Redux store.
-    provideReduxForms(store);
-  }
+		// Enable syncing of Angular form state with our Redux store.
+		provideReduxForms(store);
+	}
 }

@@ -9,9 +9,9 @@ import { AnimalService } from './animal.service';
 import { StoreModule } from '../store/store.module';
 
 @NgModule({
-  declarations: [AnimalListComponent],
-  exports: [AnimalListComponent],
-  imports: [CoreModule, StoreModule, CommonModule],
-  providers: [AnimalActions, AnimalEpics, AnimalService],
+	declarations: [AnimalListComponent],
+	exports: [AnimalListComponent],
+	imports: [CoreModule, StoreModule, CommonModule],
+	providers: [AnimalActions, AnimalEpics, AnimalService],
 })
 export class AnimalModule {}
