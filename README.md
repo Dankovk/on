@@ -113,7 +113,7 @@ When opening an issue:
 * [Bootstrap](http://getbootstrap.com/)
 
 	* Entrada V1 uses various Bootstrap components which may have to be ported (in-part) to **One** 
-	to maintain a reasonable Entrada V1&mdash;V2 transition.
+	to maintain a reasonable Entrada V1—V2 transition.
 
 * [Instructure-UI](http://instructure.github.io/)
 	

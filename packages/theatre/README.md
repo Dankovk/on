@@ -47,36 +47,36 @@ component is categorized under
 
 ### URLs
 
-* `/` &rarr; Home, navigation & type toggles are visible, nothing loaded in the Demo and State list or stage.
+* `/` → Home, navigation & type toggles are visible, nothing loaded in the Demo and State list or stage.
 * Component URLs
 	* `/atoms/<atom name>/<type>`
 	* `/atoms/<atom name>/demo/<demo>/<type>`
 	* `/atoms/<atom name>/state/<state>/<type>`
-	* &mdash; &mdash; &mdash;
+	* — — —
 	* `/molecules/<molecule name>/<type>`
 	* `/molecules/<molecule name>/demo/<demo>/<type>`
 	* `/molecules/<molecule name>/state/<state>/<type>`
-	* &mdash; &mdash; &mdash;
+	* — — —
 	* `/organisms/<organism name>/<type>`
 	* `/organisms/<atom name>/demo/<demo>/<type>`
 	* `/organisms/<atom name>/state/<state>/<type>`
-	* &mdash; &mdash; &mdash;
+	* — — —
 	* `/templates/<template name>/<type>`
 	* `/templates/<template name>/demo/<demo>/<type>`
 	* `/templates/<template name>/state/<state>/<type>`
-	* &mdash; &mdash; &mdash;
+	* — — —
 	* `/pages/<page name>/<type>`
 	* `/pages/<page name>/demo/<demo>/<type>`
 	* `/pages/<page name>/state/<state>/<type>`
 
 Where:
 
-* `<___ name>` &rarr; component package.json `one:name`
-* `<type>` &rarr; component package.json `one:type`
+* `<___ name>` → component package.json `one:name`
+* `<type>` → component package.json `one:type`
 	* Note: if the `<type>` is omitted from the URL, theatre should use the value of the Type Toggle filter
 	  and redirect to the full, valid URL
-* `<demo>` &rarr; component's valid demos
-* `<state>` &rarr; component's valid states
+* `<demo>` → component's valid demos
+* `<state>` → component's valid states
 * a component's package.json `one:pattern` value determines where the component gets categorized in the 
 url scheme
 
