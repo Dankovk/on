@@ -38,10 +38,8 @@ export function createAnimalReducer(animalType: AnimalType) {
 					loading: false,
 					error: action.error
 				};
-			case default:
+			default:
 				return state;
 		}
-
-		return state;
 	};
 }
