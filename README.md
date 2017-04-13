@@ -27,10 +27,33 @@ platform in the future.
 * BEM
 	* Like Material, **One** component styles will follow [BEM](http://getbem.com/) naming methodology.
 
-## Development Branching
+## Contributing
 
-**One** and other Entrada projects use the [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/) branching model. The 
-most important concepts of this being:
+Small changes (single commit, fixes, chores, etc) can be done in the `develop` branch.
+
+To perform a commit, use the commitizen script: `npm run commit`.
+
+* Choose the commit type from the prompts. 
+* When asked to "Denote the scope of this change:", enter the name of _package_, if updating 
+something outside a package, enter nothing.
+* Don't use the BREAKING CHANGES feature yet (too early)
+* Select any packages the commit affects
+
+Larger changes (multi-commit, multi-contributor, features) should be done in their own feature 
+branch, following the [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/) naming 
+convention.
+
+For example, a new feature called `my-new-feature` would get developed on `feature/my-new-feature` branch.
+
+When a feature branch is ready to be merged into `develop`, push the feature branch up to BitBucket 
+and open up a pull request for the feature branch into `develop`.
+
+
+
+### Background / philosophy
+
+**One** and other Entrada projects use the [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/) 
+branching model. The most important concepts of this being:
 
 * Releases always coming from `master`, built out of the `develop` branch
 * Features are developed first in their own feature branches, then merged back to `develop` once completed
