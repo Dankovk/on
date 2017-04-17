@@ -95,12 +95,12 @@ const mergeOmitNil = R.curryN(2, R.compose(
 
 function getFolders(dir, excludes, obj) {
 	const folders = fs.readdirSync(dir)
-		.filter((file) =>
+		.filter(file =>
 			_.defaultTo([], excludes).indexOf(file) < 0 && fs.statSync(path.join(dir, file)).isDirectory()
 		);
 
 	return (obj !== true) ? folders :
-		_.map((folder) =>
+		_.map(folder =>
 			({
 				name: folder,
 				base: dir
@@ -157,7 +157,7 @@ function mergeStatesForTemplate(data, file) {
  */
 export function atoms() {
 	return merge(
-		getFolders(atomSrcPath).map((folder) =>
+		getFolders(atomSrcPath).map(folder =>
 			gulp.src(path.join(atomSrcPath, folder, '/states/*.json'))
 				.pipe(jsonTransform(mergeStatesForTemplate))
 				.pipe(hbs(gulp.src(path.join(atomSrcPath, folder, `${folder}.hbs`))))
@@ -170,7 +170,7 @@ export function atoms() {
  *
  */
 export function registerAtomPartials(cb) {
-	getFolders(atomSrcPath).map((folder) =>
+	getFolders(atomSrcPath).map(folder =>
 		hbs.registerPartial(folder, fs.readFileSync(path.join(atomSrcPath, folder, `${folder}.hbs`), 'utf-8'))
 	);
 	cb();
@@ -181,7 +181,7 @@ export function registerAtomPartials(cb) {
  */
 export function createMolecules() {
 	return merge(
-		getFolders(moleculeSrcPath).map((folder) =>
+		getFolders(moleculeSrcPath).map(folder =>
 			gulp.src(path.join(moleculeSrcPath, folder, '/states/*.json'))
 				.pipe(jsonTransform(mergeStatesForTemplate))
 				.pipe(hbs(gulp.src(path.join(moleculeSrcPath, folder, `${folder}.hbs`))))
@@ -225,7 +225,7 @@ export function theatreStaticAtoms() {
 			getFolders(atomDestPath, [], true),
 			getFolders(moleculeDestPath, [], true)
 		)
-		.map((folder) =>
+		.map(folder =>
 			gulp.src(path.join(folder.base, folder.name, '*.html'))
 				.pipe(transform((contents, file) =>
 					JSON.stringify({
