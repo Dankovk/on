@@ -39,6 +39,7 @@ const atomDestPath = path.join(componentDestPath, atomPath);
 const moleculeDestPath = path.join(componentDestPath, moleculePath);
 
 const theatrePackagePath = path.join('packages', 'theatre');
+const theatreSrcPath = path.join(theatrePackagePath, 'src');
 const theatreDestPath = path.join(destPath, 'theatre');
 // const componentStaticTheatreDestPath = path.join(theatreDestPath, 'components');
 const theatreStyleDestPath = path.join(theatreDestPath, 'style');
@@ -295,8 +296,8 @@ export function browserSyncReload(cb) {
  */
 const theatreWebpackConfig = {
 	entry: {
-		polyfill: './packages/theatre/src/polyfill.ts',
-		'main.bundle': './packages/theatre/src/main.ts'
+		polyfill: `./${path.join('./', theatreSrcPath, 'polyfill.ts')}`,
+		'main.bundle': `./${path.join('./', theatreSrcPath, 'main.ts')}`
 	},
 	output: {
 		path: path.resolve(__dirname, 'dist/theatre'),
@@ -375,13 +376,11 @@ export function buildTheatre(cb) {
 /*
  * Clean, build components & the theatre, then watch everything & start the theatre
  */
-// const theatre = gulp.series(cleanTheatre, copyTheatre, gulp.parallel(
-//  watchFuncBS(theatreAssetPath, copyTheatre),
-//  serve
-// ));
-// export { theatre };
-const theatre = gulp.series(cleanTheatre, copyTheatre, buildTheatre);
-export { theatre };
+gulp.task('theatre:build', gulp.series(cleanTheatre, copyTheatre, buildTheatre));
+gulp.task('theatre:watch', gulp.series(
+	'theatre:build',
+	gulp.parallel(watchFuncBS(theatreSrcPath, 'theatre:build'), serve)
+));
 
 /*
  * Export a default task
