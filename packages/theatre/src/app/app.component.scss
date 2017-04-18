@@ -1,0 +1,13 @@
+.active {
+	padding: 5px;
+	border-radius: 3px;
+	background: #eee;
+}
+
+content { /* stylelint-disable-line selector-no-type */
+	display: block;
+	margin-top: 1rem;
+	padding: 10px;
+	border: solid gray 1px;
+	border-radius: 5px;
+}
