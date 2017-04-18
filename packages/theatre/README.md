@@ -151,14 +151,18 @@ Install development dependencies with: `npm i`
 
 Install dependencies for sub packages with: `npm run lerna bootstrap`
 
-#### Build the theatre application
+#### Build the theatre application (DLLs)
 
-From the `one` monorepo root (not the `packages/theare` directory), run the
-command: `npm run gulp theatre`
+From the `one` monorepo root (not the `packages/theare` directory), run the command:  
 
-#### View the theatre application
+`npm run theatre-build:dll`  
 
-From the `one` monorepo root (not the `packages/theare` directory), run the
-command: `npm run gulp serve`
+#### View &amp; watch the theatre application (DLL build required prior to this)
 
-Navigate to: `http://localhost:3000/theatre/`
+From the `one` monorepo root (not the `packages/theare` directory), run the command:  
+
+`npm run theatre-webdev`
+
+Navigate to: `http://localhost:3000/`
+
+`theatre.json` is available at `http://localhost:3000/theatre.json`
