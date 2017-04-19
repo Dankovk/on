@@ -10,13 +10,13 @@ import jsonTransform from 'gulp-json-transform';
 import transform from 'gulp-transform';
 import R from 'ramda';
 import _ from 'lodash/fp';
-import webpack from 'webpack';
-import gutil from 'gulp-util';
+// import webpack from 'webpack';
+// import gutil from 'gulp-util';
 // import { trace } from 'lib/debug';
 
-import { CheckerPlugin } from 'awesome-typescript-loader';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
+// import { CheckerPlugin } from 'awesome-typescript-loader';
+// import HtmlWebpackPlugin from 'html-webpack-plugin';
+// import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 import { attributes } from './lib/attributes';
 
@@ -39,7 +39,7 @@ const atomDestPath = path.join(componentDestPath, atomPath);
 const moleculeDestPath = path.join(componentDestPath, moleculePath);
 
 const theatrePackagePath = path.join('packages', 'theatre');
-const theatreSrcPath = path.join(theatrePackagePath, 'src');
+// const theatreSrcPath = path.join(theatrePackagePath, 'src');
 const theatreDestPath = path.join(destPath, 'theatre');
 // const componentStaticTheatreDestPath = path.join(theatreDestPath, 'components');
 const theatreStyleDestPath = path.join(theatreDestPath, 'style');
