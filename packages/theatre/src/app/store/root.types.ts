@@ -1,8 +1,6 @@
-import { IAnimalList } from '../animals/animal.types';
 
 export interface IAppState {
-	elephants?: IAnimalList;
-	lions?: IAnimalList;
 	routes?: any;
+	users?: any;
 	feedback?: any;
 }

@@ -11,23 +11,19 @@ import { provideReduxForms } from '@angular-redux/form';
 // Redux ecosystem stuff.
 // import * as createLogger from 'redux-logger';
 import { createLogger } from 'redux-logger';
-import { combineEpics, createEpicMiddleware } from 'redux-observable';
 
 // The top-level reducers and epics that make up our app's logic.
 import { IAppState } from './root.types';
 import { rootReducer } from './root.reducer';
-import { RootEpics } from './root.epics';
 
 @NgModule({
 	imports: [NgReduxModule, NgReduxRouterModule],
-	providers: [RootEpics],
 })
 export class StoreModule {
 	constructor(
 		public store: NgRedux<IAppState>,
 		devTools: DevToolsExtension,
 		ngReduxRouter: NgReduxRouter,
-		rootEpics: RootEpics,
 	) {
 		// Tell Redux about our reducers and epics. If the Redux DevTools
 		// chrome extension is available in the browser, tell Redux about
@@ -35,7 +31,7 @@ export class StoreModule {
 		store.configureStore(
 			rootReducer,
 			{},
-			[ createLogger(), ...rootEpics.createEpics() ],
+			[ createLogger() ],
 			devTools.isEnabled() ? [ devTools.enhancer() ] : []);
 
 		// Enable syncing of Angular router state with our Redux store.

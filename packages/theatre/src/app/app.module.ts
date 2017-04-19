@@ -8,10 +8,7 @@ import { NgReduxRouterModule } from '@angular-redux/router';
 
 // This app's ngModules
 import { StoreModule } from './store/store.module';
-import { AnimalModule } from './animals/animal.module';
-import { ElephantModule } from './elephants/elephant.module';
-import { LionModule } from './lions/lion.module';
-import { FeedbackModule } from './feedback/feedback.module';
+import { UserModule } from './users/users.module';
 
 // Top-level app component constructs.
 import { appRoutes } from './app.routes';
@@ -26,10 +23,7 @@ import { AppComponent } from './app.component';
 		HttpModule,
 		NgReduxModule,
 		NgReduxRouterModule,
-		AnimalModule,
-		ElephantModule,
-		LionModule,
-		FeedbackModule,
+		UserModule,
 		StoreModule,
 	],
 	bootstrap: [AppComponent]
