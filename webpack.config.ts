@@ -60,6 +60,7 @@ const COPY_FOLDERS = [
 	{ from: 'packages/theatre/src/assets', to: 'assets' },
 	{ from: 'packages/theatre/src/style/theatre.css', to: 'theatre.css' },
 	{ from: 'packages/theatre/src/theatre.json', to: 'theatre.json' },
+	{ from: 'packages/theatre/src/components', to: 'components' },
 	...MY_COPY_FOLDERS
 ];
 
@@ -89,7 +90,11 @@ const commonConfig = function webpackConfig(): WebpackConfig {
 				exclude: [/\.(spec|e2e|d)\.ts$/]
 			},
 			{ test: /\.json$/, loader: 'json-loader', exclude: [path.resolve(__dirname, 'packages/theatre/src/theatre.json')] },
-			{ test: /\.html/, loader: 'raw-loader', exclude: [path.resolve(__dirname, 'packages/theatre/src/index.html')] },
+			{ test: /\.html/, loader: 'raw-loader', exclude: [
+					path.resolve(__dirname, 'packages/theatre/src/index.html'),
+					path.resolve(__dirname, 'packages/theatre/src/components')
+				]
+			},
 			{ test: /\.css$/, loader: 'raw-loader' },
 			...MY_CLIENT_RULES
 		]
