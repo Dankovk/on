@@ -17,6 +17,12 @@ lerna-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+#idea
+.idea
+
+#compiled js
+app/*.js
+
 # Runtime data
 pids
 *.pid

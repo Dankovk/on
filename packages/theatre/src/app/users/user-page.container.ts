@@ -5,14 +5,8 @@ import { UsersService } from './users.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-    template: `
-        <ul>
-          <li *ngFor="let user of users | async;">
-            test {{ user.name }} {{ atom }}
-          </li>
-        </ul>
-        <iframe src="http://localhost:3000/components/atoms/header_1.html" frameborder="0"></iframe>
-`,
+    template: `<component></component>
+        <iframe src="http://localhost:3000/components/atoms/header_1.html" frameborder="0"></iframe>`,
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UserPageComponent {
