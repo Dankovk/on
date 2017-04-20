@@ -22,7 +22,7 @@ var UserPageComponent = (function () {
     ], UserPageComponent.prototype, "readonly");
     UserPageComponent = __decorate([
         core_1.Component({
-            template: "\n        <ul>\n          <li *ngFor=\"let user of users | async;\">\n            test {{ user.name }} {{ atom }}\n          </li>\n        </ul>\n",
+            template: "\n        <ul>\n          <li *ngFor=\"let user of users | async;\">\n            test {{ user.name }} {{ atom }}\n          </li>\n        </ul>\n        <iframe src=\"http://localhost:3000/components/atoms/header_1.html\" frameborder=\"0\"></iframe>\n",
             changeDetection: core_1.ChangeDetectionStrategy.OnPush
         })
     ], UserPageComponent);

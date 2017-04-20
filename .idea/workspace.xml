@@ -9,6 +9,7 @@
 =======
     <list default="true" id="e8ffab05-ce1e-47ba-8948-dbccccf7c1a9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/app/app.component.html" afterPath="$PROJECT_DIR$/packages/theatre/src/app/app.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/app/app.module.ts" afterPath="$PROJECT_DIR$/packages/theatre/src/app/app.module.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.reducer.ts" afterPath="$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.reducer.ts" />
@@ -16,6 +17,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.ts" afterPath="$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/app/topbar/topbar.component.html" afterPath="$PROJECT_DIR$/packages/theatre/src/app/topbar/topbar.component.html" />
 >>>>>>> de1c721a3490d80f107f971dda8cd2cf754961d7
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/app/users/user-page.container.ts" afterPath="$PROJECT_DIR$/packages/theatre/src/app/users/user-page.container.ts" />
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
     </list>
     <ignored path="one.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,6 +42,7 @@
   <component name="FileEditorManager">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -54,13 +59,16 @@
 =======
     <splitter split-orientation="horizontal" split-proportion="0.16587302">
 >>>>>>> 2787178029d0ac3c360f8c3f4bddf2beab4808ca
+=======
+    <splitter split-orientation="horizontal" split-proportion="0.54444444">
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="true">
+          <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/app.module.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="66" lean-forward="false" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
+                <state relative-caret-position="555">
+                  <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#58#0" expanded="true" />
                     <element signature="e#379#430#0" expanded="true" />
@@ -103,6 +111,7 @@
             </entry>
           </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <file leaf-file-name="users.reducer.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/users/users.reducer.ts">
               <provider selected="true" editor-type-id="text-editor">
@@ -118,6 +127,9 @@
             <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/counter/counter-page.container.ts">
 =======
           <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
+=======
+          <file leaf-file-name="app.component.html" pinned="false" current-in-tab="true">
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
             <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/app.component.html">
 >>>>>>> 2787178029d0ac3c360f8c3f4bddf2beab4808ca
               <provider selected="true" editor-type-id="text-editor">
@@ -267,12 +279,12 @@
           <file leaf-file-name="user-page.container.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/users/user-page.container.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+                <state relative-caret-position="195">
+                  <caret line="13" column="73" lean-forward="false" selection-start-line="13" selection-start-column="73" selection-end-line="13" selection-end-column="73" />
                   <folding>
                     <element signature="e#0#73#0" expanded="true" />
-                    <marker date="1492590575000" expanded="true" signature="302:427" ph="..." />
-                    <marker date="1492590575000" expanded="true" signature="353:413" ph="..." />
+                    <marker date="1492684265000" expanded="true" signature="302:427" ph="..." />
+                    <marker date="1492684265000" expanded="true" signature="353:413" ph="..." />
                   </folding>
 >>>>>>> de1c721a3490d80f107f971dda8cd2cf754961d7
                 </state>
@@ -334,6 +346,7 @@
             </entry>
           </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/app.component.ts">
               <provider selected="true" editor-type-id="text-editor">
@@ -341,6 +354,9 @@
                   <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
 =======
           <file leaf-file-name="app.routes.ts" pinned="false" current-in-tab="false">
+=======
+          <file leaf-file-name="app.routes.ts" pinned="false" current-in-tab="true">
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
             <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/app.routes.ts">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="135">
@@ -399,6 +415,7 @@
           </file>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <file leaf-file-name="users.actions.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/users/users.actions.ts">
               <provider selected="true" editor-type-id="text-editor">
@@ -412,6 +429,9 @@
 =======
           <file leaf-file-name="sidebar.component.html" pinned="false" current-in-tab="true">
 >>>>>>> 2787178029d0ac3c360f8c3f4bddf2beab4808ca
+=======
+          <file leaf-file-name="sidebar.component.html" pinned="false" current-in-tab="false">
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
             <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="135">
@@ -499,7 +519,6 @@
         <option value="$PROJECT_DIR$/packages/theatre/src/app/users/users.reducer.ts" />
         <option value="$PROJECT_DIR$/packages/theatre/src/app/users/user/user-list.component.html" />
         <option value="$PROJECT_DIR$/packages/theatre/templates/atoms/paragraph.demo.html" />
-        <option value="$PROJECT_DIR$/packages/theatre/src/app/users/user-page.container.ts" />
         <option value="$PROJECT_DIR$/packages/theatre/src/components/test.html" />
         <option value="$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.module.ts" />
         <option value="$PROJECT_DIR$/packages/theatre/src/app/store/root.reducer.ts" />
@@ -507,7 +526,6 @@
         <option value="$PROJECT_DIR$/packages/theatre/src/app/topbar/topbar.component.ts" />
         <option value="$PROJECT_DIR$/packages/theatre/src/theatre.json" />
         <option value="$PROJECT_DIR$/packages/theatre/src/index.html" />
-        <option value="$PROJECT_DIR$/packages/theatre/src/app/app.routes.ts" />
         <option value="$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.actions.ts" />
         <option value="$PROJECT_DIR$/packages/theatre/src/app/app.service.ts" />
         <option value="$PROJECT_DIR$/packages/theatre/src/app/topbar/topbar.component.html" />
@@ -519,7 +537,12 @@
         <option value="$PROJECT_DIR$/packages/theatre/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.ts" />
         <option value="$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.html" />
+<<<<<<< HEAD
 >>>>>>> 2787178029d0ac3c360f8c3f4bddf2beab4808ca
+=======
+        <option value="$PROJECT_DIR$/packages/theatre/src/app/users/user-page.container.ts" />
+        <option value="$PROJECT_DIR$/packages/theatre/src/app/app.routes.ts" />
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
       </list>
     </option>
   </component>
@@ -673,8 +696,13 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+=======
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -699,6 +727,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -737,6 +766,13 @@
 <<<<<<< HEAD
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
 =======
+=======
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atoms" />
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
 >>>>>>> de1c721a3490d80f107f971dda8cd2cf754961d7
             </PATH_ELEMENT>
@@ -838,6 +874,7 @@
               <option name="myItemId" value="one" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+<<<<<<< HEAD
             <PATH_ELEMENT>
               <option name="myItemId" value="one" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
@@ -870,6 +907,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
 >>>>>>> 2787178029d0ac3c360f8c3f4bddf2beab4808ca
             </PATH_ELEMENT>
+=======
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -921,8 +960,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+<<<<<<< HEAD
 >>>>>>> 2787178029d0ac3c360f8c3f4bddf2beab4808ca
               <option name="myItemId" value="json-populator" />
+=======
+              <option name="myItemId" value="users" />
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
 >>>>>>> de1c721a3490d80f107f971dda8cd2cf754961d7
             </PATH_ELEMENT>
@@ -1043,6 +1086,7 @@
       <workItem from="1492508819790" duration="12837000" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1492587937431" duration="37000" />
       <workItem from="1492592267935" duration="9690000" />
       <workItem from="1492677947462" duration="1135000" />
@@ -1052,10 +1096,14 @@
 =======
       <workItem from="1492587937431" duration="13494000" />
 >>>>>>> 2787178029d0ac3c360f8c3f4bddf2beab4808ca
+=======
+      <workItem from="1492587937431" duration="13885000" />
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="36561000" />
@@ -1065,6 +1113,9 @@
 =======
     <option name="totallyTimeSpent" value="39180000" />
 >>>>>>> 2787178029d0ac3c360f8c3f4bddf2beab4808ca
+=======
+    <option name="totallyTimeSpent" value="39571000" />
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -1566,6 +1617,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/packages/theatre/src/components/atoms/header_1.html">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
@@ -1656,6 +1708,8 @@
     </entry>
 =======
 >>>>>>> 2787178029d0ac3c360f8c3f4bddf2beab4808ca
+=======
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
     <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/users/users.actions.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
@@ -1666,6 +1720,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/users/user-page.container.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1716,6 +1771,8 @@
 =======
 =======
 >>>>>>> 2787178029d0ac3c360f8c3f4bddf2beab4808ca
+=======
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
     <entry file="file://$PROJECT_DIR$/packages/theatre/src/theatre.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1744,6 +1801,7 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/counter/counter.actions.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1759,18 +1817,12 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
     <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/topbar/topbar.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="45" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/theatre/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1823,6 +1875,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1844,6 +1897,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
     <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/users/user/user-list.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1898,6 +1953,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#379#430#0" expanded="true" />
+            <element signature="e#522#563#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1907,15 +1974,61 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/store/root.reducer.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/packages/theatre/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/users/user-page.container.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="73" lean-forward="false" selection-start-line="13" selection-start-column="73" selection-end-line="13" selection-end-column="73" />
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+            <marker date="1492684265000" expanded="true" signature="302:427" ph="..." />
+            <marker date="1492684265000" expanded="true" signature="353:413" ph="..." />
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/packages/theatre/src/components/atoms/header_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="true" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/app.routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 9fe8364e18b0f583720c73a916fe76fb4d8b8deb
   </component>
 </project>
