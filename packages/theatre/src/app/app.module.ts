@@ -8,7 +8,8 @@ import { NgReduxRouterModule } from '@angular-redux/router';
 
 // This app's ngModules
 import { StoreModule } from './store/store.module';
-import { UserModule } from './users/users.module';
+import { IframeModule } from './iframe/iframe.module';
+import { CounterModule } from './counter/counter.module';
 
 // Top-level app component constructs.
 import { appRoutes } from './app.routes';
@@ -28,7 +29,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 		HttpModule,
 		NgReduxModule,
 		NgReduxRouterModule,
-		UserModule,
+		IframeModule,
+		CounterModule,
 		StoreModule,
 	],
 	providers: [AppService, JsonActions],

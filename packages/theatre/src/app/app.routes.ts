@@ -1,9 +1,8 @@
-import {UserPageComponent} from "./users/user-page.container";
+import { IframePageComponent } from './iframe/iframe-page.container';
 
 
 export const appRoutes = [
 	{path: '', redirectTo: '/', pathMatch: 'full'},
-	{path: 'users', component: UserPageComponent},
-	{path: 'components', component: UserPageComponent},
-	{path: 'components/atoms/:atom', component: UserPageComponent}
+	{path: 'components', component: IframePageComponent},
+	{path: 'components/atoms/:atom', component: IframePageComponent}
 ];

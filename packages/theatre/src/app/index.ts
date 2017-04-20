@@ -6,11 +6,16 @@ export * from './core/utils/payload-action.types';
 export * from './core/core.module';
 
 
-export * from './users/users.module';
-export * from './users/users.reducer';
-export * from './users/user-page.container';
-export * from './users/users.actions';
-export * from './users/user/user-list.component';
+export * from './iframe/iframe.module';
+export * from './iframe/iframe.reducer';
+export * from './iframe/iframe-page.container';
+export * from './iframe/iframe.actions';
+export * from './iframe/iframe-component/iframe.component';
+
+export * from './counter/counter.module';
+export * from './counter/counter.reducer';
+export * from './counter/counter-page.container';
+export * from './counter/counter.actions';
 
 export * from './store/root.reducer';
 export * from './store/root.types';

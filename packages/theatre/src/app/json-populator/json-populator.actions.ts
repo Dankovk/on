@@ -5,7 +5,8 @@ export const jsonActionsNames = {
     LOAD_STARTED: 'json/LOAD_STARTED',
     LOAD_SUCCEEDED: 'json/LOAD_SUCCEEDED',
     LOAD_FAILED: 'json/LOAD_FAILED',
-    COMPONENT_SELECTED: 'json/COMPONENT_SELECTED'
+    COMPONENT_SELECTED: 'json/COMPONENT_SELECTED',
+    DEMO_SELECTED: 'json/DEMO_SELECTED'
 };
 
 @Injectable()
@@ -14,6 +15,7 @@ export class JsonActions {
     static readonly LOAD_SUCCEEDED = jsonActionsNames.LOAD_SUCCEEDED;
     static readonly LOAD_FAILED = jsonActionsNames.LOAD_FAILED;
     static readonly COMPONENT_SELECTED = jsonActionsNames.COMPONENT_SELECTED;
+    static readonly DEMO_SELECTED = jsonActionsNames.DEMO_SELECTED;
 
     constructor(public  ngRedux: NgRedux<any>) {
     }
@@ -44,5 +46,13 @@ export class JsonActions {
             component,
             pattern
         });
+    }
+
+    demoSelected(name){
+        console.log(name);
+        this.ngRedux.dispatch({
+            type: jsonActionsNames.DEMO_SELECTED,
+            name
+        })
     }
 }

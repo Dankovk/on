@@ -1,6 +1,7 @@
 
 export interface IAppState {
 	routes?: any;
-	users?: any;
+	iframe?: any;
+	counter?:any;
 	feedback?: any;
 }
