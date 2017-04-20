@@ -21,10 +21,11 @@ yarn-debug.log*
 yarn-error.log*
 
 #idea
+.idea
 .idea/
 
 #compiled js
-app/*.js
+packages/theatre/app/*.js
 
 # Runtime data
 pids
