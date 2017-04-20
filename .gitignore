@@ -9,8 +9,7 @@ ts-node
 /**/*.css.shim.ts
 dll/
 
-/.idea/
-.idea/workspace.xml
+
 
 # Logs
 logs
