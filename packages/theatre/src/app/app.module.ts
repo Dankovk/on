@@ -12,10 +12,13 @@ import { UserModule } from './users/users.module';
 
 // Top-level app component constructs.
 import { appRoutes } from './app.routes';
+import { AppService } from './app.service';
+import { JsonActions } from './json-populator/json-populator.actions';
 import { AppComponent } from './app.component';
+import { TopbarComponent } from './topbar/topbar.component';
 
 @NgModule({
-	declarations: [AppComponent],
+	declarations: [AppComponent, TopbarComponent],
 	imports: [
 		RouterModule.forRoot(appRoutes),
 		BrowserModule,
@@ -26,6 +29,7 @@ import { AppComponent } from './app.component';
 		UserModule,
 		StoreModule,
 	],
+	providers: [AppService, JsonActions],
 	bootstrap: [AppComponent]
 })
 export class AppModule {}

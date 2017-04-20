@@ -1,13 +1,14 @@
-import {Component, ChangeDetectionStrategy} from "@angular/core";
+import {Component, ChangeDetectionStrategy, OnInit} from "@angular/core";
 import {select} from "@angular-redux/store";
 import {Observable} from "rxjs/Observable";
 import { UsersService } from './users.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
     template: `
         <ul>
           <li *ngFor="let user of users | async;">
-            {{ user.name }}
+            test {{ user.name }} {{ atom }}
           </li>
         </ul>
 `,
@@ -18,8 +19,16 @@ export class UserPageComponent {
     @select(['users', 'items']) readonly users: Observable<any[]>;
     @select(['users', 'loading']) readonly loading: Observable<boolean>;
     @select(['users', 'error']) readonly error: Observable<any>;
+    private atom: string;
+    private sub: any;
 
-    constructor(service: UsersService) {
+    constructor(service: UsersService, private route: ActivatedRoute) {
         service.getAll();
+    }
+
+    ngOnInit() {
+        this.sub = this.route.params.subscribe(params => {
+            this.atom = params['atom'];
+        });
     }
 }

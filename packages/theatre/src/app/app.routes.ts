@@ -1,7 +1,9 @@
-import { UserPageComponent } from './users/user-page.container';
+import {UserPageComponent} from "./users/user-page.container";
 
 
 export const appRoutes = [
-	{ path: '', redirectTo: '/users', pathMatch: 'full' },
-	{ path: 'users', component: UserPageComponent },
+	{path: '', redirectTo: '/', pathMatch: 'full'},
+	{path: 'users', component: UserPageComponent},
+	{path: 'components', component: UserPageComponent},
+	{path: 'components/atoms/:atom', component: UserPageComponent}
 ];
