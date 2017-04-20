@@ -6,31 +6,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
-var UserListComponent = (function () {
-    function UserListComponent() {
+var store_1 = require("@angular-redux/store");
+var IframeComponent = (function () {
+    function IframeComponent() {
+        // @Input() name: Observable<strung>;
+        // @Input() loading: Observable<boolean>;
+        // @Input() error: Observable<any>;
+        this.readonly = atomName;
     }
-    UserListComponent.prototype.getUserName = function (_, user) {
-        return user.name;
-    };
     __decorate([
-        core_1.Input()
-    ], UserListComponent.prototype, "userName");
-    __decorate([
-        core_1.Input()
-    ], UserListComponent.prototype, "users");
-    __decorate([
-        core_1.Input()
-    ], UserListComponent.prototype, "loading");
-    __decorate([
-        core_1.Input()
-    ], UserListComponent.prototype, "error");
-    UserListComponent = __decorate([
+        store_1.select(['json', 'demoName'])
+    ], IframeComponent.prototype, "readonly");
+    IframeComponent = __decorate([
         core_1.Component({
-            selector: 'user-list',
-            templateUrl: './user-list.component.html',
+            selector: 'iframe-component',
+            templateUrl: './iframe.component.html',
             changeDetection: core_1.ChangeDetectionStrategy.OnPush
         })
-    ], UserListComponent);
-    return UserListComponent;
+    ], IframeComponent);
+    return IframeComponent;
 }());
-exports.UserListComponent = UserListComponent;
+exports.IframeComponent = IframeComponent;

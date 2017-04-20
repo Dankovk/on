@@ -4,7 +4,8 @@ var INITIAL_STATE = {
     data: false,
     loading: false,
     error: false,
-    selectedComponent: null
+    selectedComponent: null,
+    demoName: ''
 };
 function jsonReducer(state, action) {
     if (state === void 0) { state = INITIAL_STATE; }
@@ -25,6 +26,12 @@ function jsonReducer(state, action) {
             return {
                 state: state,
                 selectedComponent: state.data[action.pattern].filter(function (elem) { return elem.name === action.component; })[0]
+            };
+        case json_populator_actions_1.jsonActionsNames.DEMO_SELECTED:
+            console.log(action.name);
+            return {
+                state: state,
+                demoName: action.name
             };
         default:
             return state;

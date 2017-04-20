@@ -7,12 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require('@angular/core');
 var axios_1 = require('axios');
-var UsersService = (function () {
-    function UsersService(http, actions) {
+var IframeService = (function () {
+    function IframeService(http, actions) {
         this.http = http;
         this.actions = actions;
     }
-    UsersService.prototype.getAll = function () {
+    IframeService.prototype.getAll = function () {
         var _this = this;
         axios_1["default"].get('http://www.mocky.io/v2/58f614b4260000571c4ada6f')
             .then(function (data) {
@@ -22,9 +22,9 @@ var UsersService = (function () {
             _this.actions.loadFailed(error);
         });
     };
-    UsersService = __decorate([
+    IframeService = __decorate([
         core_1.Injectable()
-    ], UsersService);
-    return UsersService;
+    ], IframeService);
+    return IframeService;
 }());
-exports.UsersService = UsersService;
+exports.IframeService = IframeService;

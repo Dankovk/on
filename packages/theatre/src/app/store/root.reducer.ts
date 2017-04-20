@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import { composeReducers, defaultFormReducer } from '@angular-redux/form';
 import { routerReducer } from '@angular-redux/router';
-import  userReducer  from '../users/users.reducer';
+import { iframeReducer } from '../iframe/iframe.reducer';
 import { counterReducer } from '../counter/counter.reducer';
 import jsonReducer from '../json-populator/json-populator.reducer';
 
@@ -10,7 +10,7 @@ import jsonReducer from '../json-populator/json-populator.reducer';
 export const rootReducer = composeReducers(
 	defaultFormReducer(),
 	combineReducers({
-		users: userReducer,
+		iframe: iframeReducer,
 		counter: counterReducer,
 		router: routerReducer,
 		json: jsonReducer

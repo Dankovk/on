@@ -1,6 +1,7 @@
 <div class="sidebar">
     <ul>
-        <li *ngFor="let demo of demos | async">
+        <li *ngFor="let demo of demos | async"
+            (click)="actions.demoSelected(demo)">
             {{demo}}
         </li>
         <li *ngFor="let state of states | async">

@@ -9,21 +9,21 @@ var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
 var core_module_1 = require('../core/core.module');
 var store_module_1 = require('../store/store.module');
-var user_list_component_1 = require('./user/user-list.component');
-var user_page_container_1 = require('./user-page.container');
-var users_actions_1 = require('./users.actions');
-var users_service_1 = require('./users.service');
-var UserModule = (function () {
-    function UserModule() {
+var iframe_component_1 = require('./iframe-component/iframe.component');
+var iframe_page_container_1 = require('./iframe-page.container');
+var iframe_actions_1 = require('./iframe.actions');
+var iframe_service_1 = require('./iframe.service');
+var IframeModule = (function () {
+    function IframeModule() {
     }
-    UserModule = __decorate([
+    IframeModule = __decorate([
         core_1.NgModule({
-            declarations: [user_list_component_1.UserListComponent, user_page_container_1.UserPageComponent],
-            exports: [user_list_component_1.UserListComponent, user_page_container_1.UserPageComponent],
+            declarations: [iframe_component_1.IframeComponent, iframe_page_container_1.IframePageComponent],
+            exports: [iframe_component_1.IframeComponent, iframe_page_container_1.IframePageComponent],
             imports: [core_module_1.CoreModule, store_module_1.StoreModule, common_1.CommonModule],
-            providers: [users_actions_1.UserActions, users_service_1.UsersService]
+            providers: [iframe_actions_1.IframeActions, iframe_service_1.IframeService]
         })
-    ], UserModule);
-    return UserModule;
+    ], IframeModule);
+    return IframeModule;
 }());
-exports.UserModule = UserModule;
+exports.IframeModule = IframeModule;

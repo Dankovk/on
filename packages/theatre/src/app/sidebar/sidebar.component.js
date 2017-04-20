@@ -8,7 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require('@angular/core');
 var store_1 = require("@angular-redux/store");
 var SidebarComponent = (function () {
-    function SidebarComponent() {
+    function SidebarComponent(actions) {
+        this.actions = actions;
         this.readonly = states;
         this.readonly = demos;
     }

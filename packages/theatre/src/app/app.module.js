@@ -14,7 +14,7 @@ var store_1 = require('@angular-redux/store');
 var router_2 = require('@angular-redux/router');
 // This app's ngModules
 var store_module_1 = require('./store/store.module');
-var users_module_1 = require('./users/users.module');
+var iframe_module_1 = require('./iframe/iframe.module');
 var counter_module_1 = require('./counter/counter.module');
 // Top-level app component constructs.
 var app_routes_1 = require('./app.routes');
@@ -36,7 +36,7 @@ var AppModule = (function () {
                 http_1.HttpModule,
                 store_1.NgReduxModule,
                 router_2.NgReduxRouterModule,
-                users_module_1.UserModule,
+                iframe_module_1.IframeModule,
                 counter_module_1.CounterModule,
                 store_module_1.StoreModule,
             ],

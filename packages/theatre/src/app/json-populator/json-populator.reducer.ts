@@ -4,7 +4,8 @@ const INITIAL_STATE = {
     data: false,
     loading: false,
     error: false,
-    selectedComponent: null
+    selectedComponent: null,
+    demoName: ''
 };
 
 export default function jsonReducer(state: any = INITIAL_STATE, action: any) {
@@ -26,6 +27,12 @@ export default function jsonReducer(state: any = INITIAL_STATE, action: any) {
                 ...state,
                 selectedComponent: state.data[action.pattern].filter( elem => elem.name === action.component)[0]
 
+            };
+        case jsonActionsNames.DEMO_SELECTED:
+            console.log(action.name);
+            return{
+                ...state,
+                demoName: action.name
             };
         default:
             return state;

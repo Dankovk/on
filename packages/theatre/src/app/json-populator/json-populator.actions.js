@@ -10,7 +10,8 @@ exports.jsonActionsNames = {
     LOAD_STARTED: 'json/LOAD_STARTED',
     LOAD_SUCCEEDED: 'json/LOAD_SUCCEEDED',
     LOAD_FAILED: 'json/LOAD_FAILED',
-    COMPONENT_SELECTED: 'json/COMPONENT_SELECTED'
+    COMPONENT_SELECTED: 'json/COMPONENT_SELECTED',
+    DEMO_SELECTED: 'json/DEMO_SELECTED'
 };
 var JsonActions = (function () {
     function JsonActions(ngRedux) {
@@ -40,10 +41,18 @@ var JsonActions = (function () {
             pattern: pattern
         });
     };
+    JsonActions.prototype.demoSelected = function (name) {
+        console.log(name);
+        this.ngRedux.dispatch({
+            type: exports.jsonActionsNames.DEMO_SELECTED,
+            name: name
+        });
+    };
     JsonActions.readonly = LOAD_STARTED = exports.jsonActionsNames.LOAD_STARTED;
     JsonActions.readonly = LOAD_SUCCEEDED = exports.jsonActionsNames.LOAD_SUCCEEDED;
     JsonActions.readonly = LOAD_FAILED = exports.jsonActionsNames.LOAD_FAILED;
     JsonActions.readonly = COMPONENT_SELECTED = exports.jsonActionsNames.COMPONENT_SELECTED;
+    JsonActions.readonly = DEMO_SELECTED = exports.jsonActionsNames.DEMO_SELECTED;
     JsonActions = __decorate([
         core_1.Injectable()
     ], JsonActions);
