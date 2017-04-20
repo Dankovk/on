@@ -24,7 +24,7 @@ export default function jsonReducer(state: any = INITIAL_STATE, action: any) {
             console.log(action.pattern);
             return {
                 ...state,
-                selectedComponent: state.data[action.pattern].filter( elem => elem.name === action.component)
+                selectedComponent: state.data[action.pattern].filter( elem => elem.name === action.component)[0]
 
             };
         default:

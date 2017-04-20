@@ -16,9 +16,11 @@ import { AppService } from './app.service';
 import { JsonActions } from './json-populator/json-populator.actions';
 import { AppComponent } from './app.component';
 import { TopbarComponent } from './topbar/topbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+
 
 @NgModule({
-	declarations: [AppComponent, TopbarComponent],
+	declarations: [AppComponent, TopbarComponent, SidebarComponent],
 	imports: [
 		RouterModule.forRoot(appRoutes),
 		BrowserModule,

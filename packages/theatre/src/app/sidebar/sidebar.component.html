@@ -1,0 +1,10 @@
+<div class="sidebar">
+    <ul>
+        <li *ngFor="let demo of demos | async">
+            {{demo}}
+        </li>
+        <li *ngFor="let state of states | async">
+            {{ state }}
+        </li>
+    </ul>
+</div>

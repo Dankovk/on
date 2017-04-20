@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e8ffab05-ce1e-47ba-8948-dbccccf7c1a9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/app/app.component.html" afterPath="$PROJECT_DIR$/packages/theatre/src/app/app.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/app/app.module.ts" afterPath="$PROJECT_DIR$/packages/theatre/src/app/app.module.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.reducer.ts" afterPath="$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.reducer.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.html" afterPath="$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.ts" afterPath="$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/app/topbar/topbar.component.html" afterPath="$PROJECT_DIR$/packages/theatre/src/app/topbar/topbar.component.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -23,9 +28,23 @@
     <favorites_list name="one" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.65238094">
+    <splitter split-orientation="horizontal" split-proportion="0.16587302">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/app.module.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="22" column="66" lean-forward="false" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
+                  <folding>
+                    <element signature="e#0#58#0" expanded="true" />
+                    <element signature="e#379#430#0" expanded="true" />
+                    <element signature="e#522#563#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/app.component.ts">
               <provider selected="true" editor-type-id="text-editor">
@@ -50,21 +69,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="users.reducer.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/users/users.reducer.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/app.component.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="60">
-                  <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+                  <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -92,11 +101,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="json-populator.reducer.ts" pinned="false" current-in-tab="true">
+          <file leaf-file-name="json-populator.reducer.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.reducer.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+                <state relative-caret-position="450">
+                  <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
@@ -209,8 +218,8 @@
           <file leaf-file-name="sidebar.component.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+                <state relative-caret-position="210">
+                  <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
                   <folding>
                     <element signature="e#0#67#0" expanded="true" />
                   </folding>
@@ -218,21 +227,21 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="topbar.component.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="topbar.component.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/topbar/topbar.component.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+                <state relative-caret-position="90">
+                  <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="sidebar.component.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="sidebar.component.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state relative-caret-position="135">
+                  <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
                   <folding />
                 </state>
               </provider>
@@ -295,17 +304,18 @@
         <option value="$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.module.ts" />
         <option value="$PROJECT_DIR$/packages/theatre/src/app/store/root.reducer.ts" />
         <option value="$PROJECT_DIR$/packages/theatre/src/app/app.component.ts" />
-        <option value="$PROJECT_DIR$/packages/theatre/src/app/app.module.ts" />
-        <option value="$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.ts" />
         <option value="$PROJECT_DIR$/packages/theatre/src/app/topbar/topbar.component.ts" />
-        <option value="$PROJECT_DIR$/packages/theatre/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/packages/theatre/src/theatre.json" />
         <option value="$PROJECT_DIR$/packages/theatre/src/index.html" />
         <option value="$PROJECT_DIR$/packages/theatre/src/app/app.routes.ts" />
         <option value="$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.actions.ts" />
         <option value="$PROJECT_DIR$/packages/theatre/src/app/app.service.ts" />
-        <option value="$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.reducer.ts" />
         <option value="$PROJECT_DIR$/packages/theatre/src/app/topbar/topbar.component.html" />
+        <option value="$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.reducer.ts" />
+        <option value="$PROJECT_DIR$/packages/theatre/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/packages/theatre/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.ts" />
+        <option value="$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.html" />
       </list>
     </option>
   </component>
@@ -500,6 +510,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="sidebar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="one" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="one" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="packages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theatre" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="json-populator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -620,12 +660,12 @@
       <workItem from="1492278068107" duration="10000" />
       <workItem from="1492414814916" duration="6227000" />
       <workItem from="1492508819790" duration="12837000" />
-      <workItem from="1492587937431" duration="12232000" />
+      <workItem from="1492587937431" duration="13494000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37918000" />
+    <option name="totallyTimeSpent" value="39180000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -864,18 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-            <element signature="e#379#430#0" expanded="true" />
-            <element signature="e#522#563#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/core/spinner/spinner.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -934,32 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/users/user/user-list.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/users/user/user-list.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/users/users.actions.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
@@ -978,24 +980,6 @@
             <element signature="e#0#73#0" expanded="true" />
             <marker date="1492590575000" expanded="true" signature="302:427" ph="..." />
             <marker date="1492590575000" expanded="true" signature="353:413" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1064,16 +1048,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.reducer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        <state relative-caret-position="450">
+          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="66" lean-forward="false" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#379#430#0" expanded="true" />
+            <element signature="e#522#563#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/users/user/user-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/topbar/topbar.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/users/user/user-list.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding />
         </state>
       </provider>
