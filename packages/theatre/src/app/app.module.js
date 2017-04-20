@@ -18,13 +18,16 @@ var users_module_1 = require('./users/users.module');
 var counter_module_1 = require('./counter/counter.module');
 // Top-level app component constructs.
 var app_routes_1 = require('./app.routes');
+var app_service_1 = require('./app.service');
+var json_populator_actions_1 = require('./json-populator/json-populator.actions');
 var app_component_1 = require('./app.component');
+var topbar_component_1 = require('./topbar/topbar.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            declarations: [app_component_1.AppComponent],
+            declarations: [app_component_1.AppComponent, topbar_component_1.TopbarComponent],
             imports: [
                 router_1.RouterModule.forRoot(app_routes_1.appRoutes),
                 platform_browser_1.BrowserModule,
@@ -36,6 +39,7 @@ var AppModule = (function () {
                 counter_module_1.CounterModule,
                 store_module_1.StoreModule,
             ],
+            providers: [app_service_1.AppService, json_populator_actions_1.JsonActions],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);

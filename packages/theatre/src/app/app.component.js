@@ -7,9 +7,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'Welcome to the Zoo';
+    function AppComponent(service) {
+        this.service = service;
+        this.title = 'Welcome to theatre';
     }
+    AppComponent.prototype.ngOnInit = function () {
+        this.service.getJson();
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'zoo-root',

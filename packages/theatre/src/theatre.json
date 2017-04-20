@@ -1,3 +1,23 @@
 {
-	
+	"atoms": [
+		{
+			"name": "header_1",
+			"type": "static",
+			"demos": [ "demo1", "demo2"],
+			"states": [ "hover", "active", "focus" ]
+		},
+		{
+			"name": "header_2",
+			"type": "static",
+			"demos": [ "demo3", "demo4"],
+			"states": [ "hover", "active", "focus" ]
+		}
+
+	],
+	"molecules": [
+		{
+			"name": "input-group",
+			"type": "static"
+		}
+	]
 }
