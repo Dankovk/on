@@ -1,5 +1,5 @@
 import {Component, ChangeDetectionStrategy} from "@angular/core";
-import {select} from "@angular-redux/store";
+import { select } from "@angular-redux/store";
 import {Observable} from "rxjs/Observable";
 import { UsersService } from './users.service';
 

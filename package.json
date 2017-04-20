@@ -173,5 +173,8 @@
   },
   "eslintConfig": {
     "extends": "@entrada-config/eslint-config-entrada"
+  },
+  "dependencies": {
+    "axios": "^0.16.1"
   }
 }

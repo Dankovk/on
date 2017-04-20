@@ -12,6 +12,11 @@ export * from './users/user-page.container';
 export * from './users/users.actions';
 export * from './users/user/user-list.component';
 
+export * from './counter/counter.module';
+export * from './counter/counter.reducer';
+export * from './counter/counter-page.container';
+export * from './counter/counter.actions';
+
 export * from './store/root.reducer';
 export * from './store/root.types';
 export * from './store/store.module';
