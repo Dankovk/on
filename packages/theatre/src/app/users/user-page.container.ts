@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
             test {{ user.name }} {{ atom }}
           </li>
         </ul>
+        <iframe src="http://localhost:3000/components/atoms/header_1.html" frameborder="0"></iframe>
 `,
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
