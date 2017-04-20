@@ -1,7 +1,7 @@
 <div class="topbar">
     <div class="topbar__links">
-        <span  *ngFor="let atom of atoms | async" (click)="actions.selectComponent('atoms', atom.name)" >
+        <a routerLink="/components/atoms/{{atom.name}}" *ngFor="let atom of atoms | async" (click)="actions.selectComponent('atoms', atom.name)" >
             {{ atom.name }} ({{ atom.type }})
-        </span>
+        </a>
     </div>
 </div>

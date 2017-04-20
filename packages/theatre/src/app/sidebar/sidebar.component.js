@@ -7,23 +7,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require('@angular/core');
 var store_1 = require("@angular-redux/store");
-var TopbarComponent = (function () {
-    function TopbarComponent() {
-        this.readonly = atoms;
+var SidebarComponent = (function () {
+    function SidebarComponent() {
+        this.readonly = states;
+        this.readonly = demos;
     }
-    TopbarComponent.prototype.Observable = ;
     __decorate([
-        store_1.select(['json', 'data', 'atoms'])
-    ], TopbarComponent.prototype, "readonly");
-    TopbarComponent = __decorate([
+        store_1.select(['json', 'selectedComponent', 'states'])
+    ], SidebarComponent.prototype, "readonly");
+    __decorate([
+        store_1.select(['json', 'selectedComponent', 'demos'])
+    ], SidebarComponent.prototype, "readonly");
+    SidebarComponent = __decorate([
         core_1.Component({
             selector: 'sidebar',
             templateUrl: './sidebar.component.html',
             changeDetection: core_1.ChangeDetectionStrategy.OnPush
         })
-    ], TopbarComponent);
-    return TopbarComponent;
+    ], SidebarComponent);
+    return SidebarComponent;
 }());
-exports.TopbarComponent = TopbarComponent;
- > ;
+exports.SidebarComponent = SidebarComponent;
 ;

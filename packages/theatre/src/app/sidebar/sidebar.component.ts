@@ -9,6 +9,7 @@ import { select } from "@angular-redux/store";
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
-export class TopbarComponent {
-    @select(['json', 'data', 'atoms']) readonly atoms: Observable<any[]>;
+export class SidebarComponent {
+    @select(['json', 'selectedComponent', 'states' ]) readonly states: Observable<any>;
+    @select(['json', 'selectedComponent', 'demos' ]) readonly demos: Observable<any>;
 };

@@ -22,12 +22,13 @@ var app_service_1 = require('./app.service');
 var json_populator_actions_1 = require('./json-populator/json-populator.actions');
 var app_component_1 = require('./app.component');
 var topbar_component_1 = require('./topbar/topbar.component');
+var sidebar_component_1 = require('./sidebar/sidebar.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            declarations: [app_component_1.AppComponent, topbar_component_1.TopbarComponent],
+            declarations: [app_component_1.AppComponent, topbar_component_1.TopbarComponent, sidebar_component_1.SidebarComponent],
             imports: [
                 router_1.RouterModule.forRoot(app_routes_1.appRoutes),
                 platform_browser_1.BrowserModule,
