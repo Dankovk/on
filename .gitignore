@@ -21,7 +21,7 @@ yarn-error.log*
 
 #idea
 .idea
-.idea/
+.idea/workspace.xml
 
 #compiled js
 packages/theatre/src/app/*.js
