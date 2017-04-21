@@ -24,7 +24,8 @@ yarn-error.log*
 .idea/
 
 #compiled js
-packages/theatre/app/*.js
+packages/theatre/*.js
+packages/theatre/*.map
 
 # Runtime data
 pids
