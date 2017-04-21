@@ -12,10 +12,14 @@ var IframeComponent = (function () {
         // @Input() name: Observable<strung>;
         // @Input() loading: Observable<boolean>;
         // @Input() error: Observable<any>;
+        this.readonly = demoName;
         this.readonly = atomName;
     }
     __decorate([
         store_1.select(['json', 'demoName'])
+    ], IframeComponent.prototype, "readonly");
+    __decorate([
+        store_1.select(['json', 'selectedComponent', 'name'])
     ], IframeComponent.prototype, "readonly");
     IframeComponent = __decorate([
         core_1.Component({

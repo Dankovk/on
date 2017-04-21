@@ -5,7 +5,7 @@ const INITIAL_STATE = {
     loading: false,
     error: false,
     selectedComponent: null,
-    demoName: ''
+    demoName: null
 };
 
 export default function jsonReducer(state: any = INITIAL_STATE, action: any) {

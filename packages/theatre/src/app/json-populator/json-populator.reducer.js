@@ -1,11 +1,11 @@
 "use strict";
-var json_populator_actions_1 = require('./json-populator.actions');
+var json_populator_actions_1 = require("./json-populator.actions");
 var INITIAL_STATE = {
     data: false,
     loading: false,
     error: false,
     selectedComponent: null,
-    demoName: ''
+    demoName: null
 };
 function jsonReducer(state, action) {
     if (state === void 0) { state = INITIAL_STATE; }
@@ -22,7 +22,6 @@ function jsonReducer(state, action) {
                 loading: false
             };
         case json_populator_actions_1.jsonActionsNames.COMPONENT_SELECTED:
-            console.log(action.component);
             return {
                 state: state,
                 selectedComponent: state.data[action.pattern].filter(function (elem) { return elem.name === action.component; })[0]
