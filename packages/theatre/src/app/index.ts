@@ -12,11 +12,6 @@ export * from './iframe/iframe-page.container';
 export * from './iframe/iframe.actions';
 export * from './iframe/iframe-component/iframe.component';
 
-export * from './counter/counter.module';
-export * from './counter/counter.reducer';
-export * from './counter/counter-page.container';
-export * from './counter/counter.actions';
-
 export * from './store/root.reducer';
 export * from './store/root.types';
 export * from './store/store.module';
