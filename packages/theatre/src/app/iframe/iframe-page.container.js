@@ -7,9 +7,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var IframePageComponent = (function () {
-    function IframePageComponent(service, route) {
+    function IframePageComponent(route) {
         this.route = route;
-        service.getAll();
     }
     IframePageComponent.prototype.ngOnInit = function () {
         var _this = this;

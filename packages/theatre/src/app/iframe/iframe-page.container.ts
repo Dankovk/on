@@ -1,7 +1,6 @@
 import {Component, ChangeDetectionStrategy} from "@angular/core";
 import { select } from "@angular-redux/store";
 import {Observable} from "rxjs/Observable";
-import { IframeService } from './iframe.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -15,8 +14,7 @@ export class IframePageComponent {
     private atom: string;
     private sub: any;
 
-    constructor(service: IframeService, private route: ActivatedRoute) {
-        service.getAll();
+    constructor( private route: ActivatedRoute) {
     }
 
     ngOnInit() {

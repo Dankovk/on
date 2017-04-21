@@ -27,10 +27,9 @@ function jsonReducer(state, action) {
                 selectedComponent: state.data[action.pattern].filter(function (elem) { return elem.name === action.component; })[0]
             };
         case json_populator_actions_1.jsonActionsNames.DEMO_SELECTED:
-            console.log(action.name);
             return {
                 state: state,
-                demoName: action.name
+                src: action.src
             };
         default:
             return state;

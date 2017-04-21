@@ -41,11 +41,10 @@ var JsonActions = (function () {
             pattern: pattern
         });
     };
-    JsonActions.prototype.demoSelected = function (name) {
-        console.log(name);
+    JsonActions.prototype.demoSelected = function (pattern, name, namespace, element) {
         this.ngRedux.dispatch({
             type: exports.jsonActionsNames.DEMO_SELECTED,
-            name: name
+            src: "http://localhost:3000/components/" + pattern + "-" + name + "-" + namespace + "-" + element + ".html"
         });
     };
     JsonActions.readonly = LOAD_STARTED = exports.jsonActionsNames.LOAD_STARTED;

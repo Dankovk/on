@@ -7,15 +7,11 @@ import { StoreModule } from '../store/store.module';
 import { IframeComponent } from './iframe-component/iframe.component';
 import { IframePageComponent } from './iframe-page.container';
 
-import { IframeActions } from './iframe.actions';
-import { IframeService } from './iframe.service';
-
 
 @NgModule({
     declarations: [IframeComponent, IframePageComponent],
     exports: [IframeComponent, IframePageComponent],
-    imports: [CoreModule, StoreModule, CommonModule],
-    providers: [IframeActions, IframeService]
+    imports: [CoreModule, StoreModule, CommonModule]
 })
 
 export class IframeModule {}

@@ -7,9 +7,7 @@ export * from './core/core.module';
 
 
 export * from './iframe/iframe.module';
-export * from './iframe/iframe.reducer';
 export * from './iframe/iframe-page.container';
-export * from './iframe/iframe.actions';
 export * from './iframe/iframe-component/iframe.component';
 
 export * from './store/root.reducer';
