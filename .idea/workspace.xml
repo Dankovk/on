@@ -2,16 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8ffab05-ce1e-47ba-8948-dbccccf7c1a9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/theatre/src/components/atoms/header_1-demo1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/packages/theatre/src/components/atoms/header_1-demo2.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/Dima.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/typescript-compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/app.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/app.component.spec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/app.module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/app.routes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/app.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/core/core.module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/core/error-well/error-well.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/core/spinner/spinner.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/core/utils/payload-action.types.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/counter/counter-page.container.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/counter/counter-page.container.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/counter/counter.actions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/counter/counter.actions.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/counter/counter.module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/counter/counter.module.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/counter/counter.reducer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/counter/counter.reducer.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/counter/counter.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/counter/counter.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/counter/counter/counter.component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/counter/counter/counter.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/counter/counter/counter.component.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/iframe/iframe-component/iframe.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/iframe/iframe-page.container.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/iframe/iframe.actions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/iframe/iframe.module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/iframe/iframe.reducer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/iframe/iframe.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.actions.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.reducer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/sidebar/sidebar.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/store/root.reducer.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/store/root.types.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/store/store.module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/app/topbar/topbar.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/environment.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/one-stub/app.component.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/one-stub/app.module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/one-stub/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/polyfill.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/packages/theatre/src/vendor.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/app/iframe/iframe-component/iframe.component.html" afterPath="$PROJECT_DIR$/packages/theatre/src/app/iframe/iframe-component/iframe.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/app/iframe/iframe-component/iframe.component.js" afterPath="$PROJECT_DIR$/packages/theatre/src/app/iframe/iframe-component/iframe.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/app/iframe/iframe-component/iframe.component.ts" afterPath="$PROJECT_DIR$/packages/theatre/src/app/iframe/iframe-component/iframe.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.reducer.js" afterPath="$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.reducer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.reducer.ts" afterPath="$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.reducer.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/components/atoms/header_1.html" afterPath="$PROJECT_DIR$/packages/theatre/src/components/atoms/header_1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/packages/theatre/src/components/atoms/header_2.html" afterPath="$PROJECT_DIR$/packages/theatre/src/components/atoms/header_2.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,7 +84,7 @@
               <file leaf-file-name="json-populator.actions.ts" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.actions.ts">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="84">
+                    <state relative-caret-position="120">
                       <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
                       <folding>
                         <element signature="e#0#41#0" expanded="true" />
@@ -65,8 +108,8 @@
               <file leaf-file-name="iframe.component.ts" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/iframe/iframe-component/iframe.component.ts">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="390">
-                      <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+                    <state relative-caret-position="60">
+                      <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
                       <folding>
                         <element signature="e#0#74#0" expanded="true" />
                       </folding>
@@ -182,11 +225,21 @@
           </split-first>
           <split-second>
             <leaf>
-              <file leaf-file-name="iframe.component.html" pinned="false" current-in-tab="true">
+              <file leaf-file-name="iframe.component.html" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/iframe/iframe-component/iframe.component.html">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="15">
                       <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+                      <folding />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file leaf-file-name="header_1-demo2.html" pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/packages/theatre/src/components/atoms/header_1-demo2.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="0">
+                      <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
                       <folding />
                     </state>
                   </provider>
@@ -693,13 +746,14 @@
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="$PROJECT_DIR$/node_modules/mocha" />
     <property name="js.eslint.eslintPackage" value="$PROJECT_DIR$/node_modules/eslint" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.tslint" />
+    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
     <property name="js.eslint.nodeInterpreter" value="project" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="js-tslint-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="js-tslint-package" value="$PROJECT_DIR$/node_modules/tslint" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/node_modules/@entrada-config/tslint/tslint-config.json" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -791,23 +845,24 @@
       <workItem from="1492508819790" duration="12837000" />
       <workItem from="1492587937431" duration="16120000" />
       <workItem from="1492755307849" duration="149000" />
-      <workItem from="1492768022774" duration="3332000" />
+      <workItem from="1492768022774" duration="3573000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45287000" />
+    <option name="totallyTimeSpent" value="45528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1452381" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1452381" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901296" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -821,7 +876,6 @@
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901296" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
@@ -870,20 +924,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/core/core.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/app.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/theatre/src/style/_a.paragraph.scss" />
     <entry file="file://$PROJECT_DIR$/packages/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -1115,14 +1155,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/theatre/src/components/atoms/header_1-demo2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/packages/theatre/src/components/atoms/header_1-demo1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1136,16 +1168,6 @@
         <state relative-caret-position="210">
           <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.actions.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1211,13 +1233,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/iframe/iframe-component/iframe.component.ts">
+    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.reducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-105">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/iframe/iframe-component/iframe.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1226,6 +1254,34 @@
         <state relative-caret-position="15">
           <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/theatre/src/components/atoms/header_1-demo2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/json-populator/json-populator.actions.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/packages/theatre/src/app/iframe/iframe-component/iframe.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

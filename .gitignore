@@ -9,8 +9,7 @@ ts-node
 /**/*.css.shim.ts
 dll/
 
-/.idea/
-.idea/workspace.xml
+
 
 # Logs
 logs
@@ -21,10 +20,13 @@ yarn-debug.log*
 yarn-error.log*
 
 #idea
+.idea
 .idea/
 
 #compiled js
-app/*.js
+packages/theatre/src/app/*.js
+packages/theatre/src/app/*.map
+packages/*.js
 
 # Runtime data
 pids
