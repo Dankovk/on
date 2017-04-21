@@ -12,7 +12,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class IframeComponent {
     @select(['json', 'demoName']) readonly demoName: Observable<string>;
     @select(['json', 'selectedComponent', 'name']) readonly atomName: Observable<string>;
-    @select(['json', 'componentSrc']) readonly src: Observable<string>;
+    @select(['json', 'src']) readonly src: Observable<string>;
 		constructor(private sanitizer: DomSanitizer) {}
 
 	transform(url) {
