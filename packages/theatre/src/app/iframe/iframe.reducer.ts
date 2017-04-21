@@ -1,13 +1,5 @@
 import { iframeActionsNames } from './iframe.actions';
 
-
-//
-// interface IUsersList {
-//     items: IUser[],
-//     loading: boolean,
-//     error: boolean
-// }
-
 interface IIframe {
     src: string,
     id: number
