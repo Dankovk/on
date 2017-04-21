@@ -48,11 +48,10 @@ export class JsonActions {
         });
     }
 
-    demoSelected(name){
-        console.log(name);
+    demoSelected(pattern, name, namespace, element){
         this.ngRedux.dispatch({
             type: jsonActionsNames.DEMO_SELECTED,
-            name
+            src: `http://localhost:3000/components/${pattern}-${name}-${namespace}-${element}.html`
         })
     }
 }

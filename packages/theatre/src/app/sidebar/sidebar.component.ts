@@ -12,7 +12,6 @@ import { JsonActions } from '../json-populator/json-populator.actions';
 export class SidebarComponent {
 
     constructor(private actions: JsonActions){}
-
     @select(['json', 'selectedComponent', 'states' ]) readonly states: Observable<any>;
     @select(['json', 'selectedComponent', 'demos' ]) readonly demos: Observable<any>;
 };
