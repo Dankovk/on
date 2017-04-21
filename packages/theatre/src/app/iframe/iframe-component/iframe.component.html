@@ -1,2 +1,2 @@
-<div>{{atomName | async }}{{ demoName | async }}</div>
-<!--<iframe [src]="photoURL()" frameborder="0"></iframe>-->
+<!--<div>{{atomName | async }}{{ demoName | async }}</div>-->
+<iframe [src]="transform(src | async)"  frameborder="0"></iframe>

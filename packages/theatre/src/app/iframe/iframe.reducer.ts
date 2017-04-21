@@ -1,9 +1,5 @@
 import { iframeActionsNames } from './iframe.actions';
 
-interface IIframe {
-    src: string,
-    id: number
-}
 
 const INITIAL_STATE = {
     src: '',
@@ -11,7 +7,7 @@ const INITIAL_STATE = {
     error: false
 };
 
-export function iframeReducer(state: IIframe = INITIAL_STATE, action: any) {
+export function iframeReducer(state: any = INITIAL_STATE, action: any) {
     switch (action.type) {
         case iframeActionsNames.LOAD_SUCCEEDED :
             return {
