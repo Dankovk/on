@@ -49,25 +49,25 @@ component is categorized under
 
 * `/` → Home, navigation & type toggles are visible, nothing loaded in the Demo and State list or stage.
 * Component URLs
-	* `/atoms/<atom name>/<type>`
-	* `/atoms/<atom name>/demo/<demo>/<type>`
-	* `/atoms/<atom name>/state/<state>/<type>`
+	* `/<type>/atoms/<atom name>`
+	* `/<type>/atoms/<atom name>/demos/<demo>`
+	* `/<type>/atoms/<atom name>/states/<state>`
 	* — — —
-	* `/molecules/<molecule name>/<type>`
-	* `/molecules/<molecule name>/demo/<demo>/<type>`
-	* `/molecules/<molecule name>/state/<state>/<type>`
+	* `/<type>/molecules/<molecule name>`
+	* `/<type>/molecules/<molecule name>/demos/<demo>`
+	* `/<type>/molecules/<molecule name>/states/<state>`
 	* — — —
-	* `/organisms/<organism name>/<type>`
-	* `/organisms/<atom name>/demo/<demo>/<type>`
-	* `/organisms/<atom name>/state/<state>/<type>`
+	* `/<type>/organisms/<organism name>`
+	* `/<type>/organisms/<atom name>/demos/<demo>`
+	* `/<type>/organisms/<atom name>/states/<state>`
 	* — — —
-	* `/templates/<template name>/<type>`
-	* `/templates/<template name>/demo/<demo>/<type>`
-	* `/templates/<template name>/state/<state>/<type>`
+	* `/<type>/templates/<template name>`
+	* `/<type>/templates/<template name>/demos/<demo>`
+	* `/<type>/templates/<template name>/states/<state>`
 	* — — —
-	* `/pages/<page name>/<type>`
-	* `/pages/<page name>/demo/<demo>/<type>`
-	* `/pages/<page name>/state/<state>/<type>`
+	* `/<type>/pages/<page name>`
+	* `/<type>/pages/<page name>/demos/<demo>`
+	* `/<type>/pages/<page name>/states/<state>`
 
 Where:
 
@@ -79,6 +79,27 @@ Where:
 * `<state>` → component's valid states
 * a component's package.json `one:pattern` value determines where the component gets categorized in the 
 url scheme
+
+### File mapping
+
+When a state or demo is loaded, a corresponding html file will load onto the stage. The files can be 
+expected to have the following structure:  
+
+`<pattern>-<component name>-<state or demo>-<state or demo name>-<type>.html`  
+
+So for example, the angular (default state) and static (demo demo1) versions of the button 
+component will look like:  
+
+`atom-button-state-default-static.html`  
+
+`atom-button-demo-demo1-angular.html`  
+
+#### File locations
+
+The iframe components will be accessible from the theatre application on the 
+`/components/` path. For example:  
+
+`/components/atom-button-state-default-static.html`  
 
 ### Navigation
 
