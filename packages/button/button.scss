@@ -1,0 +1,34 @@
+@import "@one/typography/mixins";
+
+// $button-font-med-size: 18px
+// $button-font-size: 15px
+// $input-font-size: 14px
+// $button-color: $white
+
+// @mixin ocl-button-hover {
+
+// }
+
+.ocl-button {
+	@include ocl-typography-base;
+
+	display: inline-block;
+	position: relative;
+	height: 3rem;
+	padding: 0 1.5rem;
+	border: none;
+	border-radius: 3px;
+	// background-color: $blue
+	background-color: #5fa1b7;
+	// color: $button-color
+	color: white;
+	font-size: 16px;
+	// font-weight: 400;
+	line-height: 3rem;
+	text-align: center;
+	text-decoration: none;
+	overflow: hidden;
+	vertical-align: middle;
+	user-select: none;
+	box-sizing: border-box;
+}
