@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { select } from "@angular-redux/store";
 import { JsonActions } from '../json-populator/json-populator.actions';
@@ -12,4 +12,4 @@ import { JsonActions } from '../json-populator/json-populator.actions';
 export class TopbarComponent {
     constructor(private actions: JsonActions){}
     @select(['json', 'data', 'atoms']) readonly atoms: Observable<any[]>;
-};
+}
