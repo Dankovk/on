@@ -9,8 +9,6 @@ ts-node
 /**/*.css.shim.ts
 dll/
 
-
-
 # Logs
 logs
 *.log
@@ -27,6 +25,7 @@ yarn-error.log*
 packages/theatre/src/app/*.js
 packages/theatre/src/app/*.map
 packages/*.js
+webpack.config.js
 
 # Runtime data
 pids
