@@ -1,0 +1,10 @@
+{
+	"name": "@one/typography",
+	"description": "Typography classes, mixins, and variables for One component library.",
+	"version": "0.1.0",
+	"license": "UNLICENSED",
+	"repository": {
+		"type": "git",
+		"url": ""
+	}
+}

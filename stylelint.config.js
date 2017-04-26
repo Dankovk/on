@@ -6,9 +6,7 @@ module.exports = {
 		'dist/**/*'
 	],
 	rules: {
-		indentation: ['tab', {
-			except: ['value']
-		}],
+		indentation: ['tab']
 	}
 };
 

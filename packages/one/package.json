@@ -8,6 +8,8 @@
 		"url": ""
 	},
 	"dependencies": {
-
+		"@one/typography": "^0.1.0",
+		"@one/button": "^0.1.0",
+		"@one/textfield": "^0.1.0"
 	}
 }
