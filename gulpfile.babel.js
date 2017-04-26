@@ -4,6 +4,11 @@ import merge from 'merge-stream';
 import gulp from 'gulp';
 import del from 'del';
 import hbs from 'gulp-hbs';
+import lazypipe from 'lazypipe';
+// import mirror from 'gulp-mirror';
+import rename from 'gulp-rename';
+import gulpif from 'gulp-if';
+import glob from 'glob';
 import bs from 'browser-sync';
 import sass from 'gulp-sass';
 import jsonTransform from 'gulp-json-transform';
@@ -12,7 +17,7 @@ import R from 'ramda';
 import _ from 'lodash/fp';
 // import webpack from 'webpack';
 // import gutil from 'gulp-util';
-// import { trace } from 'lib/debug';
+// import { trace } from './lib/debug';
 
 // import { CheckerPlugin } from 'awesome-typescript-loader';
 // import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -20,10 +25,10 @@ import _ from 'lodash/fp';
 
 import { attributes } from './lib/attributes';
 
-
 const browserSync = bs.create();
 
 // Atoms, molecules
+const packageSrc = 'packages';
 const destPath = 'dist';
 const srcPath = 'src';
 const atomPath = 'atoms';
@@ -31,30 +36,31 @@ const moleculePath = 'molecules';
 
 const atomSrcPath = path.join(srcPath, atomPath);
 const moleculeSrcPath = path.join(srcPath, moleculePath);
-const componentStyleLibPath = path.join(srcPath, 'style');
-const componentStylePath = path.join(srcPath, '/**/*.scss');
+const componentStyleLibPath = path.join(packageSrc, 'one', 'node_modules');
+const componentStylePath = path.join(packageSrc, '/*/*.scss');
 
-const componentDestPath = path.join(destPath, 'static/components');
-const atomDestPath = path.join(componentDestPath, atomPath);
+const componentDestPath = path.join(destPath, 'components');
+// const atomDestPath = path.join(componentDestPath, atomPath);
 const moleculeDestPath = path.join(componentDestPath, moleculePath);
 
-const theatrePackagePath = path.join('packages', 'theatre');
+const theatrePackagePath = path.join(packageSrc, 'theatre');
 // const theatreSrcPath = path.join(theatrePackagePath, 'src');
 const theatreDestPath = path.join(destPath, 'theatre');
-// const componentStaticTheatreDestPath = path.join(theatreDestPath, 'components');
-const theatreStyleDestPath = path.join(theatreDestPath, 'style');
+const theatreComponentsDestPath = path.join(theatreDestPath, 'components');
+// const theatreStyleDestPath = path.join(theatreDestPath, 'style');
 // const atomStaticTheatreDestPath = path.join(componentStaticTheatreDestPath, atomPath);
 // const moleculeStaticTheatreDestPath = path.join(componentStaticTheatreDestPath, moleculePath);
 
 // Theatre
-const theatrePath = 'theatre';
 // const theatreAssetPath = path.join(theatrePath, '/**/*.{js,css,html,ts}');
-const theatreAssetPath = path.join(theatrePackagePath, 'src/*.json');
+// const theatreAssetPath = path.join(theatrePackagePath, 'src/*.json');
 // const theatreStylePath = path.join(theatrePath, '/style');
-const theatreTemplatePath = path.join(theatrePath, '/templates');
-// const theatreStyleSrcPath = path.join(theatreStylePath, '/**/*.scss');
+const theatreTemplatePath = path.join(theatrePackagePath, 'src/templates');
+const theatreStyleSrcPath = path.join(theatrePackagePath, 'src/style/theatre-iframe.scss');
 
+const theatreJSONPath = path.join(theatreDestPath, 'theatre.json');
 const theatreStaticTemplate = 'static.hbs';
+// const theatreComponentStyle = 'theatre-component.css';
 
 /*
  * Watch functions
@@ -66,7 +72,7 @@ const theatreStaticTemplate = 'static.hbs';
  *     the first arg: a string representing a blob of the files to watch
  *     the remaining args, functions to be placed in a gulp.series
  */
- // eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line no-unused-vars
 const watchSeriesFunc = (...args) => () => gulp.watch(R.head(args), gulp.series(R.tail(args)));
 
 /*
@@ -90,24 +96,122 @@ const watchFuncBS = (...args) =>
 // TODO: Using recursion, not optimized in JS -- alternatives?
 const mergeOmitNil = R.curryN(2, R.compose(
 	_.omitBy(R.isNil),
-	R.mergeWith((l, r) => _.isObject(r) ? mergeOmitNil(l, r) : r),
+	R.mergeWith((l, r) => !_.isArray(r) && _.isObject(r) ? mergeOmitNil(l, r) : r),
 ));
 
+/*
+ *
+ */
+// eslint-disable-next-line no-unused-vars
+const isExcluded = R.curry((excludes, file) =>
+	_.defaultTo([], excludes).indexOf(file) < 0
+);
 
-function getFolders(dir, excludes, obj) {
-	const folders = fs.readdirSync(dir)
+/*
+ *
+ */
+const isValidDir = file => fs.statSync(file).isDirectory();
+
+/*
+ *
+ */
+const patternPath = ['one', 'pattern'];
+const getPattern = R.path(patternPath);
+const isPattern = R.pathEq(patternPath);
+const isPatternAtom = isPattern('atom');
+// const isPatternMolecule = isPattern('molecule');
+// const isPatternOrganism = isPattern('organism');
+// const isPatternTemplate = isPattern('template');
+// const isPatternPages = isPattern('pages');
+
+/*
+ *
+ */
+const isType = R.pathEq(['one', 'type']);
+const isTypeStatic = isType('static');
+// const isTypeAngular = isType('angular');
+
+/*
+ *
+ */
+const patternFromPath = R.cond([
+	[R.match(/\/atoms/), R.always('atom')],
+	[R.match(/\/molecules/), R.always('molecule')],
+	[R.match(/\/organisms/), R.always('organism')],
+	[R.match(/\/templates/), R.always('template')],
+	[R.match(/\/pages/), R.always('page')]
+]);
+
+/*
+ *
+ */
+const presentationFromPath = R.cond([
+	[R.match(/\/states/), R.always('state')],
+	[R.match(/\/demos/), R.always('demo')]
+]);
+
+/*
+ *
+ */
+const packageJSON = relativeRootDir =>
+	// eslint-disable-next-line global-require, import/no-dynamic-require
+	require(path.join(__dirname, relativeRootDir, 'package.json'));
+
+/*
+ *
+ */
+function getFiles(dir, criteria = [], obj) {
+	const files = fs.readdirSync(dir)
 		.filter(file =>
-			_.defaultTo([], excludes).indexOf(file) < 0 && fs.statSync(path.join(dir, file)).isDirectory()
+			R.allPass([...criteria])(path.join(dir, file))
 		);
 
-	return (obj !== true) ? folders :
-		_.map(folder =>
+	return (obj !== true) ? files :
+		_.map(file =>
 			({
-				name: folder,
-				base: dir
+				name: file,
+				base: dir,
+				one: R.path(['one'], packageJSON(path.join(dir, file)))
 			})
-		, folders);
+		, files);
 }
+
+/*
+ *
+ */
+const getFolders = (dir, criteria = [], obj) =>
+	getFiles(dir, [isValidDir, ...criteria], obj);
+
+/*
+ *
+ */
+const packageCriteria = (relativeRootDir, ...criteria) =>
+	R.allPass(criteria)(packageJSON(relativeRootDir));
+
+/*
+ *
+ */
+const componentCriteria = relativeRootDir =>
+	packageCriteria(
+		relativeRootDir, R.compose(R.not, R.isNil, getPattern)
+	);
+
+/*
+ *
+ */
+const atomCriteria = relativeRootDir =>
+	packageCriteria(relativeRootDir, isPatternAtom, isTypeStatic);
+
+/*
+ *
+ */
+// eslint-disable-next-line no-unused-vars
+const getComponentFolders = relativeRootDir =>
+	getFolders(relativeRootDir, [componentCriteria]);
+const getComponentFolderObjs = relativeRootDir =>
+	getFolders(relativeRootDir, [componentCriteria], true);
+const getAtomFolders = relativeRootDir => getFolders(relativeRootDir, [atomCriteria]);
+
 
 /*
  * Task: Clean the project
@@ -115,12 +219,17 @@ function getFolders(dir, excludes, obj) {
 const clean = () => del([destPath]);
 export { clean };
 
+/*
+ *
+ */
 const cleanComponents = () => del([componentDestPath]);
 export { cleanComponents };
 
+/*
+ *
+ */
 const cleanTheatre = () => del([theatreDestPath]);
 export { cleanTheatre };
-
 
 /*
  * Task: Register handlebars helpers
@@ -130,7 +239,6 @@ const registerHbsHelpers = (cb) => {
 	cb();
 };
 export { registerHbsHelpers };
-
 
 /*
  * Merges a state's data to override a relative default.json, also removing key/values
@@ -156,14 +264,75 @@ function mergeStatesForTemplate(data, file) {
 /*
  *
  */
+const processComponentTemplate = (folderRoot, folder, dest = null) =>
+	lazypipe()
+		.pipe(() => jsonTransform(mergeStatesForTemplate))
+		.pipe(() => hbs(gulp.src(path.join(folderRoot, folder, `${folder}.hbs`))))
+		.pipe(() => gulpif(!R.isNil(dest), gulp.dest(dest)));
+
+/*
+ *
+ */
+const theatreComponentName = (pattern, name, presentation, stateordemo, type) =>
+	R.join('-', [pattern, name, presentation, stateordemo, type]);
+
+/*
+ *
+ */
+const processComponentTheatreTemplate = (folderRoot, folder, makeComponent,
+																				 aTheatreTemplatePath, type, dest = null) =>
+	lazypipe()
+		.pipe(() => gulpif(makeComponent, processComponentTemplate(folderRoot, folder)()))
+		.pipe(() =>
+			transform(contents =>
+				JSON.stringify({
+					title: folder,
+					description: `One static template: ${folder}`,
+					theatreStyle: `/components/theatre-${folder}.css`,
+					componentStyle: `/components/${folder}.css`,
+					component: contents.toString('utf-8')
+				})
+			)
+		)
+		.pipe(() => hbs(gulp.src(aTheatreTemplatePath)))
+		.pipe(() => rename((filepath) => {
+			filepath.basename = theatreComponentName(
+				patternFromPath(folderRoot),
+				folder,
+				presentationFromPath(folderRoot),
+				filepath.basename,
+				type
+			);
+			filepath.extname = '.html';
+			return filepath;
+		}))
+		.pipe(() => gulpif(!R.isNil(dest), gulp.dest(dest)));
+
+/*
+ *
+ */
+const processComponent = (componentRoot, component) =>
+	gulp.src(path.join(componentRoot, component, '/states/*.json'))
+		// make the static component states
+		.pipe(processComponentTemplate(
+			componentRoot, component, path.join(componentDestPath, component, 'static/states'))()
+		)
+		// make the theatre iframe components
+		.pipe(
+			processComponentTheatreTemplate(
+				componentRoot, component, false,
+				path.join(theatreTemplatePath, theatreStaticTemplate),
+				'static',
+				theatreComponentsDestPath
+			)()
+		);
+
+/*
+ *
+ */
 export function atoms() {
 	return merge(
-		getFolders(atomSrcPath).map(folder =>
-			gulp.src(path.join(atomSrcPath, folder, '/states/*.json'))
-				.pipe(jsonTransform(mergeStatesForTemplate))
-				.pipe(hbs(gulp.src(path.join(atomSrcPath, folder, `${folder}.hbs`))))
-				.pipe(gulp.dest(path.join(atomDestPath, folder)))
-		)
+		getAtomFolders(packageSrc).map(folder => processComponent(packageSrc, folder))
 	);
 }
 
@@ -194,7 +363,7 @@ export function createMolecules() {
 /*
  *
  */
-const molecules = gulp.series(registerAtomPartials, createMolecules);
+// const molecules = gulp.series(registerAtomPartials, createMolecules);
 
 /*
  *
@@ -202,61 +371,150 @@ const molecules = gulp.series(registerAtomPartials, createMolecules);
 export function sassComponents() {
 	return gulp.src(componentStylePath)
 		.pipe(sass({ includePaths: [componentStyleLibPath] }).on('error', sass.logError))
-		.pipe(gulp.dest(componentDestPath));
+		.pipe(gulp.dest(componentDestPath))
+		// flatten the directory name for theatre iframe components
+		.pipe(rename({ dirname: '.' }))
+		.pipe(gulp.dest(theatreComponentsDestPath));
 }
 
-// const componentStaticTheatreDestPath = path.join(destPath, 'theatre/components');
-// const atomStaticTheatreDestPath = path.join(componentStaticTheatreDestPath, atomPath);
-// const moleculeStaticTheatreDestPath = path.join(componentStaticTheatreDestPath, moleculePath);
+/*
+ *
+ */
+const buildComponentTemplates = gulp.series(
+	registerHbsHelpers, atoms // , molecules
+);
+export { buildComponentTemplates };
 
+/*
+ *
+ */
 const buildComponents = gulp.parallel(
 	sassComponents,
-	gulp.series(
-		registerHbsHelpers, atoms, molecules
-	)
+	buildComponentTemplates,
+	theatreJSON
 );
 export { buildComponents };
 
 /*
- * Theatre
+ *
  */
-export function theatreStaticAtoms() {
-	return merge(
-		_.concat(
-			getFolders(atomDestPath, [], true),
-			getFolders(moleculeDestPath, [], true)
-		)
-		.map(folder =>
-			gulp.src(path.join(folder.base, folder.name, '*.html'))
-				.pipe(transform((contents, file) =>
-					JSON.stringify({
-						title: folder.name,
-						description: `One static template: ${folder.name}`,
-						theatreStyle: path.join(theatreStyleDestPath.substring(4), 'theatre.css'),
-						componentStyle: path.join(file.base.replace(file.cwd, '').substring(5), `${folder}.css`),
-						component: contents.toString('utf-8')
-					})
-				))
-				.pipe(hbs(gulp.src(path.join(theatreTemplatePath, theatreStaticTemplate))))
-				.pipe(gulp.dest(path.join(folder.base.replace('dist/static', 'dist/theatre'), folder.name)))
-		)
-	);
-}
+// eslint-disable-next-line no-unused-vars
+const buildComponent = component => gulp.series(
+	registerHbsHelpers, () => processComponent(packageSrc, component)
+);
 
-export function copyTheatre() {
-	// console.log('copyTheatre');
-	return gulp.src(theatreAssetPath, { followSymlinks: false })
-		.pipe(gulp.dest(theatreDestPath));
+/*
+ *
+ */
+// eslint-disable-next-line no-unused-vars
+const buildDependents = (component) => {
+	// console.log('TBD');
+};
+
+/*
+ *
+ */
+// eslint-disable-next-line no-unused-vars
+const buildComponentAndDeps = component => gulp.series(
+	registerHbsHelpers,
+	() => processComponent(packageSrc, component),
+	() => buildDependents(component)
+);
+
+/*
+ *
+ */
+// eslint-disable-next-line no-unused-vars
+export function theatreJSON(cb) {
+	const allComponents = {
+		atoms: [],
+		molecules: [],
+		organisms: [],
+		tempaltes: [],
+		pages: []
+	};
+
+	getComponentFolderObjs(packageSrc).forEach((folder) => {
+		allComponents[`${folder.one.pattern}s`].push(
+			{
+				name: folder.one.name,
+				type: folder.one.type,
+				states: glob.sync(path.join(packageSrc, folder.name, '**/states/*.json')).map(file =>
+					path.basename(file, '.json')
+				)
+			}
+		);
+	});
+
+	fs.writeFile(theatreJSONPath, JSON.stringify(allComponents), 'utf8', cb);
 }
 
 /*
- * Clean, build components & the theatre, then watch everything & start the theatre
+ *
  */
-const buildTheatreComponents = gulp.parallel(
-	copyTheatre,
-	theatreStaticAtoms
-);
-export { buildTheatreComponents };
+const isFile = (filePattern, fileChanged) => R.compose(
+	R.equals(filePattern), R.takeLast(R.length(filePattern))
+)(fileChanged);
+
+/*
+ *
+ */
+const isComponent = (fileChanged) => {
+	const pack = R.match(/packages\/(.+?)\//, fileChanged);
+
+	return (pack.length > 0) ?
+		componentCriteria(path.join(packageSrc, pack[1])) : false;
+};
+
+/*
+ *
+ */
+const isTheatreSass = fileChanged => isFile(theatreStyleSrcPath, fileChanged);
+
+/*
+ *
+ */
+const isTheatreTemplate = fileChanged => isFile(theatreStaticTemplate, fileChanged);
+
+/*
+ *
+ */
+const isSass = fileChanged => isFile('.scss', fileChanged);
+
+/*
+ *
+ */
+export function watchComponents() {
+	return gulp.watch(path.join(packageSrc, '/*/**/*.{hbs,json,scss}'))
+		.on('change', (file) => {
+			R.cond([
+				// TODO: Create a function to only build one sass component & dependents
+				[R.compose(R.equals(true), isTheatreSass),
+					gulp.series(sassTheatre, browserSyncReload)],
+				// eslint-disable-next-line max-len
+				[R.compose(R.equals(true), isTheatreTemplate),
+					gulp.series(buildComponentTemplates, theatreJSON, browserSyncReload)],
+				[R.compose(R.equals(true), isSass),
+					gulp.series(sassComponents, browserSyncReload)],
+				// TODO: Use a function to only build one component & dependents
+				// eslint-disable-next-line max-len
+				[R.compose(R.equals(true), isComponent),
+					gulp.series(buildComponentTemplates, theatreJSON, browserSyncReload)]
+			])(file);
+		});
+}
+
+/*
+ * Theatre
+ */
+
+/*
+ *
+ */
+// export function copyTheatre() {
+// 	return gulp.src(theatreAssetPath, { followSymlinks: false })
+// 		.pipe(gulp.dest(theatreDestPath));
+// }
 
 /*
  *
@@ -268,14 +526,22 @@ export function serve() {
 }
 
 /*
- * Future: separate Angular app
+ *
  */
+export function serveTheatre() {
+	browserSync.init({
+		server: './dist/theatre'
+	});
+}
 
-// export function sassTheatre() {
-//  return gulp.src(theatreStyleSrcPath)
-//    .pipe(sass().on('error', sass.logError))
-//    .pipe(gulp.dest(theatreStyleDestPath));
-// }
+/*
+ *
+ */
+export function sassTheatre() {
+	return gulp.src(theatreStyleSrcPath)
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest(theatreDestPath));
+}
 
 /*
  * Reload browser sync
@@ -286,12 +552,6 @@ export function browserSyncReload(cb) {
 }
 
 /*
- *
- */
-// const buildTheatre = gulp.parallel(copyTheatre, sassTheatre);
-// export { buildTheatre };
-
-/*
  * Export a default task
  */
-export default gulp.series(clean, buildComponents, buildTheatreComponents);
+export default gulp.series(clean, buildComponents);
