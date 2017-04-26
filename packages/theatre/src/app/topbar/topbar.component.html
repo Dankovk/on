@@ -1,7 +1,46 @@
-<div class="topbar">
-    <div class="topbar__links">
-        <a routerLink="/components/atoms/{{atom.name}}" *ngFor="let atom of atoms | async" (click)="actions.selectComponent('atoms', atom.name)" >
-            {{ atom.name }} ({{ atom.type }})
-        </a>
-    </div>
-</div>
+<header class="topbar">
+	<nav class="topbar__component-nav clearfix">
+		<ul class="topbar__component-nav-list">
+			<li class="topbar__component-nav-list-item">
+				<a href="#">Atoms</a>
+				<ul class="topbar__component-subnav-list">
+					<li class="topbar__component-subnav-list-item" *ngFor="let atom of atoms | async">
+						<a routerLink="/components/atoms/{{atom.name}}" (click)="actions.selectComponent('atoms', atom.name)">{{ atom.name }}</a>
+					</li>
+				</ul>
+			</li>
+			<li class="topbar__component-nav-list-item">
+				<a href="#">Molecules</a>
+				<ul class="topbar__component-subnav-list">
+					<li class="topbar__component-subnav-list-item" *ngFor="let molecule of molecules | async">
+						<a routerLink="/components/molecules/{{molecule.name}}" (click)="actions.selectComponent('molecules', molecule.name)">{{ molecule.name }}</a>
+					</li>
+				</ul>
+			</li>
+			<li class="topbar__component-nav-list-item">
+				<a href="#">Organisms</a>
+				<ul class="topbar__component-subnav-list">
+					<li class="topbar__component-subnav-list-item" *ngFor="let organism of organisms | async">
+						<a routerLink="/components/organisms/{{organism.name}}" (click)="actions.selectComponent('organisms', organism.name)">{{ organism.name }}</a>
+					</li>
+				</ul>
+			</li>
+			<li class="topbar__component-nav-list-item">
+				<a href="#">Templates</a>
+				<ul class="topbar__component-subnav-list">
+					<li class="topbar__component-subnav-list-item" *ngFor="let template of templates | async">
+						<a routerLink="/components/templates/{{template.name}}" (click)="actions.selectComponent('template', template.name)">{{ template.name }}</a>
+					</li>
+				</ul>
+			</li>
+			<li class="topbar__component-nav-list-item">
+				<a href="#">Pages</a>
+				<ul class="topbar__component-subnav-list">
+					<li class="topbar__component-subnav-list-item" *ngFor="let page of pages | async">
+						<a routerLink="/components/pages/{{page.name}}" (click)="actions.selectComponent('pages', page.name)">{{ page.name }}</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</header>

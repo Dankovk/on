@@ -7,6 +7,7 @@ import { JsonActions } from '../json-populator/json-populator.actions';
 @Component({
     selector: 'topbar',
     templateUrl: './topbar.component.html',
+    styleUrls: ['./topbar.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TopbarComponent {

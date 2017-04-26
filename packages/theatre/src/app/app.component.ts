@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ViewEncapsulation, OnInit } from '@angular/core';
 
 import { AppService } from './app.service';
 @Component({
@@ -6,9 +6,9 @@ import { AppService } from './app.service';
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.css'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
+	encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-	title = 'Welcome to theatre';
 	constructor(private service: AppService){}
 
 	ngOnInit() {

@@ -6,6 +6,7 @@ import { JsonActions } from '../json-populator/json-populator.actions';
 @Component({
     selector: 'sidebar',
     templateUrl: './sidebar.component.html',
+    styleUrls: ['./sidebar.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 

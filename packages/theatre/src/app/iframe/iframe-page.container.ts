@@ -5,8 +5,9 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
     template: `
-        <iframe-component></iframe-component>
+        <iframe-component class="stage"></iframe-component>
     `,
+    styleUrls: ['./iframe-page.container.css'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IframePageComponent {
