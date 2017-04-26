@@ -7,3 +7,24 @@
 	margin-right: 30px;
 	float: left;
 }
+
+.topbar__type-toggle-block{
+
+}
+
+.topbar__type-toggle-item{
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+	border: 1px solid #000;
+	background-color: #fff;
+	text-align: center;
+	padding: 10px;
+	margin: 0 10px;
+	transition: all .15s linear;
+	font-weight: bold;
+	cursor: pointer;
+	&:hover{
+		background-color: #eee;
+	}
+}

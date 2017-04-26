@@ -11,6 +11,9 @@ import { JsonActions } from '../json-populator/json-populator.actions';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TopbarComponent {
-    constructor(private actions: JsonActions){}
-    @select(['json', 'data', 'atoms']) readonly atoms: Observable<any[]>;
+    constructor(private actions: JsonActions){
+    }
+
+    @select(['json', 'componentType']) readonly componentType: Observable<string>;
+    @select(state => state.json.data[state.json.componentType].atoms) readonly atoms: Observable<any[]>;
 }

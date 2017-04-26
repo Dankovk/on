@@ -8,7 +8,13 @@
 		},
 		{
 			"name": "header_2",
-			"type": "static",
+			"type": "angular",
+			"demos": [ "demo3", "demo4"],
+			"states": [ "hover", "active", "focus" ]
+		},
+		{
+			"name": "header_3",
+			"type": "angular",
 			"demos": [ "demo3", "demo4"],
 			"states": [ "hover", "active", "focus" ]
 		}

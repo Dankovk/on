@@ -5,7 +5,7 @@
 				<a href="#">Atoms</a>
 				<ul class="topbar__component-subnav-list">
 					<li class="topbar__component-subnav-list-item" *ngFor="let atom of atoms | async">
-						<a routerLink="/components/atoms/{{atom.name}}" (click)="actions.selectComponent('atoms', atom.name)">{{ atom.name }}</a>
+						<a routerLink="/components/atoms/{{atom.name}}" (click)="actions.selectComponent('atoms', atom.name)">{{ atom.name }}{{atom.type}}</a>
 					</li>
 				</ul>
 			</li>
@@ -42,5 +42,9 @@
 				</ul>
 			</li>
 		</ul>
+		<div class="topbar__type-toggle-block">
+			<button class="topbar__type-toggle-item" (click)="actions.typeSelected('angularType')">Angular</button>
+			<button class="topbar__type-toggle-item" (click)="actions.typeSelected('staticType')">Static</button>
+		</div>
 	</nav>
 </header>
