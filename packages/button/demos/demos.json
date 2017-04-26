@@ -1,0 +1,18 @@
+{
+	"template": {
+		"demo1": {
+			"elementName": "button",
+			"body": "<span class=\"ocl-button__text\">Demo1 Button</span>",
+			"attributes": [
+				["class", "\"ocl-button\""]
+			]
+		},
+		"demo2": {
+			"elementName": "button",
+			"body": "<span class=\"ocl-button__text\">Demo2 Button</span>",
+			"attributes": [
+				["class", "\"ocl-button\""]
+			]
+		}
+	}
+}
