@@ -8,6 +8,7 @@ import lazypipe from 'lazypipe';
 // import mirror from 'gulp-mirror';
 import rename from 'gulp-rename';
 import gulpif from 'gulp-if';
+import glob from 'glob';
 import bs from 'browser-sync';
 import sass from 'gulp-sass';
 import jsonTransform from 'gulp-json-transform';
@@ -57,6 +58,7 @@ const theatreComponentsDestPath = path.join(theatreDestPath, 'components');
 const theatreTemplatePath = path.join(theatrePackagePath, 'src/templates');
 const theatreStyleSrcPath = path.join(theatrePackagePath, 'src/style/theatre-iframe.scss');
 
+const theatreJSONPath = path.join(theatreDestPath, 'theatre.json');
 const theatreStaticTemplate = 'static.hbs';
 // const theatreComponentStyle = 'theatre-component.css';
 
@@ -151,31 +153,65 @@ const presentationFromPath = R.cond([
 /*
  *
  */
-function getFolders(dir, criteria, obj) {
-	const folders = fs.readdirSync(dir)
+const packageJSON = relativeRootDir =>
+	// eslint-disable-next-line global-require, import/no-dynamic-require
+	require(path.join(__dirname, relativeRootDir, 'package.json'));
+
+/*
+ *
+ */
+function getFiles(dir, criteria = [], obj) {
+	const files = fs.readdirSync(dir)
 		.filter(file =>
-			R.allPass([isValidDir, _.defaultTo(R.T, criteria)])(path.join(dir, file))
+			R.allPass([...criteria])(path.join(dir, file))
 		);
 
-	return (obj !== true) ? folders :
-		_.map(folder =>
+	return (obj !== true) ? files :
+		_.map(file =>
 			({
-				name: folder,
-				base: dir
+				name: file,
+				base: dir,
+				one: R.path(['one'], packageJSON(path.join(dir, file)))
 			})
-		, folders);
+		, files);
 }
 
+/*
+ *
+ */
+const getFolders = (dir, criteria = [], obj) =>
+	getFiles(dir, [isValidDir, ...criteria], obj);
+
+/*
+ *
+ */
 const packageCriteria = (relativeRootDir, ...criteria) =>
-	R.allPass(criteria)(
-		// eslint-disable-next-line global-require, import/no-dynamic-require
-		require(path.join(__dirname, relativeRootDir, 'package.json'))
+	R.allPass(criteria)(packageJSON(relativeRootDir));
+
+/*
+ *
+ */
+const componentCriteria = relativeRootDir =>
+	packageCriteria(
+		relativeRootDir, R.compose(R.not, R.isNil, getPattern)
 	);
 
+/*
+ *
+ */
 const atomCriteria = relativeRootDir =>
 	packageCriteria(relativeRootDir, isPatternAtom, isTypeStatic);
 
-const getAtomFolders = relativeRootDir => getFolders(relativeRootDir, atomCriteria);
+/*
+ *
+ */
+// eslint-disable-next-line no-unused-vars
+const getComponentFolders = relativeRootDir =>
+	getFolders(relativeRootDir, [componentCriteria]);
+const getComponentFolderObjs = relativeRootDir =>
+	getFolders(relativeRootDir, [componentCriteria], true);
+const getAtomFolders = relativeRootDir => getFolders(relativeRootDir, [atomCriteria]);
+
 
 /*
  * Task: Clean the project
@@ -183,9 +219,15 @@ const getAtomFolders = relativeRootDir => getFolders(relativeRootDir, atomCriter
 const clean = () => del([destPath]);
 export { clean };
 
+/*
+ *
+ */
 const cleanComponents = () => del([componentDestPath]);
 export { cleanComponents };
 
+/*
+ *
+ */
 const cleanTheatre = () => del([theatreDestPath]);
 export { cleanTheatre };
 
@@ -348,7 +390,8 @@ export { buildComponentTemplates };
  */
 const buildComponents = gulp.parallel(
 	sassComponents,
-	buildComponentTemplates
+	buildComponentTemplates,
+	theatreJSON
 );
 export { buildComponents };
 
@@ -381,6 +424,34 @@ const buildComponentAndDeps = component => gulp.series(
 /*
  *
  */
+// eslint-disable-next-line no-unused-vars
+export function theatreJSON(cb) {
+	const allComponents = {
+		atoms: [],
+		molecules: [],
+		organisms: [],
+		tempaltes: [],
+		pages: []
+	};
+
+	getComponentFolderObjs(packageSrc).forEach((folder) => {
+		allComponents[`${folder.one.pattern}s`].push(
+			{
+				name: folder.one.name,
+				type: folder.one.type,
+				states: glob.sync(path.join(packageSrc, folder.name, '**/states/*.json')).map(file =>
+					path.basename(file, '.json')
+				)
+			}
+		);
+	});
+
+	fs.writeFile(theatreJSONPath, JSON.stringify(allComponents), 'utf8', cb);
+}
+
+/*
+ *
+ */
 const isFile = (filePattern, fileChanged) => R.compose(
 	R.equals(filePattern), R.takeLast(R.length(filePattern))
 )(fileChanged);
@@ -391,9 +462,8 @@ const isFile = (filePattern, fileChanged) => R.compose(
 const isComponent = (fileChanged) => {
 	const pack = R.match(/packages\/(.+?)\//, fileChanged);
 
-	return (pack.length > 0) ? packageCriteria(
-		path.join(packageSrc, pack[1]), R.compose(R.not, R.isNil, getPattern)
-	) : false;
+	return (pack.length > 0) ?
+		componentCriteria(path.join(packageSrc, pack[1])) : false;
 };
 
 /*
@@ -419,13 +489,17 @@ export function watchComponents() {
 		.on('change', (file) => {
 			R.cond([
 				// TODO: Create a function to only build one sass component & dependents
-				[R.compose(R.equals(true), isTheatreSass), gulp.series(sassTheatre, browserSyncReload)],
+				[R.compose(R.equals(true), isTheatreSass),
+					gulp.series(sassTheatre, browserSyncReload)],
 				// eslint-disable-next-line max-len
-				[R.compose(R.equals(true), isTheatreTemplate), gulp.series(buildComponentTemplates, browserSyncReload)],
-				[R.compose(R.equals(true), isSass), gulp.series(sassComponents, browserSyncReload)],
+				[R.compose(R.equals(true), isTheatreTemplate),
+					gulp.series(buildComponentTemplates, theatreJSON, browserSyncReload)],
+				[R.compose(R.equals(true), isSass),
+					gulp.series(sassComponents, browserSyncReload)],
 				// TODO: Use a function to only build one component & dependents
 				// eslint-disable-next-line max-len
-				[R.compose(R.equals(true), isComponent), gulp.series(buildComponentTemplates, browserSyncReload)]
+				[R.compose(R.equals(true), isComponent),
+					gulp.series(buildComponentTemplates, theatreJSON, browserSyncReload)]
 			])(file);
 		});
 }
