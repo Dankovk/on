@@ -2,10 +2,11 @@
 	<div class="sidebar__title">&lt;TYPE&gt; Component Name</div>
 	<ul class="sidebar__nav-list">
 			<li class="sidebar__nav-list-item" *ngFor="let demo of demos | async"
-					(click)="actions.demoSelected('atoms', 'header_1', 'demo', demo)">
+					(click)="selectDemo('demo', demo)">
 					{{demo}}
 			</li>
-			<li class="sidebar__nav-list-item" *ngFor="let state of states | async">
+			<li class="sidebar__nav-list-item" *ngFor="let state of states | async"
+				(click)="actions.demoSelected(pattern, name, 'state', state)">
 					{{ state }}
 			</li>
 	</ul>

@@ -12,8 +12,13 @@ const INITIAL_STATE = {
         }
     },
     loading: false,
+    loaded: false,
     error: false,
-    selectedComponent: null,
+    selectedComponent: {
+        pattern: '',
+        name: ''
+    },
+    src: null,
     demoName: null,
     componentType:'staticType'
 };
@@ -37,16 +42,22 @@ export default function jsonReducer(state: any = INITIAL_STATE, action: any) {
                 newState.angularType[key] = action.data[key].filter((elem) => {
                    return elem.type === 'angular';
                 })
-            };
+            });
             return {
                 ...state,
                 data: newState,
                 loading: false,
+                loaded: true
             };
         case jsonActionsNames.COMPONENT_SELECTED:
+            const component = state.data[state.componentType][action.pattern].filter(elem => elem.name === action.component)[0];
             return {
                 ...state,
-                selectedComponent: state.data[state.componentType][action.pattern].filter(elem => elem.name === action.component)[0]
+                selectedComponent: {
+                    ...component,
+                    pattern: action.pattern
+                }
+
             };
         case jsonActionsNames.DEMO_SELECTED:
             return {
@@ -54,7 +65,6 @@ export default function jsonReducer(state: any = INITIAL_STATE, action: any) {
                 src: action.src
             };
         case jsonActionsNames.TYPE_SELECTED:
-            console.log(action.componentType);
             return {
                 ...state,
                 componentType: action.componentType

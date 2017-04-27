@@ -1,8 +1,29 @@
-import { IframePageComponent } from './iframe/iframe-page.container';
+import {IframePageComponent} from "./iframe/iframe-page.container";
 
 
 export const appRoutes = [
-	{path: '', redirectTo: '/', pathMatch: 'full'},
-	{path: 'components', component: IframePageComponent},
-	{path: 'components/atoms/:atom', component: IframePageComponent}
+	{	path: '',
+		pathMatch: 'full',
+		component: IframePageComponent,
+	},
+	{
+		path: ':type',
+		component: IframePageComponent
+	},
+	{
+		path: ':type/:pattern',
+		component: IframePageComponent
+	},
+	{
+		path: ':type/:pattern/:component',
+		component: IframePageComponent
+	},
+	{
+		path: ':type/:pattern/:component/state/:state',
+		component: IframePageComponent
+	},
+	{
+		path: ':type/:pattern/:component/demo/:demo',
+		component: IframePageComponent
+	}
 ];
