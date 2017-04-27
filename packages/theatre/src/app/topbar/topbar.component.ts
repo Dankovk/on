@@ -17,4 +17,8 @@ export class TopbarComponent {
     @select(['json', 'componentType']) readonly componentType: Observable<string>;
     @select(state => state.json.data[state.json.componentType].atoms) readonly atoms: Observable<any[]>;
 
+    changeComponentType(componentType) {
+        this.actions.selectType(componentType);
+        this.actions.changeUrlAccordingToType(componentType);
+    }
 }
