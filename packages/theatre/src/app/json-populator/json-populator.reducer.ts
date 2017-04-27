@@ -2,11 +2,11 @@ import {jsonActionsNames} from "./json-populator.actions";
 
 const INITIAL_STATE = {
     data: {
-        staticType: {
+        'static': {
             atoms:[],
             molecules:[]
         },
-        angularType: {
+        'angular': {
             atoms:[],
             molecules:[]
         }
@@ -20,7 +20,7 @@ const INITIAL_STATE = {
     },
     src: null,
     demoName: null,
-    componentType:'staticType'
+    componentType:'static'
 };
 
 export default function jsonReducer(state: any = INITIAL_STATE, action: any) {
@@ -32,14 +32,14 @@ export default function jsonReducer(state: any = INITIAL_STATE, action: any) {
             };
         case jsonActionsNames.LOAD_SUCCEEDED :
             let newState = {
-                staticType: {},
-                angularType: {}
+                'static': {},
+                'angular': {}
             };
             Object.keys(action.data).forEach(function(key) {
-                newState.staticType[key] = action.data[key].filter((elem) => {
+                newState.static[key] = action.data[key].filter((elem) => {
                     return elem.type === 'static';
                 });
-                newState.angularType[key] = action.data[key].filter((elem) => {
+                newState.angular[key] = action.data[key].filter((elem) => {
                    return elem.type === 'angular';
                 })
             });

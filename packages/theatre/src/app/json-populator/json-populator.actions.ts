@@ -57,7 +57,7 @@ export class JsonActions {
         })
     }
     
-    typeSelected(componentType){
+    selectType(componentType){
         this.ngRedux.dispatch({
             type: jsonActionsNames.TYPE_SELECTED,
             componentType: componentType

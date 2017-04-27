@@ -2,10 +2,10 @@
 	<nav class="topbar__component-nav clearfix">
 		<ul class="topbar__component-nav-list">
 			<li class="topbar__component-nav-list-item">
-				<a href="#">Atoms</a>
+				<a routerLink="{{componentType | async}}/atoms/">Atoms</a>
 				<ul class="topbar__component-subnav-list">
 					<li class="topbar__component-subnav-list-item" *ngFor="let atom of atoms | async">
-						<a routerLink="/atoms/{{atom.name}}" (click)="actions.selectComponent('atoms', atom.name)">{{ atom.name }}{{atom.type}}</a>
+						<a routerLink="{{componentType | async}}/atoms/{{atom.name}}" (click)="actions.selectComponent('atoms', atom.name)">{{ atom.name }}{{atom.type}}</a>
 					</li>
 				</ul>
 			</li>
@@ -43,8 +43,8 @@
 			</li>
 		</ul>
 		<div class="topbar__type-toggle-block">
-			<button class="topbar__type-toggle-item" (click)="actions.typeSelected('angularType')">Angular</button>
-			<button class="topbar__type-toggle-item" (click)="actions.typeSelected('staticType')">Static</button>
+			<button class="topbar__type-toggle-item" (click)="actions.selectType('angular')">Angular</button>
+			<button class="topbar__type-toggle-item" (click)="actions.selectType('static')">Static</button>
 		</div>
 	</nav>
 </header>

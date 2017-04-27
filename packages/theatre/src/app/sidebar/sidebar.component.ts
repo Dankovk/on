@@ -14,6 +14,7 @@ export class SidebarComponent {
     constructor(private actions: JsonActions){}
     private componentName: string;
     private componentPattern: string;
+    @select (['json', 'componentType']) readonly componentType: Observable<string>;
     @select(['json', 'selectedComponent', 'name'])  name: Observable<string>;
     @select(['json', 'selectedComponent', 'pattern'])  pattern: Observable<string>;
     @select(['json', 'selectedComponent', 'states' ]) readonly states: Observable<any>;
