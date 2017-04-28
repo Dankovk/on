@@ -21,4 +21,8 @@ export class TopbarComponent {
     @select(state => state.json.data[state.json.componentType].templates) readonly templates: Observable<any[]>;
     @select(state => state.json.data[state.json.componentType].pages) readonly pages: Observable<any[]>;
 
+    changeComponentType(componentType) {
+        this.actions.selectType(componentType);
+        this.actions.changeUrlAccordingToType(componentType);
+    }
 }

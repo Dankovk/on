@@ -1,5 +1,6 @@
 import {Injectable} from "@angular/core";
 import {NgRedux} from "@angular-redux/store";
+import {Router, ActivatedRoute} from '@angular/router';
 
 export const jsonActionsNames = {
     LOAD_STARTED: 'json/LOAD_STARTED',
@@ -18,8 +19,9 @@ export class JsonActions {
     static readonly COMPONENT_SELECTED = jsonActionsNames.COMPONENT_SELECTED;
     static readonly DEMO_SELECTED = jsonActionsNames.DEMO_SELECTED;
     static readonly TYPE_SELECTED = jsonActionsNames.TYPE_SELECTED;
+    private sub:any;
 
-    constructor(public  ngRedux: NgRedux<any>) {
+    constructor(public  ngRedux:NgRedux<any>, private router:Router, private route:ActivatedRoute) {
     }
 
     loadJson() {
@@ -56,11 +58,15 @@ export class JsonActions {
             src: `http://localhost:3000/components/${pattern}-${name}-${namespace}-${element}-${type}.html`
         })
     }
-    
-    selectType(componentType){
+
+    selectType(componentType) {
         this.ngRedux.dispatch({
             type: jsonActionsNames.TYPE_SELECTED,
             componentType: componentType
-        })
+        });
+    }
+    
+    changeUrlAccordingToType(componentType) {
+        this.router.navigateByUrl(`/${componentType}/`);
     }
 }
