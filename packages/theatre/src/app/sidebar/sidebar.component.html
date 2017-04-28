@@ -5,9 +5,9 @@
 					(click)="selectDemo('demo', demo)">
 				<a routerLink="/{{componentType | async}}/{{pattern | async}}/{{name | async}}/demo/{{demo}}">{{demo}}</a>
 			</li>
-			<li class="sidebar__nav-list-item" *ngFor="let state of states | async"
-				(click)="actions.demoSelected(pattern, name, 'state', state)">
-					{{ state }}
-			</li>
+		<li class="sidebar__nav-list-item" *ngFor="let state of states | async"
+			(click)="selectDemo('state', state)">
+			<a routerLink="/{{componentType | async}}/{{pattern | async}}/{{name | async}}/state/{{state}}">{{state}}</a>
+		</li>
 	</ul>
 </div>

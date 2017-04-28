@@ -24,10 +24,10 @@ export class IframeService {
                     this.actions.selectComponent(pattern, component);
                 }
                 if (demo) {
-                    this.actions.demoSelected(pattern, component, 'demo', demo);
+                    this.actions.demoSelected(pattern, component, 'demo', demo, type);
                 }
                 if (state) {
-                    this.actions.demoSelected(pattern, component, 'state', state);
+                    this.actions.demoSelected(pattern, component, 'state', state, type);
                 }
             }
         });

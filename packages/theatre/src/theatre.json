@@ -4,26 +4,70 @@
 			"name": "header_1",
 			"type": "static",
 			"demos": [ "demo1", "demo2"],
-			"states": [ "hover", "active", "focus" ]
+			"states": [ "hover"]
 		},
 		{
 			"name": "header_1",
 			"type": "angular",
 			"demos": [ "demo3", "demo4"],
-			"states": [ "hover", "active", "focus" ]
-		},
-		{
-			"name": "header_1",
-			"type": "angular",
-			"demos": [ "demo3", "demo4"],
-			"states": [ "hover", "active", "focus" ]
+			"states": ["hover"]
 		}
 
 	],
 	"molecules": [
 		{
-			"name": "input-group",
-			"type": "static"
+			"name": "header_1",
+			"type": "static",
+			"demos": [ "demo1"],
+			"states": [ "hover"]
+		},
+		{
+			"name": "header_1",
+			"type": "angular",
+			"demos": [ "demo1"],
+			"states": [ "hover"]
+		}
+	],
+	"organisms": [
+		{
+			"name": "header_1",
+			"type": "static",
+			"demos": [ "demo1"],
+			"states": [ "hover"]
+		},
+		{
+			"name": "header_1",
+			"type": "angular",
+			"demos": [ "demo1"],
+			"states": [ "hover"]
+		}
+	],
+	"templates": [
+		{
+			"name": "header_1",
+			"type": "static",
+			"demos": [ "demo1"],
+			"states": [ "hover"]
+		},
+		{
+			"name": "header_1",
+			"type": "angular",
+			"demos": [ "demo1"],
+			"states": [ "hover"]
+		}
+	],
+	"pages": [
+		{
+			"name": "page",
+			"type": "static",
+			"demos": [ "demo1"],
+			"states": [ "hover"]
+		},
+		{
+			"name": "page",
+			"type": "angular",
+			"demos": [ "demo1"],
+			"states": [ "hover"]
 		}
 	]
 }

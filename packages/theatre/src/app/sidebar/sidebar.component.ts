@@ -14,6 +14,7 @@ export class SidebarComponent {
     constructor(private actions: JsonActions){}
     private componentName: string;
     private componentPattern: string;
+    private type: string;
     @select (['json', 'componentType']) readonly componentType: Observable<string>;
     @select(['json', 'selectedComponent', 'name'])  name: Observable<string>;
     @select(['json', 'selectedComponent', 'pattern'])  pattern: Observable<string>;
@@ -27,9 +28,12 @@ export class SidebarComponent {
         this.pattern.subscribe((data) => {
             this.componentPattern = data
         });
+        this.componentType.subscribe((data) => {
+           this.type = data;
+        });
     }
 
     selectDemo(demoType, demo) {
-        this.actions.demoSelected(this.componentPattern, this.componentName, demoType, demo);
+        this.actions.demoSelected(this.componentPattern, this.componentName, demoType, demo, this.type);
     }
 };

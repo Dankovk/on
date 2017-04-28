@@ -16,5 +16,9 @@ export class TopbarComponent {
     constructor(private actions: JsonActions){}
     @select(['json', 'componentType']) readonly componentType: Observable<string>;
     @select(state => state.json.data[state.json.componentType].atoms) readonly atoms: Observable<any[]>;
+    @select(state => state.json.data[state.json.componentType].molecules) readonly molecules: Observable<any[]>;
+    @select(state => state.json.data[state.json.componentType].organisms) readonly organisms: Observable<any[]>;
+    @select(state => state.json.data[state.json.componentType].templates) readonly templates: Observable<any[]>;
+    @select(state => state.json.data[state.json.componentType].pages) readonly pages: Observable<any[]>;
 
 }
