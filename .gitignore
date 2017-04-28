@@ -28,7 +28,7 @@ packages/*.js
 webpack.config.js
 
 #compiled css
-packages/theatre/src/app/**/*.css
+packages/theatre/src/**/*.css
 
 # Runtime data
 pids
