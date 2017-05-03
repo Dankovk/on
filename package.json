@@ -103,6 +103,7 @@
     "theatre-sass:watch": "node-sass -w packages/theatre/src -o packages/theatre/src --include-path packages/theatre/node_modules --output-style compressed -q",
     "theatre-build:dll": "npm run clean:dll && npm run theatre-sass && webpack",
     "theatre-devserver": "webpack-dev-server",
+    "tsc": "tsc",
     "commit": "git-cz",
     "commitizen": "commitizen",
     "test": "./node_modules/.bin/mocha --reporter spec --require babel-register $(find lib src -path '*.spec.js') && npm run lint",
@@ -180,6 +181,8 @@
     "extends": "@entrada-config/eslint-config-entrada"
   },
   "dependencies": {
-    "axios": "^0.16.1"
+    "axios": "^0.16.1",
+    "express": "^4.15.2",
+    "socket.io": "^1.7.3"
   }
 }
