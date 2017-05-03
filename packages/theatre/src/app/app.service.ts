@@ -1,5 +1,4 @@
 import {Injectable} from "@angular/core";
-import {Observable} from "rxjs/Observable";
 import {JsonActions} from "./json-populator/json-populator.actions";
 import axios from "axios";
 import {select} from "@angular-redux/store";
