@@ -14,6 +14,10 @@
 .sidebar__nav-list-item {
 	padding: 10px;
 	border-bottom: 1px solid #ddd;
+	text-transform: uppercase;
+	a{
+		text-decoration: none;
+	}
 }
 
 .sidebar__title {

@@ -16,7 +16,8 @@ const INITIAL_STATE = {
     error: false,
     selectedComponent: {
         pattern: '',
-        name: ''
+        name: '',
+        demo: ''
     },
     src: null,
     demoName: null,
@@ -55,14 +56,18 @@ export default function jsonReducer(state: any = INITIAL_STATE, action: any) {
                 ...state,
                 selectedComponent: {
                     ...component,
-                    pattern: action.pattern
+                    pattern: action.pattern,
                 }
 
             };
         case jsonActionsNames.DEMO_SELECTED:
             return {
                 ...state,
-                src: action.src
+                src: action.src,
+                selectedComponent: {
+                    ...state.selectedComponent,
+                    demo: action.demo
+                }
             };
         case jsonActionsNames.TYPE_SELECTED:
             return {

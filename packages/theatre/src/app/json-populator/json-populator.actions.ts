@@ -55,7 +55,8 @@ export class JsonActions {
     demoSelected(pattern, name, namespace, element, type){
         this.ngRedux.dispatch({
             type: jsonActionsNames.DEMO_SELECTED,
-            src: `http://localhost:3000/components/${pattern}-${name}-${namespace}-${element}-${type}.html`
+            src: `http://localhost:3000/components/${pattern}-${name}-${namespace}-${element}-${type}.html`,
+            demo: element
         })
     }
 
@@ -66,7 +67,11 @@ export class JsonActions {
         });
     }
     
-    changeUrlAccordingToType(componentType) {
-        this.router.navigateByUrl(`/${componentType}/`);
+    changeUrlAccordingToType(type) {
+        this.router.navigateByUrl(`/${type}/`);
+    }
+
+    changeUrlAccordingToDemo(pattern, name, namespace, element, type) {
+        this.router.navigateByUrl(`/${type}/${pattern}/${name}/${namespace}/${element}`);
     }
 }
