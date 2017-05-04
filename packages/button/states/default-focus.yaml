@@ -1,0 +1,6 @@
+---
+template:
+  attributes:
+  - - class
+    - '"ocl-button js-ocl-button--focus"'
+state: {}

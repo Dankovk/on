@@ -1,0 +1,10 @@
+{
+  "name": "@one/animation",
+  "description": "Animation Variables and Mixins used by the One component library",
+	"version": "0.1.0",
+	"license": "UNLICENSED",
+	"repository": {
+		"type": "git",
+		"url": ""
+	}
+}

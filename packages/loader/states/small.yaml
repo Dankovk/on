@@ -1,0 +1,12 @@
+---
+template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-loader ocl-loader--small"'
+  subElement:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-loader__spinner ocl-loader__spinner--small"'
+state: {}

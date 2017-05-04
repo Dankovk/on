@@ -14,25 +14,16 @@
 // limitations under the License.
 //
 
-//
-// Adapted from originally from Google Material Components Web
-//
-// https://github.com/material-components/material-components-web
-//
-
 @import "./variables";
-// @import "./mixins";
 
-// .mdc-typography {
-//   @include mdc-typography-base;
-// }
+@mixin ocl-animation-linear-out-slow-in {
+	animation-timing-function: $ocl-animation-linear-out-slow-in-timing-function;
+}
 
-// @each $style in map-keys($mdc-typography-styles) {
-//   .mdc-typography--#{$style} {
-//     @include mdc-typography($style);
-//   }
+@mixin ocl-animation-fast-out-slow-in {
+	animation-timing-function: $ocl-animation-fast-out-slow-in-timing-function;
+}
 
-//   .mdc-typography--adjust-margin.mdc-typography--#{$style} {
-//     @include mdc-typography-adjust-margin($style);
-//   }
-// }
+@mixin ocl-animation-fast-out-linear-in {
+	animation-timing-function: $ocl-animation-fast-out-linear-in-timing-function;
+}

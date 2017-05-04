@@ -1,0 +1,12 @@
+---
+template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-loader"'
+  subElement:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-loader__spinner"'
+state: {}

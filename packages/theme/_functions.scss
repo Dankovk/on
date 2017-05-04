@@ -1,0 +1,97 @@
+//
+// Copyright 2017 Google Inc. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+
+//
+// Adapted from originally from Google Material Components Web
+//
+// https://github.com/material-components/material-components-web
+//
+
+@import "./constants";
+
+/**
+ * Calculate the luminance for a color.
+ * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
+ */
+@function ocl-theme-luminance($color) {
+	$red: nth($ocl-theme-linear-channel-values, red($color) + 1);
+	$green: nth($ocl-theme-linear-channel-values, green($color) + 1);
+	$blue: nth($ocl-theme-linear-channel-values, blue($color) + 1);
+
+	@return .2126 * $red + .7152 * $green + .0722 * $blue;
+}
+
+/**
+ * Calculate the contrast ratio between two colors.
+ * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
+ */
+@function ocl-theme-contrast($back, $front) {
+	$backLum: ocl-theme-luminance($back) + .05;
+	$foreLum: ocl-theme-luminance($front) + .05;
+
+	@return max($backLum, $foreLum) / min($backLum, $foreLum);
+}
+
+/**
+ * Determine whether to use dark or light text on top of given color.
+ * Returns "dark" for dark text and "light" for light text.
+ */
+@function ocl-theme-light-or-dark($color) {
+	$minimumContrast: 3.1;
+
+	$lightContrast: ocl-theme-contrast($color, white);
+	$darkContrast: ocl-theme-contrast($color, rgba(black, .87));
+
+	@if ($lightContrast < $minimumContrast) and ($darkContrast > $lightContrast) {
+		@return "dark";
+	}
+
+	@else {
+		@return "light";
+	}
+}
+
+/**
+ * Returns a sass-map that represents the diff between the two
+ * colors in terns of hue, saturation, and lightness
+ */
+@function ocl-color-diff($color-a, $color-b) {
+	$hue: hue($color-a) - hue($color-b);
+	$saturation: saturation($color-a) - saturation($color-b);
+	$lightness: lightness($color-a) - lightness($color-b);
+
+	$function-hue: "adjust-hue";
+	$function-saturation: if($saturation > 0, "desaturate", "saturate");
+	$function-lightness: if($lightness > 0, "darken", "lighten");
+
+	@return (
+		#{$function-hue}: -($hue),
+		#{$function-saturation}: abs($saturation),
+		#{$function-lightness}: abs($lightness),
+	);
+}
+
+/**
+ * Calculates and returns the color calculated based on the
+ * color diff
+ */
+@function ocl-apply-color-diff($color, $diff) {
+	@each $key, $value in $diff {
+		$color: call($key, $color, $value);
+	}
+
+	@return $color;
+}
