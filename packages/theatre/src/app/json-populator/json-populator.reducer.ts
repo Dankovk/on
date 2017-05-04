@@ -29,7 +29,9 @@ export default function jsonReducer(state: any = INITIAL_STATE, action: any) {
         case jsonActionsNames.LOAD_STARTED:
             return {
                 ...state,
-                loading: true
+                loading: true,
+                loaded: false,
+                src: null
             };
         case jsonActionsNames.LOAD_SUCCEEDED :
             let newState = {

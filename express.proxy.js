@@ -23,6 +23,11 @@ app.put('/updated', function (req, res) {
   res.send('OK');
 });
 
+app.put('/changed', function (req, res) {
+  currentSocket.emit('changed', req.body);
+  res.send('OK');
+});
+
 server.listen(PORT, () => {
 	console.log(`Server is listening on port ${PORT}`)
 });

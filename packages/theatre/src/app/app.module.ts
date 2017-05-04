@@ -17,6 +17,7 @@ import { JsonActions } from './json-populator/json-populator.actions';
 import { AppComponent } from './app.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { IframeService } from './iframe/iframe-page.service';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 		IframeModule,
 		StoreModule,
 	],
-	providers: [AppService, JsonActions],
+	providers: [AppService, JsonActions, IframeService],
 	bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,4 +1,5 @@
 import { Component, ChangeDetectionStrategy, ViewEncapsulation, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import {Observable} from "rxjs/Observable";
 import * as io from 'socket.io-client';
 
@@ -12,17 +13,22 @@ import { AppService } from './app.service';
 })
 export class AppComponent {
 	private socketUrl = 'http://localhost:4112';
-	constructor(private service: AppService){}
+	private params: Object;
+	private sub: any;
+	constructor(private service: AppService, private route: ActivatedRoute){}
 
-	refreshApp(data) {
+	refreshApp() {
 		this.service.getJson();
 	}
 
 	ngOnInit() {
+		this.sub = this.route.params.subscribe(params => {
+			this.params = params;
+		});
 		this.service.getJson();
 		const socket = io.connect(this.socketUrl);
-		socket.on('changed', (data) => {
-			this.refreshApp(data);
+		socket.on('changed', () => {
+			this.refreshApp();
 		})
 	}
 }
