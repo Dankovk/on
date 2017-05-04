@@ -20,19 +20,24 @@
 // https://github.com/material-components/material-components-web
 //
 
-@import "./variables";
-// @import "./mixins";
+@import "./mixins";
 
-// .mdc-typography {
-//   @include mdc-typography-base;
-// }
+/* Special case, so that .ocl-theme--background changes background color, not text color. */
+.ocl-theme--background {
+	@include ocl-theme-prop(background-color, background);
+}
 
-// @each $style in map-keys($mdc-typography-styles) {
-//   .mdc-typography--#{$style} {
-//     @include mdc-typography($style);
-//   }
+@each $style in map-keys($ocl-theme-property-values) {
+	@if $style != "background" {
+		.ocl-theme--#{$style} {
+			@include ocl-theme-prop(color, $style, false, true);
+		}
+	}
+}
 
-//   .mdc-typography--adjust-margin.mdc-typography--#{$style} {
-//     @include mdc-typography-adjust-margin($style);
-//   }
-// }
+/* CSS rules for using primary and accent as background colors. */
+@each $style in ("primary", "accent") {
+	.ocl-theme--#{$style}-bg {
+		@include ocl-theme-prop(background-color, $style, false, true);
+	}
+}

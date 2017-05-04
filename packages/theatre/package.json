@@ -29,6 +29,8 @@
     "immutable": "^3.8.1",
 		"rxjs": "^5.3.0",
 		"typescript": "^2.2.2",
-		"zone.js": "^0.8.5"
+		"zone.js": "^0.8.5",
+
+		"@one/typography": "^0.1.0"
 	}
 }

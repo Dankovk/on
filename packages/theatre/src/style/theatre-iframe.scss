@@ -1,3 +1,5 @@
+@import "@one/typography/mixins";
+
 :root {
 	margin: 0;
 	padding: 0;
@@ -7,5 +9,7 @@
 }
 
 .theatre__stage-iframe {
+	@include ocl-typography-base;
 	text-align: center;
+	font-weight: 400;
 }

@@ -5,6 +5,9 @@ import estream from 'event-stream';
 import multipipe from 'multipipe';
 import reduce from 'stream-reduce';
 import hbs from 'gulp-hbs';
+import yaml from 'gulp-yaml';
+import yaml2json from 'yamljs';
+import stylelint from 'gulp-stylelint';
 import lazypipe from 'lazypipe';
 import mirror from 'gulp-mirror';
 import source from 'vinyl-source-stream';
@@ -140,20 +143,47 @@ const isTypeStatic = isType('static');
 /*
  *
  */
-const patternFromPath = R.cond([
-	[R.match(/\/atoms/), R.always('atom')],
-	[R.match(/\/molecules/), R.always('molecule')],
-	[R.match(/\/organisms/), R.always('organism')],
-	[R.match(/\/templates/), R.always('template')],
-	[R.match(/\/pages/), R.always('page')]
-]);
+const packageJSON = relativeRootDir =>
+	// TODO: Use a cache for package.json imports
+	// eslint-disable-next-line global-require, import/no-dynamic-require
+	require(path.join(__dirname, relativeRootDir, 'package.json'));
 
 /*
  *
  */
-const packageJSON = relativeRootDir =>
-	// eslint-disable-next-line global-require, import/no-dynamic-require
-	require(path.join(__dirname, relativeRootDir, 'package.json'));
+const loadConfigSync =
+	R.cond([
+		[R.compose(R.equals(true), fs.existsSync, R.concat(R.__, '.yaml')),
+			R.pipe(
+				R.concat(R.__, '.yaml'),
+				(R.curry(fs.readFileSync)(R.__, { encoding: 'utf8' })),
+				yaml2json.parse
+			)
+		],
+		[R.T,
+			R.pipe(
+				R.concat(R.__, '.json'),
+				(R.curry(fs.readFileSync)(R.__, { encoding: 'utf8' }))
+			)
+		]
+	]);
+
+/*
+ * Returns the name of the one package (less the "@one/") from a package.json
+ * depedency list
+ */
+const onePackageName = pack => pack.substring(5);
+
+/*
+ *
+ */
+const oneDependencies =
+	R.compose(R.map(onePackageName), R.filter(_.startsWith('@one')));
+
+/*
+ *
+ */
+const onePackageNames = R.compose(oneDependencies, R.keys);
 
 /*
  *
@@ -166,14 +196,24 @@ function getFiles(dir, criteria = [], obj) {
 			)
 		: [];
 
-	return (obj !== true) ? files :
-		_.map(file =>
-			({
+	// return an object with additional metadata info
+	if(obj === true) {
+		return _.map(file => {
+			const pack = packageJSON(path.join(dir, file));
+
+			return ({
 				name: file,
 				base: dir,
-				one: R.path(['one'], packageJSON(path.join(dir, file)))
-			})
-		, files);
+				path: path.join(dir, file),
+				deps: onePackageNames(pack.dependencies),
+				one: R.path(['one'], pack)
+			});
+		}, files);
+	}
+	// return a plain list of files
+	else {
+		return files;
+	}
 }
 
 /*
@@ -247,7 +287,7 @@ export { registerHbsHelpers };
 function mergeStates(data, file) {
 	return R.when(
 		// eslint-disable-next-line global-require, import/no-dynamic-require
-		() => !R.equals(file.relative, 'default.json'), mergeOmitNil(require(`${file.base}/default.json`))
+		() => !R.equals(file.relative, 'default'), mergeOmitNil(loadConfigSync(`${file.base}/default`)/* require(`${file.base}/default.json`)*/)
 	)(data);
 }
 
@@ -273,13 +313,22 @@ function selectStateTemplate(data, file) {
  * marked for deletion, and selects the root level 'template' key, if available
  */
 function mergeStatesForTemplateKeyed(data, file) {
-	// const keyedState = {template: {}};
 	const keyedState = {};
-	// keyedState.template[path.basename(file.relative, '.json')] =
-	keyedState[path.basename(file.relative, '.json')] =
+
+	keyedState[(path.parse(file.relative)).name] =
 		mergeStatesForTemplate(data, file);
 
 	return keyedState;
+}
+
+/*
+ *
+ */
+function srcJsonAndYaml(datapath) {
+	return merge(
+		gulp.src(path.join(datapath, '/*.yaml')).pipe(yaml()),
+		gulp.src(path.join(datapath, '/*.json'))
+	);
 }
 
 /*
@@ -305,6 +354,9 @@ const theatreBodyClasses = (pattern, name, presentation, stateordemo) => {
 	if (R.equals('demo', presentation)) {
 		bodyClasses = R.prepend('theatre__stage-demo', bodyClasses);
 	}
+	else {
+		bodyClasses = R.prepend('theatre__stage-state', bodyClasses);
+	}
 	return bodyClasses;
 };
 
@@ -312,21 +364,22 @@ const theatreBodyClasses = (pattern, name, presentation, stateordemo) => {
  *
  */
 const processComponentTheatreTemplate = (folderRoot, folder, makeComponent, presentation,
-																				 stateordemo, aTheatreTemplatePath, type, dest = null) =>
+																				 stateordemo, pattern, aTheatreTemplatePath,
+																				 type, deps = [], dest = null) =>
 	lazypipe()
 		.pipe(() => gulpif(makeComponent, processComponentTemplate(folderRoot, folder)()))
 		.pipe(() =>
-			transform(contents =>
+			transform((contents, file) =>
 				JSON.stringify({
 					title: folder,
 					description: `One static template: ${folder}`,
 					theatreStyle: `/components/theatre-${folder}.css`,
-					componentStyle: `/components/${folder}.css`,
+					componentStyleDeps: R.concat(deps, [folder]),
 					theatreBodyClasses: R.join(' ', theatreBodyClasses(
-						patternFromPath(folderRoot),
+						pattern,
 						folder,
 						presentation,
-						path.basename(stateordemo, '.hbs'), // 'xxxxxxxx', // filepath.basename,
+						(path.parse(file.path)).name,
 						type
 					)),
 					component: contents.toString('utf-8')
@@ -336,7 +389,7 @@ const processComponentTheatreTemplate = (folderRoot, folder, makeComponent, pres
 		.pipe(() => hbs(gulp.src(aTheatreTemplatePath)))
 		.pipe(() => rename((filepath) => {
 			filepath.basename = theatreComponentName(
-				patternFromPath(folderRoot),
+				pattern,
 				folder,
 				presentation,
 				filepath.basename,
@@ -351,17 +404,18 @@ const processComponentTheatreTemplate = (folderRoot, folder, makeComponent, pres
  *
  */
 const processComponentStates = (componentRoot, component) =>
-	gulp.src(path.join(componentRoot, component, '/states/*.json'))
+	srcJsonAndYaml(path.join(component.path, '/states'))
 		// make the static component states
 		.pipe(processComponentTemplate(
-			componentRoot, component, path.join(componentDestPath, component, 'static/states'))()
+			componentRoot, component.name, path.join(componentDestPath, component.name, 'static/states'))()
 		)
 		// make the theatre iframe components
 		.pipe(
 			processComponentTheatreTemplate(
-				componentRoot, component, false, 'state', component,
+				componentRoot, component.name, false, 'state',
+				component.name, component.one.pattern,
 				path.join(theatreTemplatePath, theatreStaticTemplate),
-				'static',
+				component.one.type, component.deps,
 				theatreComponentsDestPath
 			)()
 		);
@@ -372,10 +426,18 @@ const processComponentStates = (componentRoot, component) =>
 const processComponentDemos = (componentRoot, component) =>
 	// start with the state json and the json configs for arbitrary demos
 	merge(
-		gulp.src(path.join(componentRoot, component, '/states/*.json'), { allowEmpty: true })
-			.pipe(jsonTransform(mergeStatesForTemplateKeyed)),
-		gulp.src(path.join(componentRoot, component, '/demos/demos.json'), { allowEmpty: true })
-			.pipe(jsonTransform(selectStateTemplate))
+		// merge(
+		// 	gulp.src(path.join(component.path, '/states/*.json'), { allowEmpty: true }),
+		// 	gulp.src(path.join(component.path, '/states/*.yaml'), { allowEmpty: true }).pipe(yaml())
+		// )
+		srcJsonAndYaml(path.join(component.path, '/states'))
+		.pipe(jsonTransform(mergeStatesForTemplateKeyed)),
+		// merge(
+		// 	gulp.src(path.join(component.path, '/demos/demos.json'), { allowEmpty: true }),
+		// 	gulp.src(path.join(component.path, '/demos/demos.yaml'), { allowEmpty: true }).pipe(yaml())
+		// )
+		srcJsonAndYaml(path.join(component.path, '/demos'))
+		.pipe(jsonTransform(selectStateTemplate))
 	)
 	// merge them all together into one JSON stream
 	.pipe(reduce((acc, data) =>
@@ -393,7 +455,7 @@ const processComponentDemos = (componentRoot, component) =>
 					multipipe(
 						// process the demo template
 						hbs(
-							gulp.src(path.join(componentRoot, component, 'demos', template))
+							gulp.src(path.join(component.path, 'demos', template))
 						),
 						// give the virtual file a proper name (processComponentTheatreTemplate
 						// will need it)
@@ -403,35 +465,31 @@ const processComponentDemos = (componentRoot, component) =>
 						}),
 						// make the theatre template for the demo
 						processComponentTheatreTemplate(
-							componentRoot, component, false, 'demo', template,
+							componentRoot, component.name, false, 'demo',
+							template, component.one.pattern,
 							path.join(theatreTemplatePath, theatreStaticTemplate),
-							'static',
+							'static', component.deps,
 							theatreComponentsDestPath
 						)()
 					)
 				, getFiles(
-					path.join(componentRoot, component, 'demos'),
+					path.join(component.path, 'demos'),
 					R.compose(R.equals('.hbs'), R.takeLast(4))
 				)
 			)
 		)
 	);
 
-export function testDemos() {
-	return processComponentDemos(packageSrc, 'button');
-}
-
-export const testDemosYeah = gulp.series(registerHbsHelpers, registerAtomPartials, testDemos);
-
 /*
  *
  */
 export function atoms() {
 	return merge(
-		getAtomFolders(packageSrc).map(folder =>
+		// getAtomFolders(packageSrc).map(folder =>
+		getComponentFolderObjs(packageSrc).map(component =>
 			merge(
-				processComponentStates(packageSrc, folder),
-				processComponentDemos(packageSrc, folder)
+				processComponentStates(packageSrc, component),
+				processComponentDemos(packageSrc, component)
 			)
 		)
 	);
@@ -450,19 +508,19 @@ export function registerAtomPartials(cb) {
 	cb();
 }
 
-/*
- *
- */
-export function createMolecules() {
-	return merge(
-		getFolders(moleculeSrcPath).map(folder =>
-			gulp.src(path.join(moleculeSrcPath, folder, '/states/*.json'))
-				.pipe(jsonTransform(mergeStatesForTemplate))
-				.pipe(hbs(gulp.src(path.join(moleculeSrcPath, folder, `${folder}.hbs`))))
-				.pipe(gulp.dest(path.join(moleculeDestPath, folder)))
-		)
-	);
-}
+// /*
+//  *
+//  */
+// export function createMolecules() {
+// 	return merge(
+// 		getFolders(moleculeSrcPath).map(folder =>
+// 			gulp.src(path.join(moleculeSrcPath, folder, '/states/*.json'))
+// 				.pipe(jsonTransform(mergeStatesForTemplate))
+// 				.pipe(hbs(gulp.src(path.join(moleculeSrcPath, folder, `${folder}.hbs`))))
+// 				.pipe(gulp.dest(path.join(moleculeDestPath, folder)))
+// 		)
+// 	);
+// }
 
 /*
  *
@@ -474,6 +532,15 @@ export function createMolecules() {
  */
 export function sassComponents() {
 	return gulp.src(componentStylePath)
+		.pipe(stylelint({
+			failAfterError: false,
+			reporters: [
+				{
+					formatter: 'string',
+					console: true
+				}
+			]
+		}))
 		.pipe(sass({ includePaths: [componentStyleLibPath] }).on('error', sass.logError))
 		.pipe(gulp.dest(componentDestPath))
 		// flatten the directory name for theatre iframe components
@@ -504,27 +571,27 @@ export { buildComponents };
  *
  */
 // eslint-disable-next-line no-unused-vars
-const buildComponent = component => gulp.series(
-	registerHbsHelpers, () => processComponentStates(packageSrc, component)
-);
+// const buildComponent = component => gulp.series(
+// 	registerHbsHelpers, () => processComponentStates(packageSrc, component)
+// );
 
 /*
  *
  */
 // eslint-disable-next-line no-unused-vars
-const buildDependents = (component) => {
-	// console.log('TBD');
-};
+// const buildDependents = (component) => {
+// 	// console.log('TBD');
+// };
 
 /*
  *
  */
 // eslint-disable-next-line no-unused-vars
-const buildComponentAndDeps = component => gulp.series(
-	registerHbsHelpers,
-	() => processComponentStates(packageSrc, component),
-	() => buildDependents(component)
-);
+// const buildComponentAndDeps = component => gulp.series(
+// 	registerHbsHelpers,
+// 	() => processComponentStates(packageSrc, component),
+// 	() => buildDependents(component)
+// );
 
 /*
  *
@@ -544,8 +611,11 @@ export function theatreJSON(cb) {
 			{
 				name: folder.one.name,
 				type: folder.one.type,
-				states: glob.sync(path.join(packageSrc, folder.name, '**/states/*.json')).map(file =>
-					path.basename(file, '.json')
+				states: glob.sync(path.join(folder.path, '**/states/*.{json,yaml}')).map(file =>
+					(path.parse(file)).name
+				),
+				demos: glob.sync(path.join(folder.path, '**/demos/*.hbs')).map(file =>
+					(path.parse(file)).name
 				)
 			}
 		);
@@ -590,7 +660,7 @@ const isSass = fileChanged => isFile('.scss', fileChanged);
  *
  */
 export function watchComponents() {
-	return gulp.watch(path.join(packageSrc, '/*/**/*.{hbs,json,scss}'))
+	return gulp.watch(path.join(packageSrc, '/*/**/*.{hbs,json,yaml,scss}'))
 		.on('change', (file) => {
 			R.cond([
 				// TODO: Create a function to only build one sass component & dependents
@@ -644,7 +714,7 @@ export function serveTheatre() {
  */
 export function sassTheatre() {
 	return gulp.src(theatreStyleSrcPath)
-		.pipe(sass().on('error', sass.logError))
+		.pipe(sass({ includePaths: [componentStyleLibPath] }).on('error', sass.logError))
 		.pipe(gulp.dest(theatreDestPath));
 }
 
@@ -659,13 +729,13 @@ export function browserSyncReload(cb) {
 /*
  *
  */
-const cleanBuildComponents = gulp.series(clean, buildComponents);
+const cleanBuildComponents = gulp.series(clean, sassTheatre, buildComponents);
 export { cleanBuildComponents };
 
 /*
  *
  */
-const cleanWatchComponents = gulp.series(clean, buildComponents, watchComponents);
+const cleanWatchComponents = gulp.series(cleanBuildComponents, watchComponents);
 export { cleanWatchComponents };
 
 /*
