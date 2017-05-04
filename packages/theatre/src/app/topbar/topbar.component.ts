@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ElementRef } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { select } from "@angular-redux/store";
 import { JsonActions } from '../json-populator/json-populator.actions';
@@ -6,15 +6,30 @@ import { JsonActions } from '../json-populator/json-populator.actions';
 
 @Component({
     selector: 'topbar',
+    host: {
+        '(document:click)': 'onClick($event)',
+    },
     templateUrl: './topbar.component.html',
     styleUrls: ['./topbar.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
+
+
 export class TopbarComponent {
-    constructor(private actions: JsonActions){}
+
+    constructor(private actions: JsonActions, private _eref: ElementRef){}
 
     private currentStateJson: any;
     private isDemoExist: any;
+    private isClassVisible:any;
+
+    isClassVisible = {
+        'atoms': false,
+        'molecules': false,
+        'organisms': false,
+        'templates': false,
+        'pages': false
+    };
 
     @select(['json', 'componentType']) readonly componentType: Observable<string>;
     @select(state => state.json.data[state.json.componentType].atoms) readonly atoms: Observable<any[]>;
@@ -26,7 +41,6 @@ export class TopbarComponent {
     @select(state => state.json) stateJson: Observable<any>;
 
     ngOnInit() {
-
 
         this.stateJson.subscribe((data) => {
             this.currentStateJson = data;
@@ -72,5 +86,30 @@ export class TopbarComponent {
 
     changeComponentType(componentType) {
         this.actions.selectType(componentType);
+    }
+
+    toggleClass(name) {
+        Object.keys(this.isClassVisible).forEach((key) => {
+            key !== name ?  this.isClassVisible[key] = false :
+                            this.isClassVisible[key] = !this.isClassVisible[key];
+        });
+    }
+
+    onClick(event) {
+
+            let target = event.target || event.srcElement || event.currentTarget;
+            let idAttr = target.attributes.class;
+            let value = idAttr ? idAttr.nodeValue : false;
+            const dropdown_class = ['topbar__component-subnav-list', 'topbar__component-subnav-list-item', 'topbar__component-nav-list-link';
+
+            if(!dropdown_class.includes(value)){
+                this.hideAllDropdowns();
+            }
+    }
+
+    hideAllDropdowns() {
+        Object.keys(this.isClassVisible).forEach((key) => {
+            this.isClassVisible[key] = false;
+        });
     }
 }

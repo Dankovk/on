@@ -30,3 +30,35 @@
 		background-color: #eee;
 	}
 }
+
+.topbar__component-nav-list-item{
+	position: relative;
+	&.open{
+		.topbar__component-subnav-list{
+			opacity: 1;
+			pointer-events: auto;
+			visibility: visible;
+		}
+	}
+}
+.topbar__component-subnav-list{
+	position: absolute;
+	top: 25px;
+	left: 0;
+	background-color: #fff;
+	padding: 5px 0;
+	border: 1px solid #aaa;
+	opacity: 0;
+	pointer-events: none;
+	visibility: hidden;
+	li{
+		list-style: none;
+		border-bottom: 1px solid #aaa;
+		padding: 5px 10px;
+		transition: opacity .15s linear;
+		&:last-of-type{
+			border-bottom: none;
+		}
+	}
+}
+
