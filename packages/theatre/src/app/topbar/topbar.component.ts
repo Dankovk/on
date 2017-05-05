@@ -17,13 +17,11 @@ import { JsonActions } from '../json-populator/json-populator.actions';
 
 export class TopbarComponent {
 
-    constructor(private actions: JsonActions, private _eref: ElementRef){}
+    constructor(private actions: JsonActions){}
 
     private currentStateJson: any;
     private isDemoExist: any;
-    private isClassVisible:any;
-
-    isClassVisible = {
+    private isClassVisible:any = {
         'atoms': false,
         'molecules': false,
         'organisms': false,
@@ -100,7 +98,7 @@ export class TopbarComponent {
             let target = event.target || event.srcElement || event.currentTarget;
             let idAttr = target.attributes.class;
             let value = idAttr ? idAttr.nodeValue : false;
-            const dropdown_class = ['topbar__component-subnav-list', 'topbar__component-subnav-list-item', 'topbar__component-nav-list-link';
+            const dropdown_class = ['topbar__component-subnav-list', 'topbar__component-subnav-list-item', 'topbar__component-nav-list-link'];
 
             if(!dropdown_class.includes(value)){
                 this.hideAllDropdowns();

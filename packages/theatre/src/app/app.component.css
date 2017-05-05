@@ -1,1 +1,0 @@
-html,body{box-sizing:border-box;margin:0;padding:0}*,*::before,*::after{box-sizing:inherit}.active{padding:5px;border-radius:3px;background:#eee}content{display:block}.clearfix::before,.clearfix::after{display:table;content:" "}.clearfix::after{clear:both}
