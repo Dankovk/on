@@ -24,6 +24,7 @@ import jsonTransform from 'gulp-json-transform';
 import transform from 'gulp-transform';
 import R from 'ramda';
 import _ from 'lodash/fp';
+import request from 'request';
 // import webpack from 'webpack';
 // import gutil from 'gulp-util';
 // import { trace } from './lib/debug';
@@ -611,10 +612,10 @@ export function theatreJSON(cb) {
 			{
 				name: folder.one.name,
 				type: folder.one.type,
-				states: glob.sync(path.join(folder.path, '**/states/*.{json,yaml}')).map(file =>
+				states: glob.sync(path.join(folder.path, '/states/*.{json,yaml}')).map(file =>
 					(path.parse(file)).name
 				),
-				demos: glob.sync(path.join(folder.path, '**/demos/*.hbs')).map(file =>
+				demos: glob.sync(path.join(folder.path, '/demos/*.hbs')).map(file =>
 					(path.parse(file)).name
 				)
 			}
@@ -676,6 +677,18 @@ export function watchComponents() {
 				[R.compose(R.equals(true), isComponent),
 					gulp.series(buildComponentTemplates, theatreJSON, browserSyncReload)]
 			])(file);
+
+			// Tell theatre we've updated
+			request.put({
+				url: 'http://localhost:4112/updated',
+				json: true,
+				body: {
+					component:'name'
+				}
+			},
+			function (error, response, body) {
+				// nothing
+			});
 		});
 }
 

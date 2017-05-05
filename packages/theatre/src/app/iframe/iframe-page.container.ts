@@ -4,7 +4,7 @@ import { IframeService } from './iframe-page.service';
 
 @Component({
     template: `
-        <iframe-component 
+        <iframe-component
         class="stage"
         ></iframe-component>
     `,
