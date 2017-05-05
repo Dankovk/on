@@ -1,34 +1,114 @@
 @import "@one/typography/mixins";
+@import "@one/theme/mixins";
+@import "@one/theme/functions";
+@import "@one/animation/functions";
+@import "./mixins";
 
-// $button-font-med-size: 18px
-// $button-font-size: 15px
-// $input-font-size: 14px
-// $button-color: $white
-
-// @mixin ocl-button-hover {
-
-// }
+$ocl-button-disabled-color: #999;
 
 .ocl-button {
 	@include ocl-typography-base;
+	@include ocl-theme-prop(color, text-primary-on-dark);
+	@include ocl-theme-prop(background-color, accent);
+	@include ocl-button-hover-base;
+	// When/if buttons have an :active state, place that style here
+	// @include ocl-button-active-base;
 
-	display: inline-block;
+	display: inline-flex;
 	position: relative;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
 	height: 3rem;
 	padding: 0 1.5rem;
+	transition: ocl-animation-exit(background-color, 200ms);
 	border: none;
 	border-radius: 3px;
-	// background-color: $blue
-	background-color: #5fa1b7;
-	// color: $button-color
-	color: white;
 	font-size: 16px;
 	// font-weight: 400;
-	line-height: 3rem;
 	text-align: center;
 	text-decoration: none;
+	cursor: pointer;
 	overflow: hidden;
 	vertical-align: middle;
 	user-select: none;
 	box-sizing: border-box;
+
+	// Loader integration
+
+	&__label {
+		transition: .3s cubic-bezier(.175, .885, .32, 1.275) padding;
+	}
+
+	.ocl-loader {
+		position: absolute;
+		top: 50%;
+		right: 1rem;
+		transform: translateY(-50%);
+	}
+
+	.ocl-loader__spinner {
+		transform: scale(0);
+		animation-fill-mode: both;
+		animation-duration: .4s;
+
+		&::before {
+			border-color: #ddd;
+			border-top-color: #333;
+		}
+	}
+
+	&--loading {
+		.ocl-button__label {
+			padding-right: 1.5rem;
+		}
+
+		.ocl-loader__spinner {
+			animation-name: ocl-button-add-loader;
+		}
+	}
+
+	/* MEDIUM BUTTON */
+
+	&--med {
+		height: 4.5rem;
+		padding: 0 3rem;
+		font-size: 18px;
+		line-height: 4.5rem;
+
+		// MEDIUM loader overrides
+
+		.ocl-loader {
+			right: 2rem;
+		}
+
+		&.ocl-button--loading {
+			.ocl-button__label {
+				padding-right: 2.5rem;
+			}
+		}
+	}
+
+	/* KNOCKOUT BUTTON */
+
+	&--knockout {
+		@include ocl-theme-prop(border-color, text-primary-on-dark);
+
+		border-width: 2px;
+		border-style: solid;
+		background-color: transparent;
+	}
+
+	/* DISABLED SETTINGS */
+
+	&:disabled,
+	&[disabled] {
+		border-color: $ocl-button-disabled-color;
+		background-color: $ocl-button-disabled-color;
+
+		&:hover {
+			background-color: $ocl-button-disabled-color;
+		}
+	}
 }

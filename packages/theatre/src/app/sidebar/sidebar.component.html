@@ -1,13 +1,17 @@
 <div class="sidebar">
 	<div class="sidebar__title">&lt;TYPE&gt; Component Name</div>
 	<ul class="sidebar__nav-list">
-			<li class="sidebar__nav-list-item" *ngFor="let demo of demos | async"
-					(click)="selectDemo('demo', demo)">
-				<a routerLink="/{{componentType | async}}/{{pattern | async}}/{{name | async}}/demo/{{demo}}">{{demo}}</a>
+			<li class="sidebar__nav-list-item" *ngFor="let demo of demos | async">
+				<a class="sidebar__nav-list-item-link" routerLink="/{{componentType | async}}/{{pattern | async}}/{{name | async}}/demo/{{demo}}">
+					<label class="sidebar__nav-list-item-label">Demo</label><br/>
+					{{demo}}
+				</a>
 			</li>
-		<li class="sidebar__nav-list-item" *ngFor="let state of states | async"
-			(click)="selectDemo('state', state)">
-			<a routerLink="/{{componentType | async}}/{{pattern | async}}/{{name | async}}/state/{{state}}">{{state}}</a>
+		<li class="sidebar__nav-list-item" *ngFor="let state of states | async">
+			<a class="sidebar__nav-list-item-link" routerLink="/{{componentType | async}}/{{pattern | async}}/{{name | async}}/state/{{state}}">
+				<label class="sidebar__nav-list-item-label">State</label><br/>
+				{{state}}
+			</a>
 		</li>
 	</ul>
 </div>

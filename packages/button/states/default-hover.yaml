@@ -1,0 +1,6 @@
+---
+template:
+  attributes:
+  - - class
+    - '"ocl-button ocl-button--hover"'
+state: {}

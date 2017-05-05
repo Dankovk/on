@@ -1,6 +1,10 @@
 .topbar__component-nav {
 	padding-bottom: 10px;
 	border-bottom: 1px solid #ddd;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 72px;
 }
 
 .topbar__component-nav-list-item {
@@ -8,13 +12,12 @@
 	float: left;
 }
 
-.topbar__type-toggle-block{
+.topbar__type-toggle-block {
 	float: right;
 	margin-right: 50px;
-
 }
 
-.topbar__type-toggle-item{
+.topbar__type-toggle-item {
 	display: inline-block;
 	width: 100px;
 	height: 40px;
@@ -61,4 +64,3 @@
 		}
 	}
 }
-

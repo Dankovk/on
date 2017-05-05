@@ -1,0 +1,10 @@
+{
+  "name": "@one/theme",
+  "description": "The Material Components for the web theming system",
+	"version": "0.1.0",
+	"license": "UNLICENSED",
+	"repository": {
+		"type": "git",
+		"url": ""
+	}
+}

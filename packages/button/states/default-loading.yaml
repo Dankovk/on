@@ -1,0 +1,19 @@
+---
+template:
+  elementName: button
+  body: <span class="ocl-button__label">Button text</span>
+  attributes:
+  - disabled
+  - - class
+    - '"ocl-button ocl-button--loading ocl-button--add-loader"'
+  loader:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-loader ocl-loader--small"'
+    subElement:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-loader__spinner ocl-loader__spinner--small"'
+state: {}

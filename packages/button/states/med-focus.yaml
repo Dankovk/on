@@ -1,0 +1,6 @@
+---
+template:
+  attributes:
+  - - class
+    - '"ocl-button ocl-button--med js-ocl-button--focus"'
+state: {}

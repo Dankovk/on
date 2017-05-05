@@ -1,0 +1,9 @@
+---
+template:
+  elementName: a
+  attributes:
+  - - tabindex
+    - '"-1"'
+  - - class
+    - '"ocl-button js-ocl-button--focus"'
+state: {}

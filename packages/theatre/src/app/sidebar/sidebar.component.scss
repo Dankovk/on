@@ -3,21 +3,44 @@
 	min-height: 100%;
 	float: left;
 	border-right: 1px solid #ddd;
+
+	position: absolute;
+	height: 100%;
+	overflow: scroll;
 }
 
 .sidebar__nav-list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+
+	position: absolute;
+	width: 100%;
+	overflow: scroll;
+	height: calc(100% - 40px);
+	top: 40px;
 }
 
 .sidebar__nav-list-item {
-	padding: 10px;
 	border-bottom: 1px solid #ddd;
-	text-transform: uppercase;
-	a{
+}
+
+.sidebar__nav-list-item-link {
+	padding: 10px;
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	color: black;
+
+	&::active, &::visited {
 		text-decoration: none;
+		color: black;
 	}
+}
+
+.sidebar__nav-list-item-label {
+	text-transform: uppercase;
+	font-size: 10px;
 }
 
 .sidebar__title {

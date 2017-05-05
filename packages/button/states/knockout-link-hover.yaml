@@ -1,0 +1,7 @@
+---
+template:
+  elementName: a
+  attributes:
+  - - class
+    - '"ocl-button ocl-button--knockout ocl-button--hover"'
+state: {}

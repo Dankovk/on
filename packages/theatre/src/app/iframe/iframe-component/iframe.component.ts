@@ -6,6 +6,7 @@ import {DomSanitizer} from "@angular/platform-browser";
 @Component({
     selector: 'iframe-component',
     templateUrl: './iframe.component.html',
+    styleUrls: ['./iframe.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 

@@ -1,0 +1,137 @@
+---
+template:
+  loading:
+    elementName: button
+    body: <span class="ocl-button__label">Click to load</span>
+    attributes:
+    - - class
+      - '"ocl-button js-ocl-loading-button"'
+    loader:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-loader ocl-loader--small"'
+      subElement:
+        elementName: div
+        attributes:
+        - - class
+          - '"ocl-loader__spinner ocl-loader__spinner--small"'
+  loading-link:
+    elementName: a
+    body: <span class="ocl-button__label">Click to load</span>
+    attributes:
+    - - class
+      - '"ocl-button js-ocl-loading-button"'
+    loader:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-loader ocl-loader--small"'
+      subElement:
+        elementName: div
+        attributes:
+        - - class
+          - '"ocl-loader__spinner ocl-loader__spinner--small"'
+  loading-med:
+    elementName: button
+    body: <span class="ocl-button__label">Click to load</span>
+    attributes:
+    - - class
+      - '"ocl-button ocl-button--med js-ocl-loading-button"'
+    loader:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-loader ocl-loader"'
+      subElement:
+        elementName: div
+        attributes:
+        - - class
+          - '"ocl-loader__spinner ocl-loader__spinner"'
+  loading-med-link:
+    elementName: a
+    body: <span class="ocl-button__label">Click to load</span>
+    attributes:
+    - - class
+      - '"ocl-button ocl-button--med js-ocl-loading-button"'
+    loader:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-loader ocl-loader"'
+      subElement:
+        elementName: div
+        attributes:
+        - - class
+          - '"ocl-loader__spinner ocl-loader__spinner"'
+  loading-knockout:
+    elementName: button
+    body: <span class="ocl-button__label">Click to load</span>
+    attributes:
+    - - class
+      - '"ocl-button ocl-button--knockout js-ocl-loading-button"'
+    loader:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-loader ocl-loader--small"'
+      subElement:
+        elementName: div
+        attributes:
+        - - class
+          - '"ocl-loader__spinner ocl-loader__spinner--small"'
+  loading-knockout-link:
+    elementName: a
+    body: <span class="ocl-button__label">Click to load</span>
+    attributes:
+    - - class
+      - '"ocl-button ocl-button--knockout js-ocl-loading-button"'
+    loader:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-loader ocl-loader--small"'
+      subElement:
+        elementName: div
+        attributes:
+        - - class
+          - '"ocl-loader__spinner ocl-loader__spinner--small"'
+  allButtonsDemoScript: >
+    $(function() {
+      $('.js-ocl-loading-button').on('click', function() {
+        var $this = $(this);
+        var disabled = $(this).attr('disabled');
+
+        var toggle = function() {
+          $this.toggleClass('ocl-button--loading ocl-button--add-loader');
+          $this.attr('disabled', !disabled);
+          disabled = !disabled;
+        };
+
+        toggle();
+
+        setTimeout(toggle, 3000);
+
+      });
+
+      $('.js-ocl-button-focus').on('click', function(e) {
+        var $this = $(this);
+        var $check = $this.parent().siblings('.theatre__ocl-button-bar-cont-button').find('.ocl-button');
+        if($this.prop('checked')) {
+          setTimeout(function() {
+            $check.focus();
+          }, 100);
+        }
+        else {
+          $check.blur();
+        }
+      });
+
+      $('.ocl-button').on('blur', function(e) {
+        e.preventDefault();
+        var $check = $(this).parent().siblings('.theatre__ocl-button-bar-cont-title').find('.js-ocl-button-focus');
+        setTimeout(function() {
+          $check.prop('checked', false);
+        }, 200);
+      });
+    });

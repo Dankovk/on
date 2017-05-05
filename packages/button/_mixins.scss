@@ -1,0 +1,34 @@
+@import "@one/animation/functions";
+@import "./variables";
+
+@mixin ocl-button-hover {
+	transition: ocl-animation-enter("background-color, border-color", 200ms);
+
+	@include ocl-theme-prop(background-color, accent, $ocl-button-hover-color-diff);
+	@include ocl-theme-prop(border-color, accent, $ocl-button-hover-color-diff);
+}
+
+@mixin ocl-button-hover-base {
+	will-change: background-color border-color;
+
+	&:hover {
+		@include ocl-button-hover;
+	}
+}
+
+/*
+
+When/if buttons have an :active state, place that style here
+
+@mixin ocl-button-active {
+
+}
+
+@mixin ocl-button-active-base {
+	will-change: <properties that change>
+
+	&:active {
+		@include ocl-active-hover;
+	}
+}
+*/

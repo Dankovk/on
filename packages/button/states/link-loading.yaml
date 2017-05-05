@@ -1,0 +1,18 @@
+---
+template:
+  elementName: a
+  attributes:
+  - disabled
+  - - class
+    - '"ocl-button ocl-button--loading"'
+  loader:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-loader ocl-loader--small"'
+    subElement:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-loader__spinner ocl-loader__spinner--small"'
+state: {}

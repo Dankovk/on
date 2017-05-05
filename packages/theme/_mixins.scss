@@ -1,0 +1,112 @@
+//
+// Copyright 2017 Google Inc. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+
+//
+// Adapted from originally from Google Material Components Web
+//
+// https://github.com/material-components/material-components-web
+//
+
+@import "./variables";
+@import "./functions";
+
+/**
+ * Applies the correct theme color style to the specified property.
+ * $property is typically color or background-color, but can be any CSS property that accepts color values.
+ * $style should be one of the map keys in $ocl-theme-property-values (_variables.scss).
+ */
+@mixin ocl-theme-prop($property, $style, $color-diff: false, $important: false) {
+	@if not map-has-key($ocl-theme-property-values, $style) {
+		@error "Invalid style specified! Choose one of #{map-keys($ocl-theme-property-values)}";
+	}
+
+	@if $important and $color-diff {
+		#{$property}: ocl-apply-color-diff(map-get($ocl-theme-property-values, $style), $color-diff) !important;
+	}
+
+	@else if $important {
+		#{$property}: map-get($ocl-theme-property-values, $style) !important;
+	}
+
+	@else if $color-diff {
+		#{$property}: ocl-apply-color-diff(map-get($ocl-theme-property-values, $style), $color-diff);
+	}
+
+	@else {
+		#{$property}: map-get($ocl-theme-property-values, $style);
+	}
+}
+
+/**
+ * Creates a rule to be used in MDC-Web components for dark theming, and applies the provided contents.
+ * Should provide the $root-selector option if applied to anything other than the root selector.
+ * When used with a modifier class, provide a second argument of `true` for the $compound parameter
+ * to specify that this should be attached as a compound class.
+ *
+ * Usage example:
+ *
+ * ```scss
+ * .ocl-foo {
+ *   color: black;
+ *
+ *   @include ocl-theme-dark {
+ *     color: white;
+ *   }
+ *
+ *   &__bar {
+ *     background: black;
+ *
+ *     @include ocl-theme-dark(".ocl-foo") {
+ *       background: white;
+ *     }
+ *   }
+ * }
+ *
+ * .ocl-foo--disabled {
+ *   opacity: .38;
+ *
+ *   @include ocl-theme-dark(".ocl-foo", true) {
+ *     opacity: .5;
+ *   }
+ * }
+ * ```
+ */
+@mixin ocl-theme-dark($root-selector: null, $compound: false) {
+	@if ($root-selector) {
+		@at-root {
+			@if ($compound) {
+				#{$root-selector}--theme-dark#{&},
+				.ocl-theme--dark & {
+					@content;
+				}
+			}
+
+			@else {
+				#{$root-selector}--theme-dark &,
+				.ocl-theme--dark & {
+					@content;
+				}
+			}
+		}
+	}
+
+	@else {
+		&--theme-dark,
+		.ocl-theme--dark & {
+			@content;
+		}
+	}
+}

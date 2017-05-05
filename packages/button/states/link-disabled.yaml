@@ -1,0 +1,8 @@
+---
+template:
+  elementName: a
+  attributes:
+  - disabled
+  - - class
+    - '"ocl-button"'
+state: {}

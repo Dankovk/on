@@ -11,10 +11,17 @@
 		<link rel="stylesheet" href="//fast.fonts.net/cssapi/1ff5a211-cb1c-4569-ab72-a671f80870f8.css">
 
 		<link rel="stylesheet" href="/theatre-iframe.css">
+		{{#each componentStyleDeps}}
+		<link rel="stylesheet" href="/components/{{this}}.css">
+		{{/each}}
 		<link rel="stylesheet" href="{{theatreStyle}}">
-		<link rel="stylesheet" href="{{componentStyle}}">
+
+		<script
+			src="https://code.jquery.com/jquery-3.2.1.min.js"
+			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			crossorigin="anonymous"></script>
 	</head>
-	<body class="theatre__stage-iframe">
+	<body class="theatre__stage-iframe {{theatreBodyClasses}}">
 		{{{component}}}
 	</body>
 </html>
