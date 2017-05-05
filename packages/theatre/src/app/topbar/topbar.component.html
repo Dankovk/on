@@ -2,7 +2,7 @@
 	<nav class="topbar__component-nav clearfix">
 		<ul class="topbar__component-nav-list">
 			<li class="topbar__component-nav-list-item" [class.open]="isClassVisible.atoms">
-				<a routerLink="{{componentType | async}}/atoms/" class="topbar__component-nav-list-link" (click)="toggleClass('atoms')">Atoms</a>
+				<a href="#" (click)="false;" class="topbar__component-nav-list-link" (click)="toggleClass('atoms')">Atoms</a>
 				<ul class="topbar__component-subnav-list">
 					<li class="topbar__component-subnav-list-item" *ngFor="let atom of atoms | async">
 						<a routerLink="{{componentType | async}}/atoms/{{atom.name}}" (click)="actions.selectComponent('atoms', atom.name)">{{ atom.name }}{{atom.type}}</a>
@@ -10,7 +10,7 @@
 				</ul>
 			</li>
 			<li class="topbar__component-nav-list-item" [class.open]="isClassVisible.molecules">
-				<a routerLink="{{componentType | async}}/molecules/" class="topbar__component-nav-list-link" (click)="toggleClass('molecules')">Molecules</a>
+				<a href="#" (click)="false;" class="topbar__component-nav-list-link" (click)="toggleClass('molecules')">Molecules</a>
 				<ul class="topbar__component-subnav-list">
 					<li class="topbar__component-subnav-list-item" *ngFor="let molecule of molecules | async">
 						<a routerLink="{{componentType | async}}/molecules/{{molecule.name}}" (click)="actions.selectComponent('molecules', molecule.name)">{{ molecule.name }}</a>
@@ -18,7 +18,7 @@
 				</ul>
 			</li>
 			<li class="topbar__component-nav-list-item" [class.open]="isClassVisible.organisms">
-				<a routerLink="{{componentType | async}}/organisms/" class="topbar__component-nav-list-link" (click)="toggleClass('organisms')">Organisms</a>
+				<a href="#" (click)="false;" class="topbar__component-nav-list-link" (click)="toggleClass('organisms')">Organisms</a>
 				<ul class="topbar__component-subnav-list">
 					<li class="topbar__component-subnav-list-item" *ngFor="let organism of organisms | async">
 						<a routerLink="{{componentType | async}}/organisms/{{organism.name}}" (click)="actions.selectComponent('organisms', organism.name)">{{ organism.name }}</a>
@@ -26,7 +26,7 @@
 				</ul>
 			</li>
 			<li class="topbar__component-nav-list-item" [class.open]="isClassVisible.templates">
-				<a routerLink="{{componentType | async}}/templates/" class="topbar__component-nav-list-link" (click)="toggleClass('templates')">Templates</a>
+				<a href="#" (click)="false;" class="topbar__component-nav-list-link" (click)="toggleClass('templates')">Templates</a>
 				<ul class="topbar__component-subnav-list">
 					<li class="topbar__component-subnav-list-item" *ngFor="let template of templates | async">
 						<a routerLink="{{componentType | async}}/templates/{{template.name}}" (click)="actions.selectComponent('templates', template.name)">{{ template.name }}</a>
@@ -34,7 +34,7 @@
 				</ul>
 			</li>
 			<li class="topbar__component-nav-list-item" [class.open]="isClassVisible.pages">
-				<a routerLink="{{componentType | async}}/pages/" class="topbar__component-nav-list-link" (click)="toggleClass('pages')">Pages</a>
+				<a href="#" (click)="false;" class="topbar__component-nav-list-link" (click)="toggleClass('pages')">Pages</a>
 				<ul class="topbar__component-subnav-list">
 					<li class="topbar__component-subnav-list-item" *ngFor="let page of pages | async">
 						<a routerLink="{{componentType | async}}/pages/{{page.name}}" (click)="actions.selectComponent('pages', page.name)">{{ page.name }}</a>
