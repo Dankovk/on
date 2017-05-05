@@ -2,9 +2,8 @@
 @import "@one/theme/mixins";
 @import "@one/theme/functions";
 @import "@one/animation/functions";
+@import "./variables";
 @import "./mixins";
-
-$ocl-button-disabled-color: #999;
 
 .ocl-button {
 	@include ocl-typography-base;

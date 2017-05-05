@@ -26,7 +26,7 @@ import R from 'ramda';
 import _ from 'lodash/fp';
 import request from 'request';
 // import webpack from 'webpack';
-// import gutil from 'gulp-util';
+import gutil from 'gulp-util';
 // import { trace } from './lib/debug';
 
 // import { CheckerPlugin } from 'awesome-typescript-loader';
@@ -666,29 +666,17 @@ export function watchComponents() {
 			R.cond([
 				// TODO: Create a function to only build one sass component & dependents
 				[R.compose(R.equals(true), isTheatreSass),
-					gulp.series(sassTheatre, browserSyncReload)],
+					gulp.series(sassTheatre, theatreProxyTriggerUpdate)],
 				// eslint-disable-next-line max-len
 				[R.compose(R.equals(true), isTheatreTemplate),
-					gulp.series(buildComponentTemplates, theatreJSON, browserSyncReload)],
+					gulp.series(buildComponentTemplates, theatreJSON, theatreProxyTriggerUpdate)],
 				[R.compose(R.equals(true), isSass),
-					gulp.series(sassComponents, browserSyncReload)],
+					gulp.series(sassComponents, theatreProxyTriggerUpdate)],
 				// TODO: Use a function to only build one component & dependents
 				// eslint-disable-next-line max-len
 				[R.compose(R.equals(true), isComponent),
-					gulp.series(buildComponentTemplates, theatreJSON, browserSyncReload)]
+					gulp.series(buildComponentTemplates, theatreJSON, theatreProxyTriggerUpdate)]
 			])(file);
-
-			// Tell theatre we've updated
-			request.put({
-				url: 'http://localhost:4112/updated',
-				json: true,
-				body: {
-					component:'name'
-				}
-			},
-			function (error, response, body) {
-				// nothing
-			});
 		});
 }
 
@@ -737,6 +725,24 @@ export function sassTheatre() {
 export function browserSyncReload(cb) {
 	browserSync.reload();
 	cb();
+}
+
+export function theatreProxyTriggerUpdate(cb) {
+	// Tell theatre we've updated
+	request.put({
+		url: 'http://localhost:4112/updated',
+		json: true,
+		body: {
+			component: 'name'
+		}
+	},
+	function (error, response, body) {
+		if (error) {
+			gutil.log(err);
+		}
+
+		cb();
+	});
 }
 
 /*
