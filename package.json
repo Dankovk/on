@@ -105,7 +105,7 @@
     "clean:dll": "npm run rimraf -- dll",
     "lint:ts": "npm run tslint \"packages/*/src/**/*.ts\"",
     "lint:es": "npm run eslint lib *.js --silent",
-    "lint:css": "npm run stylelint packages/**/*.scss",
+    "lint:css": "npm run stylelint \"packages/**/*.scss\"",
     "lint": "npm run npm-run-all lint:ts lint:es lint:css",
     "theatre-sass": "node-sass packages/theatre/src -o packages/theatre/src --include-path packages/theatre/node_modules --output-style compressed -q",
     "theatre-sass:watch": "node-sass -w packages/theatre/src -o packages/theatre/src --include-path packages/theatre/node_modules --output-style compressed -q",
