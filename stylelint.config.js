@@ -4,10 +4,7 @@ module.exports = {
 		'node_modules/**/*',
 		'packages/**/node_modules/**/*',
 		'dist/**/*'
-	],
-	rules: {
-		indentation: ['tab']
-	}
+	]
 };
 
 // # Ensure any defined symbols are prefixed with "mdc-"

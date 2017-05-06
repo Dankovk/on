@@ -25,6 +25,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CheckerPlugin } = require('awesome-typescript-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const NamedModulesPlugin = require('webpack/lib/NamedModulesPlugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const webpackMerge = require('webpack-merge');
 const path = require('path');
 
@@ -123,6 +124,11 @@ const commonConfig = function webpackConfig(): WebpackConfig {
 				template: 'packages/theatre/src/index.html',
 				inject: false
 			})
+			// Stylelint
+			// ,new StyleLintPlugin({
+			// 	files: STYLE_PATH,
+			// 	syntax: 'scss'
+			// })
 		);
 	}
 
