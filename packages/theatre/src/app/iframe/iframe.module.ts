@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CoreModule } from '../core/core.module';
 import { StoreModule } from '../store/store.module';
 
 import { UtilityService } from '../core/utils/utility.service';
@@ -14,7 +13,7 @@ import { IframeService } from './iframe-page.service';
 @NgModule({
 	declarations: [IframeComponent, IframePageComponent],
 	exports: [IframeComponent, IframePageComponent],
-	imports: [CoreModule, StoreModule, CommonModule],
+	imports: [StoreModule, CommonModule],
 	providers: [IframeService, UtilityService]
 })
 
