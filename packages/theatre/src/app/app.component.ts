@@ -5,7 +5,7 @@ import * as io from 'socket.io-client';
 
 import { AppService } from './app.service';
 @Component({
-	selector: 'zoo-root',
+	selector: 'theatre-root',
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.css'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
