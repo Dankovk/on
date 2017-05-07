@@ -26,6 +26,7 @@ packages/theatre/src/**/*.js
 packages/theatre/src/**/*.map
 packages/*.js
 webpack.config.js
+webpack.config.js.map
 
 #compiled css
 packages/theatre/src/**/*.css

@@ -105,7 +105,10 @@
     "tslint": "tslint",
     "nodemon": "nodemon",
     "stylelint": "stylelint",
+    "ngc:theatre": "./node_modules/.bin/ngc -p tsconfig.aot.json",
     "clean:dll": "npm run rimraf -- dll",
+    "clean:theatre": "npm run rimraf -- dist/theatre",
+    "build:theatre:prod": "npm run clean:theatre && npm run component-build && npm run theatre-sass && webpack",
     "lint:ts": "npm run tslint \"packages/*/src/**/*.ts\"",
     "lint:es": "npm run eslint lib *.js --silent",
     "lint:css": "npm run stylelint \"packages/**/*.scss\"",
@@ -121,6 +124,7 @@
     "commitizen": "commitizen",
     "test": "./node_modules/.bin/mocha --reporter spec --require babel-register $(find lib src -path '*.spec.js') && npm run lint",
     "theatre-webdev": "npm-run-all -p theatre-proxy theatre-sass theatre-sass:watch lint:theatre-css:watch theatre-devserver",
+    "component-build": "npm run gulp cleanBuildComponents",
     "component-dev": "npm run gulp cleanWatchComponents",
     "theatre-component-dev": "npm-run-all -p -r component-dev theatre-webdev",
     "webpack": "webpack"

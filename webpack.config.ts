@@ -55,7 +55,7 @@ const CONSTANTS = {
 };
 
 const DLL_VENDORS = ['./packages/theatre/src/vendor'];
-const DLL_POLYFILLS = ['./packages/theatre/src/polyfill'];
+const DLL_POLYFILLS = ['./packages/theatre/src/polyfills.browser'];
 
 const COPY_FOLDERS = [
 	{ from: 'packages/theatre/src/assets', to: 'assets' },
@@ -160,7 +160,7 @@ const clientConfig = function webpackConfig(): WebpackConfig {
 
 	if (DLL) {
 		config.entry = {
-			app_assets: ['./packages/theatre/src/main'],
+			app_assets: ['./packages/theatre/src/main.browser'],
 			polyfill: [
 				...DLL_POLYFILLS,
 				...MY_POLYFILL_DLLS
@@ -170,7 +170,7 @@ const clientConfig = function webpackConfig(): WebpackConfig {
 	}
 	else {
 		config.entry = {
-			main: './packages/theatre/src/main'
+			main: './packages/theatre/src/main.browser'
 		};
 	}
 
