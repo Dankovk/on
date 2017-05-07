@@ -17,7 +17,6 @@
 		"@angular/platform-browser": "^4.0.1",
 		"@angular/platform-browser-dynamic": "^4.0.1",
 		"@angular/router": "^4.0.1",
-
 		"core-js": "^2.4.1",
 		"redux": "^3.6.0",
 		"redux-logger": "^3.0.1",
@@ -25,7 +24,7 @@
 		"@angular-redux/store": "^6.1.0",
 		"@angular-redux/form": "^6.1.0",
 		"@angular-redux/router": "^6.1.0",
-
+		"axios": "^0.16.1",
 		"immutable": "^3.8.1",
 		"rxjs": "^5.3.0",
 		"typescript": "^2.2.2",
