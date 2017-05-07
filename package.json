@@ -105,7 +105,6 @@
     "tslint": "tslint",
     "nodemon": "nodemon",
     "stylelint": "stylelint",
-    "ngc:theatre": "./node_modules/.bin/ngc -p tsconfig.aot.json",
     "clean:dll": "npm run rimraf -- dll",
     "clean:theatre": "npm run rimraf -- dist/theatre",
     "build:theatre:prod": "npm run clean:theatre && npm run component-build && npm run theatre-sass && webpack",
