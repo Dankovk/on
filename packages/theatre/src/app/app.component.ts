@@ -13,7 +13,7 @@ import { AppService } from './app.service';
 	encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-	@select (['json', 'selectedComponent', 'pattern']) readonly selectedComponent: Observable<string>;
+	@select (['json', 'selectedComponent']) readonly selectedComponent: Observable<any>;
 	private socketUrl = 'http://localhost:4112';
 	private params: Object;
 	private sub: any;
@@ -34,8 +34,8 @@ export class AppComponent {
 		socket.on('changed', () => {
 			this.refreshApp();
 		});
-		this.selectedComponent.subscribe( pattern => {
-			this.componentSelected = pattern != "";
+		this.selectedComponent.subscribe( component => {
+			this.componentSelected = component && component.pattern && component.pattern != "" && component.name && component.name != "";
 		})
 	}
 }

@@ -63,6 +63,15 @@ export default function jsonReducer(state: any = INITIAL_STATE, action: any) {
 			}
 
 		};
+		case jsonActionsNames.CLEAR_IFRAME:
+			return {
+				...state,
+				selectedComponent: {
+					pattern: '',
+					name: '',
+					demo: ''
+				}
+			};
 		case jsonActionsNames.DEMO_SELECTED:
 		return {
 			...state,

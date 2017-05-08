@@ -28,7 +28,6 @@ export class TopbarComponent {
         'templates': false,
         'pages': false
     };
-
     @select(['json', 'componentType']) readonly componentType: Observable<string>;
     @select(state => state.json.data[state.json.componentType].atoms) readonly atoms: Observable<any[]>;
     @select(state => state.json.data[state.json.componentType].molecules) readonly molecules: Observable<any[]>;
@@ -57,7 +56,6 @@ export class TopbarComponent {
                     stateJson.data[selectedComponentType][currentPattern].forEach((elem) => {
                         if(elem.name = currentName){
                             elem.demos.forEach((elem) => {
-                                console.log(elem, currentDemo);
                                 if(elem === currentDemo){
                                     exist = true;
                                 }
