@@ -38,6 +38,10 @@ body {
 	position: absolute;
 	width: 100%;
 	height: calc(100% - 72px);
+
+	&--hidden {
+		display: none;
+	}
 }
 
 /* stylelint-disable selector-no-type, selector-no-universal */

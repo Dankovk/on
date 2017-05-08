@@ -56,12 +56,22 @@ export default function jsonReducer(state: any = INITIAL_STATE, action: any) {
 		const component = state.data[state.componentType][action.pattern].filter(elem => elem.name === action.component)[0];
 		return {
 			...state,
+			src: null,
 			selectedComponent: {
 				...component,
 				pattern: action.pattern,
 			}
 
 		};
+		case jsonActionsNames.CLEAR_IFRAME:
+			return {
+				...state,
+				selectedComponent: {
+					pattern: '',
+					name: '',
+					demo: ''
+				}
+			};
 		case jsonActionsNames.DEMO_SELECTED:
 		return {
 			...state,

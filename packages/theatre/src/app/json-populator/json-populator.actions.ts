@@ -8,7 +8,8 @@ export const jsonActionsNames = {
 	LOAD_FAILED: 'json/LOAD_FAILED',
 	COMPONENT_SELECTED: 'json/COMPONENT_SELECTED',
 	DEMO_SELECTED: 'json/DEMO_SELECTED',
-	TYPE_SELECTED: 'json/TYPE_SELECTED'
+	TYPE_SELECTED: 'json/TYPE_SELECTED',
+	CLEAR_IFRAME: 'json/CLEAR_IFRAME'
 };
 
 @Injectable()
@@ -19,6 +20,7 @@ export class JsonActions {
 	static readonly COMPONENT_SELECTED = jsonActionsNames.COMPONENT_SELECTED;
 	static readonly DEMO_SELECTED = jsonActionsNames.DEMO_SELECTED;
 	static readonly TYPE_SELECTED = jsonActionsNames.TYPE_SELECTED;
+	static readonly CLEAR_IFRAME = jsonActionsNames.CLEAR_IFRAME;
 	private sub:any;
 
 	constructor(public  ngRedux:NgRedux<any>, private router:Router, private route:ActivatedRoute) {
@@ -62,12 +64,15 @@ export class JsonActions {
 
 	selectType(componentType) {
 		this.ngRedux.dispatch({
-			type: jsonActionsNames.TYPE_SELECTED,
+			type: JsonActions.TYPE_SELECTED,
 			componentType: componentType
 		});
 	}
 
 	changeUrlAccordingToType(type) {
+		this.ngRedux.dispatch({
+			type: JsonActions.CLEAR_IFRAME,
+		});
 		this.router.navigateByUrl(`/${type}/`);
 	}
 
