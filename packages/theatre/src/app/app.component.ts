@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy, ViewEncapsulation, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {Observable} from "rxjs/Observable";
+import { select } from "@angular-redux/store";
+import { Observable } from "rxjs/Observable";
 import * as io from 'socket.io-client';
 
 import { AppService } from './app.service';
@@ -12,14 +13,17 @@ import { AppService } from './app.service';
 	encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
+	@select (['json', 'selectedComponent', 'pattern']) readonly selectedComponent: Observable<string>;
 	private socketUrl = 'http://localhost:4112';
 	private params: Object;
 	private sub: any;
+	private componentSelected: boolean;
 	constructor(private service: AppService, private route: ActivatedRoute){}
 
 	refreshApp() {
 		this.service.getJson();
 	}
+
 
 	ngOnInit() {
 		this.sub = this.route.params.subscribe(params => {
@@ -29,6 +33,9 @@ export class AppComponent {
 		const socket = io.connect(this.socketUrl);
 		socket.on('changed', () => {
 			this.refreshApp();
+		});
+		this.selectedComponent.subscribe( pattern => {
+			this.componentSelected = pattern != "";
 		})
 	}
 }

@@ -1,5 +1,5 @@
 <div class="sidebar">
-	<div class="sidebar__title">&lt;TYPE&gt; Component Name</div>
+	<div class="sidebar__title">{{componentType | async}} {{name | async}}</div>
 	<ul class="sidebar__nav-list">
 			<li class="sidebar__nav-list-item" *ngFor="let demo of demos | async">
 				<a class="sidebar__nav-list-item-link" routerLink="/{{componentType | async}}/{{pattern | async}}/{{name | async}}/demo/{{demo}}">
