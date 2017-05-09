@@ -1,0 +1,21 @@
+---
+template:
+  label:
+    elementName: label
+    body: 'Email:'
+    attributes:
+    - - class
+      - '"ocl-input-label"'
+  elementName: input
+  attributes:
+  - - class
+    - '"ocl-input"'
+  - - placeholder
+    - '"enter your email address"'
+  error:
+    elementName: span
+    body: Wrong e-mail
+    attributes:
+    - - class
+      - '"ocl-input-error"'
+state: {}

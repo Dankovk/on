@@ -1,0 +1,15 @@
+---
+template:
+  elementName: input
+  attributes:
+  - - class
+    - '"ocl-input-search"'
+  - - placeholder
+    - '"Search"'
+  button:
+    elementName: div
+    body: S
+    attributes:
+    - - class
+      - '"ocl-button-search"'
+state: {}

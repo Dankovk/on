@@ -1,19 +1,7 @@
 ---
 template:
-  label:
-    elementName: label
-    body: Label
-    attributes:
-    - - class
-      - '"ocl-input-label"'
   elementName: input
   attributes:
   - - class
     - '"ocl-input"'
-  error:
-    elementName: span
-    body: Error Message
-    attributes:
-    - - class
-      - '"ocl-input-error"'
 state: {}
