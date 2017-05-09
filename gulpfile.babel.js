@@ -351,7 +351,11 @@ const theatreComponentName = (pattern, name, presentation, stateordemo, type) =>
  *
  */
 const theatreBodyClasses = (pattern, name, presentation, stateordemo) => {
-	let bodyClasses = [`theatre__stage-${name}-${presentation}-${stateordemo}`];
+	let bodyClasses = [
+		`theatre__stage-${name}`,
+		`theatre__stage-${name}-${presentation}`,
+		`theatre__stage-${name}-${presentation}-${stateordemo}`
+	];
 	if (R.equals('demo', presentation)) {
 		bodyClasses = R.prepend('theatre__stage-demo', bodyClasses);
 	}
