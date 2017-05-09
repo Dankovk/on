@@ -1,7 +1,7 @@
 ---
 template:
   elementName: button
-  body: <span class="ocl-button__label">Button text</span>
+  body: <span class="ocl-button__label">Button text!!</span>
   attributes:
   - - class
     - '"ocl-button"'
