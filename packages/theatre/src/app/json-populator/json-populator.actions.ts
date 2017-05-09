@@ -70,10 +70,10 @@ export class JsonActions {
 	}
 
 	changeUrlAccordingToType(type) {
+		this.router.navigateByUrl(`/${type}/`);
 		this.ngRedux.dispatch({
 			type: JsonActions.CLEAR_IFRAME,
 		});
-		this.router.navigateByUrl(`/${type}/`);
 	}
 
 	changeUrlAccordingToDemo(pattern, name, namespace, element, type) {

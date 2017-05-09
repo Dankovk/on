@@ -67,14 +67,15 @@ export class TopbarComponent {
                 return exist;
             };
 
+            //TODO: rewrite this to wait until json is loaded, cause it's causing reloading the page whe url is ok
 
-            if(this.isDemoExist()){
-                this.actions.changeUrlAccordingToDemo(currentPattern, currentName, 'demo', currentDemo, selectedComponentType);
-            }
-            else {
-                currentPattern ? this.actions.selectComponent(currentPattern, currentName) : false;
-                this.actions.changeUrlAccordingToType(selectedComponentType);
-            }
+            // if(this.isDemoExist()){
+            //     this.actions.changeUrlAccordingToDemo(currentPattern, currentName, 'demo', currentDemo, selectedComponentType);
+            // }
+            // else {
+            //     currentPattern ? this.actions.selectComponent(currentPattern, currentName) : false;
+            //     this.actions.changeUrlAccordingToType(selectedComponentType);
+            // }
 
         });
 

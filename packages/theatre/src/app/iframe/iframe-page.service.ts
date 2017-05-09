@@ -16,7 +16,6 @@ export class IframeService {
 			if(loaded) {
 				const { type, pattern, component, state, demo } = route;
 				const patternSingular = this.utils.depluralize(pattern);
-
 				if (type) {
 					this.actions.selectType(type)
 				}
