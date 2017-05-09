@@ -1,29 +1,27 @@
-.oct-input-wrap{
-	position: relative;
-}
+@import "./variables";
 
 .ocl-input-label {
 	display: block;
-	font-weight: 500;
-	font-size: 16px;
-	margin-bottom: 2px;
+	margin-bottom: $input-label-margin-bottom;
 	color: #444;
+	font-size: $input-font-size;
+	font-weight: 500;
 	letter-spacing: 0;
 }
 
-.ocl-input{
-	height: 42px;
-	width: 280px;
-	font-size: 16px;
+.ocl-input {
+	width: $input-width;
+	height: $input-height;
+	padding: $input-padding;
+	border: $input-border;
+	border-radius: $input-radius;
 	background: #fff;
-	border: 1px solid #D3D3D3;
-	border-radius: 2px;
-	padding: 10px;
+	font-size: $input-font-size;
 	box-sizing: border-box;
-	margin-bottom: 22px;
-	&::placeholder{
-		font-size: 16px;
+
+	&::placeholder {
 		color: #999;
+		font-size: $input-font-size;
 		font-style: italic;
 		letter-spacing: 0;
 	}
@@ -31,37 +29,38 @@
 
 .ocl-input-error {
 	display: block;
-	color: #c42f2f;
-	font-size: 16px;
-	position: absolute;
-	bottom: -3px;
+	margin-top: $input-error-margin-top;
+	color: $input-error-color;
+	font-size: $input-font-size;
 }
 
-.ocl-input-search{
+.ocl-input-search {
+	width: $input-width;
+	height: $input-search-height;
+	padding: $input-padding;
+	border: $input-border;
+	border-radius: $input-radius;
 	background: #fff;
-	height: 37px;
-	width: 200px;
-	font-size: 16px;
-	border: 1px solid #D3D3D3;
-	border-radius: 2px;
-	padding: 10px;
+	font-size: $input-font-size;
 	box-sizing: border-box;
-	box-shadow: inset -1px 1px 1px 0 rgba(142,142,142,0.50);
-	&::placeholder{
+	box-shadow: $input-inner-shadow;
+
+	&::placeholder {
+		color: $input-placeholder-color;
+		font-size: $input-font-size;
 		font-weight: bold;
-		font-size: 16px;
-		color: #BEBEBE;
 		letter-spacing: 0;
 	}
 }
 
-.ocl-button-search{
+.ocl-button-search {
 	position: absolute;
-	top:8px;
-	left: 175px;
-	cursor: pointer;
+	top: 15px;
+	right: 0;
+	margin-right: 25px;
+	color: $input-search-color;
+	font-size: $input-font-size;
 	font-weight: bold;
-	font-size: 16px;
-	color: #BEBEBE;
+	cursor: pointer;
 	letter-spacing: 0;
 }
