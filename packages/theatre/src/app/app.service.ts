@@ -15,7 +15,7 @@ export class AppService {
 
     getJson() {
         this.actions.loadJson();
-        axios.get('http://localhost:3000/theatre.json')
+        axios.get('/theatre.json')
             .then((data) => {
                 this.actions.loadSucceeded(data.data);
             })
