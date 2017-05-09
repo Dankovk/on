@@ -1,0 +1,10 @@
+{
+  "name": "@one/layout",
+  "description": "General layout functions, mixins and variables",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}

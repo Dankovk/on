@@ -1,0 +1,8 @@
+@import "./variables";
+@import "./mixins";
+@import "@one/layout/function";
+
+.ocl-card {
+  padding: rem(10px);
+}
+

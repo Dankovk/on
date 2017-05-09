@@ -31,6 +31,7 @@ $ocl-theme-primary: $ocl-magenta !default;
 $ocl-theme-accent: $ocl-blue !default;
 $ocl-theme-background: #fff !default;
 
+
 /* Which set of text colors to use for each main theme color (light or dark) */
 $ocl-theme-primary-tone: ocl-theme-light-or-dark($ocl-theme-primary);
 $ocl-theme-accent-tone: ocl-theme-light-or-dark($ocl-theme-accent);
