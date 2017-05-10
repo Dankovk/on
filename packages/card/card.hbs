@@ -1,3 +1,17 @@
 <{{elementName}} {{{attr attributes}}}>
-{{{body}}}{{#if loader}}{{> loader loader}}{{/if}}
+{{#if header}}
+    <{{header.elementName}} {{{attr header.attributes}}}>
+        {{{header.body}}}
+    </{{header.elementName}}>
+{{/if}}
+<{{body.elementName}} {{{attr body.attributes}}}>
+    <{{body.content.elementName}} {{{attr body.content.attributes}}}>
+        {{{body.content.body}}}
+    </{{body.content.elementName}}>
+</{{body.elementName}}>
+{{#if footer}}
+    <{{footer.elementName}} {{{attr footer.attributes}}}>
+        {{{footer.body}}}
+    </{{footer.elementName}}>
+{{/if}}
 </{{elementName}}>

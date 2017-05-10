@@ -1,0 +1,11 @@
+.theatre__stage-card {
+	position: absolute;
+	width: 500px;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	.ocl-card {
+		background-color: #ededed;
+	}
+}
