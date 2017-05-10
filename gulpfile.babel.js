@@ -6,7 +6,7 @@ import multipipe from 'multipipe';
 import reduce from 'stream-reduce';
 import hbs from 'gulp-hbs';
 import yaml from 'gulp-yaml';
-import yaml2json from 'yamljs';
+import yaml2json from 'js-yaml';
 import stylelint from 'gulp-stylelint';
 import lazypipe from 'lazypipe';
 import mirror from 'gulp-mirror';
@@ -144,7 +144,7 @@ const loadConfigSync =
 			R.pipe(
 				R.concat(R.__, '.yaml'),
 				(R.curry(fs.readFileSync)(R.__, { encoding: 'utf8' })),
-				yaml2json.parse
+				yaml2json.load
 			)
 		],
 		[R.T,
