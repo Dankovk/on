@@ -1,8 +1,38 @@
+@import "@one/layout/functions";
+@import "@one/layout/mixins";
 @import "./variables";
 @import "./mixins";
-@import "@one/layout/function";
 
 .ocl-card {
-  padding: rem(10px);
+	padding-right: rem(30px);
+	padding-left: rem(30px);
+	border-radius: 2px;
+	box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .5);
+
+	&__header {
+		padding-top: rem(30px);
+		padding-bottom: rem(20px);
+		border-bottom: solid 1px $card__block--border-color;
+	}
+
+	&__header-content {
+		@include ocl-reset-margin--top-and-bottom;
+		@include ocl-font-family--regular;
+
+		color: $card__header--font-color;
+		font-family: "Proxima Nova", sans-serif;
+		font-size: $card-_header--font-size;
+		font-weight: normal;
+	}
+
+	&__footer {
+		padding-top: rem(15px);
+		padding-bottom: rem(10px);
+		border-top: solid 1px $card__block--border-color;
+	}
+
+	&--flat {
+		box-shadow: none;
+	}
 }
 

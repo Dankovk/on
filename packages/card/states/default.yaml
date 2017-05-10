@@ -1,0 +1,30 @@
+---
+template:
+  elementName: div
+  body:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-card__body"'
+    content:
+      elementName: div
+      body: <p>Card content</p>
+      attributes:
+      - - class
+        - '"ocl-card__body-content"'
+  attributes:
+  - - class
+    - '"ocl-card"'
+  header:
+    elementName: div
+    body: <h1 class="ocl-card__header-content">Sign in to Fiber Entrada</h1>
+    attributes:
+    - - class
+      - '"ocl-card__header"'
+  footer:
+    elementName: div
+    body: <span class="ocl-card__footer-content">footer</span>
+    attributes:
+    - - class
+      - '"ocl-card__footer"'
+state: {}
