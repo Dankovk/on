@@ -2,6 +2,6 @@
 template:
   attributes:
     - - class
-      - '"ocl-card ocl-card--flat"'
+      - '"ocl-card ocl-card--square-bottom"'
 state: {}
 

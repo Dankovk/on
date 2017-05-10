@@ -23,7 +23,7 @@ template:
       - '"ocl-card__header"'
   footer:
     elementName: div
-    body: <span class="ocl-card__footer-content">footer</span>
+    body: <div class="ocl-card__footer-content">footer</div>
     attributes:
     - - class
       - '"ocl-card__footer"'
