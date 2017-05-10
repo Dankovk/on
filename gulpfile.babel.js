@@ -25,13 +25,8 @@ import transform from 'gulp-transform';
 import R from 'ramda';
 import _ from 'lodash/fp';
 import request from 'request';
-// import webpack from 'webpack';
 import gutil from 'gulp-util';
 // import { trace } from './lib/debug';
-
-// import { CheckerPlugin } from 'awesome-typescript-loader';
-// import HtmlWebpackPlugin from 'html-webpack-plugin';
-// import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 import { attributes } from './lib/attributes';
 
@@ -40,19 +35,10 @@ const browserSync = bs.create();
 // Atoms, molecules
 const packageSrc = 'packages';
 const destPath = 'dist';
-const srcPath = 'src';
-// const atomPath = 'atoms';
-const moleculePath = 'molecules';
 
-// const atomSrcPath = path.join(srcPath, atomPath);
-const moleculeSrcPath = path.join(srcPath, moleculePath);
 const componentStyleLibPath = path.join(packageSrc, 'one', 'node_modules');
 const componentStylePath = path.join(packageSrc, '/*/*.scss');
-
 const componentDestPath = path.join(destPath, 'components');
-// const atomDestPath = path.join(componentDestPath, atomPath);
-const moleculeDestPath = path.join(componentDestPath, moleculePath);
-
 const theatrePackagePath = path.join(packageSrc, 'theatre');
 // const theatreSrcPath = path.join(theatrePackagePath, 'src');
 const theatreDestPath = path.join(destPath, 'theatre');
@@ -198,8 +184,8 @@ function getFiles(dir, criteria = [], obj) {
 		: [];
 
 	// return an object with additional metadata info
-	if(obj === true) {
-		return _.map(file => {
+	if (obj === true) {
+		return _.map((file) => {
 			const pack = packageJSON(path.join(dir, file));
 
 			return ({
@@ -212,6 +198,7 @@ function getFiles(dir, criteria = [], obj) {
 		}, files);
 	}
 	// return a plain list of files
+	// eslint-disable-next-line no-else-return
 	else {
 		return files;
 	}
@@ -240,6 +227,7 @@ const componentCriteria = relativeRootDir =>
 /*
  *
  */
+ // eslint-disable-next-line no-unused-vars
 const atomCriteria = relativeRootDir =>
 	packageCriteria(relativeRootDir, isPatternAtom, isTypeStatic);
 
@@ -251,7 +239,6 @@ const getComponentFolders = relativeRootDir =>
 	getFolders(relativeRootDir, [componentCriteria]);
 const getComponentFolderObjs = relativeRootDir =>
 	getFolders(relativeRootDir, [componentCriteria], true);
-const getAtomFolders = relativeRootDir => getFolders(relativeRootDir, [atomCriteria]);
 
 
 /*
@@ -488,9 +475,8 @@ const processComponentDemos = (componentRoot, component) =>
 /*
  *
  */
-export function atoms() {
+export function components() {
 	return merge(
-		// getAtomFolders(packageSrc).map(folder =>
 		getComponentFolderObjs(packageSrc).map(component =>
 			merge(
 				processComponentStates(packageSrc, component),
@@ -557,7 +543,7 @@ export function sassComponents() {
  *
  */
 const buildComponentTemplates = gulp.series(
-	registerHbsHelpers, registerAtomPartials, atoms // , molecules
+	registerHbsHelpers, registerAtomPartials, components // , molecules
 );
 export { buildComponentTemplates };
 
@@ -740,9 +726,10 @@ export function theatreProxyTriggerUpdate(cb) {
 			component: 'name'
 		}
 	},
-	function (error, response, body) {
+	// eslint-disable-next-line no-unused-vars
+	(error, response, body) => {
 		if (error) {
-			gutil.log(err);
+			gutil.log(error);
 		}
 
 		cb();

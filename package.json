@@ -112,7 +112,7 @@
     "lint:es": "npm run eslint lib *.js --silent",
     "lint:css": "npm run stylelint \"packages/**/*.scss\"",
     "lint:theatre-css": "npm run stylelint \"packages/theatre/**/*.scss\"",
-		"lint:theatre-css:watch": "npm run nodemon -- -e scss --watch \"packages/theatre/**/*.scss\" --ignore **/node_modules/* -x \"npm run lint:theatre-css --silent || exit 0\"",
+    "lint:theatre-css:watch": "npm run nodemon -- -e scss --watch \"packages/theatre/**/*.scss\" --ignore **/node_modules/* -x \"npm run lint:theatre-css --silent || exit 0\"",
     "lint": "npm run npm-run-all lint:ts lint:es lint:css",
     "theatre-sass": "node-sass packages/theatre/src -o packages/theatre/src --include-path packages/theatre/node_modules --output-style compressed -q",
     "theatre-sass:watch": "node-sass -w packages/theatre/src -o packages/theatre/src --include-path packages/theatre/node_modules --output-style compressed -q",
@@ -196,11 +196,17 @@
     }
   },
   "eslintConfig": {
-    "extends": "@entrada-config/eslint-config-entrada"
+    "extends": "@entrada-config/eslint-config-entrada",
+    "rules": {
+			"no-underscore-dangle": ["error", {
+				"allow": ["__"]
+			}]
+    }
   },
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
+    "request": "^2.81.0",
     "socket.io": "^1.7.3",
     "socket.io-client": "^1.7.3"
   }
