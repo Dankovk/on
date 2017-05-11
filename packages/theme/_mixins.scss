@@ -51,6 +51,44 @@
 }
 
 /**
+ * Takes the structure of a map and produces css classes from it
+ */
+@mixin ocl-map-to-class($map) {
+	@each $k, $v in $map {
+		@if type-of($v) == map {
+			#{$k} {
+				@include ocl-map-to-class($v) {
+					@content;
+				}
+			}
+		}
+
+		@else {
+			#{$k}: $v;
+		}
+	}
+}
+
+/**
+ * Takes the structure of a map and produces css classes from it
+ */
+@mixin ocl-link-theme-style($include-root: true) {
+	/* stylelint-disable selector-no-type */
+	$optimized: ocl-optimize-style-groups($ocl-default-link-config);
+
+	@if $include-root {
+		a {
+			@include ocl-map-to-class($optimized);
+		}
+	}
+
+	@else {
+		@include ocl-map-to-class($optimized);
+	}
+	/* stylelint-enable selector-no-type */
+}
+
+/**
  * Creates a rule to be used in MDC-Web components for dark theming, and applies the provided contents.
  * Should provide the $root-selector option if applied to anything other than the root selector.
  * When used with a modifier class, provide a second argument of `true` for the $compound parameter
