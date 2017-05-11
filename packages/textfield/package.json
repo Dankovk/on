@@ -6,13 +6,15 @@
 	"one": {
 		"name": "textfield",
 		"type": "static",
-		"pattern": "atom"
+		"pattern": "molecule"
 	},
 	"repository": {
 		"type": "git",
 		"url": ""
 	},
 	"dependencies": {
-
+		"@one/fieldlabel": "^0.1.0",
+		"@one/fielderror": "^0.1.0",
+		"@one/button": "^0.1.0"
 	}
 }
