@@ -1,12 +1,8 @@
-$ocl-button-hover-color-diff: (
-	adjust-hue: -.17647deg,
-	saturate: 6.11042%,
-	lighten: 7.64706%
-);
-
 @keyframes ocl-button-add-loader {
 	from { transform: scale(0); }
 	to { transform: scale(1); }
 }
 
 $ocl-button-disabled-color: #999;
+
+$input-search-color: #bebebe;

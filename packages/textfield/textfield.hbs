@@ -1,4 +1,4 @@
-{{#if label}}<{{label.elementName}} {{{attr label.attributes}}}>{{{label.body}}}</{{label.elementName}}>{{/if}}
+{{#if fieldlabel}}{{> fieldlabel fieldlabel}}{{{body}}}{{/if}}
 <{{elementName}} {{{attr attributes}}}></{{elementName}}>
-{{#if error}}<{{error.elementName}} {{{attr error.attributes}}}>{{{error.body}}}</{{error.elementName}}>{{/if}}
-{{#if button}}<{{button.elementName}} {{{attr button.attributes}}}>{{{button.body}}}</{{button.elementName}}>{{/if}}
+{{#if fielderror}}{{> fielderror fielderror}}{{{body}}}{{/if}}
+{{#if button}}{{> button button}}{{{body}}}{{/if}}

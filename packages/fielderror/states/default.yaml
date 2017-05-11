@@ -1,0 +1,8 @@
+---
+template:
+  elementName: span
+  body: 'Error massage'
+  attributes:
+  - - class
+    - '"ocl-input-error"'
+state: {}
