@@ -13,6 +13,9 @@
 		"@one/theme": "^0.1.0",
 		"@one/button": "^0.1.0",
 		"@one/textfield": "^0.1.0",
-		"@one/layout": "^0.1.0"
+		"@one/layout": "^0.1.0",
+		"@one/card": "^0.1.0",
+		"@one/popover": "^0.1.0"
+
 	}
 }

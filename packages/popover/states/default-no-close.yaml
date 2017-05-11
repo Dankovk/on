@@ -1,0 +1,6 @@
+---
+template:
+  attributes:
+  - - class
+    - '"ocl-popover ocl-popover--no-close"'
+state: {}

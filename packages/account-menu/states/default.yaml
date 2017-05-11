@@ -1,0 +1,30 @@
+---
+template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-account-menu"'
+  toggle:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-account-menu__toggle"'
+    username:
+      elementName: div
+      body: <span>USERNAME</span>
+      attributes:
+      - - class
+        - '"ocl-account-menu__username"'
+    icon:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-account-menu__user-icon"'
+      body: <span>U</span>
+  dropdown:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-account-menu__list"'
+    body: <ul><li class="ocl-menu__link"><a href="#">My account</a></li><li class="ocl-menu__link"><a href="#">Logout</a></li></ul>
+state: {}
