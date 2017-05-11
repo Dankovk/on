@@ -1,0 +1,15 @@
+@import "./variables";
+
+.ocl-input-label {
+	display: block;
+	margin-bottom: $input-label-margin-bottom;
+	color: #444;
+	font-size: $input-font-size;
+	font-weight: 500;
+	letter-spacing: 0;
+}
+
+.ocl-input--display-none {
+  display: none;
+}
+

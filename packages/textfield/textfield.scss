@@ -1,14 +1,5 @@
 @import "./variables";
 
-.ocl-input-label {
-	display: block;
-	margin-bottom: $input-label-margin-bottom;
-	color: #444;
-	font-size: $input-font-size;
-	font-weight: 500;
-	letter-spacing: 0;
-}
-
 .ocl-input {
 	width: $input-width;
 	height: $input-height;
@@ -17,7 +8,7 @@
 	border-radius: $input-radius;
 	background: #fff;
 	font-size: $input-font-size;
-	box-sizing: border-box;
+  	box-sizing: border-box;
 
 	&::placeholder {
 		color: #999;
@@ -25,42 +16,33 @@
 		font-style: italic;
 		letter-spacing: 0;
 	}
-}
 
-.ocl-input-error {
-	display: block;
-	margin-top: $input-error-margin-top;
-	color: $input-error-color;
-	font-size: $input-font-size;
-}
+	&--search {
+	  width: $input-width;
+	  height: $input-search-height;
+	  padding: $input-padding;
+	  border: $input-border;
+	  border-radius: $input-radius;
+	  background: #fff;
+	  font-size: $input-font-size;
+	  box-sizing: border-box;
+	  box-shadow: $input-inner-shadow;
 
-.ocl-input-search {
-	width: $input-width;
-	height: $input-search-height;
-	padding: $input-padding;
-	border: $input-border;
-	border-radius: $input-radius;
-	background: #fff;
-	font-size: $input-font-size;
-	box-sizing: border-box;
-	box-shadow: $input-inner-shadow;
-
-	&::placeholder {
+	  &::placeholder {
 		color: $input-placeholder-color;
 		font-size: $input-font-size;
 		font-weight: bold;
 		letter-spacing: 0;
+	  }
+	}
+
+  	&--textarea {
+	  width: $input-width;
+	  max-width: $input-width;
+	}
+
+  	&--display-none {
+	  display: none;
 	}
 }
 
-.ocl-button-search {
-	position: absolute;
-	top: 15px;
-	right: 0;
-	margin-right: 25px;
-	color: $input-search-color;
-	font-size: $input-font-size;
-	font-weight: bold;
-	cursor: pointer;
-	letter-spacing: 0;
-}

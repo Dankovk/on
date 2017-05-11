@@ -1,6 +1,6 @@
 ---
 template:
-  label:
+  fieldlabel:
     elementName: label
     body: 'Email:'
     attributes:
@@ -12,7 +12,7 @@ template:
     - '"ocl-input"'
   - - placeholder
     - '"enter your email address"'
-  error:
+  fielderror:
     elementName: span
     body: Wrong e-mail
     attributes:

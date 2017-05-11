@@ -2,21 +2,25 @@
 template:
   fieldlabel:
     elementName: label
-    body: 'Password:'
+    body: 'Textarea:'
     attributes:
     - - class
       - '"ocl-input-label"'
-  elementName: input
+  elementName: textarea
   attributes:
   - - class
-    - '"ocl-input"'
+    - '"ocl-input ocl-input--textarea"'
   - - placeholder
-    - '"enter your password"'
+    - '"Default textarea"'
+  - - rows
+    - "5"
+  - - cols
+    - "5"
   - - type
-    - "'password'"
+    - "'text'"
   fielderror:
     elementName: span
-    body: Wrong password
+    body: 'Default error massage'
     attributes:
     - - class
       - '"ocl-input-error"'

@@ -1,0 +1,8 @@
+---
+template:
+  elementName: span
+  body: 'S'
+  attributes:
+  - - class
+    - '"ocl-button--search"'
+state: {}

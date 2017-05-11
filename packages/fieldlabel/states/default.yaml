@@ -1,0 +1,8 @@
+---
+template:
+  elementName: label
+  body: 'Default fieldlabel:'
+  attributes:
+  - - class
+    - '"ocl-input-label"'
+state: {}
