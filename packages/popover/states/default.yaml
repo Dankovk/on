@@ -20,7 +20,7 @@ template:
       body: <span>Link in pop</span>
       attributes:
       - - class
-        - 'ocl-popover__link'
+        - '"ocl-popover__link"'
       - - href
-        - '#'
+        - '"#"'
 state: {}
