@@ -13,7 +13,7 @@ template:
   - - placeholder
     - '"Default text field"'
   - - type
-    - "'text'"
+    - '"text"'
   fielderror:
     elementName: span
     body: 'Default error massage'
