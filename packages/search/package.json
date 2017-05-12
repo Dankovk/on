@@ -1,10 +1,10 @@
 {
 	"name": "@one/textfield",
-	"description": "The static One component for a text input field",
+	"description": "The static One component for a search input field",
 	"version": "0.1.0",
 	"license": "UNLICENSED",
 	"one": {
-		"name": "textfield",
+		"name": "search",
 		"type": "static",
 		"pattern": "molecule"
 	},

@@ -1,7 +1,7 @@
 ---
 template:
   elementName: span
-  body: 'Error massage'
+  body: 'Error message'
   attributes:
   - - class
     - '"ocl-input-error"'

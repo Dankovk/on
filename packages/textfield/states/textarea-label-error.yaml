@@ -1,0 +1,27 @@
+---
+template:
+  fieldlabel:
+    elementName: label
+    body: 'Textarea'
+    attributes:
+    - - class
+      - '"ocl-input-label"'
+  elementName: textarea
+  attributes:
+  - - class
+    - '"ocl-input ocl-input__textarea"'
+  - - placeholder
+    - '"Default textarea"'
+  - - rows
+    - '"5"'
+  - - cols
+    - '"5"'
+  - - type
+    - "'text'"
+  fielderror:
+    elementName: span
+    body: 'Default error massage'
+    attributes:
+    - - class
+      - '"ocl-input-error"'
+state: {}

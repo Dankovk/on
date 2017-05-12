@@ -8,4 +8,10 @@ template:
     - '"enter your email address"'
   - - type
     - '"email"'
+  fielderror:
+    elementName: span
+    body: Wrong e-mail
+    attributes:
+    - - class
+      - '"ocl-input-error"'
 state: {}

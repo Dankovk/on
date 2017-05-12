@@ -1,5 +1,11 @@
 ---
 template:
+  fieldlabel:
+    elementName: label
+    body: 'Email'
+    attributes:
+    - - class
+      - '"ocl-input-label"'
   elementName: input
   attributes:
   - - class

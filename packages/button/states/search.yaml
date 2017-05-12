@@ -1,8 +1,8 @@
 ---
 template:
-  elementName: span
+  elementName: button
   body: 'S'
   attributes:
   - - class
-    - '"ocl-button--search"'
+    - '"ocl-button__search"'
 state: {}
