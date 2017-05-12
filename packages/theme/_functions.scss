@@ -95,3 +95,61 @@
 
 	@return $color;
 }
+
+/**
+ * Takes a sass-map of configurations that looks like:
+ *
+ * WARNING! 3 levels of nesting, do not use on very large maps
+ *
+ * selector1:
+ *     property1: property1-value
+ *     property2: property2-value
+ * selector2:
+ *     property1: property1-value
+ *     property2: property2-value
+ *
+ * and returns a map that lumps selectors together that have the same properties
+ *
+ * selector1, selector2
+ *     property1: property1-value
+ *     property2: property2-value
+ */
+@function ocl-optimize-style-groups($config) {
+	/* stylelint-disable max-nesting-depth */
+	$groups: ();
+
+	@each $config-prop, $config-val in $config {
+		$match-group: ();
+		$match-key: null;
+
+		@each $group-prop, $group-val in $groups {
+			$matches: true;
+
+			@if length($match-group) < 1 and length($config-val) == length($group-val) {
+				@each $prop, $val in $config-val {
+					@if map-get($group-val, $prop) != $val {
+						$matches: false;
+					}
+				}
+
+				@if $matches {
+					$match-group: map-merge($match-group, ($group-prop + "," + $config-prop: $config-val));
+					$match-key: $group-prop;
+				}
+			}
+		}
+
+		@if length($match-group) > 0 {
+			$new-groups: map-remove($groups, $match-key);
+			$groups: map-merge($new-groups, $match-group);
+		}
+
+		@else {
+			$groups: map-merge($groups, ($config-prop: $config-val));
+		}
+	}
+
+	@return $groups;
+	/* stylelint-enable max-nesting-depth */
+}
+

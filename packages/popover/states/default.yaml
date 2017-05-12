@@ -1,0 +1,26 @@
+---
+template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-popover"'
+  list:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-popover__list"'
+  close:
+    elementName: button
+    body: <div class="ocl-popover__close-element"></div>
+    attributes:
+    - - class
+      - '"ocl-popover__close"'
+  link:
+      elementName: a
+      body: <span>Link in pop</span>
+      attributes:
+      - - class
+        - '"ocl-popover__link"'
+      - - href
+        - '"#"'
+state: {}

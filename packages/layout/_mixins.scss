@@ -6,3 +6,80 @@
 @mixin ocl-font-family--regular {
 	font-family: "Proxima Nova", sans-serif;
 }
+
+
+/**
+  $size = size of the triangle in px, rem and so on
+  $color = background color of triangle
+  $direction = the direction of triangle.
+   Acceptable values:top, left, right, bottom, top-left, top-right, bottom-left, bottom-right,
+   inset-top, inset-bottom, inset-right, inset-left
+ */
+@mixin triangle ($size, $color, $direction) {
+	height: 0;
+	width: 0;
+
+	$width: nth($size, 1);
+	$height: nth($size, length($size));
+	$foreground-color: nth($color, 1);
+	$background-color: if(length($color) == 2, nth($color, 2), transparent);
+
+	@if ($direction == top) or ($direction == bottom) or ($direction == right) or ($direction == left) {
+
+		$width: $width / 2;
+		$height: if(length($size) > 1, $height, $height/2);
+
+		@if $direction == top {
+			border-bottom: $height solid $foreground-color;
+			border-left:   $width  solid $background-color;
+			border-right:  $width  solid $background-color;
+		} @else if $direction == right {
+			border-bottom: $width  solid $background-color;
+			border-left:   $height solid $foreground-color;
+			border-top:    $width  solid $background-color;
+		} @else if $direction == bottom {
+			border-left:   $width  solid $background-color;
+			border-right:  $width  solid $background-color;
+			border-top:    $height solid $foreground-color;
+		} @else if $direction == left {
+			border-bottom: $width  solid $background-color;
+			border-right:  $height solid $foreground-color;
+			border-top:    $width  solid $background-color;
+		}
+	} @else if ($direction == top-right) or ($direction == top-left) {
+
+		border-top: $height solid $foreground-color;
+
+		@if $direction == top-right {
+			border-left:  $width solid $background-color;
+		} @else if $direction == top-left {
+			border-right: $width solid $background-color;
+		}
+	} @else if ($direction == bottom-right) or ($direction == bottom-left) {
+
+		border-bottom: $height solid $foreground-color;
+
+		@if $direction == bottom-right {
+			border-left:  $width solid $background-color;
+		} @else if $direction == bottom-left {
+			border-right: $width solid $background-color;
+		}
+	} @else if ($direction == inset-top) {
+		border-color: $background-color $background-color $foreground-color;
+		border-style: solid;
+		border-width: $height $width;
+	} @else if ($direction == inset-bottom) {
+		border-color: $foreground-color $background-color $background-color;
+		border-style: solid;
+		border-width: $height $width;
+	} @else if ($direction == inset-right) {
+		border-color: $background-color $background-color $background-color $foreground-color;
+		border-style: solid;
+		border-width: $width $height;
+	} @else if ($direction == inset-left) {
+		border-color: $background-color $foreground-color $background-color $background-color;
+		border-style: solid;
+		border-width: $width $height;
+	}
+}
+

@@ -1,0 +1,8 @@
+---
+template:
+  arrow:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-popover__arrow ocl-popover__arrow--bottom-left"'
+state: {}

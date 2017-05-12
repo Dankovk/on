@@ -12,6 +12,8 @@ template:
     - '"ocl-input"'
   - - placeholder
     - '"enter your email address"'
+  - - type
+    - '"email"'
   fielderror:
     elementName: span
     body: Wrong e-mail
