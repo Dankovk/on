@@ -418,16 +418,8 @@ const processComponentStates = (componentRoot, component) =>
 const processComponentDemos = (componentRoot, component) =>
 	// start with the state json and the json configs for arbitrary demos
 	merge(
-		// merge(
-		// 	gulp.src(path.join(component.path, '/states/*.json'), { allowEmpty: true }),
-		// 	gulp.src(path.join(component.path, '/states/*.yaml'), { allowEmpty: true }).pipe(yaml())
-		// )
 		srcJsonAndYaml(path.join(component.path, '/states'))
 		.pipe(jsonTransform(mergeStatesForTemplateKeyed)),
-		// merge(
-		// 	gulp.src(path.join(component.path, '/demos/demos.json'), { allowEmpty: true }),
-		// 	gulp.src(path.join(component.path, '/demos/demos.yaml'), { allowEmpty: true }).pipe(yaml())
-		// )
 		srcJsonAndYaml(path.join(component.path, '/demos'))
 		.pipe(jsonTransform(selectStateTemplate))
 	)
@@ -498,25 +490,6 @@ export function registerAtomPartials(cb) {
 	});
 	cb();
 }
-
-// /*
-//  *
-//  */
-// export function createMolecules() {
-// 	return merge(
-// 		getFolders(moleculeSrcPath).map(folder =>
-// 			gulp.src(path.join(moleculeSrcPath, folder, '/states/*.json'))
-// 				.pipe(jsonTransform(mergeStatesForTemplate))
-// 				.pipe(hbs(gulp.src(path.join(moleculeSrcPath, folder, `${folder}.hbs`))))
-// 				.pipe(gulp.dest(path.join(moleculeDestPath, folder)))
-// 		)
-// 	);
-// }
-
-/*
- *
- */
-// const molecules = gulp.series(registerAtomPartials, createMolecules);
 
 /*
  *
