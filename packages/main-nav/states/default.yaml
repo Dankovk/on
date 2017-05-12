@@ -1,0 +1,103 @@
+---
+template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-main-nav"'
+  menuToggle:
+    elementName: button
+    body: <span class="ocl-main-nav__logo"></span><span class="ocl-main-nav__toggle-caption">Menu</span>
+    attributes:
+    - - class
+      - '"ocl-main-nav__toggle"'
+  search:
+    elementName: span
+    attributes:
+    - - class
+      - '"ocl-search"'
+    input:
+      elementName: input
+      attributes:
+      - - class
+        - '"ocl-search__input"'
+      - - placeholder
+        - '"Search"'
+    button:
+      elementName: button
+      body: 'S'
+      attributes:
+      - - class
+        - '"ocl-search__button"'
+  navItemsList:
+    elementName: ul
+    body: <li class="ocl-main-nav__item"><a href="#">Tours</a></li><li class="ocl-main-nav__item"><a href="#">Help</a></li><li class="ocl-main-nav__item"><a href="#">News</a></li>
+    attributes:
+    - - class
+      - '"ocl-main-nav__items-list"'
+  home:
+    elementName: button
+    attributes:
+    - - class
+      - '"ocl-main-nav__home"'
+  actionBar:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-main-nav__action-bar"'
+    left:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-main-nav__action-bar--left"'
+    right:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-main-nav__action-bar--right"'
+  account-menu:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-account-menu"'
+    toggle:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-account-menu__toggle"'
+      username:
+        elementName: div
+        body: <span>Barbara T.</span>
+        attributes:
+        - - class
+          - '"ocl-account-menu__username"'
+      icon:
+        elementName: div
+        attributes:
+        - - class
+          - '"ocl-account-menu__user-icon"'
+        body: <span>U</span>
+    popover:
+      elementName: div
+      attributes:
+        - - class
+          - '"ocl-popover"'
+      list:
+        elementName: div
+        attributes:
+        - - class
+          - '"ocl-popover__list"'
+      close:
+        elementName: button
+        body: <div class="ocl-popover__close-element"></div>
+        attributes:
+        - - class
+          - '"ocl-popover__close"'
+      link:
+        elementName: a
+        body: <span>Link in pop</span>
+        attributes:
+        - - class
+          - '"ocl-popover__link"'
+        - - href
+          - '"#"'
+state: {}

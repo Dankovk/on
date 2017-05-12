@@ -11,7 +11,7 @@ template:
       - '"ocl-account-menu__toggle"'
     username:
       elementName: div
-      body: <span>USERNAME</span>
+      body: <span>Barbara T.</span>
       attributes:
       - - class
         - '"ocl-account-menu__username"'

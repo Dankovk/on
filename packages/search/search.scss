@@ -24,7 +24,8 @@
 
 	&__button {
 		position: absolute;
-		top: 0;
+		top: 50%;
+		transform: translateY(-50%);
 		right: 10px;
 		border: 0;
 		background: transparent;
