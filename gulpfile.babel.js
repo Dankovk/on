@@ -566,7 +566,7 @@ export function theatreJSON(cb) {
 		atoms: [],
 		molecules: [],
 		organisms: [],
-		tempaltes: [],
+		templates: [],
 		pages: []
 	};
 
