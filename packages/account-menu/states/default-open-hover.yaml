@@ -1,7 +1,0 @@
----
-template:
-  elementName: div
-  attributes:
-  - - class
-    - '"ocl-account-menu ocl-account-menu--open ocl-account-menu--hover"'
-state: {}

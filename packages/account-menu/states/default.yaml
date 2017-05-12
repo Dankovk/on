@@ -32,8 +32,8 @@ template:
       - - class
         - '"ocl-popover__list"'
     close:
-      elementName: div
-      body: <div class="ocl-popover__close-wrap"></div>
+      elementName: button
+      body: <div class="ocl-popover__close-element"></div>
       attributes:
       - - class
         - '"ocl-popover__close"'
@@ -42,7 +42,7 @@ template:
       body: <span>Link in pop</span>
       attributes:
       - - class
-      - 'ocl-popover__link'
+        - '"ocl-popover__link"'
       - - href
-        - '#'
+        - '"#"'
 state: {}

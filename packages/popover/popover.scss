@@ -39,7 +39,7 @@
 		}
 	}
 
-	&__close-wrap {
+	&__close-element {
 		position: relative;
 		width: 12px;
 		height: 12px;
@@ -67,6 +67,10 @@
 	}
 
 	&__close {
+		padding: 0;
+		border: none;
+		background-color: #fff;
+		outline: none;
 		z-index: 5;
 		position: absolute;
 		top: 10px;
