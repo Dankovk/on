@@ -22,6 +22,7 @@
 
 	&__link {
 		@include ocl-font-family--regular;
+		@include ocl-link-theme-style;
 
 		text-align: left;
 		display: block;

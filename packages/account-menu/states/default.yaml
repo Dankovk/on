@@ -21,10 +21,28 @@ template:
       - - class
         - '"ocl-account-menu__user-icon"'
       body: <span>U</span>
-  dropdown:
+  popover:
     elementName: div
     attributes:
-    - - class
-      - '"ocl-account-menu__list"'
-    body: <ul><li class="ocl-menu__link"><a href="#">My account</a></li><li class="ocl-menu__link"><a href="#">Logout</a></li></ul>
+      - - class
+        - '"ocl-popover"'
+    list:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-popover__list"'
+    close:
+      elementName: div
+      body: <div class="ocl-popover__close-wrap"></div>
+      attributes:
+      - - class
+        - '"ocl-popover__close"'
+    link:
+      elementName: a
+      body: <span>Link in pop</span>
+      attributes:
+      - - class
+      - 'ocl-popover__link'
+      - - href
+        - '#'
 state: {}
