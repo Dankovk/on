@@ -1,0 +1,48 @@
+---
+template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-card ocl-signin__form"'
+  card:
+    body:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-card__body"'
+      content:
+        elementName: div
+        body:
+          textfield:
+            elementName: div
+          fieldlabel:
+            elementName: label
+            body: 'Password:'
+            attributes:
+            - - class
+            - '"ocl-input-label"'
+          body:
+          elementName: input
+          attributes:
+          - - class
+            - '"ocl-input"'
+          - - placeholder
+            - '"enter your password"'
+          - - type
+            - "'password'"
+        attributes:
+        - - class
+          - '"ocl-card__body-content"'
+    header:
+      elementName: div
+      body: <h1 class="ocl-card__header-content">Sign in to Fiber Entrada</h1>
+      attributes:
+      - - class
+        - '"ocl-card__header"'
+    footer:
+      elementName: div
+      body: <div class="ocl-card__footer-content">footer</div>
+      attributes:
+      - - class
+        - '"ocl-card__footer"'
+state: {}
