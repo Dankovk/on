@@ -1,0 +1,32 @@
+@import "@one/layout/mixins";
+
+.ocl-card--student {
+
+	.ocl-card__header {
+		background-color: #ea9164;
+		height: 45px;
+		line-height: 45px;
+	}
+
+	.ocl-card__header-content {
+		padding-top: 0;
+		padding-bottom: 0;
+		border-bottom: none;
+		@include clearfix;
+	}
+
+	.ocl-card__header-item {
+		color: #fff;
+		&--left {
+			float: left;
+			font-size: 18px;
+		}
+
+		&--right {
+			float: right;
+			font-size: 16px;
+		}
+
+	}
+
+}
