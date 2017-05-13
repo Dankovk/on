@@ -1,0 +1,11 @@
+---
+template:
+  fielderror:
+    elementName: span
+    body: 'Error message'
+    attributes:
+    - - class
+      - '"ocl-input-error"'
+state: {}
+
+

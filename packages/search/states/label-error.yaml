@@ -1,0 +1,17 @@
+---
+template:
+  fieldlabel:
+    elementName: label
+    body: 'Password:'
+    attributes:
+    - - class
+      - '"ocl-input-label"'
+  fielderror:
+    elementName: span
+    body: 'Error message'
+    attributes:
+    - - class
+      - '"ocl-input-error"'
+state: {}
+
+

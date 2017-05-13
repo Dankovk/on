@@ -3,13 +3,46 @@
 @import "@one/popover/popover";
 
 .ocl-account-menu {
+	position: relative;
+	.ocl-popover {
+		display: none;
+	}
+
+	&__toggle {
+		padding-left: 10px;
+		padding-right: 10px;
+		display: inline-block;
+	}
 
 	&__username {
 		display: inline-block;
+		padding-left: 15px;
+		text-align: left;
+		color: #fff;
 	}
 
 	&__user-icon {
+		position: relative;
 		display: inline-block;
+		margin-left: 5px;
+		color: #fff;
+		padding-right: 23px;
+		&:after {
+			@include triangle(15px, #fff, bottom);
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+			position: absolute;
+			content: '';
+			display: block;
+		}
 	}
 
+	&--open {
+		.ocl-popover {
+			right: 0;
+			display: block;
+			position: absolute;
+		}
+	}
 }

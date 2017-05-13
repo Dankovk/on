@@ -8,7 +8,7 @@
 	border-radius: $input-radius;
 	background: #fff;
 	font-size: $input-font-size;
-  	box-sizing: border-box;
+	box-sizing: border-box;
 
 	&::placeholder {
 		color: #999;
@@ -17,32 +17,9 @@
 		letter-spacing: 0;
 	}
 
-	&--search {
-	  width: $input-width;
-	  height: $input-search-height;
-	  padding: $input-padding;
-	  border: $input-border;
-	  border-radius: $input-radius;
-	  background: #fff;
-	  font-size: $input-font-size;
-	  box-sizing: border-box;
-	  box-shadow: $input-inner-shadow;
-
-	  &::placeholder {
-		color: $input-placeholder-color;
-		font-size: $input-font-size;
-		font-weight: bold;
-		letter-spacing: 0;
-	  }
-	}
-
-  	&--textarea {
-	  width: $input-width;
-	  max-width: $input-width;
-	}
-
-  	&--display-none {
-	  display: none;
+	&__textarea {
+		width: $input-width;
+		max-width: $input-width;
+		height: auto;
 	}
 }
-

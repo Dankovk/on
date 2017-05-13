@@ -1,0 +1,6 @@
+{{#if fieldlabel}}{{> fieldlabel fieldlabel}}{{{body}}}{{/if}}
+<{{elementName}} {{{attr attributes}}}>
+	<{{input.elementName}} {{{attr input.attributes}}}></{{input.elementName}}>
+	<{{button.elementName}} {{{attr button.attributes}}}>{{{button.body}}}</{{button.elementName}}>
+</{{elementName}}>
+{{#if fielderror}}{{> fielderror fielderror}}{{{body}}}{{/if}}
