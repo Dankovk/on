@@ -17,7 +17,7 @@ template:
     - '"ocl-card"'
   header:
     elementName: div
-    body: <h1 class="ocl-card__header-content">Sign in to Fiber Entrada</h1>
+    body: <div class="ocl-card__header-content"><h1>Sign in to Fiber Entrada</h1></div>
     attributes:
     - - class
       - '"ocl-card__header"'

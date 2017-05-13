@@ -1,3 +1,5 @@
+@import "@one/layout/functions";
+
 .theatre__stage-card {
 	position: absolute;
 	top: 30%;
@@ -8,4 +10,15 @@
 	.ocl-card {
 		background-color: #ededed;
 	}
+
+	.ocl-card__header-content h1 {
+		color: #666;
+		font-size: 34px;
+		font-weight: normal;
+		margin: 0;
+		padding-top: rem(15px);
+		padding-bottom: rem(15px);
+	}
 }
+
+

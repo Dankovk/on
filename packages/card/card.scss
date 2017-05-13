@@ -12,15 +12,9 @@
 	}
 
 	&__header-content {
-		@include ocl-reset-margin--top-and-bottom;
-		@include ocl-font-family--regular;
-
-		padding-top: rem(30px);
-		padding-bottom: rem(30px);
+		padding-top: rem(15px);
+		padding-bottom: rem(15px);
 		border-bottom: solid 1px $card__block--border-color;
-		color: $card__header--font-color;
-		font-size: $card-_header--font-size;
-		font-weight: normal;
 	}
 
 	&__body {
@@ -58,6 +52,11 @@
 			padding-right: 0;
 			padding-left: 0;
 		}
+
+		.ocl-card__body-content {
+			padding-right: rem(30px);
+			padding-left: rem(30px);
+		}
 	}
 
 	&--full-width-header {
@@ -65,12 +64,22 @@
 			padding-right: 0;
 			padding-left: 0;
 		}
+
+		.ocl-card__header-content {
+			padding-right: rem(30px);
+			padding-left: rem(30px);
+		}
 	}
 
 	&--full-width-footer {
 		.ocl-card__footer {
 			padding-right: 0;
 			padding-left: 0;
+		}
+
+		.ocl-card__footer-content {
+			padding-right: rem(30px);
+			padding-left: rem(30px);
 		}
 	}
 
