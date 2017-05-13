@@ -23,3 +23,4 @@
 @function ocl-animation-exit($name, $duration, $delay: 0ms) {
 	@return $name $duration $delay $ocl-animation-fast-out-linear-in-timing-function;
 }
+

@@ -15,7 +15,7 @@
 		@include ocl-font-family--regular;
 
 		padding-top: rem(30px);
-		padding-bottom: rem(20px);
+		padding-bottom: rem(30px);
 		border-bottom: solid 1px $card__block--border-color;
 		color: $card__header--font-color;
 		font-size: $card-_header--font-size;
@@ -34,7 +34,7 @@
 
 	&__footer-content {
 		padding-top: rem(15px);
-		padding-bottom: rem(10px);
+		padding-bottom: rem(15px);
 		border-top: solid 1px $card__block--border-color;
 	}
 
@@ -84,5 +84,8 @@
 			border: none;
 		}
 	}
-}
 
+	&--align-left {
+	  text-align: left;
+	}
+}

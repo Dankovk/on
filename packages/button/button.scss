@@ -68,6 +68,11 @@
 		}
 	}
 
+  	&--centered {
+	  display: block;
+	  margin: 0 auto;
+	}
+
   	&--search {
 	  position: absolute;
 	  top: 15px;

@@ -18,7 +18,6 @@
 		"@one/fieldlabel": "^0.1.0",
 		"@one/fielderror": "^0.1.0",
 		"@one/layout": "^0.1.0",
-		"@one/card": "^0.1.0",
-		"@one/signin": "^0.1.0"
+		"@one/modal": "^0.1.0"
 	}
 }

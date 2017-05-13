@@ -1,19 +1,18 @@
 {
-  "name": "@one/signin",
-  "description": "The static One component for a signin page",
+  "name": "@one/modal",
+  "description": "The static One component for a modal templates",
   "version": "0.1.0",
   "license": "UNLICENSED",
   "one": {
-    "name": "signin",
+    "name": "modal",
     "type": "static",
-    "pattern": "page"
+    "pattern": "template"
   },
   "repository": {
     "type": "git",
     "url": ""
   },
   "dependencies": {
-    "@one/modal": "^0.1.0",
     "@one/card": "^0.1.0",
     "@one/textfield": "^0.1.0",
     "@one/button": "^0.1.0",

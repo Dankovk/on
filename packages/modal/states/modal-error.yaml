@@ -6,6 +6,12 @@ template:
     - '"ocl-t-modal ocl-t-modal__form"'
   - - method
     - '"POST"'
+  modalerror:
+    elementName: div
+    body: '<div class="ocl-modal__error-massage_text">(ICON) Sorry, that email and password combo are not valid.</div>'
+    attributes:
+      - - class
+        - '"ocl-modal__error-massage"'
   textfields:
     elementName: form
     email:
