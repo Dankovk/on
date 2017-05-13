@@ -4,6 +4,7 @@
 
 .ocl-card {
 	box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .5);
+	border-radius: 4px;
 
 	&__header {
 		padding-right: rem(30px);
@@ -43,13 +44,13 @@
 	}
 
 	&--square-top {
-		border-top-left-radius: 2px;
-		border-top-right-radius: 2px;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
 	}
 
 	&--square-bottom {
-		border-bottom-left-radius: 2px;
-		border-bottom-right-radius: 2px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
 	}
 
 	&--full-width-body {
