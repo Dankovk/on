@@ -1,35 +1,33 @@
-@import "@one/layout/functions";
+@import "@one/typography/functions";
 @import "@one/layout/mixins";
 @import "./variables";
 
 .ocl-card {
 	box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .5);
 	border-radius: 4px;
+	overflow: hidden;
 
 	&__header {
-		padding-right: rem(30px);
-		padding-left: rem(30px);
+		@include ocl-horizontal-whitespace(rem(30px));
 	}
 
 	&__header-content {
-		padding-top: rem(15px);
-		padding-bottom: rem(15px);
+		@include ocl-vertical-whitespace(rem(30px));
 		border-bottom: solid 1px $card__block--border-color;
+		background-clip: padding-box;
 	}
 
 	&__body {
-		padding-right: rem(30px);
-		padding-left: rem(30px);
+		@include ocl-horizontal-whitespace(rem(30px));
 	}
 
 	&__footer {
-		padding-right: rem(30px);
-		padding-left: rem(30px);
+		@include ocl-horizontal-whitespace(rem(30px));
 	}
 
 	&__footer-content {
-		padding-top: rem(15px);
-		padding-bottom: rem(15px);
+		@include ocl-vertical-whitespace(rem(15px));
+
 		border-top: solid 1px $card__block--border-color;
 	}
 
@@ -54,8 +52,7 @@
 		}
 
 		.ocl-card__body-content {
-			padding-right: rem(30px);
-			padding-left: rem(30px);
+			@include ocl-horizontal-whitespace(rem(30px));
 		}
 	}
 
@@ -66,8 +63,7 @@
 		}
 
 		.ocl-card__header-content {
-			padding-right: rem(30px);
-			padding-left: rem(30px);
+			@include ocl-horizontal-whitespace(rem(30px));
 		}
 	}
 
@@ -78,8 +74,7 @@
 		}
 
 		.ocl-card__footer-content {
-			padding-right: rem(30px);
-			padding-left: rem(30px);
+			@include ocl-horizontal-whitespace(rem(30px));
 		}
 	}
 

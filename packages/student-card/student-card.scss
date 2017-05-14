@@ -1,32 +1,48 @@
+@import "@one/typography/functions";
 @import "@one/layout/mixins";
+@import "@one/theme/mixins";
 
-.ocl-card--student {
+.ocl-card-student {
+	@include ocl-link-theme-style;
 
 	.ocl-card__header {
+		@include ocl-horizontal-whitespace(rem(15px));
+
 		background-color: #ea9164;
 		height: 45px;
 		line-height: 45px;
 	}
 
 	.ocl-card__header-content {
-		padding-top: 0;
-		padding-bottom: 0;
-		border-bottom: none;
-		@include clearfix;
-	}
-
-	.ocl-card__header-item {
+		display: flex;
+		align-items: center;
 		color: #fff;
-		&--left {
-			float: left;
-			font-size: 18px;
-		}
-
-		&--right {
-			float: right;
-			font-size: 16px;
-		}
-
+		padding: 0;
 	}
+}
 
+.ocl-student-card__body {
+	padding-top: rem(15px);
+	@include ocl-horizontal-whitespace(rem(15px));
+}
+
+.ocl-student-card__header-name {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.ocl-student-card__header-date {
+	margin-left: auto;
+}
+
+.ocl-student-card__activity-list {
+	@include ocl-styleless-list;
+}
+
+.ocl-student-card__body-content {
+
+}
+
+.ocl-student-card__footer {
+	@include ocl-horizontal-whitespace(rem(15px));
 }

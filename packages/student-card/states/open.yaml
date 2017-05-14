@@ -1,0 +1,5 @@
+---
+template:
+  activity-list-classes: ocl-student-card__activity-list ocl-student-card__activity-list--open
+  activity-link-classes: ocl-student-card__activity-more ocl-student-card__activity-more--open
+state: {}

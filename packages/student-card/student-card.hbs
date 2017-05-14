@@ -1,37 +1,50 @@
 <{{elementName}} {{{attr attributes}}}>
-    <div class="ocl-card__header">
-        <div class="ocl-card__header-content">
-            <div class="ocl-card__header-item ocl-card__header-item--left">
-                Catherine Jacobs
-            </div>
-            <div class="ocl-card__header-item ocl-card__header-item--right">
-                10/14/16
-            </div>
-        </div>
-    </div>
-    <div class="ocl-card__body">
-        <div class="ocl-card__body-content">
-            <div class="ocl-card__content-title">
-                <div class="ocl-card__content-title-icon">
-                    ?
-                </div>
-                <div class="ocl-card__content-title-descr">
-                    Quiz Attempt
-                </div>
-            </div>
-            <div class="ocl-card__content-info">
-                <div class="ocl-card__content-info-title">
-                    Anatomy of Piano playing
-                </div>
-                <div class="ocl-card__content-info-descr">
-                    8 of 10 correct
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="ocl-card__footer">
-        <div class="ocl-card__footer-content">
-            footer
-        </div>
-    </div>
+	<div class="ocl-card__header">
+		<div class="ocl-card__header-content">
+			<div class="ocl-student-card__header-name">
+				Catherine Jacobs
+			</div>
+			<div class="ocl-student-card__header-date">
+				10/14/16
+			</div>
+		</div>
+	</div>
+	<div class="ocl-card__body ocl-student-card__body">
+		<div class="ocl-card__body-content ocl-student-card__body-content">
+			<ul class="{{activity-list-classes}}">
+				<li class="ocl-student-card__activity">
+					<div class="ocl-student-card__activity-title">
+						(?) Quiz Attempt
+					</div>
+					<div class="ocl-student-card__activity-item">
+						Anatomy of Piano playing
+					</div>
+					<div class="ocl-student-card__activity-detail">
+						8 of 10 correct
+					</div>
+				</li>
+
+				<li class="ocl-student-card__activity">
+					<div class="ocl-student-card__activity-title">
+						(W) Videos Watched
+					</div>
+					<div class="ocl-student-card__activity-item">
+						Sitting Position at the Bench
+					</div>
+				</li>
+
+				<li class="ocl-student-card__activity">
+					<div class="ocl-student-card__activity-title">
+						(U) Assignment Updated
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="ocl-card__footer ocl-student-card__footer">
+		<div class="ocl-card__footer-content ocl-student-card__footer-content">
+			<a href="#" class="{{activity-link-classes}}">See More Activity (A)</a>
+			<a href="#" class="ocl-student-card__activity-full">Full History</a>
+		</div>
+	</div>
 </{{elementName}}>
