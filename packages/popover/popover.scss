@@ -4,36 +4,36 @@
 @import "@one/theme/functions";
 @import "@one/layout/mixins";
 
-
 .ocl-popover {
 	position: relative;
-	box-shadow: 0 0 6px 0 rgba(136, 136, 136, .5);
-	border-radius: 3px;
 	width: auto;
 	min-width: 185px;
+	border-radius: 3px;
+	box-shadow: 0 0 6px 0 rgba(136, 136, 136, .5);
 
 	&__list {
-		padding-left: 15px;
-		padding-right: 15px;
 		position: relative;
-		z-index: 3;
+		padding-right: rem(15px);
+		padding-left: rem(15px);
 		background-color: #fff;
+		z-index: 3;
 	}
 
 	&__link {
 		@include ocl-font-family--regular;
 		@include ocl-link-theme-style;
 
-		text-align: left;
 		display: block;
-		font-weight: bold;
-		font-size: rem(16px);
-		text-decoration: none;
-		padding-top: 12px;
-		padding-bottom: 12px;
-		line-height: 20px;
+		padding-top: rem(12px);
+		padding-bottom: rem(12px);
 		border-bottom: 1px solid #c4c4c4;
 		color: #5ca1b8;
+		font-size: rem(16px);
+		font-weight: bold;
+		line-height: 20px;
+		text-align: left;
+		text-decoration: none;
+
 		&:last-of-type {
 			border-bottom: none;
 		}
@@ -44,47 +44,49 @@
 		width: 12px;
 		height: 12px;
 		cursor: pointer;
+
 		&::before {
-			content: '';
+			display: block;
 			position: absolute;
 			top: 5px;
-			display: block;
+			width: 12px;
+			height: 3px;
 			transform: rotate(45deg);
-			width: 12px;
-			height: 3px;
 			background-color: #c4c4c4;
+			content: "";
 		}
+
 		&::after {
-			content: '';
 			display: block;
-			top: 5px;
 			position: absolute;
-			transform: rotate(-45deg);
+			top: 5px;
 			width: 12px;
 			height: 3px;
+			transform: rotate(-45deg);
 			background-color: #c4c4c4;
+			content: "";
 		}
 	}
 
 	&__close {
-		padding: 0;
-		border: none;
-		background-color: #fff;
-		outline: none;
-		z-index: 5;
 		position: absolute;
 		top: 10px;
 		right: 10px;
+		padding: 0;
+		border: none;
+		outline: none;
+		background-color: #fff;
+		z-index: 5;
 	}
 
 	&__arrow {
+		position: absolute;
 		width: 25px;
 		height: 25px;
-		z-index: 2;
-		box-shadow: 0 0 6px 0 rgba(136, 136, 136, .5);
-		background-color: #fff;
 		transform: rotate(-45deg);
-		position: absolute;
+		background-color: #fff;
+		box-shadow: 0 0 6px 0 rgba(136, 136, 136, .5);
+		z-index: 2;
 
 		&--top-right {
 			top: -9px;
@@ -99,7 +101,7 @@
 		&--top-center {
 			top: -9px;
 			left: 50%;
-			margin-left: -12.5px;
+			margin-left: rem(-12.5px);
 		}
 
 		&--bottom-left {
@@ -108,14 +110,14 @@
 		}
 
 		&--bottom-right {
-			bottom: -9px;
 			right: 12px;
+			bottom: -9px;
 		}
 
 		&--bottom-center {
 			bottom: -9px;
 			left: 50%;
-			margin-left: -12.5px;
+			margin-left: rem(-12.5px);
 		}
 	}
 
@@ -124,5 +126,4 @@
 			display: none;
 		}
 	}
-
 }

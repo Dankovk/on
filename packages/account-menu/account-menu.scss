@@ -1,48 +1,52 @@
 @import "@one/layout/functions";
 @import "@one/layout/mixins";
 @import "@one/popover/popover";
+@import "@one/typography/functions";
 
 .ocl-account-menu {
 	position: relative;
+
 	.ocl-popover {
 		display: none;
 	}
 
 	&__toggle {
-		padding-left: 10px;
-		padding-right: 10px;
 		display: inline-block;
+		padding-right: rem(10px);
+		padding-left: rem(10px);
 	}
 
 	&__username {
 		display: inline-block;
-		padding-left: 15px;
-		text-align: left;
+		padding-left: rem(15px);
 		color: #fff;
+		text-align: left;
 	}
 
 	&__user-icon {
-		position: relative;
 		display: inline-block;
+		position: relative;
 		margin-left: 5px;
+		padding-right: rem(23px);
 		color: #fff;
-		padding-right: 23px;
-		&:after {
+
+		&::after {
 			@include triangle(15px, #fff, bottom);
-			top: 50%;
-			transform: translateY(-50%);
-			right: 0;
-			position: absolute;
-			content: '';
+
 			display: block;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			content: "";
 		}
 	}
 
 	&--open {
 		.ocl-popover {
-			right: 0;
 			display: block;
 			position: absolute;
+			right: 0;
 		}
 	}
 }

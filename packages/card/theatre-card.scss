@@ -11,14 +11,14 @@
 		background-color: #ededed;
 	}
 
-	.ocl-card__header-content h1 {
-		color: #666;
-		font-size: 34px;
-		font-weight: normal;
-		margin: 0;
-		padding-top: rem(15px);
-		padding-bottom: rem(15px);
+	.ocl-card__header-content {
+		.ocl-card__header-title {
+			margin: 0;
+			padding-top: rem(15px);
+			padding-bottom: rem(15px);
+			color: #666;
+			font-size: 34px;
+			font-weight: normal;
+		}
 	}
 }
-
-

@@ -3,8 +3,8 @@
 @import "./variables";
 
 .ocl-card {
-	box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .5);
 	border-radius: 4px;
+	box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .5);
 	overflow: hidden;
 
 	&__header {
@@ -13,6 +13,7 @@
 
 	&__header-content {
 		@include ocl-vertical-whitespace(rem(30px));
+
 		border-bottom: solid 1px $card__block--border-color;
 		background-clip: padding-box;
 	}
@@ -36,13 +37,13 @@
 	}
 
 	&--square-top {
-		border-top-left-radius: 0px;
-		border-top-right-radius: 0px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
 	}
 
 	&--square-bottom {
-		border-bottom-left-radius: 0px;
-		border-bottom-right-radius: 0px;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
 	}
 
 	&--full-width-body {
@@ -91,6 +92,6 @@
 	}
 
 	&--align-left {
-	  text-align: left;
+		text-align: left;
 	}
 }

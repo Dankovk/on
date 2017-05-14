@@ -1,11 +1,12 @@
 .theatre__stage-account-menu {
 	position: absolute;
-	width: 185px;
 	top: 50%;
 	left: 50%;
+	width: 185px;
 	transform: translate(-50%, -50%);
+
 	.ocl-account-menu {
-		background-color: #ea9164;
 		width: 157px;
+		background-color: #ea9164;
 	}
 }

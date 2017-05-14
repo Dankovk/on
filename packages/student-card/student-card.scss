@@ -8,21 +8,30 @@
 	.ocl-card__header {
 		@include ocl-horizontal-whitespace(rem(15px));
 
-		background-color: #ea9164;
 		height: 45px;
+		background-color: #ea9164;
 		line-height: 45px;
 	}
 
 	.ocl-card__header-content {
 		display: flex;
 		align-items: center;
-		color: #fff;
 		padding: 0;
+		color: #fff;
+	}
+
+	.ocl-card__footer {
+		padding-right: 0;
+	}
+
+	.ocl-card__footer-content {
+		display: flex;
+		align-items: center;
+		padding-bottom: 0;
 	}
 }
 
 .ocl-student-card__body {
-	padding-top: rem(15px);
 	@include ocl-horizontal-whitespace(rem(15px));
 }
 
@@ -35,12 +44,64 @@
 	margin-left: auto;
 }
 
-.ocl-student-card__activity-list {
-	@include ocl-styleless-list;
+.ocl-student-card__activity {
+	display: none;
+
+	&:first-of-type {
+		display: block;
+	}
 }
 
-.ocl-student-card__body-content {
+.ocl-student-card__activity-list {
+	@include ocl-styleless-list;
 
+	&--open {
+		.ocl-student-card__activity {
+			display: block;
+		}
+	}
+}
+
+.ocl-student-card__activity-title {
+	margin-top: 17px;
+	margin-bottom: 17px;
+	font-size: 24px;
+	font-weight: 300;
+}
+
+.ocl-student-card__activity-detail {
+	font-style: italic;
+	font-weight: 300;
+}
+
+.ocl-student-card__activity-more {
+	font-weight: 500;
+
+	&--open {
+		visibility: hidden;
+	}
+}
+
+.ocl-student-card__activity-full {
+	display: inline-flex;
+	position: relative;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 3rem;
+	margin-left: auto;
+	padding: 0 1.5rem;
+	border-top: 2px solid #d2d2d2;
+	border-left: 2px solid #d2d2d2;
+	border-radius: 3px;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.ocl-student-card__activity-item {
+	font-weight: 500;
 }
 
 .ocl-student-card__footer {

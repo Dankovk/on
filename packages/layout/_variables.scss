@@ -1,9 +1,9 @@
 $ocl-breakpoints: (
-	'smallest': (min-width: 0px),
-	'small': (min-width: 480px),
-	'medium': (min-width: 768px),
-	'large': (min-width: 1024px),
-	'largest': (min-width: 1200px)
+	"smallest": (min-width: 0px),
+	"small": (min-width: 480px),
+	"medium": (min-width: 768px),
+	"large": (min-width: 1024px),
+	"largest": (min-width: 1200px)
 ) !default;
 
 $ocl-horizontal-whitespace-vals: left right;
