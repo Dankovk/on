@@ -1,19 +1,74 @@
+@import "./functions";
+@import "./variables";
+
 @mixin ocl-reset-margin--top-and-bottom {
 	margin-top: 0;
 	margin-bottom: 0;
+}
+
+@mixin ocl-styleless-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 @mixin ocl-font-family--regular {
 	font-family: "Proxima Nova", sans-serif;
 }
 
+/// Mixin to manage responsive breakpoints
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin ocl-respond-to($breakpoint) {
+	// If the key exists in the map
+	@if map-has-key($ocl-breakpoints, $breakpoint) {
+		// Prints a media query based on the value
+		@media #{inspect(map-get($ocl-breakpoints, $breakpoint))} {
+			@content;
+		}
+	}
+
+	@else if type-of($breakpoint) == 'number' {
+		// Prints a media query based on the number value
+		@media #{inspect(ocl-min-width-map($breakpoint))} {
+			@content;
+		}
+	}
+
+	// If the key doesn't exist in the map
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+				+ "Available breakpoints are: #{map-keys($ocl-breakpoints)}.";
+	}
+}
+
+@mixin ocl-horizontal-whitespace($value, $type: padding, $responsive: ()) {
+	@include ocl-whitespace($value, $type, $ocl-horizontal-whitespace-vals, $responsive);
+}
+
+@mixin ocl-vertical-whitespace($value, $type: padding, $responsive: ()) {
+	@include ocl-whitespace($value, $type, $ocl-vertical-whitespace-vals, $responsive);
+}
+
+@mixin ocl-whitespace($value, $type: padding, $direction: $ocl-horizontal-whitespace-vals, $responsive: ()) {
+	@each $dir in $direction {
+		#{$type}-#{$dir}: $value;
+	}
+
+	@each $k, $v in $responsive {
+		@include ocl-respond-to($k) {
+			@include ocl-horizontal-whitespace($v, $type, $direction);
+		}
+	}
+}
 
 /**
-  $size = size of the triangle in px, rem and so on
-  $color = background color of triangle
-  $direction = the direction of triangle.
-   Acceptable values:top, left, right, bottom, top-left, top-right, bottom-left, bottom-right,
-   inset-top, inset-bottom, inset-right, inset-left
+	$size = size of the triangle in px, rem and so on
+	$color = background color of triangle
+	$direction = the direction of triangle.
+	 Acceptable values:top, left, right, bottom, top-left, top-right, bottom-left, bottom-right,
+	 inset-top, inset-bottom, inset-right, inset-left
  */
 @mixin triangle ($size, $color, $direction) {
 	height: 0;

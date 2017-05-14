@@ -1,0 +1,5 @@
+@import "./variables";
+
+@function rem($px, $base: $ocl-typography-base-size) {
+	@return ($px / $base) * 1rem;
+}
