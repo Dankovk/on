@@ -1,0 +1,21 @@
+---
+template:
+  completed:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-assignment-card__date ocl-assignment-card__date--completed"'
+    body: "Completed: 11/22/17"
+  title:
+    elementName: h2
+    attributes:
+    - - class
+      - '"ocl-assignment-card__title"'
+  buttons:
+    left:
+      -
+        title: Reassign
+        attributes:
+        - - class
+          - '"ocl-assignment-card__unassign"'
+state: {}

@@ -9,13 +9,13 @@ template:
     attributes:
     - - class
       - '"ocl-assignment-card__date ocl-assignment-card__date--assigned"'
-    body: "Assigned: 11/22/17"
+    body: "Not Assigned"
   due:
     elementName: div
     attributes:
     - - class
       - '"ocl-assignment-card__date ocl-assignment-card__date--due"'
-    body: "Due: 11/22/17"
+    body: "No Due Date"
   completed:
     elementName: div
     attributes:
@@ -37,13 +37,8 @@ template:
   buttons:
     left:
       -
-        title: Unassign
+        title: Assign
         attributes:
         - - class
-          - '"ocl-assignment-card__unassign"'
-      -
-        title: Reassign
-        attributes:
-        - - class
-          - '"ocl-assignment-card__unassign"'
+          - '"ocl-assignment-card__assign"'
 state: {}

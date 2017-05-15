@@ -1,0 +1,10 @@
+---
+template:
+  buttons:
+    left:
+      -
+        title: Unassign
+        attributes:
+        - - class
+          - '"ocl-assignment-card__unassign"'
+state: {}
