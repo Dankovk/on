@@ -4,5 +4,11 @@ template:
   attributes:
   - - class
     - '"ocl-page-title"'
-  heading: <h1 class="ocl-page-title__heading">Page Title</h1>
+  heading:
+    elementName: h1
+    attributes:
+    - - class
+      - '"ocl-page-title__heading"'
+    body: Page Title
+
 state: {}
