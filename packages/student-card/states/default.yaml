@@ -4,6 +4,7 @@ template:
   attributes:
   - - class
     - '"ocl-card ocl-card--no-border-header ocl-card--no-border-footer ocl-card-student"'
+  activity-link-body: See More Activity <i class="fa fa-chevron-down" aria-hidden="true"></i>
   activity-link-classes: ocl-student-card__activity-more
   activity-list-classes: ocl-student-card__activity-list
 state: {}

@@ -1,6 +1,7 @@
 @import "@one/typography/functions";
 @import "@one/layout/mixins";
 @import "@one/theme/mixins";
+@import "@one/theme/colors";
 
 .ocl-card-student {
 	@include ocl-link-theme-style;
@@ -60,6 +61,10 @@
 			display: block;
 		}
 	}
+
+	.fa {
+		color: $ocl-monarch;
+	}
 }
 
 .ocl-student-card__activity-title {
@@ -75,11 +80,8 @@
 }
 
 .ocl-student-card__activity-more {
+	font-size: 18px;
 	font-weight: 500;
-
-	&--open {
-		visibility: hidden;
-	}
 }
 
 .ocl-student-card__activity-full {

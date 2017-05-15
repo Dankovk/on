@@ -13,7 +13,7 @@
     "url": ""
   },
   "dependencies": {
-    "@one/modal": "^0.1.0",
+    "@one/modal-page": "^0.1.0",
     "@one/card": "^0.1.0",
     "@one/textfield": "^0.1.0",
     "@one/button": "^0.1.0",

@@ -1,0 +1,32 @@
+<{{elementName}} {{{attr attributes}}}>
+	<div class="ocl-card ocl-card--full-width-header">
+		<div class="ocl-card__header">
+			<h1 class="ocl-card__header-content">Sign in to Faber Entrada</h1>
+			{{#if modalerror}}
+				<{{modalerror.elementName}} {{{attr modalerror.attributes}}}>
+					{{{modalerror.body}}}
+				</{{modalerror.elementName}}>
+			{{/if}}
+		</div>
+		<div class="ocl-card__body">
+			<div class="ocl-card__body-content ocl-card__body-content--centered ocl-card--align-left">
+				<form class="ocl-modal-page-form">
+					{{#if textfields}}
+						{{>textfield textfields.email}}
+						{{>textfield textfields.password}}
+					{{/if}}
+					{{#if button}}
+						{{> button button}}
+					{{/if}}
+				</form>
+			</div>
+		</div>
+		<div class="ocl-card__footer">
+			<div class="ocl-card__footer-content ocl-clearfix">
+				<a href="" class="ocl-card__link ocl--floatleft">Forgot your password?</a>
+				<a href="" class="ocl-card__link ocl--floatright">Sign up now</a>
+				<span class="ocl-card__label ocl-card__label--margin-right ocl--floatright">Not a member?</span>
+			</div>
+		</div>
+	</div>
+</{{elementName}}>

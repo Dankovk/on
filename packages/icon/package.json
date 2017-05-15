@@ -1,0 +1,18 @@
+{
+	"name": "@one/icon",
+	"description": "The static One component for an icon",
+	"version": "0.1.0",
+	"license": "UNLICENSED",
+	"one": {
+		"name": "icon",
+		"type": "static",
+		"pattern": "atom"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"dependencies": {
+
+	}
+}

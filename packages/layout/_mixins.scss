@@ -27,17 +27,19 @@
 		@media #{inspect(map-get($ocl-breakpoints, $breakpoint))} {
 			@content;
 		}
-	} @else if type-of($breakpoint) == 'number' {
+	}
+
+	@else if type-of($breakpoint) == "number" {
 		// Prints a media query based on the number value
 		@media #{inspect(ocl-min-width-map($breakpoint))} {
 			@content;
 		}
 	}
 
-		// If the key doesn't exist in the map
+	// If the key doesn't exist in the map
 	@else {
 		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-				+ "Available breakpoints are: #{map-keys($ocl-breakpoints)}.";
+			+ "Available breakpoints are: #{map-keys($ocl-breakpoints)}.";
 	}
 }
 
@@ -69,8 +71,6 @@
 	 inset-top, inset-bottom, inset-right, inset-left
  */
 /* stylelint-disable order/properties-order */
-/* stylelint-disable block-closing-brace-newline-after */
-/* stylelint-disable at-rule-empty-line-before  */
 @mixin triangle($size, $color, $direction) {
 	height: 0;
 	width: 0;
@@ -89,57 +89,76 @@
 			border-bottom: $height solid $foreground-color;
 			border-left: $width solid $background-color;
 			border-right: $width solid $background-color;
-		} @else if $direction == right {
+		}
+
+		@else if $direction == right {
 			border-bottom: $width solid $background-color;
 			border-left: $height solid $foreground-color;
 			border-top: $width solid $background-color;
-		} @else if $direction == bottom {
+		}
+
+		@else if $direction == bottom {
 			border-left: $width solid $background-color;
 			border-right: $width solid $background-color;
 			border-top: $height solid $foreground-color;
-		} @else if $direction == left {
+		}
+
+		@else if $direction == left {
 			border-bottom: $width solid $background-color;
 			border-right: $height solid $foreground-color;
 			border-top: $width solid $background-color;
 		}
-	} @else if ($direction == top-right) or ($direction == top-left) {
+	}
+
+	@else if ($direction == top-right) or ($direction == top-left) {
 		border-top: $height solid $foreground-color;
 
 		@if $direction == top-right {
 			border-left: $width solid $background-color;
-		} @else if $direction == top-left {
+		}
+
+		@else if $direction == top-left {
 			border-right: $width solid $background-color;
 		}
-	} @else if ($direction == bottom-right) or ($direction == bottom-left) {
+	}
 
+	@else if ($direction == bottom-right) or ($direction == bottom-left) {
 		border-bottom: $height solid $foreground-color;
 
 		@if $direction == bottom-right {
 			border-left: $width solid $background-color;
-		} @else if $direction == bottom-left {
+		}
+
+		@else if $direction == bottom-left {
 			border-right: $width solid $background-color;
 		}
-	} @else if ($direction == inset-top) {
+	}
+
+	@else if ($direction == inset-top) {
 		border-color: $background-color $background-color $foreground-color;
 		border-style: solid;
 		border-width: $height $width;
-	} @else if ($direction == inset-bottom) {
+	}
+
+	@else if ($direction == inset-bottom) {
 		border-color: $foreground-color $background-color $background-color;
 		border-style: solid;
 		border-width: $height $width;
-	} @else if ($direction == inset-right) {
+	}
+
+	@else if ($direction == inset-right) {
 		border-color: $background-color $background-color $background-color $foreground-color;
 		border-style: solid;
 		border-width: $width $height;
-	} @else if ($direction == inset-left) {
+	}
+
+	@else if ($direction == inset-left) {
 		border-color: $background-color $foreground-color $background-color $background-color;
 		border-style: solid;
 		border-width: $width $height;
 	}
 }
 /* stylelint-enable order/properties-order */
-/* stylelint-enable block-closing-brace-newline-after */
-/* stylelint-enable at-rule-empty-line-before  */
 
 @mixin clearfix {
 	&::after {

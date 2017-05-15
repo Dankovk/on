@@ -13,7 +13,7 @@ template:
       - '"Search"'
   button:
     elementName: button
-    body: 'S'
+    body: <i class="fa fa-search" aria-hidden="true"></i>
     attributes:
     - - class
       - '"ocl-search__button"'

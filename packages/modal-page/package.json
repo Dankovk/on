@@ -1,10 +1,10 @@
 {
-  "name": "@one/modal",
+  "name": "@one/modal-page",
   "description": "The static One component for a modal templates",
   "version": "0.1.0",
   "license": "UNLICENSED",
   "one": {
-    "name": "modal",
+    "name": "modal-page",
     "type": "static",
     "pattern": "template"
   },
