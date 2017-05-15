@@ -1,0 +1,8 @@
+---
+template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-page-title"'
+  heading: <h1 class="ocl-page-title__heading">Page Title</h1>
+state: {}

@@ -1,0 +1,4 @@
+---
+template:
+  secondary: <span class="page-title__secondary">Secondary text<br/>goes over here</span>
+state: {}
