@@ -1,7 +1,69 @@
-.ocl-page-title {
+@import "@one/typography/functions";
+@import "@one/typography/mixins";
+@import "@one/layout/mixins";
+@import "@one/theme/mixins";
+@import "@one/theme/colors";
+@import "./variables";
 
-}
+.ocl-student-link-card {
+	@include ocl-link-theme-style;
+	@include ocl-typography-base;
 
-.ocl-page-title__secondary {
+	display: flex;
+	flex-wrap: wrap;
+	color: $student-link-card__font-color;
 
+	&__link {
+		display: block;
+		margin-bottom: 26px;
+		padding-top: rem(10px);
+		font-size: 21px;
+		font-weight: 500;
+		word-spacing: 1000px;
+	}
+
+	&__last-action {
+		display: flex;
+		margin-bottom: rem(15px);
+
+		.fa {
+			display: inline-block;
+			width: 22px;
+			height: 22px;
+			margin-right: rem(10px);
+			font-size: 26px;
+		}
+
+		&-info {
+			font-size: 13px;
+			font-style: italic;
+			font-weight: 300;
+		}
+
+		&-date {
+			line-height: 16px;
+		}
+
+		&-title {
+			line-height: 15px;
+		}
+	}
+
+	.ocl-card__body {
+		@include ocl-horizontal-whitespace(rem(15px));
+
+		flex-basis: 100%;
+		min-height: 130px;
+	}
+
+	.ocl-card__footer {
+		@include ocl-horizontal-whitespace(rem(15px));
+
+		flex-basis: 100%;
+		padding-top: rem(10px);
+		padding-bottom: rem(10px);
+		background-color: #f2f2f2;
+		font-weight: 500;
+		text-transform: uppercase;
+	}
 }
