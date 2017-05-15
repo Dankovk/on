@@ -14,39 +14,27 @@
 		display: inline-block;
 		padding-right: rem(10px);
 		padding-left: rem(10px);
+		text-decoration: none;
 	}
 
 	&__username {
-		display: inline-block;
+		display: flex;
 		padding-left: rem(15px);
 		color: #fff;
 		text-align: left;
+		align-items: center;
 	}
 
-	&__user-icon {
-		display: inline-block;
-		position: relative;
-		margin-left: 5px;
-		padding-right: rem(23px);
-		color: #fff;
-
-		&::after {
-			@include triangle(15px, #fff, bottom);
-
-			display: block;
-			position: absolute;
-			top: 50%;
-			right: 0;
-			transform: translateY(-50%);
-			content: "";
-		}
+	&__username-type {
+		margin-right: rem(10px);
 	}
 
 	&--open {
 		.ocl-popover {
 			display: block;
 			position: absolute;
-			right: 0;
+			right: 5px;
+			top: 42px;
 		}
 	}
 }

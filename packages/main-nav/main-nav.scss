@@ -18,9 +18,8 @@
 		padding: 0;
 		float: left;
 		border: none;
-		border-right: 1px solid #fff;
 		outline: none;
-		background-color: transparent;
+		background: linear-gradient(#b90e43, #800a2f);
 	}
 
 	&__home {
@@ -39,10 +38,10 @@
 		top: 50%;
 		left: 50%;
 		width: 25px;
-		height: 25px;
+		height: 28px;
 		transform: translate(-50%, -75%);
 		background-image: url("https://entradapiano.com/img/logo-54x62.png");
-		background-size: contain;
+		background-size: 25px 28px;
 	}
 
 	&__items-list {
@@ -78,7 +77,9 @@
 		left: 0;
 		width: 100%;
 		color: #fff;
-		font-size: 12px;
+		font-size: 10px;
+		font-weight: 700;
+		text-transform: uppercase;
 	}
 
 	.ocl-account-menu {

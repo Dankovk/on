@@ -1,11 +1,9 @@
 ---
 template:
-  elementName: form
+  elementName: div
   attributes:
   - - class
-    - '"ocl-t-modal ocl-t-modal__form"'
-  - - method
-    - '"POST"'
+    - '"ocl-t-modal-page"'
   textfields:
     elementName: form
     email:

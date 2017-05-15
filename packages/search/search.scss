@@ -31,11 +31,6 @@
 		background: transparent;
 		color: $input-search-color;
 		cursor: pointer;
-		/* stylelint-disable order/properties-order */
-		// temporary icon-less
-		font-weight: bold;
-		letter-spacing: 0;
 		font-size: $input-font-size;
-		/* stylelint-enable order/properties-order */
 	}
 }
