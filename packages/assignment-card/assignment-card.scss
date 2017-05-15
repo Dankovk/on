@@ -1,9 +1,125 @@
 @import "@one/layout/mixins";
+@import "@one/layout/functions";
+@import "@one/typography/functions";
+@import "@one/theme/mixins";
+@import "@one/theme/colors";
+
+.ocl-assignment-card {
+	@include ocl-link-theme-style;
+
+	color: #444;
+
+	&__header {
+		display: flex;
+		align-items: stretch;
+		flex-wrap: wrap;
+	}
+
+	&__date {
+		flex: 1;
+		padding-top: rem(15px);
+		padding-bottom: rem(15px);
+		border-right: 1px solid #c6c6c6;
+		border-bottom: 1px solid #c6c6c6;
+		font-style: italic;
+		text-align: center;
+		font-size: 14px;
+		font-weight: 300;
+
+		&:last-of-type {
+			border-right: none;
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__title {
+		font-size: 24px;
+		font-weight: 400;
+		flex-basis: 100%;
+	}
+
+	&__details {
+		display: inline-flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		border-radius: 2px;
+		height: 42px;
+		width: 160px;
+		border: 2px solid #d2d2d2;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	.ocl-assignment-card__list {
+		flex: 1;
+		margin-bottom: 40px;
+	}
+
+	&__list-item {
+		display: flex;
+		margin-bottom: 10px;
+		.icon {
+			display: inline-block;
+			color: #55b847;
+			font-size: 26px;
+			margin-right: 10px;
+		}
+
+		&-title {
+			display: inline-block;
+			margin-top: 0;
+			margin-bottom: 0;
+			font-size: 16px;
+			font-weight: 500;
+		}
+	}
+
+	&__footer {
+		@include ocl-link-theme-style;
+
+		padding-top: 10px;
+		padding-bottom: 10px;
+		background-color: #f2f2f2;
+	}
+}
 
 .ocl-assignment-progress {
-
+	width: 20px;
+	height: 20px;
+	clip: rect(0px, 10px, 20px, 0px);
+	background-color: #fff;
+	border: 1px solid #55b847;
+	border-radius: 50%;
+	&__mask {
+		width: 120px;
+		height: 120px;
+		position: absolute;
+		clip: rect(0px, 20px, 20px, 10px);
+	}
+	&__fill {
+		border-radius: 50%;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background-color: #55b847;
+		transform: rotate(120deg);
+		clip: rect(0px, 10px, 20px, 0px);
+	}
 }
 
 .ocl-assignment-card__list {
 	@include ocl-styleless-list;
+}
+
+.ocl-assignment-card__unassign, .ocl-assignment-card__reassign {
+	@include ocl-horizontal-whitespace(rem(10px));
+}
+
+.ocl-assignment-card__footer-trash {
+	float: right;
 }

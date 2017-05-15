@@ -1,5 +1,8 @@
 <{{elementName}} {{{attr attributes}}}>
 	<div class="ocl-card__header ocl-assignment-card__header">
+        <{{assigned.elementName}} {{{attr assigned.attributes}}}>Assigned: 11/22/17</{{assigned.elementName}}>
+        <{{due.elementName}} {{{attr due.attributes}}}>Due: 11/22/17</{{due.elementName}}>
+        <{{completed.elementName}} {{{attr completed.attributes}}}>Completed: 11/22/17</{{completed.elementName}}>
 	</div>
 	<div class="ocl-card__body ocl-assignment-card__body">
 		{{#if title}}
@@ -18,8 +21,8 @@
 	</div>
 	<div class="ocl-card__footer ocl-assignment-card__footer">
 		{{#each buttons.left}}
-			<button {{{attr this.attributes}}}>{{this.title}}</button>
+			<a href="#" {{{attr this.attributes}}}>{{this.title}}</a>
 		{{/each}}
-		<button class="ocl-assignment-card__footer-trash"><i class="fa fa-trash" aria-hidden="true"></i></button>
+		<a href="#" class="ocl-assignment-card__footer-trash"><i class="fa fa-trash" aria-hidden="true"></i></a>
 	</div>
 </{{elementName}}>
