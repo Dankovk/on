@@ -1,8 +1,8 @@
 <{{elementName}} {{{attr attributes}}}>
 	<div class="ocl-card__header ocl-assignment-card__header">
-		<{{assigned.elementName}}>{{assigned.body}}</{{assigned.elementName}}>
-		<{{due.elementName}}>{{due.body}}</{{due.elementName}}>
-		<{{completed.elementName}}>{{completed.body}}</{{completed.elementName}}>
+        <{{assigned.elementName}} {{{attr assigned.attributes}}}>{{assigned.body}}</{{assigned.elementName}}>
+        <{{due.elementName}} {{{attr due.attributes}}}>{{due.body}}</{{due.elementName}}>
+        <{{completed.elementName}} {{{attr completed.attributes}}}>{{completed.body}}</{{completed.elementName}}>
 	</div>
 	<div class="ocl-card__body ocl-assignment-card__body">
 		{{#if title}}
@@ -21,8 +21,8 @@
 	</div>
 	<div class="ocl-card__footer ocl-assignment-card__footer">
 		{{#each buttons.left}}
-			<button {{{attr this.attributes}}}>{{this.title}}</button>
+			<a href="#" {{{attr this.attributes}}}>{{this.title}}</a>
 		{{/each}}
-		<button class="ocl-assignment-card__footer-trash"><i class="fa fa-trash" aria-hidden="true"></i></button>
+		<a href="#" class="ocl-assignment-card__footer-trash"><i class="fa fa-trash" aria-hidden="true"></i></a>
 	</div>
 </{{elementName}}>
