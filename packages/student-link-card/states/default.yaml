@@ -1,0 +1,9 @@
+---
+template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-card ocl-student-link-card"'
+  title: Student Name
+  status: Active
+state: {}

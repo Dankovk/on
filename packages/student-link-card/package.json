@@ -1,0 +1,22 @@
+{
+  "name": "@one/student-link-card",
+  "description": "The static One component for a student-link card",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "one": {
+    "name": "student-link-card",
+    "type": "static",
+    "pattern": "organism"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "@one/typography": "^0.1.0",
+    "@one/layout": "^0.1.0",
+    "@one/theme": "^0.1.0",
+    "@one/card": "^0.1.0",
+    "@one/icon": "^0.1.0"
+  }
+}

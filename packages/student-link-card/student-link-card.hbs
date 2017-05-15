@@ -1,0 +1,14 @@
+<{{elementName}} {{{attr attributes}}}>
+	<div class="ocl-card__body">
+		<a href="#" class="ocl-student-link-card__link">{{title}}</a>
+		{{#if last-action}}
+		<div class="ocl-student-link-card__last-action">
+			<div class="ocl-student-link-card__last-action-date">{{last-action.date}}</div>
+			<div class="ocl-student-link-card__last-action-title">{{last-action.title}}</div>
+		</div>
+		{{/if}}
+	</div>
+	<div class="ocl-card__footer">
+		<span class="ocl-student-link-card__status">{{status}}</span>
+	</div>
+</{{elementName}}>
