@@ -3,8 +3,13 @@
 		<a href="#" class="ocl-student-link-card__link">{{title}}</a>
 		{{#if last-action}}
 		<div class="ocl-student-link-card__last-action">
-			<div class="ocl-student-link-card__last-action-date">{{last-action.date}}</div>
-			<div class="ocl-student-link-card__last-action-title">{{last-action.title}}</div>
+            <div class="ocl-student-link-card__last-action-icon">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+            </div>
+            <div class="ocl-student-link-card__last-action-info">
+                <div class="ocl-student-link-card__last-action-date">{{last-action.date}}</div>
+                <div class="ocl-student-link-card__last-action-title">{{last-action.title}}</div>
+            </div>
 		</div>
 		{{/if}}
 	</div>
