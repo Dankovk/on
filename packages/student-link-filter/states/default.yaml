@@ -1,0 +1,75 @@
+---
+template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-student-link-filter"'
+  active:
+    elementName: label
+    attributes:
+    - - class
+      - '"ocl-filter-toggle"'
+    input:
+      elementName: input
+      attributes:
+      - - type
+        - '"radio"'
+      - - class
+        - '"ocl-filter-toggle__input"'
+      - - name
+        - '"group"'
+      - - value
+        - '"toggle"'
+      body: Recently Active
+  alpha:
+    elementName: label
+    attributes:
+    - - class
+      - '"ocl-filter-toggle"'
+    input:
+      elementName: input
+      attributes:
+      - - type
+        - '"radio"'
+      - - class
+        - '"ocl-filter-toggle__input"'
+      - - name
+        - '"group"'
+      - - value
+        - '"toggle"'
+      body: Alphabetical
+  date:
+    elementName: label
+    attributes:
+    - - class
+      - '"ocl-filter-toggle"'
+    input:
+      elementName: input
+      attributes:
+      - - type
+        - '"radio"'
+      - - class
+        - '"ocl-filter-toggle__input"'
+      - - name
+        - '"group"'
+      - - value
+        - '"toggle"'
+      body: Date Added
+  status:
+    elementName: label
+    attributes:
+    - - class
+      - '"ocl-filter-toggle"'
+    input:
+      elementName: input
+      attributes:
+      - - type
+        - '"radio"'
+      - - class
+        - '"ocl-filter-toggle__input"'
+      - - name
+        - '"group"'
+      - - value
+        - '"toggle"'
+      body: Status
+state: {}

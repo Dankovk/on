@@ -1,0 +1,9 @@
+@import "@one/layout/mixins";
+
+.ocl-assignment-progress {
+
+}
+
+.ocl-assignment-card__list {
+	@include ocl-styleless-list;
+}

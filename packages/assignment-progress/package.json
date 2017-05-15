@@ -1,0 +1,17 @@
+{
+  "name": "@one/assignment-progress",
+  "description": "The static One component for assignment progress",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "one": {
+    "name": "assignment-progress",
+    "type": "static",
+    "pattern": "atom"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+  }
+}

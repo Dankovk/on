@@ -1,0 +1,25 @@
+<{{elementName}} {{{attr attributes}}}>
+	<div class="ocl-card__header ocl-assignment-card__header">
+	</div>
+	<div class="ocl-card__body ocl-assignment-card__body">
+		{{#if title}}
+		<{{title.elementName}} {{{attr title.attributes}}}>Assignment Title</{{title.elementName}}>
+		{{/if}}
+		{{#if assignment-list}}
+		<ul class="ocl-assignment-card__list">
+		{{#each assignment-list}}
+			<li class="ocl-assignment-card__list-item">
+				{{{icon}}}<h3 class="ocl-assignment-card__list-item-title">{{title}}</h3>
+			</li>
+		{{/each}}
+		</ul>
+		{{/if}}
+		<a href="#" class="ocl-assignment-card__details">Details</a>
+	</div>
+	<div class="ocl-card__footer ocl-assignment-card__footer">
+		{{#each buttons.left}}
+			<button {{{attr this.attributes}}}>{{this.title}}</button>
+		{{/each}}
+		<button class="ocl-assignment-card__footer-trash"><i class="fa fa-trash" aria-hidden="true"></i></button>
+	</div>
+</{{elementName}}>

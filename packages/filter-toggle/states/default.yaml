@@ -1,0 +1,19 @@
+---
+template:
+  elementName: label
+  attributes:
+  - - class
+    - '"ocl-filter-toggle"'
+  input:
+    elementName: input
+    attributes:
+    - - type
+      - '"radio"'
+    - - class
+      - '"ocl-filter-toggle__input"'
+    - - name
+      - '"group"'
+    - - value
+      - '"toggle"'
+    body: Filter toggle
+state: {}
