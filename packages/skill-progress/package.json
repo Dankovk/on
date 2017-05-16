@@ -4,7 +4,7 @@
 	"version": "0.1.0",
 	"license": "UNLICENSED",
 	"one": {
-		"name": "loader",
+		"name": "skill-progress",
 		"type": "static",
 		"pattern": "atom"
 	},
