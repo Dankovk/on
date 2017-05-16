@@ -24,7 +24,7 @@ template:
         - '"Search"'
     button:
       elementName: button
-      body: 'S'
+      body: <i class="fa fa-search" aria-hidden="true"></i>
       attributes:
       - - class
         - '"ocl-search__button"'
@@ -35,8 +35,10 @@ template:
     - - class
       - '"ocl-main-nav__items-list"'
   home:
-    elementName: button
+    elementName: a
     attributes:
+    - - href
+      - '"#"'
     - - class
       - '"ocl-main-nav__home"'
   actionBar:
@@ -60,22 +62,19 @@ template:
     - - class
       - '"ocl-account-menu"'
     toggle:
-      elementName: div
+      elementName: a
       attributes:
+      - - href
+        - '"#"'
       - - class
         - '"ocl-account-menu__toggle"'
       username:
         elementName: div
-        body: <span>Barbara T.</span>
+        body: <span class="ocl-account-menu__username-type">Barbara T.</span>
         attributes:
         - - class
           - '"ocl-account-menu__username"'
-      icon:
-        elementName: div
-        attributes:
-        - - class
-          - '"ocl-account-menu__user-icon"'
-        body: <span>U</span>
+      icon: <i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>
     popover:
       elementName: div
       attributes:
