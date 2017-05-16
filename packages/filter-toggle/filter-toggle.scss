@@ -1,7 +1,30 @@
+@import "@one/typography/functions";
+@import "@one/animation/functions";
+
 .ocl-filter-toggle {
 
+  &__input{
+	display: none;
+
+	& + div {
+	  width: rem(140px);
+	  height: rem(35px);
+	  border-radius: rem(2px);
+	  font-style: italic;
+	  font-weight: 300;
+	  line-height: rem(35px);
+	  background-color: #ffffff;
+	  border: solid 1px #d3d3d3;
+	  transition: ocl-animation-exit(background-color, 200ms), ocl-animation-exit(border-color, 200ms);
+	  cursor: pointer;
+
+	}
+
+	&--checked + div,
+	&:checked + div{
+	  background-color: #d3d3d3;
+	  border-color: #d3d3d3;
+	}
+  }
 }
 
-.ocl-filter-toggle__input {
-
-}

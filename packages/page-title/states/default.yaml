@@ -9,6 +9,5 @@ template:
     attributes:
     - - class
       - '"ocl-page-title__heading"'
-    body: Page Title
-
+    body: Page title
 state: {}
