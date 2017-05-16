@@ -10,25 +10,35 @@
 	color: #444;
 
 	&__header {
+		padding: 10px 0;
+		border-bottom: 1px solid #c6c6c6;
 		display: flex;
 		align-items: stretch;
 		flex-wrap: wrap;
+		@include ocl-respond-to(small) {
+			padding: 0;
+			border: none;
+		}
 	}
 
 	&__date {
-		flex: 1;
-		padding-top: rem(15px);
-		padding-bottom: rem(15px);
-		border-right: 1px solid #c6c6c6;
-		border-bottom: 1px solid #c6c6c6;
+		border: none;
+		flex-basis: 100%;
 		font-style: italic;
 		text-align: center;
 		font-size: 14px;
 		font-weight: 300;
-
+		@include ocl-respond-to(small) {
+			flex: 1;
+			padding-top: rem(15px);
+			padding-bottom: rem(15px);
+			border-right: 1px solid #c6c6c6;
+			border-bottom: 1px solid #c6c6c6;
+		}
 		&:last-of-type {
 			border-right: none;
 		}
+
 	}
 
 	&__body {
@@ -40,9 +50,14 @@
 		font-size: 24px;
 		font-weight: 400;
 		flex-basis: 100%;
+		text-align: center;
+		@include ocl-respond-to(small) {
+			text-align: left;
+		}
 	}
 
 	&__details {
+		margin: 0 auto;
 		display: inline-flex;
 		flex-direction: row;
 		align-items: center;
@@ -53,11 +68,20 @@
 		border: 2px solid #d2d2d2;
 		text-align: center;
 		text-decoration: none;
+		margin-bottom: 30px;
+		margin-top: 30px;
+		@include ocl-respond-to(small) {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
 	}
 
 	.ocl-assignment-card__list {
-		flex: 1;
-		margin-bottom: 40px;
+		flex-basis: 100%;
+		@include ocl-respond-to(small) {
+			flex: 1;
+			margin-bottom: 40px;
+		}
 	}
 
 	&__list-item {
@@ -91,6 +115,7 @@
 .ocl-assignment-progress {
 	width: 20px;
 	height: 20px;
+	margin-top: 1px;
 	clip: rect(0px, 10px, 20px, 0px);
 	background-color: #fff;
 	border: 1px solid #55b847;
