@@ -1,7 +1,9 @@
 @import "@one/typography/mixins";
 @import "@one/typography/functions";
-@import "@one/theme/mixins";
 @import "@one/layout/mixins";
+@import "@one/theme/mixins";
+@import "@one/theme/colors";
+
 @import "./variables";
 
 .ocl-t-modal-page {
@@ -39,16 +41,6 @@
 			&--margin-right {
 				margin-right: 5px;
 			}
-		}
-
-		.ocl-card__link {
-			@include ocl-font-family--regular;
-			@include ocl-link-theme-style;
-
-			color: $link-color;
-			font-weight: bold;
-			font-size: rem(16px);
-			text-decoration: none;
 		}
 
 		.ocl--floatleft {
@@ -107,6 +99,11 @@
 	display: inline-block;
 	margin-left: 10px;
 	text-transform: uppercase;
+}
+
+.ocl-card__footer {
+	@include ocl-link-theme-style;
+  	font-weight: 500;
 }
 
 // .ocl-t-modal {

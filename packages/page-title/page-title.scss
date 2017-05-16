@@ -1,7 +1,27 @@
+@import "@one/typography/functions";
+
 .ocl-page-title {
+  padding: rem(30px);
+  background-color: #ededed;
+  display: flex;
+  justify-content: space-between;
+
+  &__heading {
+	font-size: rem(34px);
+	line-height: rem(40px);
+	font-weight: 300;
+	color: #666666;
+	margin: 0;
+  }
+
+  &__secondary {
+	display: block;
+	font-size: rem(14px);
+	line-height: 1.43;
+	color: #444444;
+	font-weight:300;
+	font-style: italic;
+  }
 
 }
 
-.ocl-page-title__secondary {
-
-}

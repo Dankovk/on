@@ -1,4 +1,14 @@
 ---
 template:
-  secondary: <span class="page-title__secondary">Secondary text<br/>goes over here</span>
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-page-title"'
+  heading:
+    elementName: h1
+    attributes:
+    - - class
+      - '"ocl-page-title__heading"'
+    body: Page title
+  secondary: <span class="ocl-page-title__secondary">Secondary text<br/>goes over here</span>
 state: {}

@@ -4,6 +4,12 @@ template:
   attributes:
   - - class
     - '"ocl-student-link-filter"'
+  title:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-student-link-filter__title"'
+    body: 'Sort by:'
   active:
     elementName: label
     attributes:

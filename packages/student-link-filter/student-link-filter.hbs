@@ -1,4 +1,7 @@
 <{{elementName}} {{{attr attributes}}}>
+	{{#if title}}
+		<{{title.elementName}} {{{attr title.attributes}}}>{{{title.body}}}</{{title.elementName}}>
+	{{/if}}
 	{{> filter-toggle active}}
 	{{> filter-toggle alpha}}
 	{{> filter-toggle date}}

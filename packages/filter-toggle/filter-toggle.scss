@@ -1,4 +1,39 @@
+@import "@one/typography/functions";
+@import "@one/animation/functions";
+
 .ocl-filter-toggle {
+
+  &__input{
+	display: none;
+
+	& + div {
+	  width: rem(140px);
+	  height: rem(35px);
+	  font-style: italic;
+	  border-radius: rem(2px);
+	  font-weight: 300;
+	  background-color: #ffffff;
+	  border: solid 1px #d3d3d3;
+	  transition: ocl-animation-exit(background-color, 200ms), ocl-animation-exit(border-color, 200ms);
+	  line-height: rem(35px);
+	  cursor: pointer;
+
+	}
+
+	&--checked + div,
+	&:checked + div{
+	  background-color: #d3d3d3;
+	  border-color: #d3d3d3;
+	  //&:after{
+		//color: #fff;
+		//width: 100%;
+		//text-align: center;
+		//font-size:1em;
+		//line-height:1em;
+	  //}
+	}
+
+  }
 
 }
 

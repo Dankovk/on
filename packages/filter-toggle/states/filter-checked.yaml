@@ -10,10 +10,12 @@ template:
     - - type
       - '"radio"'
     - - class
-      - '"ocl-filter-toggle__input"'
+      - '"ocl-filter-toggle__input ocl-filter-toggle__input--checked"'
     - - name
       - '"group"'
     - - value
       - '"toggle"'
+    - - checked
+      - '"checked"'
     body: '<div>Filter toggle</div>'
 state: {}
