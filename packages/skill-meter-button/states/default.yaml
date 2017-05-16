@@ -1,0 +1,15 @@
+---
+template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-skill-meter-button"'
+  buttonElementName: button
+  buttonAttributes:
+  - - class
+    - '"ocl-skill-meter-button__element"'
+  labelElementName: label
+  labelAttributes:
+  - - class
+    - '"ocl-skill-meter-button__label"'
+state: {}

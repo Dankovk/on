@@ -1,0 +1,6 @@
+---
+template:
+  buttonAttributes:
+  - - class
+    - '"ocl-skill-meter-button__element ocl-skill-meter-button__element--active"'
+state: {}

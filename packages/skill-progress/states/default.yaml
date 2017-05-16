@@ -1,0 +1,7 @@
+---
+template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-skill-progress"'
+state: {}

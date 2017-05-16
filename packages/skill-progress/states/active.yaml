@@ -1,0 +1,6 @@
+---
+template:
+  attributes:
+  - - class
+    - '"ocl-skill-progress ocl-skill-progress--active"'
+state: {}

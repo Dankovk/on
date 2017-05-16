@@ -1,0 +1,22 @@
+<{{elementName}} {{{attr attributes}}}> <!-- div.ocl-card.ocl-card--flat.ocl-skill-profile -->
+	<!-- div.ocl-card__header.ocl-card__header--full-width.ocl-skill-profile__header -->
+		<!-- h2.ocl-skill-profile__title -->
+		<!-- a.ocl-skill-profile__help -->
+			<!-- ? icon -->
+	<!-- div.ocl-card__body.ocl-skill-profile__body -->
+		<!-- div.ocl-skill-profile-categories -->
+			<!-- #each profile-category -->
+			<!-- radio.ocl-skill-profile-category-button -->
+				<!-- span.ocl-skill-profile-category-button__title -->
+				<!-- > skill-progress -->
+				<!-- icon -->
+			<!-- /each -->
+		<!-- div.ocl-skill-profile-details -->
+			<!-- #each profile-category -->
+			<!-- div.ocl-skill-profile-detail (these are all hidden, but for one, like tabs, only the one corresponding to the selected button above is visible) -->
+				<!-- div.ocl-skill-profile-detail -->
+					<!-- ul.ocl-skill-profile-meter-list -->
+						<!-- #each profile-category.skill-meters -->
+						<!-- li.ocl-skill-profile-meter-list-item -->
+							<!-- > skill-meter -->
+</{{elementName}}>

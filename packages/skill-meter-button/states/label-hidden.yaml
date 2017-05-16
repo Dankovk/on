@@ -1,0 +1,6 @@
+---
+template:
+  labelAttributes:
+  - - class
+    - '"ocl-skill-meter-button__label ocl-skill-meter-button__label--hidden"'
+state: {}
