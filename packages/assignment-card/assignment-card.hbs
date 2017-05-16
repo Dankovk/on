@@ -17,12 +17,11 @@
 		{{/each}}
 		</ul>
 		{{/if}}
-		<a href="#" class="ocl-assignment-card__details">Details</a>
 	</div>
 	<div class="ocl-card__footer ocl-assignment-card__footer">
 		{{#each buttons.left}}
-			<a href="#" {{{attr this.attributes}}}>{{this.title}}</a>
+			<button {{{attr this.attributes}}}><span>{{{this.title}}}</span></button>
 		{{/each}}
-		<a href="#" class="ocl-assignment-card__footer-trash"><i class="fa fa-trash" aria-hidden="true"></i></a>
+		<a href="#" class="ocl-assignment-card__footer-item ocl-assignment-card__footer-trash"><i class="fa fa-trash" aria-hidden="true"></i></a>
 	</div>
 </{{elementName}}>

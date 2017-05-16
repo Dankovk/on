@@ -37,13 +37,18 @@ template:
   buttons:
     left:
       -
-        title: Unassign
+        title: View/Edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
         attributes:
         - - class
-          - '"ocl-assignment-card__unassign"'
+          - '"ocl-button ocl-button--link-style ocl-assignment-card__unassign ocl-assignment-card__footer-item"'
       -
         title: Reassign
         attributes:
         - - class
-          - '"ocl-assignment-card__unassign"'
+          - '"ocl-button ocl-button--link-style ocl-assignment-card__reassign ocl-assignment-card__footer-item"'
+      -
+        title: Unassign
+        attributes:
+        - - class
+          - '"ocl-button ocl-button--link-style ocl-assignment-card__unassign ocl-assignment-card__footer-item"'
 state: {}

@@ -25,6 +25,7 @@
 	transition: ocl-animation-exit(background-color, 200ms);
 	border: none;
 	border-radius: 3px;
+	outline: none;
 	font-size: 16px;
 	text-align: center;
 	text-decoration: none;
@@ -113,6 +114,22 @@
 		border-width: 2px;
 		border-style: solid;
 		background-color: transparent;
+	}
+
+	&--link-style {
+		$optimized: ocl-optimize-style-groups($ocl-default-button-link-config);
+
+		@include ocl-map-to-class($optimized);
+
+		display: inline;
+		height: auto;
+		padding: 0;
+		background-color: transparent;
+
+		&:hover {
+			border: none;
+			background-color: transparent;
+		}
 	}
 
 	/* DISABLED SETTINGS */
