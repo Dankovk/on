@@ -18,7 +18,7 @@ template:
         attributes:
         - - class
           - '"ocl-account-menu__username"'
-      icon: <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+      icon: <i class="fa fa-user-circle-o ocl-account-menu-icon" aria-hidden="true"></i>
     popover:
       elementName: div
       attributes:

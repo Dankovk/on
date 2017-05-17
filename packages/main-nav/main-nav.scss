@@ -1,3 +1,4 @@
+@import "@one/layout/mixins";
 @import "@one/typography/functions";
 
 .ocl-main-nav {
@@ -43,7 +44,11 @@
 	}
 
 	&__items-list {
-		display: inline-block;
+		@include ocl-respond-to(medium) {
+			display: inline-block;
+		}
+
+		display: none;
 		margin: 0;
 		padding: 0;
 	}
@@ -59,6 +64,8 @@
 	}
 
 	&__action-bar--right {
+		display: flex;
+		align-items: center;
 		margin-left: auto;
 	}
 
@@ -78,8 +85,31 @@
 		display: inline-block;
 	}
 
+	.ocl-account-menu__username-type {
+		@include ocl-respond-to(small, false) {
+			@include visuallyhidden;
+		}
+	}
+
 	.ocl-search {
 		display: inline-block;
+	}
+
+	.ocl-search__button {
+		@include ocl-respond-to(medium, false) {
+			position: static;
+			padding: 0 4px;
+			transform: none;
+			color: #fff;
+			font-size: 20px;
+		}
+	}
+
+	.ocl-search__input {
+		@include ocl-respond-to(medium, false) {
+			display: none;
+		}
+
 		width: 200px;
 	}
 }
