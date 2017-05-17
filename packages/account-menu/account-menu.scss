@@ -19,10 +19,14 @@
 
 	&__username {
 		display: flex;
+		align-items: center;
 		padding-left: rem(15px);
 		color: #fff;
 		text-align: left;
-		align-items: center;
+
+		.fa {
+			font-size: 24px;
+		}
 	}
 
 	&__username-type {
@@ -33,7 +37,7 @@
 		.ocl-popover {
 			display: block;
 			position: absolute;
-			right: 5px;
+			right: -3px;
 			top: 42px;
 		}
 	}
