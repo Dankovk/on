@@ -3,95 +3,95 @@
 @import "./variables";
 
 .ocl-card {
-	border-radius: 4px;
-	box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .5);
-	overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .5);
+  overflow: hidden;
 
-	&__header {
-		@include ocl-horizontal-whitespace(rem(30px));
+  &__header {
+	@include ocl-horizontal-whitespace(rem(30px));
+  }
+
+  &__header-content {
+	@include ocl-vertical-whitespace(rem(30px));
+
+	border-bottom: solid 1px $card__block--border-color;
+	background-clip: padding-box;
+  }
+
+  &__body {
+	@include ocl-horizontal-whitespace(rem(30px));
+  }
+
+  &__footer {
+	@include ocl-horizontal-whitespace(rem(30px));
+  }
+
+  &__footer-content {
+	@include ocl-vertical-whitespace(rem(15px));
+
+	border-top: solid 1px $card__block--border-color;
+  }
+
+  &--flat {
+	box-shadow: none;
+  }
+
+  &--square-top {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+  }
+
+  &--square-bottom {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+  }
+
+  &--full-width-body {
+	.ocl-card__body {
+	  padding-right: 0;
+	  padding-left: 0;
 	}
 
-	&__header-content {
-		@include ocl-vertical-whitespace(rem(30px));
+	.ocl-card__body-content {
+	  @include ocl-horizontal-whitespace(rem(30px));
+	}
+  }
 
-		border-bottom: solid 1px $card__block--border-color;
-		background-clip: padding-box;
+  &--full-width-header {
+	.ocl-card__header {
+	  padding-right: 0;
+	  padding-left: 0;
 	}
 
-	&__body {
-		@include ocl-horizontal-whitespace(rem(30px));
+	.ocl-card__header-content {
+	  @include ocl-horizontal-whitespace(rem(30px));
+	}
+  }
+
+  &--full-width-footer {
+	.ocl-card__footer {
+	  padding-right: 0;
+	  padding-left: 0;
 	}
 
-	&__footer {
-		@include ocl-horizontal-whitespace(rem(30px));
+	.ocl-card__footer-content {
+	  @include ocl-horizontal-whitespace(rem(30px));
 	}
+  }
 
-	&__footer-content {
-		@include ocl-vertical-whitespace(rem(15px));
-
-		border-top: solid 1px $card__block--border-color;
+  &--no-border-header {
+	.ocl-card__header-content {
+	  border: none;
 	}
+  }
 
-	&--flat {
-		box-shadow: none;
+  &--no-border-footer {
+	.ocl-card__footer-content {
+	  border: none;
 	}
+  }
 
-	&--square-top {
-		border-top-left-radius: 0;
-		border-top-right-radius: 0;
-	}
-
-	&--square-bottom {
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
-	}
-
-	&--full-width-body {
-		.ocl-card__body {
-			padding-right: 0;
-			padding-left: 0;
-		}
-
-		.ocl-card__body-content {
-			@include ocl-horizontal-whitespace(rem(30px));
-		}
-	}
-
-	&--full-width-header {
-		.ocl-card__header {
-			padding-right: 0;
-			padding-left: 0;
-		}
-
-		.ocl-card__header-content {
-			@include ocl-horizontal-whitespace(rem(30px));
-		}
-	}
-
-	&--full-width-footer {
-		.ocl-card__footer {
-			padding-right: 0;
-			padding-left: 0;
-		}
-
-		.ocl-card__footer-content {
-			@include ocl-horizontal-whitespace(rem(30px));
-		}
-	}
-
-	&--no-border-header {
-		.ocl-card__header-content {
-			border: none;
-		}
-	}
-
-	&--no-border-footer {
-		.ocl-card__footer-content {
-			border: none;
-		}
-	}
-
-	&--align-left {
-		text-align: left;
-	}
+  &--align-left {
+	text-align: left;
+  }
 }

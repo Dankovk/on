@@ -1,0 +1,26 @@
+---
+template:
+  elementName: label
+  attributes:
+  - - class
+    - '"ocl-checkbox"'
+  input:
+    elementName: input
+    attributes:
+    - - type
+      - '"checkbox"'
+    - - class
+      - '"ocl-checkbox__input"'
+    - - name
+      - '"group"'
+    - - value
+      - '"checkbox"'
+    - - checked
+      - '"checked"'
+    body: 'Checked checkbox'
+  toggle:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-checkbox__toggle"'
+state: {}

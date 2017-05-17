@@ -1,15 +1,15 @@
 $ocl-min-breakpoints: (
-	"small": (min-width: 480px),
-	"medium": (min-width: 768px),
-	"large": (min-width: 1024px),
-	"largest": (min-width: 1200px)
+		"small": (min-width: 480px),
+		"medium": (min-width: 768px),
+		"large": (min-width: 1024px),
+		"largest": (min-width: 1200px)
 ) !default;
 
 $ocl-max-breakpoints: (
-	"small": (max-width: 479px),
-	"medium": (max-width: 767px),
-	"large": (max-width: 1023px),
-	"largest": (max-width: 1199px)
+		"small": (max-width: 479px),
+		"medium": (max-width: 767px),
+		"large": (max-width: 1023px),
+		"largest": (max-width: 1199px)
 ) !default;
 
 $ocl-horizontal-whitespace-vals: left right;

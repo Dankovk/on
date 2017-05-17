@@ -17,10 +17,10 @@
 @import "./variables";
 
 @function ocl-animation-enter($name, $duration, $delay: 0ms) {
-	@return $name $duration $delay $ocl-animation-linear-out-slow-in-timing-function;
+  @return $name $duration $delay $ocl-animation-linear-out-slow-in-timing-function;
 }
 
 @function ocl-animation-exit($name, $duration, $delay: 0ms) {
-	@return $name $duration $delay $ocl-animation-fast-out-linear-in-timing-function;
+  @return $name $duration $delay $ocl-animation-fast-out-linear-in-timing-function;
 }
 

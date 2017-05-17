@@ -2,54 +2,54 @@
 @import "./mixins";
 
 .theatre__stage-state {
-	.ocl-button {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translateY(-50%) translateX(-50%);
-	}
+  .ocl-button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+  }
 }
 
 .theatre__ocl-button-bar-title {
-	text-align: left;
+  text-align: left;
 }
 
 .theatre__ocl-button-bar {
-	margin-bottom: 50px;
-	text-align: left;
+  margin-bottom: 50px;
+  text-align: left;
 }
 
 .theatre__ocl-button-bar-cont {
-	display: inline-block;
-	margin-right: 5px;
+  display: inline-block;
+  margin-right: 5px;
 }
 
 .theatre__ocl-button-bar-cont-title {
-	padding-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 .theatre__stage-demo {
-	.ocl-buttons {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translateY(-50%) translateX(-50%);
-
-		// .ocl-button {
-		// 	margin-right: 10px;
-		// }
-	}
+  .ocl-buttons {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
 
 	// .ocl-button {
-	// 	position: relative;
-	// 	top: auto;
-	// 	left: auto;
-	// 	transform: none;
+	// 	margin-right: 10px;
 	// }
+  }
+
+  // .ocl-button {
+  // 	position: relative;
+  // 	top: auto;
+  // 	left: auto;
+  // 	transform: none;
+  // }
 }
 
 .ocl-button--hover {
-	@include ocl-button-hover;
+  @include ocl-button-hover;
 }
 
 // When/if buttons have an :active state, place that style here
@@ -61,14 +61,14 @@ $theatre-knockout-demo-background: #666;
 
 .theatre__stage-button-state-knockout,
 .theatre__stage-button-state-knockout-loading {
-	background: $theatre-knockout-demo-background;
+  background: $theatre-knockout-demo-background;
 }
 
 .theatre__ocl-button-bar--knockout {
-	padding: 30px;
-	background: $theatre-knockout-demo-background;
+  padding: 30px;
+  background: $theatre-knockout-demo-background;
 
-	.theatre__ocl-button-bar-cont-title {
-		color: #fff;
-	}
+  .theatre__ocl-button-bar-cont-title {
+	color: #fff;
+  }
 }

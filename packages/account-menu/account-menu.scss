@@ -4,41 +4,41 @@
 @import "@one/typography/functions";
 
 .ocl-account-menu {
-	position: relative;
+  position: relative;
 
+  .ocl-popover {
+	display: none;
+  }
+
+  &__toggle {
+	display: inline-block;
+	padding-right: rem(10px);
+	padding-left: rem(10px);
+	text-decoration: none;
+  }
+
+  &__username {
+	display: flex;
+	align-items: center;
+	padding-left: rem(15px);
+	color: #fff;
+	text-align: left;
+  }
+
+  &-icon {
+	font-size: 24px;
+  }
+
+  &__username-type {
+	margin-right: rem(10px);
+  }
+
+  &--open {
 	.ocl-popover {
-		display: none;
+	  display: block;
+	  position: absolute;
+	  top: 42px;
+	  right: -3px;
 	}
-
-	&__toggle {
-		display: inline-block;
-		padding-right: rem(10px);
-		padding-left: rem(10px);
-		text-decoration: none;
-	}
-
-	&__username {
-		display: flex;
-		align-items: center;
-		padding-left: rem(15px);
-		color: #fff;
-		text-align: left;
-	}
-
-	&-icon {
-		font-size: 24px;
-	}
-
-	&__username-type {
-		margin-right: rem(10px);
-	}
-
-	&--open {
-		.ocl-popover {
-			display: block;
-			position: absolute;
-			top: 42px;
-			right: -3px;
-		}
-	}
+  }
 }

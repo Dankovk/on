@@ -38,82 +38,82 @@ $ocl-theme-background-tone: ocl-theme-light-or-dark($ocl-theme-background);
 
 /* Text colors according to light vs dark and text type */
 $ocl-theme-text-colors: (
-	dark: (
-		primary: rgba(black, .87),
-		secondary: rgba(black, .54),
-		hint: rgba(black, .38),
-		disabled: rgba(black, .38),
-		icon: rgba(black, .38)
-	),
-	light: (
-		primary: white,
-		secondary: rgba(white, .7),
-		hint: rgba(white, .5),
-		disabled: rgba(white, .5),
-		icon: rgba(white, .5)
-	)
+		dark: (
+				primary: rgba(black, .87),
+				secondary: rgba(black, .54),
+				hint: rgba(black, .38),
+				disabled: rgba(black, .38),
+				icon: rgba(black, .38)
+		),
+		light: (
+				primary: white,
+				secondary: rgba(white, .7),
+				hint: rgba(white, .5),
+				disabled: rgba(white, .5),
+				icon: rgba(white, .5)
+		)
 );
 
 /* Primary text colors for each of the theme colors */
 $ocl-theme-property-values: (
-	primary: $ocl-theme-primary,
-	accent: $ocl-theme-accent,
-	background: $ocl-theme-background,
-	text-primary-on-primary: map-get(map-get($ocl-theme-text-colors, $ocl-theme-primary-tone), primary),
-	text-secondary-on-primary: map-get(map-get($ocl-theme-text-colors, $ocl-theme-primary-tone), secondary),
-	text-hint-on-primary: map-get(map-get($ocl-theme-text-colors, $ocl-theme-primary-tone), hint),
-	text-disabled-on-primary: map-get(map-get($ocl-theme-text-colors, $ocl-theme-primary-tone), disabled),
-	text-icon-on-primary: map-get(map-get($ocl-theme-text-colors, $ocl-theme-primary-tone), icon),
-	text-primary-on-accent: map-get(map-get($ocl-theme-text-colors, $ocl-theme-accent-tone), primary),
-	text-secondary-on-accent: map-get(map-get($ocl-theme-text-colors, $ocl-theme-accent-tone), secondary),
-	text-hint-on-accent: map-get(map-get($ocl-theme-text-colors, $ocl-theme-accent-tone), hint),
-	text-disabled-on-accent: map-get(map-get($ocl-theme-text-colors, $ocl-theme-accent-tone), disabled),
-	text-icon-on-accent: map-get(map-get($ocl-theme-text-colors, $ocl-theme-accent-tone), icon),
-	text-primary-on-background: map-get(map-get($ocl-theme-text-colors, $ocl-theme-background-tone), primary),
-	text-secondary-on-background: map-get(map-get($ocl-theme-text-colors, $ocl-theme-background-tone), secondary),
-	text-hint-on-background: map-get(map-get($ocl-theme-text-colors, $ocl-theme-background-tone), hint),
-	text-disabled-on-background: map-get(map-get($ocl-theme-text-colors, $ocl-theme-background-tone), disabled),
-	text-icon-on-background: map-get(map-get($ocl-theme-text-colors, $ocl-theme-background-tone), icon),
-	text-primary-on-light: map-get(map-get($ocl-theme-text-colors, dark), primary),
-	text-secondary-on-light: map-get(map-get($ocl-theme-text-colors, dark), secondary),
-	text-hint-on-light: map-get(map-get($ocl-theme-text-colors, dark), hint),
-	text-disabled-on-light: map-get(map-get($ocl-theme-text-colors, dark), disabled),
-	text-icon-on-light: map-get(map-get($ocl-theme-text-colors, dark), icon),
-	text-primary-on-dark: map-get(map-get($ocl-theme-text-colors, light), primary),
-	text-secondary-on-dark: map-get(map-get($ocl-theme-text-colors, light), secondary),
-	text-hint-on-dark: map-get(map-get($ocl-theme-text-colors, light), hint),
-	text-disabled-on-dark: map-get(map-get($ocl-theme-text-colors, light), disabled),
-	text-icon-on-dark: map-get(map-get($ocl-theme-text-colors, light), icon)
+		primary: $ocl-theme-primary,
+		accent: $ocl-theme-accent,
+		background: $ocl-theme-background,
+		text-primary-on-primary: map-get(map-get($ocl-theme-text-colors, $ocl-theme-primary-tone), primary),
+		text-secondary-on-primary: map-get(map-get($ocl-theme-text-colors, $ocl-theme-primary-tone), secondary),
+		text-hint-on-primary: map-get(map-get($ocl-theme-text-colors, $ocl-theme-primary-tone), hint),
+		text-disabled-on-primary: map-get(map-get($ocl-theme-text-colors, $ocl-theme-primary-tone), disabled),
+		text-icon-on-primary: map-get(map-get($ocl-theme-text-colors, $ocl-theme-primary-tone), icon),
+		text-primary-on-accent: map-get(map-get($ocl-theme-text-colors, $ocl-theme-accent-tone), primary),
+		text-secondary-on-accent: map-get(map-get($ocl-theme-text-colors, $ocl-theme-accent-tone), secondary),
+		text-hint-on-accent: map-get(map-get($ocl-theme-text-colors, $ocl-theme-accent-tone), hint),
+		text-disabled-on-accent: map-get(map-get($ocl-theme-text-colors, $ocl-theme-accent-tone), disabled),
+		text-icon-on-accent: map-get(map-get($ocl-theme-text-colors, $ocl-theme-accent-tone), icon),
+		text-primary-on-background: map-get(map-get($ocl-theme-text-colors, $ocl-theme-background-tone), primary),
+		text-secondary-on-background: map-get(map-get($ocl-theme-text-colors, $ocl-theme-background-tone), secondary),
+		text-hint-on-background: map-get(map-get($ocl-theme-text-colors, $ocl-theme-background-tone), hint),
+		text-disabled-on-background: map-get(map-get($ocl-theme-text-colors, $ocl-theme-background-tone), disabled),
+		text-icon-on-background: map-get(map-get($ocl-theme-text-colors, $ocl-theme-background-tone), icon),
+		text-primary-on-light: map-get(map-get($ocl-theme-text-colors, dark), primary),
+		text-secondary-on-light: map-get(map-get($ocl-theme-text-colors, dark), secondary),
+		text-hint-on-light: map-get(map-get($ocl-theme-text-colors, dark), hint),
+		text-disabled-on-light: map-get(map-get($ocl-theme-text-colors, dark), disabled),
+		text-icon-on-light: map-get(map-get($ocl-theme-text-colors, dark), icon),
+		text-primary-on-dark: map-get(map-get($ocl-theme-text-colors, light), primary),
+		text-secondary-on-dark: map-get(map-get($ocl-theme-text-colors, light), secondary),
+		text-hint-on-dark: map-get(map-get($ocl-theme-text-colors, light), hint),
+		text-disabled-on-dark: map-get(map-get($ocl-theme-text-colors, light), disabled),
+		text-icon-on-dark: map-get(map-get($ocl-theme-text-colors, light), icon)
 );
 
 $ocl-accent-hover-color-diff: (
-	adjust-hue: -.17647deg,
-	saturate: 6.11042%,
-	lighten: 7.64706%
+		adjust-hue: -.17647deg,
+		saturate: 6.11042%,
+		lighten: 7.64706%
 );
 
 $ocl-default-link-transition: .3s color ease;
 $ocl-default-link-config: (
-	"&:link": (
-		color: $ocl-theme-accent,
-		transition: $ocl-default-link-transition,
-		text-decoration: none,
-		will-change: color
-	),
-	"&:visited": (
-		color: $ocl-theme-accent,
-		transition: $ocl-default-link-transition,
-		text-decoration: none,
-		will-change: color
-	),
-	"&:hover": (
-		color: ocl-apply-color-diff($ocl-theme-accent, $ocl-accent-hover-color-diff),
-		transition: $ocl-default-link-transition,
-		text-decoration: none
-	),
-	"&:active": (
-		color: ocl-apply-color-diff($ocl-theme-accent, $ocl-accent-hover-color-diff),
-		transition: $ocl-default-link-transition,
-		text-decoration: none
-	)
+		"&:link": (
+				color: $ocl-theme-accent,
+				transition: $ocl-default-link-transition,
+				text-decoration: none,
+				will-change: color
+		),
+		"&:visited": (
+				color: $ocl-theme-accent,
+				transition: $ocl-default-link-transition,
+				text-decoration: none,
+				will-change: color
+		),
+		"&:hover": (
+				color: ocl-apply-color-diff($ocl-theme-accent, $ocl-accent-hover-color-diff),
+				transition: $ocl-default-link-transition,
+				text-decoration: none
+		),
+		"&:active": (
+				color: ocl-apply-color-diff($ocl-theme-accent, $ocl-accent-hover-color-diff),
+				transition: $ocl-default-link-transition,
+				text-decoration: none
+		)
 );

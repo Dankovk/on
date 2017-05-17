@@ -24,20 +24,20 @@
 
 /* Special case, so that .ocl-theme--background changes background color, not text color. */
 .ocl-theme--background {
-	@include ocl-theme-prop(background-color, background);
+  @include ocl-theme-prop(background-color, background);
 }
 
 @each $style in map-keys($ocl-theme-property-values) {
-	@if $style != "background" {
-		.ocl-theme--#{$style} {
-			@include ocl-theme-prop(color, $style, false, true);
-		}
+  @if $style != "background" {
+	.ocl-theme--#{$style} {
+	  @include ocl-theme-prop(color, $style, false, true);
 	}
+  }
 }
 
 /* CSS rules for using primary and accent as background colors. */
 @each $style in ("primary", "accent") {
-	.ocl-theme--#{$style}-bg {
-		@include ocl-theme-prop(background-color, $style, false, true);
-	}
+  .ocl-theme--#{$style}-bg {
+	@include ocl-theme-prop(background-color, $style, false, true);
+  }
 }

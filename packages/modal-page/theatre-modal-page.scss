@@ -1,14 +1,14 @@
 @import "./variables";
 
 .theatre__stage-modal-page {
-	text-align: left;
-	// position: absolute;
-	// top: 30%;
-	// left: 50%;
-	// width: 500px;
-	// transform: translate(-50%, -50%);
+  text-align: left;
+  // position: absolute;
+  // top: 30%;
+  // left: 50%;
+  // width: 500px;
+  // transform: translate(-50%, -50%);
 
-	.ocl-card {
-		background-color: $modal--background-color;
-	}
+  .ocl-card {
+	background-color: $modal--background-color;
+  }
 }

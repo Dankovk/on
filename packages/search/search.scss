@@ -1,39 +1,39 @@
 @import "./variables";
 
 .ocl-search {
-	position: relative;
+  position: relative;
 
-	&__input {
-		width: $input-width;
-		height: $input-search-height;
-		padding: $input-padding;
-		border: $input-border;
-		border-radius: $input-radius;
-		background: #fff;
-		font-size: $input-font-size;
-		box-sizing: border-box;
+  &__input {
+	width: $input-width;
+	height: $input-search-height;
+	padding: $input-padding;
+	border: $input-border;
+	border-radius: $input-radius;
+	background: #fff;
+	font-size: $input-font-size;
+	box-sizing: border-box;
 
-		&::placeholder {
-			color: $input-placeholder-color;
-			font-size: $input-font-size;
-			font-weight: bold;
-			letter-spacing: 0;
-		}
-
-		&--shadow {
-			box-shadow: $input-inner-shadow;
-		}
+	&::placeholder {
+	  color: $input-placeholder-color;
+	  font-size: $input-font-size;
+	  font-weight: bold;
+	  letter-spacing: 0;
 	}
 
-	&__button {
-		position: absolute;
-		top: 50%;
-		right: 10px;
-		transform: translateY(-50%);
-		border: 0;
-		background: transparent;
-		color: $input-search-color;
-		font-size: $input-font-size;
-		cursor: pointer;
+	&--shadow {
+	  box-shadow: $input-inner-shadow;
 	}
+  }
+
+  &__button {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	border: 0;
+	background: transparent;
+	color: $input-search-color;
+	font-size: $input-font-size;
+	cursor: pointer;
+  }
 }

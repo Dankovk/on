@@ -1,9 +1,9 @@
 @import "./variables";
 
 @function ocl-min-width-map($breakpoint-value) {
-	@return (min-width: $breakpoint-value);
+  @return (min-width: $breakpoint-value);
 }
 
 @function ocl-max-width-map($breakpoint-value) {
-	@return (max-width: $breakpoint-value);
+  @return (max-width: $breakpoint-value);
 }

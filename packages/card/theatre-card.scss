@@ -1,24 +1,24 @@
 @import "@one/typography/functions";
 
 .theatre__stage-card {
-	position: absolute;
-	top: 30%;
-	left: 50%;
-	width: 500px;
-	transform: translate(-50%, -50%);
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width: 500px;
+  transform: translate(-50%, -50%);
 
-	.ocl-card {
-		background-color: #ededed;
-	}
+  .ocl-card {
+	background-color: #ededed;
+  }
 
-	.ocl-card__header-content {
-		.ocl-card__header-title {
-			margin: 0;
-			padding-top: rem(15px);
-			padding-bottom: rem(15px);
-			color: #666;
-			font-size: 34px;
-			font-weight: normal;
-		}
+  .ocl-card__header-content {
+	.ocl-card__header-title {
+	  margin: 0;
+	  padding-top: rem(15px);
+	  padding-bottom: rem(15px);
+	  color: #666;
+	  font-size: 34px;
+	  font-weight: normal;
 	}
+  }
 }

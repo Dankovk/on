@@ -29,63 +29,63 @@
  * $style should be one of the map keys in $ocl-theme-property-values (_variables.scss).
  */
 @mixin ocl-theme-prop($property, $style, $color-diff: false, $important: false) {
-	@if not map-has-key($ocl-theme-property-values, $style) {
-		@error "Invalid style specified! Choose one of #{map-keys($ocl-theme-property-values)}";
-	}
+  @if not map-has-key($ocl-theme-property-values, $style) {
+	@error "Invalid style specified! Choose one of #{map-keys($ocl-theme-property-values)}";
+  }
 
-	@if $important and $color-diff {
-		#{$property}: ocl-apply-color-diff(map-get($ocl-theme-property-values, $style), $color-diff) !important;
-	}
+  @if $important and $color-diff {
+	#{$property}: ocl-apply-color-diff(map-get($ocl-theme-property-values, $style), $color-diff) !important;
+  }
 
-	@else if $important {
-		#{$property}: map-get($ocl-theme-property-values, $style) !important;
-	}
+  @else if $important {
+	#{$property}: map-get($ocl-theme-property-values, $style) !important;
+  }
 
-	@else if $color-diff {
-		#{$property}: ocl-apply-color-diff(map-get($ocl-theme-property-values, $style), $color-diff);
-	}
+  @else if $color-diff {
+	#{$property}: ocl-apply-color-diff(map-get($ocl-theme-property-values, $style), $color-diff);
+  }
 
-	@else {
-		#{$property}: map-get($ocl-theme-property-values, $style);
-	}
+  @else {
+	#{$property}: map-get($ocl-theme-property-values, $style);
+  }
 }
 
 /**
  * Takes the structure of a map and produces css classes from it
  */
 @mixin ocl-map-to-class($map) {
-	@each $k, $v in $map {
-		@if type-of($v) == map {
-			#{$k} {
-				@include ocl-map-to-class($v) {
-					@content;
-				}
-			}
+  @each $k, $v in $map {
+	@if type-of($v) == map {
+	  #{$k} {
+		@include ocl-map-to-class($v) {
+		  @content;
 		}
-
-		@else {
-			#{$k}: $v;
-		}
+	  }
 	}
+
+	@else {
+	  #{$k}: $v;
+	}
+  }
 }
 
 /**
  * Takes the structure of a map and produces css classes from it
  */
 @mixin ocl-link-theme-style($include-root: true) {
-	/* stylelint-disable selector-no-type */
-	$optimized: ocl-optimize-style-groups($ocl-default-link-config);
+  /* stylelint-disable selector-no-type */
+  $optimized: ocl-optimize-style-groups($ocl-default-link-config);
 
-	@if $include-root {
-		a {
-			@include ocl-map-to-class($optimized);
-		}
+  @if $include-root {
+	a {
+	  @include ocl-map-to-class($optimized);
 	}
+  }
 
-	@else {
-		@include ocl-map-to-class($optimized);
-	}
-	/* stylelint-enable selector-no-type */
+  @else {
+	@include ocl-map-to-class($optimized);
+  }
+  /* stylelint-enable selector-no-type */
 }
 
 /**
@@ -123,28 +123,28 @@
  * ```
  */
 @mixin ocl-theme-dark($root-selector: null, $compound: false) {
-	@if ($root-selector) {
-		@at-root {
-			@if ($compound) {
-				#{$root-selector}--theme-dark#{&},
-				.ocl-theme--dark & {
-					@content;
-				}
-			}
-
-			@else {
-				#{$root-selector}--theme-dark &,
-				.ocl-theme--dark & {
-					@content;
-				}
-			}
-		}
-	}
-
-	@else {
-		&--theme-dark,
+  @if ($root-selector) {
+	@at-root {
+	  @if ($compound) {
+		#{$root-selector}--theme-dark#{&},
 		.ocl-theme--dark & {
-			@content;
+		  @content;
 		}
+	  }
+
+	  @else {
+		#{$root-selector}--theme-dark &,
+		.ocl-theme--dark & {
+		  @content;
+		}
+	  }
 	}
+  }
+
+  @else {
+	&--theme-dark,
+	.ocl-theme--dark & {
+	  @content;
+	}
+  }
 }

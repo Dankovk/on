@@ -1,0 +1,13 @@
+---
+template:
+  elementName: input
+  attributes:
+  - - class
+    - '"ocl-input ocl-input__datefield"'
+  - - placeholder
+    - '"Default date field"'
+  - - type
+    - '"text"'
+  - - value
+    - '6/4/17'
+state: {}
