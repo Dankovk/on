@@ -23,10 +23,10 @@
 		padding-left: rem(15px);
 		color: #fff;
 		text-align: left;
+	}
 
-		.fa {
-			font-size: 24px;
-		}
+	&-icon {
+		font-size: 24px;
 	}
 
 	&__username-type {
@@ -37,8 +37,8 @@
 		.ocl-popover {
 			display: block;
 			position: absolute;
-			right: -3px;
 			top: 42px;
+			right: -3px;
 		}
 	}
 }
