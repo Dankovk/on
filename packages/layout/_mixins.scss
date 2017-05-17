@@ -20,26 +20,44 @@
 /// @author Hugo Giraudel
 /// @param {String} $breakpoint - Breakpoint name
 /// @require $breakpoints
-@mixin ocl-respond-to($breakpoint) {
+@mixin ocl-respond-to($breakpoint, $min: true) {
 	// If the key exists in the map
-	@if map-has-key($ocl-breakpoints, $breakpoint) {
+	@if map-has-key($ocl-min-breakpoints, $breakpoint) {
 		// Prints a media query based on the value
-		@media #{inspect(map-get($ocl-breakpoints, $breakpoint))} {
-			@content;
+
+		@if $min {
+			@media #{inspect(map-get($ocl-min-breakpoints, $breakpoint))} {
+				@content;
+			}
+		}
+
+		@else {
+			@media #{inspect(map-get($ocl-max-breakpoints, $breakpoint))} {
+				@content;
+			}
 		}
 	}
 
 	@else if type-of($breakpoint) == "number" {
 		// Prints a media query based on the number value
-		@media #{inspect(ocl-min-width-map($breakpoint))} {
-			@content;
+
+		@if $min {
+			@media #{inspect(ocl-min-width-map($breakpoint))} {
+				@content;
+			}
+		}
+
+		@else {
+			@media #{inspect(ocl-max-width-map($breakpoint))} {
+				@content;
+			}
 		}
 	}
 
 	// If the key doesn't exist in the map
 	@else {
 		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-			+ "Available breakpoints are: #{map-keys($ocl-breakpoints)}.";
+			+ "Available breakpoints are: #{map-keys($ocl-min-breakpoints)}.";
 	}
 }
 
@@ -159,6 +177,30 @@
 	}
 }
 /* stylelint-enable order/properties-order */
+
+@mixin visuallyhidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	white-space: nowrap; /* 1 */
+	overflow: hidden;
+}
+
+@mixin visuallyhidden-focusable {
+	position: static;
+	width: auto;
+	height: auto;
+	margin: 0;
+	clip: auto;
+	clip-path: none;
+	white-space: inherit;
+	overflow: visible;
+}
 
 @mixin clearfix {
 	&::after {
