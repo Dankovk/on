@@ -6,3 +6,29 @@
 $ocl-button-disabled-color: #999;
 
 $input-search-color: #bebebe;
+
+$ocl-default-button-link-config: (
+	"span": (
+		color: $ocl-theme-accent,
+		transition: $ocl-default-link-transition,
+		text-decoration: none,
+		will-change: color
+	),
+	"&:visited span": (
+		color: $ocl-theme-accent,
+		transition: $ocl-default-link-transition,
+		text-decoration: none,
+		will-change: color
+	),
+	"&:hover span": (
+		background-color: transparent,
+		color: ocl-apply-color-diff($ocl-theme-accent, $ocl-accent-hover-color-diff),
+		transition: $ocl-default-link-transition,
+		text-decoration: none
+	),
+	"&:active span": (
+		color: ocl-apply-color-diff($ocl-theme-accent, $ocl-accent-hover-color-diff),
+		transition: $ocl-default-link-transition,
+		text-decoration: none
+	)
+);

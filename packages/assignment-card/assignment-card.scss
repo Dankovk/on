@@ -10,11 +10,12 @@
 	color: #444;
 
 	&__header {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
 		padding: 10px 0;
 		border-bottom: 1px solid #c6c6c6;
-		display: flex;
-		align-items: stretch;
-		flex-wrap: wrap;
+
 		@include ocl-respond-to(small) {
 			padding: 0;
 			border: none;
@@ -22,12 +23,13 @@
 	}
 
 	&__date {
-		border: none;
 		flex-basis: 100%;
-		font-style: italic;
-		text-align: center;
+		border: none;
 		font-size: 14px;
+		font-style: italic;
 		font-weight: 300;
+		text-align: center;
+
 		@include ocl-respond-to(small) {
 			flex: 1;
 			padding-top: rem(15px);
@@ -35,10 +37,10 @@
 			border-right: 1px solid #c6c6c6;
 			border-bottom: 1px solid #c6c6c6;
 		}
+
 		&:last-of-type {
 			border-right: none;
 		}
-
 	}
 
 	&__body {
@@ -47,51 +49,34 @@
 	}
 
 	&__title {
+		flex-basis: 100%;
 		font-size: 24px;
 		font-weight: 400;
-		flex-basis: 100%;
 		text-align: center;
+
 		@include ocl-respond-to(small) {
 			text-align: left;
 		}
 	}
 
-	&__details {
-		margin: 0 auto;
-		display: inline-flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		border-radius: 2px;
-		height: 42px;
-		width: 160px;
-		border: 2px solid #d2d2d2;
-		text-align: center;
-		text-decoration: none;
-		margin-bottom: 30px;
-		margin-top: 30px;
-		@include ocl-respond-to(small) {
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-	}
-
 	.ocl-assignment-card__list {
 		flex-basis: 100%;
+		margin-bottom: 40px;
+
 		@include ocl-respond-to(small) {
 			flex: 1;
-			margin-bottom: 40px;
 		}
 	}
 
 	&__list-item {
 		display: flex;
 		margin-bottom: 10px;
+
 		.icon {
 			display: inline-block;
+			margin-right: 10px;
 			color: #55b847;
 			font-size: 26px;
-			margin-right: 10px;
 		}
 
 		&-title {
@@ -103,12 +88,37 @@
 		}
 	}
 
-	&__footer {
-		@include ocl-link-theme-style;
+	.ocl-button {
+		.fa {
+			display: none;
+			margin-bottom: 2px;
+			margin-left: 5px;
+			font-size: 18px;
+			vertical-align: bottom;
 
+			@include ocl-respond-to(small) {
+				display: inline-block;
+			}
+		}
+	}
+
+	&__footer {
+		display: flex;
 		padding-top: 10px;
 		padding-bottom: 10px;
 		background-color: #f2f2f2;
+
+		@include ocl-horizontal-whitespace(rem(5px));
+
+		@include ocl-respond-to(small) {
+			@include ocl-horizontal-whitespace(rem(30px));
+
+			display: block;
+		}
+
+		&-item {
+			flex: 1;
+		}
 	}
 }
 
@@ -116,24 +126,26 @@
 	width: 20px;
 	height: 20px;
 	margin-top: 1px;
-	clip: rect(0px, 10px, 20px, 0px);
-	background-color: #fff;
+	clip: rect(0, 10px, 20px, 0);
 	border: 1px solid #55b847;
 	border-radius: 50%;
+	background-color: #fff;
+
 	&__mask {
+		position: absolute;
 		width: 120px;
 		height: 120px;
-		position: absolute;
-		clip: rect(0px, 20px, 20px, 10px);
+		clip: rect(0, 20px, 20px, 10px);
 	}
+
 	&__fill {
-		border-radius: 50%;
 		position: absolute;
 		width: 20px;
 		height: 20px;
-		background-color: #55b847;
 		transform: rotate(120deg);
-		clip: rect(0px, 10px, 20px, 0px);
+		border-radius: 50%;
+		background-color: #55b847;
+		clip: rect(0, 10px, 20px, 0);
 	}
 }
 
@@ -141,10 +153,26 @@
 	@include ocl-styleless-list;
 }
 
-.ocl-assignment-card__unassign, .ocl-assignment-card__reassign {
-	@include ocl-horizontal-whitespace(rem(10px));
+.ocl-assignment-card__unassign,
+.ocl-assignment-card__reassign {
+	@include ocl-horizontal-whitespace(rem(5px));
+
+	@include ocl-respond-to(small) {
+		@include ocl-horizontal-whitespace(rem(10px));
+	}
+
+	&:first-of-type {
+		padding-left: 0;
+	}
 }
 
 .ocl-assignment-card__footer-trash {
+	flex: .3;
 	float: right;
+	text-align: center;
+
+	.fa {
+		display: inline-block;
+		vertical-align: middle;
+	}
 }
