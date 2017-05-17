@@ -26,7 +26,7 @@ template:
         - '"group"'
       - - value
         - '"toggle"'
-      body: '<div>Recently Active</div>'
+      body: '<span class="ocl-filter-toggle__text">Recently Active</span>'
   alpha:
     elementName: label
     attributes:
@@ -43,7 +43,7 @@ template:
         - '"group"'
       - - value
         - '"toggle"'
-      body: '<div>Alphabetical</div>'
+      body: '<span class="ocl-filter-toggle__text">Alphabetical</span>'
   date:
     elementName: label
     attributes:
@@ -60,7 +60,7 @@ template:
         - '"group"'
       - - value
         - '"toggle"'
-      body: '<div>Date Added</div>'
+      body: '<span class="ocl-filter-toggle__text">Date Added</span>'
   status:
     elementName: label
     attributes:
@@ -77,5 +77,5 @@ template:
         - '"group"'
       - - value
         - '"toggle"'
-      body: '<div>Status</div>'
+      body: '<span class="ocl-filter-toggle__text">Status</span>'
 state: {}

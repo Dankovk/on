@@ -17,5 +17,5 @@ template:
       - '"toggle"'
     - - checked
       - '"checked"'
-    body: '<div>Filter toggle</div>'
+    body: '<span class="ocl-filter-toggle__text">Filter toggle</span>'
 state: {}
