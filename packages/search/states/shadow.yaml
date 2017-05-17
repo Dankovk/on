@@ -1,0 +1,9 @@
+---
+template:
+  input:
+    attributes:
+    - - class
+      - '"ocl-search__input ocl-search__input--shadow"'
+    - - placeholder
+      - '"Search"'
+state: {}

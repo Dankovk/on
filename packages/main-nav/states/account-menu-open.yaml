@@ -1,0 +1,51 @@
+---
+template:
+  account-menu:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-account-menu ocl-account-menu--open"'
+    toggle:
+      elementName: a
+      attributes:
+      - - href
+        - '"#"'
+      - - class
+        - '"ocl-account-menu__toggle"'
+      username:
+        elementName: div
+        body: <span class="ocl-account-menu__username-type">Barbara T.</span>
+        attributes:
+        - - class
+          - '"ocl-account-menu__username"'
+      icon: <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+    popover:
+      elementName: div
+      attributes:
+        - - class
+          - '"ocl-popover ocl-popover--no-close"'
+      list:
+        elementName: div
+        attributes:
+        - - class
+          - '"ocl-popover__list"'
+      close:
+        elementName: button
+        body: <div class="ocl-popover__close-element"></div>
+        attributes:
+        - - class
+          - '"ocl-popover__close"'
+      link:
+        elementName: a
+        body: <span>Link in pop</span>
+        attributes:
+        - - class
+          - '"ocl-popover__link"'
+        - - href
+          - '"#"'
+      arrow:
+        elementName: div
+        attributes:
+        - - class
+          - '"ocl-popover__arrow ocl-popover__arrow--top-right"'
+state: {}
