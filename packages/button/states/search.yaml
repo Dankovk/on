@@ -1,8 +1,0 @@
----
-template:
-  elementName: button
-  body: 'S'
-  attributes:
-  - - class
-    - '"ocl-button__search"'
-state: {}
