@@ -16,8 +16,8 @@
     "@one/typography": "^0.1.0",
     "@one/animation": "^0.1.0",
     "@one/theme": "^0.1.0",
+    "@one/icon": "^0.1.0",
     "@one/account-menu": "^0.1.0",
-    "@one/search": "^0.1.0",
-    "@one/icon": "^0.1.0"
+    "@one/search": "^0.1.0"
   }
 }

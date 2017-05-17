@@ -1,35 +1,33 @@
-@import "@one/account-menu/account-menu";
-@import "@one/search/search";
+@import "@one/typography/functions";
 
 .ocl-main-nav {
+	display: flex;
+	align-items: center;
 	height: 71px;
 	padding-right: 20px;
-	background-image: url("https://entradapiano.com/img/header.png");
+	background-image: url(https://entradapiano.com/img/header.png);
 	background-repeat: no-repeat;
 	background-position: 0 0;
-	line-height: 71px;
 
 	&__toggle {
 		display: block;
 		position: relative;
-		width: 71px;
+		min-width: 71px;
 		height: 71px;
 		margin: 0;
 		padding: 0;
-		float: left;
 		border: none;
-		outline: none;
 		background: linear-gradient(#b90e43, #800a2f);
+		cursor: pointer;
 	}
 
 	&__home {
 		display: inline-block;
-		width: 71px;
-		height: 71px;
+		margin: 0 rem(15px);
 		border: none;
-		outline: none;
 		background-color: transparent;
 		color: #fff;
+		font-size: 20px;
 	}
 
 	&__logo {
@@ -40,7 +38,7 @@
 		width: 25px;
 		height: 28px;
 		transform: translate(-50%, -75%);
-		background-image: url("https://entradapiano.com/img/logo-54x62.png");
+		background-image: url(https://entradapiano.com/img/logo-54x62.png);
 		background-size: 25px 28px;
 	}
 
@@ -53,21 +51,15 @@
 	&__item {
 		display: inline-block;
 		margin-right: 18px;
-
-		a {
-			color: #fff;
-			text-decoration: none;
-		}
 	}
 
-	&__action-bar {
-		&--left {
-			float: left;
-		}
+	&__link {
+		color: #fff;
+		text-decoration: none;
+	}
 
-		&--right {
-			float: right;
-		}
+	&__action-bar--right {
+		margin-left: auto;
 	}
 
 	&__toggle-caption {

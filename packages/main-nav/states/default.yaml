@@ -19,7 +19,7 @@ template:
       elementName: input
       attributes:
       - - class
-        - '"ocl-search__input"'
+        - '"ocl-search__input ocl-search__input--shadow"'
       - - placeholder
         - '"Search"'
     button:
@@ -30,7 +30,16 @@ template:
         - '"ocl-search__button"'
   navItemsList:
     elementName: ul
-    body: <li class="ocl-main-nav__item"><a href="#">Tours</a></li><li class="ocl-main-nav__item"><a href="#">Help</a></li><li class="ocl-main-nav__item"><a href="#">News</a></li>
+    body:
+      <li class="ocl-main-nav__item">
+        <a href="#" class="ocl-main-nav__link">Tours</a>
+      </li>
+      <li class="ocl-main-nav__item">
+        <a href="#" class="ocl-main-nav__link">Help</a>
+      </li>
+      <li class="ocl-main-nav__item">
+        <a href="#" class="ocl-main-nav__link">News</a>
+      </li>
     attributes:
     - - class
       - '"ocl-main-nav__items-list"'
@@ -74,7 +83,7 @@ template:
         attributes:
         - - class
           - '"ocl-account-menu__username"'
-      icon: <i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>
+      icon: <i class="fa fa-user-circle-o ocl-account-menu-icon" aria-hidden="true"></i>
     popover:
       elementName: div
       attributes:
