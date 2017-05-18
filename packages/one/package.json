@@ -21,6 +21,7 @@
 		"@one/modal-page": "^0.1.0",
 		"@one/signin": "^0.1.0",
 		"@one/account-menu": "^0.1.0",
-		"@one/search": "^0.1.0"
+		"@one/search": "^0.1.0",
+		"@one/skill-meter-button": "^0.1.0"
 	}
 }

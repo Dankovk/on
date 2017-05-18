@@ -1,3 +1,52 @@
 ---
 template:
+  attributes:
+    - - class
+      - '"ocl-skill-meter ocl-skill-meter--showing-more"'
+  buttons:
+        -
+          label:
+            text: Started
+            attributes:
+            - - class
+              - '"ocl-skill-meter-button__label ocl-skill-meter-button__label--combined"'
+          attributes:
+          - - class
+            - '"ocl-skill-meter-button__element ocl-skill-meter-button__element--active"'
+        -
+          label:
+            text: Processing
+            attributes:
+            - - class
+              - '"ocl-skill-meter-button__label ocl-skill-meter-button__label--combined"'
+          attributes:
+          - - class
+            - '"ocl-skill-meter-button__element ocl-skill-meter-button__element--active"'
+        -
+          label:
+            text: Capable
+            attributes:
+            - - class
+              - '"ocl-skill-meter-button__label ocl-skill-meter-button__label--combined"'
+          attributes:
+          - - class
+            - '"ocl-skill-meter-button__element ocl-skill-meter-button__element--active"'
+        -
+          label:
+            text: Proficent
+            attributes:
+            - - class
+              - '"ocl-skill-meter-button__label ocl-skill-meter-button__label--combined"'
+          attributes:
+          - - class
+            - '"ocl-skill-meter-button__element"'
+        -
+          label:
+            text: Excelling
+            attributes:
+            - - class
+              - '"ocl-skill-meter-button__label ocl-skill-meter-button__label--combined"'
+          attributes:
+          - - class
+            - '"ocl-skill-meter-button__element"'
 state: {}

@@ -1,3 +1,58 @@
 ---
 template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-skill-meter"'
+  label:
+    elementName: label
+    attributes:
+    - - class
+      - '"ocl-skill-meter__label"'
+  buttons:
+      -
+        label:
+          text: Started
+          attributes:
+          - - class
+            - '"ocl-skill-meter-button__label"'
+        attributes:
+        - - class
+          - '"ocl-skill-meter-button__element ocl-skill-meter-button__element--active"'
+      -
+        label:
+          text: Processing
+          attributes:
+          - - class
+            - '"ocl-skill-meter-button__label"'
+        attributes:
+        - - class
+          - '"ocl-skill-meter-button__element ocl-skill-meter-button__element--active"'
+      -
+        label:
+          text: Capable
+          attributes:
+          - - class
+            - '"ocl-skill-meter-button__label"'
+        attributes:
+        - - class
+          - '"ocl-skill-meter-button__element ocl-skill-meter-button__element--active"'
+      -
+        label:
+          text: Proficent
+          attributes:
+          - - class
+            - '"ocl-skill-meter-button__label"'
+        attributes:
+        - - class
+          - '"ocl-skill-meter-button__element"'
+      -
+        label:
+          text: Excelling
+          attributes:
+          - - class
+            - '"ocl-skill-meter-button__label"'
+        attributes:
+        - - class
+          - '"ocl-skill-meter-button__element"'
 state: {}
