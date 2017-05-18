@@ -2,28 +2,28 @@
 @import "@one/animation/functions";
 
 .ocl-filter-toggle {
-  &__input {
-	display: none;
+	&__input {
+		display: none;
 
-	&--checked + .ocl-filter-toggle__text,
-	&:checked + .ocl-filter-toggle__text {
-	  border-color: #d3d3d3;
-	  background-color: #d3d3d3;
+		&--checked + .ocl-filter-toggle__text,
+		&:checked + .ocl-filter-toggle__text {
+			border-color: #d3d3d3;
+			background-color: #d3d3d3;
+		}
 	}
-  }
 
-  &__text {
-	display: block;
-	width: rem(140px);
-	height: rem(35px);
-	transition: ocl-animation-exit(background-color, 200ms), ocl-animation-exit(border-color, 200ms);
-	border: solid 1px #d3d3d3;
-	border-radius: rem(2px);
-	background-color: #fff;
-	font-style: italic;
-	font-weight: 300;
-	line-height: rem(35px);
-	cursor: pointer;
-  }
+	&__text {
+		display: block;
+		width: rem(140px);
+		height: rem(35px);
+		transition: ocl-animation-exit(background-color, 200ms), ocl-animation-exit(border-color, 200ms);
+		border: solid 1px #d3d3d3;
+		border-radius: rem(2px);
+		background-color: #fff;
+		font-style: italic;
+		font-weight: 300;
+		line-height: rem(35px);
+		cursor: pointer;
+	}
 }
 

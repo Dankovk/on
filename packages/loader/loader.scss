@@ -3,27 +3,27 @@
 .ocl-loader,
 .ocl-loader__spinner,
 .ocl-loader__spinner::before {
-  width: 34px;
-  height: 34px;
-  box-sizing: border-box;
+	width: 34px;
+	height: 34px;
+	box-sizing: border-box;
 }
 
 .ocl-loader__spinner::before {
-  display: block;
-  border: 3px solid #ccc;
-  border-radius: 50%;
-  border-top-color: #333;
-  content: "";
-  animation: ocl-default-loader 1s linear infinite;
+	display: block;
+	border: 3px solid #ccc;
+	border-radius: 50%;
+	border-top-color: #333;
+	content: "";
+	animation: ocl-default-loader 1s linear infinite;
 }
 
 .ocl-loader--small,
 .ocl-loader__spinner--small,
 .ocl-loader__spinner--small::before {
-  width: 20px;
-  height: 20px;
+	width: 20px;
+	height: 20px;
 }
 
 .ocl-loader__spinner--small::before {
-  border-width: 2px;
+	border-width: 2px;
 }

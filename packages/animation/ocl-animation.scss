@@ -17,15 +17,15 @@
 @import "./mixins";
 
 .ocl-animation {
-  &-linear-out-slow-in {
-	@include ocl-animation-linear-out-slow-in;
-  }
+	&-linear-out-slow-in {
+		@include ocl-animation-linear-out-slow-in;
+	}
 
-  &-fast-out-slow-in {
-	@include ocl-animation-fast-out-slow-in;
-  }
+	&-fast-out-slow-in {
+		@include ocl-animation-fast-out-slow-in;
+	}
 
-  &-fast-out-linear-in {
-	@include ocl-animation-fast-out-linear-in;
-  }
+	&-fast-out-linear-in {
+		@include ocl-animation-fast-out-linear-in;
+	}
 }

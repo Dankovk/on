@@ -23,35 +23,35 @@
 @import "./variables";
 
 @mixin ocl-typography-font-family($family) {
-  font-family: map-get($ocl-typography-font-families, $family);
+	font-family: map-get($ocl-typography-font-families, $family);
 
-  @if not map-has-key($ocl-typography-font-families, $family) {
-	@error "Invalid font-family specified! Choose one of #{map-keys($ocl-typography-font-families)}";
-  }
+	@if not map-has-key($ocl-typography-font-families, $family) {
+		@error "Invalid font-family specified! Choose one of #{map-keys($ocl-typography-font-families)}";
+	}
 }
 
 @mixin ocl-typography-base($family: sansserif1) {
-  @include ocl-typography-font-family($family);
+	@include ocl-typography-font-family($family);
 
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 }
 
 /* stylelint-disable indentation */
 @mixin ocl-typography($style, $family: sansserif1, $font-size: true, $font-weight: true,
-                      $letter-spacing: true, $line-height: true) {
-  /* stylelint-enable indentation */
+											$letter-spacing: true, $line-height: true) {
+	/* stylelint-enable indentation */
 
-  $style-props: map-get($ocl-typography-styles, $style);
+	$style-props: map-get($ocl-typography-styles, $style);
 
-  @if not map-has-key($ocl-typography-styles, $style) {
-	@error "Invalid style specified! Choose one of #{map-keys($ocl-typography-styles)}";
-  }
+	@if not map-has-key($ocl-typography-styles, $style) {
+		@error "Invalid style specified! Choose one of #{map-keys($ocl-typography-styles)}";
+	}
 
-  @include ocl-typography-base($family);
+	@include ocl-typography-base($family);
 
-  font-size: if($font-size == true, map-get($style-props, font-size), $font-size);
-  font-weight: if($font-weight == true, #{map-get($style-props, font-weight)}, $font-weight);
-  letter-spacing: if($letter-spacing == true, map-get($style-props, letter-spacing), $letter-spacing);
-  line-height: if($line-height == true, map-get($style-props, line-height), $line-height);
+	font-size: if($font-size == true, map-get($style-props, font-size), $font-size);
+	font-weight: if($font-weight == true, #{map-get($style-props, font-weight)}, $font-weight);
+	letter-spacing: if($letter-spacing == true, map-get($style-props, letter-spacing), $letter-spacing);
+	line-height: if($line-height == true, map-get($style-props, line-height), $line-height);
 }

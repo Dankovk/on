@@ -3,107 +3,106 @@
 @import "@one/layout/mixins";
 @import "@one/theme/mixins";
 @import "@one/theme/colors";
-
 @import "./variables";
 
 .ocl-t-modal-page {
-  @include ocl-link-theme-style;
+	@include ocl-link-theme-style;
 
-  .ocl-card {
-	text-align: center;
-	max-width: 500px;
-	margin: 0 auto;
-
-	.ocl-card__body-content {
-	  width: $modal-content--width;
-	  padding: $modal-form__body--padding--top-bottom;
-
-	  &--centered {
+	.ocl-card {
+		max-width: 500px;
 		margin: 0 auto;
-	  }
+		text-align: center;
 
-	  .ocl-button__signin {
-		width: rem(180px);
-		font-size: rem(18px);
-		margin-top: rem(40px);
-		margin-bottom: rem(20px);
-	  }
+		.ocl-card__body-content {
+			width: $modal-content--width;
+			padding: $modal-form__body--padding--top-bottom;
+
+			&--centered {
+				margin: 0 auto;
+			}
+
+			.ocl-button__signin {
+				width: rem(180px);
+				margin-top: rem(40px);
+				margin-bottom: rem(20px);
+				font-size: rem(18px);
+			}
+		}
+
+		.ocl-input__group {
+			margin-bottom: rem(20px);
+		}
+
+		.ocl-card__label {
+			color: #444;
+			font-weight: 500;
+
+			&--margin-right {
+				margin-right: 5px;
+			}
+		}
+
+		.ocl--floatleft {
+			float: left;
+		}
+
+		.ocl--floatright {
+			float: right;
+		}
+
+		.ocl-clearfix {
+			&::after {
+				display: table;
+				clear: both;
+				content: "";
+			}
+		}
+
+		.ocl-modal__error-massage {
+			margin-bottom: rem(-18px);
+			padding: rem(12px);
+			background: $modal__error-massage--background-color;
+			color: $modal--background-color;
+			font-weight: 500;
+		}
 	}
 
-	.ocl-input__group {
-	  margin-bottom: rem(20px);
+	.ocl-card__header-content {
+		margin-top: 0;
+		color: #666;
+		font-size: 34px;
+		font-weight: normal;
 	}
 
-	.ocl-card__label {
-	  color: #444444;
-	  font-weight: 500;
-
-	  &--margin-right {
-		margin-right: 5px;
-	  }
+	.ocl-input-error {
+		display: none;
 	}
-
-	.ocl--floatleft {
-	  float: left;
-	}
-	.ocl--floatright {
-	  float: right;
-	}
-
-	.ocl-clearfix {
-
-	  &:after {
-		content: "";
-		display: table;
-		clear: both;
-	  }
-	}
-
-	.ocl-modal__error-massage {
-	  padding: rem(12px);
-	  background: $modal__error-massage--background-color;
-	  font-weight: 500;
-	  color: $modal--background-color;
-	  margin-bottom: rem(-18px);
-	}
-
-  }
-
-  .ocl-card__header-content {
-	color: #666;
-	font-size: 34px;
-	font-weight: normal;
-	margin-top: 0;
-  }
-
-  .ocl-input-error {
-	display: none;
-  }
 }
 
 .ocl-t-modal-page__header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
+	display: flex;
+	align-items: center;
+	margin-bottom: 2rem;
 }
 
 .ocl-t-modal-page__nav-list {
-  @include ocl-styleless-list;
+	@include ocl-styleless-list;
 }
 
 .ocl-t-modal-page__header--right {
-  margin-left: auto;
+	margin-left: auto;
 }
 
 .ocl-t-modal-page__nav-list-item {
-  display: inline-block;
-  margin-left: 10px;
-  text-transform: uppercase;
+	display: inline-block;
+	margin-left: 10px;
+	text-transform: uppercase;
 }
 
 .ocl-card__footer {
-  @include ocl-link-theme-style;
-  font-weight: 500;
+	@include ocl-link-theme-style;
+
+	font-weight: 500;
 }
 
 // .ocl-t-modal {

@@ -2,18 +2,18 @@
 @import "./variables";
 
 @mixin ocl-reset-margin--top-and-bottom {
-  margin-top: 0;
-  margin-bottom: 0;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 @mixin ocl-styleless-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 @mixin ocl-font-family--regular {
-  font-family: "Proxima Nova", sans-serif;
+	font-family: "Proxima Nova", sans-serif;
 }
 
 /// Mixin to manage responsive breakpoints
@@ -21,191 +21,191 @@
 /// @param {String} $breakpoint - Breakpoint name
 /// @require $breakpoints
 @mixin ocl-respond-to($breakpoint, $min: true) {
-  // If the key exists in the map
-  @if map-has-key($ocl-min-breakpoints, $breakpoint) {
-	// Prints a media query based on the value
+	// If the key exists in the map
+	@if map-has-key($ocl-min-breakpoints, $breakpoint) {
+		// Prints a media query based on the value
 
-	@if $min {
-	  @media #{inspect(map-get($ocl-min-breakpoints, $breakpoint))} {
-		@content;
-	  }
+		@if $min {
+			@media #{inspect(map-get($ocl-min-breakpoints, $breakpoint))} {
+				@content;
+			}
+		}
+
+		@else {
+			@media #{inspect(map-get($ocl-max-breakpoints, $breakpoint))} {
+				@content;
+			}
+		}
 	}
 
-	@else {
-	  @media #{inspect(map-get($ocl-max-breakpoints, $breakpoint))} {
-		@content;
-	  }
-	}
-  }
+	@else if type-of($breakpoint) == "number" {
+		// Prints a media query based on the number value
 
-  @else if type-of($breakpoint) == "number" {
-	// Prints a media query based on the number value
+		@if $min {
+			@media #{inspect(ocl-min-width-map($breakpoint))} {
+				@content;
+			}
+		}
 
-	@if $min {
-	  @media #{inspect(ocl-min-width-map($breakpoint))} {
-		@content;
-	  }
+		@else {
+			@media #{inspect(ocl-max-width-map($breakpoint))} {
+				@content;
+			}
+		}
 	}
-
-	@else {
-	  @media #{inspect(ocl-max-width-map($breakpoint))} {
-		@content;
-	  }
-	}
-  }
 
 	// If the key doesn't exist in the map
-  @else {
-	@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
 			+ "Available breakpoints are: #{map-keys($ocl-min-breakpoints)}.";
-  }
+	}
 }
 
 @mixin ocl-horizontal-whitespace($value, $type: padding, $responsive: ()) {
-  @include ocl-whitespace($value, $type, $ocl-horizontal-whitespace-vals, $responsive);
+	@include ocl-whitespace($value, $type, $ocl-horizontal-whitespace-vals, $responsive);
 }
 
 @mixin ocl-vertical-whitespace($value, $type: padding, $responsive: ()) {
-  @include ocl-whitespace($value, $type, $ocl-vertical-whitespace-vals, $responsive);
+	@include ocl-whitespace($value, $type, $ocl-vertical-whitespace-vals, $responsive);
 }
 
 @mixin ocl-whitespace($value, $type: padding, $direction: $ocl-horizontal-whitespace-vals, $responsive: ()) {
-  @each $dir in $direction {
-	#{$type}-#{$dir}: $value;
-  }
-
-  @each $k, $v in $responsive {
-	@include ocl-respond-to($k) {
-	  @include ocl-horizontal-whitespace($v, $type, $direction);
+	@each $dir in $direction {
+		#{$type}-#{$dir}: $value;
 	}
-  }
+
+	@each $k, $v in $responsive {
+		@include ocl-respond-to($k) {
+			@include ocl-horizontal-whitespace($v, $type, $direction);
+		}
+	}
 }
 
 /**
-	$size = size of the triangle in px, rem and so on
-	$color = background color of triangle
-	$direction = the direction of triangle.
-	 Acceptable values:top, left, right, bottom, top-left, top-right, bottom-left, bottom-right,
-	 inset-top, inset-bottom, inset-right, inset-left
+ * $size = size of the triangle in px, rem and so on
+ * $color = background color of triangle
+ * $direction = the direction of triangle.
+ * Acceptable values:top, left, right, bottom, top-left, top-right, bottom-left, bottom-right,
+ * inset-top, inset-bottom, inset-right, inset-left
  */
 /* stylelint-disable order/properties-order */
 @mixin triangle($size, $color, $direction) {
-  height: 0;
-  width: 0;
+	height: 0;
+	width: 0;
 
-  $width: nth($size, 1);
-  $height: nth($size, length($size));
-  $foreground-color: nth($color, 1);
-  $background-color: if(length($color) == 2, nth($color, 2), transparent);
+	$width: nth($size, 1);
+	$height: nth($size, length($size));
+	$foreground-color: nth($color, 1);
+	$background-color: if(length($color) == 2, nth($color, 2), transparent);
 
-  @if ($direction == top) or ($direction == bottom) or ($direction == right) or ($direction == left) {
+	@if ($direction == top) or ($direction == bottom) or ($direction == right) or ($direction == left) {
 
-	$width: $width / 2;
-	$height: if(length($size) > 1, $height, $height/2);
+		$width: $width / 2;
+		$height: if(length($size) > 1, $height, $height/2);
 
-	@if $direction == top {
-	  border-bottom: $height solid $foreground-color;
-	  border-left: $width solid $background-color;
-	  border-right: $width solid $background-color;
+		@if $direction == top {
+			border-bottom: $height solid $foreground-color;
+			border-left: $width solid $background-color;
+			border-right: $width solid $background-color;
+		}
+
+		@else if $direction == right {
+			border-bottom: $width solid $background-color;
+			border-left: $height solid $foreground-color;
+			border-top: $width solid $background-color;
+		}
+
+		@else if $direction == bottom {
+			border-left: $width solid $background-color;
+			border-right: $width solid $background-color;
+			border-top: $height solid $foreground-color;
+		}
+
+		@else if $direction == left {
+			border-bottom: $width solid $background-color;
+			border-right: $height solid $foreground-color;
+			border-top: $width solid $background-color;
+		}
 	}
 
-	@else if $direction == right {
-	  border-bottom: $width solid $background-color;
-	  border-left: $height solid $foreground-color;
-	  border-top: $width solid $background-color;
+	@else if ($direction == top-right) or ($direction == top-left) {
+		border-top: $height solid $foreground-color;
+
+		@if $direction == top-right {
+			border-left: $width solid $background-color;
+		}
+
+		@else if $direction == top-left {
+			border-right: $width solid $background-color;
+		}
 	}
 
-	@else if $direction == bottom {
-	  border-left: $width solid $background-color;
-	  border-right: $width solid $background-color;
-	  border-top: $height solid $foreground-color;
+	@else if ($direction == bottom-right) or ($direction == bottom-left) {
+		border-bottom: $height solid $foreground-color;
+
+		@if $direction == bottom-right {
+			border-left: $width solid $background-color;
+		}
+
+		@else if $direction == bottom-left {
+			border-right: $width solid $background-color;
+		}
 	}
 
-	@else if $direction == left {
-	  border-bottom: $width solid $background-color;
-	  border-right: $height solid $foreground-color;
-	  border-top: $width solid $background-color;
-	}
-  }
-
-  @else if ($direction == top-right) or ($direction == top-left) {
-	border-top: $height solid $foreground-color;
-
-	@if $direction == top-right {
-	  border-left: $width solid $background-color;
+	@else if ($direction == inset-top) {
+		border-color: $background-color $background-color $foreground-color;
+		border-style: solid;
+		border-width: $height $width;
 	}
 
-	@else if $direction == top-left {
-	  border-right: $width solid $background-color;
-	}
-  }
-
-  @else if ($direction == bottom-right) or ($direction == bottom-left) {
-	border-bottom: $height solid $foreground-color;
-
-	@if $direction == bottom-right {
-	  border-left: $width solid $background-color;
+	@else if ($direction == inset-bottom) {
+		border-color: $foreground-color $background-color $background-color;
+		border-style: solid;
+		border-width: $height $width;
 	}
 
-	@else if $direction == bottom-left {
-	  border-right: $width solid $background-color;
+	@else if ($direction == inset-right) {
+		border-color: $background-color $background-color $background-color $foreground-color;
+		border-style: solid;
+		border-width: $width $height;
 	}
-  }
 
-  @else if ($direction == inset-top) {
-	border-color: $background-color $background-color $foreground-color;
-	border-style: solid;
-	border-width: $height $width;
-  }
-
-  @else if ($direction == inset-bottom) {
-	border-color: $foreground-color $background-color $background-color;
-	border-style: solid;
-	border-width: $height $width;
-  }
-
-  @else if ($direction == inset-right) {
-	border-color: $background-color $background-color $background-color $foreground-color;
-	border-style: solid;
-	border-width: $width $height;
-  }
-
-  @else if ($direction == inset-left) {
-	border-color: $background-color $foreground-color $background-color $background-color;
-	border-style: solid;
-	border-width: $width $height;
-  }
+	@else if ($direction == inset-left) {
+		border-color: $background-color $foreground-color $background-color $background-color;
+		border-style: solid;
+		border-width: $width $height;
+	}
 }
 /* stylelint-enable order/properties-order */
 
 @mixin visuallyhidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap; /* 1 */
-  overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	white-space: nowrap; /* 1 */
+	overflow: hidden;
 }
 
 @mixin visuallyhidden-focusable {
-  position: static;
-  width: auto;
-  height: auto;
-  margin: 0;
-  clip: auto;
-  clip-path: none;
-  white-space: inherit;
-  overflow: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	margin: 0;
+	clip: auto;
+	clip-path: none;
+	white-space: inherit;
+	overflow: visible;
 }
 
 @mixin clearfix {
-  &::after {
-	display: table;
-	clear: both;
-	content: "";
-  }
+	&::after {
+		display: table;
+		clear: both;
+		content: "";
+	}
 }

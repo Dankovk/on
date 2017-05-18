@@ -1,26 +1,14 @@
 @import "@one/typography/functions";
 @import "@one/animation/functions";
 
-.ocl-input__group {
-  text-align: left;
+.ocl-datefield {
+	position: relative;
+	width: rem(140px);
 
-  .fa-calendar {
-	position: absolute;
-	top: rem(12px);
-	right: rem(11px);
-	color: #999;
-	cursor: pointer;
-  }
-}
-
-.ocl-input {
-
-  &__datefield {
-	font-style: italic;
-
-	&__wrap {
-	  position: relative;
-	  width: rem(122px);
+	.fa-calendar {
+		position: absolute;
+		top: rem(12px);
+		right: rem(11px);
+		color: #999;
 	}
-  }
 }

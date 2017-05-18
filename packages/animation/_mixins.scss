@@ -17,13 +17,13 @@
 @import "./variables";
 
 @mixin ocl-animation-linear-out-slow-in {
-  animation-timing-function: $ocl-animation-linear-out-slow-in-timing-function;
+	animation-timing-function: $ocl-animation-linear-out-slow-in-timing-function;
 }
 
 @mixin ocl-animation-fast-out-slow-in {
-  animation-timing-function: $ocl-animation-fast-out-slow-in-timing-function;
+	animation-timing-function: $ocl-animation-fast-out-slow-in-timing-function;
 }
 
 @mixin ocl-animation-fast-out-linear-in {
-  animation-timing-function: $ocl-animation-fast-out-linear-in-timing-function;
+	animation-timing-function: $ocl-animation-fast-out-linear-in-timing-function;
 }

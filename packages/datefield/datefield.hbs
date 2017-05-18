@@ -1,7 +1,5 @@
-<div class="ocl-input__group">
 {{#if fieldlabel}}{{> fieldlabel fieldlabel}}{{{body}}}{{/if}}
-	<div class="ocl-input__datefield__wrap">
-		<{{elementName}} {{{attr attributes}}}><i class="fa fa-calendar" aria-hidden="true"></i></{{elementName}}>
-	</div>
+<{{elementName}} {{{attr attributes}}}>
+	<{{input.elementName}} {{{attr input.attributes}}}><i class="fa fa-calendar" aria-hidden="true"></i></{{input.elementName}}>
+</{{elementName}}>
 {{#if fielderror}}{{> fielderror fielderror}}{{{body}}}{{/if}}
-</div>

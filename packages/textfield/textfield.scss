@@ -1,25 +1,25 @@
 @import "./variables";
 
 .ocl-input {
-  width: $input-width;
-  height: $input-height;
-  padding: $input-padding;
-  border: $input-border;
-  border-radius: $input-radius;
-  background: #fff;
-  font-size: $input-font-size;
-  box-sizing: border-box;
-
-  &::placeholder {
-	color: #999;
-	font-size: $input-font-size;
-	font-style: italic;
-	letter-spacing: 0;
-  }
-
-  &__textarea {
 	width: $input-width;
-	max-width: $input-width;
-	height: auto;
-  }
+	height: $input-height;
+	padding: $input-padding;
+	border: $input-border;
+	border-radius: $input-radius;
+	background: #fff;
+	font-size: $input-font-size;
+	box-sizing: border-box;
+
+	&::placeholder {
+		color: #999;
+		font-size: $input-font-size;
+		font-style: italic;
+		letter-spacing: 0;
+	}
+
+	&__textarea {
+		width: $input-width;
+		max-width: $input-width;
+		height: auto;
+	}
 }

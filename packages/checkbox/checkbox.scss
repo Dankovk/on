@@ -2,43 +2,44 @@
 @import "@one/animation/functions";
 
 .ocl-checkbox {
-  position: relative;
-  padding-right: rem(32px);
-  line-height: 1.25;
-  cursor: pointer;
-  &__input {
-	display: none;
+	position: relative;
+	padding-right: rem(32px);
+	line-height: 1.25;
+	cursor: pointer;
 
-	&--checked + .ocl-checkbox__toggle,
-	&:checked + .ocl-checkbox__toggle {
-	  .fa-check{
-		opacity: 1;
-		margin-top: rem(4px);
-	  }
+	&__input {
+		display: none;
+
+		&--checked + .ocl-checkbox__toggle,
+		&:checked + .ocl-checkbox__toggle {
+			.fa-check {
+				margin-top: rem(4px);
+				opacity: 1;
+			}
+		}
 	}
-  }
 
-  &__toggle{
-	display: block;
-	position: absolute;
-	right: 0;
-	top: rem(-3px);
-	content: '';
-	width: rem(25px);
-	height: rem(25px);
-	border-radius: rem(2px);
-	background-color: #fff;
-	border: solid 1px #d3d3d3;
+	&__toggle {
+		display: block;
+		position: absolute;
+		top: rem(-3px);
+		right: 0;
+		width: rem(25px);
+		height: rem(25px);
+		border: solid 1px #d3d3d3;
+		border-radius: rem(2px);
+		background-color: #fff;
+		content: "";
 
-	.fa-check{
-	  opacity: 0;
-	  margin-top: rem(2px);
-	  color: #5ca1b8;
-	  transition: ocl-animation-exit(opacity, 150ms), ocl-animation-exit(margin-top, 150ms);
+		.fa-check {
+			margin-top: rem(2px);
+			transition: ocl-animation-exit(opacity, 150ms), ocl-animation-exit(margin-top, 150ms);
+			color: #5ca1b8;
+			opacity: 0;
+		}
 	}
-  }
 
-  //&__text {
+	//&__text {
 	//display: block;
 	//width: rem(140px);
 	//height: rem(35px);
@@ -50,6 +51,5 @@
 	//font-weight: 300;
 	//line-height: rem(35px);
 	//cursor: pointer;
-  //}
+	//}
 }
-

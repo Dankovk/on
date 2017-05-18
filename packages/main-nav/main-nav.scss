@@ -2,114 +2,114 @@
 @import "@one/typography/functions";
 
 .ocl-main-nav {
-  display: flex;
-  align-items: center;
-  height: 71px;
-  padding-right: 20px;
-  background-image: url(https://entradapiano.com/img/header.png);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-
-  &__toggle {
-	display: block;
-	position: relative;
-	min-width: 71px;
-	height: 71px;
-	margin: 0;
-	padding: 0;
-	border: none;
-	background: linear-gradient(#b90e43, #800a2f);
-	cursor: pointer;
-  }
-
-  &__home {
-	display: inline-block;
-	margin: 0 rem(15px);
-	border: none;
-	background-color: transparent;
-	color: #fff;
-	font-size: 20px;
-  }
-
-  &__logo {
-	display: block;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 25px;
-	height: 28px;
-	transform: translate(-50%, -75%);
-	background-image: url(https://entradapiano.com/img/logo-54x62.png);
-	background-size: 25px 28px;
-  }
-
-  &__items-list {
-	@include ocl-respond-to(medium) {
-	  display: inline-block;
-	}
-
-	display: none;
-	margin: 0;
-	padding: 0;
-  }
-
-  &__item {
-	display: inline-block;
-	margin-right: 18px;
-  }
-
-  &__link {
-	color: #fff;
-	text-decoration: none;
-  }
-
-  &__action-bar--right {
 	display: flex;
 	align-items: center;
-	margin-left: auto;
-  }
+	height: 71px;
+	padding-right: 20px;
+	background-image: url(https://entradapiano.com/img/header.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
 
-  &__toggle-caption {
-	display: inline-block;
-	position: absolute;
-	top: 45px;
-	left: 0;
-	width: 100%;
-	color: #fff;
-	font-size: 10px;
-	font-weight: 700;
-	text-transform: uppercase;
-  }
-
-  .ocl-account-menu {
-	display: inline-block;
-  }
-
-  .ocl-account-menu__username-type {
-	@include ocl-respond-to(small, false) {
-	  @include visuallyhidden;
-	}
-  }
-
-  .ocl-search {
-	display: inline-block;
-  }
-
-  .ocl-search__button {
-	@include ocl-respond-to(medium, false) {
-	  position: static;
-	  padding: 0 4px;
-	  transform: none;
-	  color: #fff;
-	  font-size: 20px;
-	}
-  }
-
-  .ocl-search__input {
-	@include ocl-respond-to(medium, false) {
-	  display: none;
+	&__toggle {
+		display: block;
+		position: relative;
+		min-width: 71px;
+		height: 71px;
+		margin: 0;
+		padding: 0;
+		border: none;
+		background: linear-gradient(#b90e43, #800a2f);
+		cursor: pointer;
 	}
 
-	width: 200px;
-  }
+	&__home {
+		display: inline-block;
+		margin: 0 rem(15px);
+		border: none;
+		background-color: transparent;
+		color: #fff;
+		font-size: 20px;
+	}
+
+	&__logo {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 25px;
+		height: 28px;
+		transform: translate(-50%, -75%);
+		background-image: url(https://entradapiano.com/img/logo-54x62.png);
+		background-size: 25px 28px;
+	}
+
+	&__items-list {
+		@include ocl-respond-to(medium) {
+			display: inline-block;
+		}
+
+		display: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__item {
+		display: inline-block;
+		margin-right: 18px;
+	}
+
+	&__link {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	&__action-bar--right {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+	}
+
+	&__toggle-caption {
+		display: inline-block;
+		position: absolute;
+		top: 45px;
+		left: 0;
+		width: 100%;
+		color: #fff;
+		font-size: 10px;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	.ocl-account-menu {
+		display: inline-block;
+	}
+
+	.ocl-account-menu__username-type {
+		@include ocl-respond-to(small, false) {
+			@include visuallyhidden;
+		}
+	}
+
+	.ocl-search {
+		display: inline-block;
+	}
+
+	.ocl-search__button {
+		@include ocl-respond-to(medium, false) {
+			position: static;
+			padding: 0 4px;
+			transform: none;
+			color: #fff;
+			font-size: 20px;
+		}
+	}
+
+	.ocl-search__input {
+		@include ocl-respond-to(medium, false) {
+			display: none;
+		}
+
+		width: 200px;
+	}
 }
