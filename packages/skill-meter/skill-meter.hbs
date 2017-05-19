@@ -1,13 +1,40 @@
-<{{elementName}} {{{attr attributes}}}> <!-- div.ocl-skill-meter -->
-	<{{labelElementName}} {{{attr labelAttributes}}}></{{labelElementName}}> <!-- label.ocl-skill-meter__label -->
-	<!-- ul.ocl-skill-meter-button-list -->
-		<!-- #each buttons -->
-		<!-- li.ocl-skill-meter-button-list-item -->
-			<!-- > skill-button (Started, Progressing, Capable, Proficient, Excelling) -->
-		<!-- /each -->
-		<!-- li.ocl-skill-meter-button-list-item -->
-			<!-- button.ocl-skill-meter-button__more-toggle -->
-	<!-- div.ocl-skill-meter__more -->
-		<!-- ul.ocl-skill-meter-more-list -->
-			<!-- li.ocl-skill-meter-more-list-item -->
+<{{elementName}} {{{attr attributes}}}>
+    <div class="ocl-skill-meter__title">
+        <{{label.elementName}} {{{attr label.attributes}}}>Skill meter Label</{{label.elementName}}>
+        <div class="ocl-skill-meter-button__more">
+            <button class="ocl-button ocl-button--link-style ocl-skill-meter-button__more-toggle">
+                <span>Show more</span>
+            </button>
+        </div>
+    </div>
+	 <ul class="ocl-skill-meter__button-list">
+         {{#each buttons}}
+             <li class="ocl-skill-meter-button__list-item">
+                 <div class="ocl-skill-meter-button">
+                     <button {{{attr this.attributes}}}></button>
+                     <label {{{attr this.label.attributes}}}>{{this.label.text}}</label>
+                 </div>
+             </li>
+         {{/each}}
+         <li class="ocl-skill-meter-button__list-item ocl-skill-meter-button__list-item--more">
+             <button class="ocl-button ocl-button--link-style ocl-skill-meter-button__more-toggle">
+                 <span>Show more</span>
+             </button>
+         </li>
+     </ul>
+	 <div class="ocl-skill-meter__more">
+         <ul class="ocl-skill-meter-more__list">
+             <li class="ocl-skill-meter-more__list-item">
+                 10/14/16 - Started
+             </li>
+             <li class="ocl-skill-meter-more__list-item">
+                 10/21/16 - Processing
+             </li>
+             <li class="ocl-skill-meter-more__list-item">
+                 10/28/16 - Capable
+             </li>
+         </ul>
+     </div>
+
+
 </{{elementName}}>

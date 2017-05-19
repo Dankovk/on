@@ -1,3 +1,35 @@
 ---
 template:
+ profile-category:
+    -
+      title: Foundations
+      skillMeters:
+      -
+        tittle: Sitting Position
+        showingMore: true
+      -
+        tittle: Anatomy and Piano playing
+      -
+        title: Hand Position and th Sound point
+    -
+      title: Intermediate
+      active: true
+      skillMeters:
+      -
+        tittle: Sitting Position
+      -
+        tittle: Anatomy and Piano playing
+        showingMore: true
+
+      -
+        title: Hand Position and th Sound point
+    -
+      title: Advanced
+      skillMeters:
+      -
+        tittle: Sitting Position
+      -
+        tittle: Anatomy and Piano playing
+      -
+        title: Hand Position and th Sound point
 state: {}

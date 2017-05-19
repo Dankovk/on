@@ -13,6 +13,14 @@
 		"url": ""
 	},
 	"dependencies": {
-
+		"@one/typography": "^0.1.0",
+		"@one/card": "^0.1.0",
+		"@one/theme": "^0.1.0",
+		"@one/layout": "^0.1.0",
+		"@one/skill-progress": "^0.1.0",
+		"@one/button": "^0.1.0",
+		"@one/skill-meter-button": "^0.1.0",
+		"@one/icon": "^0.1.0",
+		"@one/skill-meter": "^0.1.0"
 	}
 }

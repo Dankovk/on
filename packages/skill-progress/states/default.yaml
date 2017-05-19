@@ -4,4 +4,10 @@ template:
   attributes:
   - - class
     - '"ocl-skill-progress"'
+  label: Foundations
+  circle:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-skill-progress__circle"'
 state: {}

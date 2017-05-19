@@ -1,8 +1,15 @@
+@import "@one/layout/mixins";
+
 .theatre__stage-iframe {
 	.ocl-skill-meter {
 		position: absolute;
 		top: 50%;
 		left: 50%;
+		min-width: 280px;
 		transform: translateY(-50%) translateX(-50%);
+
+		@include ocl-respond-to(small) {
+			min-width: 340px;
+		}
 	}
 }

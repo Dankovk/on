@@ -1,5 +1,78 @@
-@import "./variables";
+@import "@one/layout/mixins";
+@import "@one/theme/mixins";
+@import "@one/typography/functions";
 
 .ocl-skill-profile {
+	width: 100%;
+	padding-bottom: rem(25px);
+	background-color: #ededed;
 
+	&__header {
+		@include ocl-link-theme-style;
+
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: rem(20px);
+		padding-top: rem(21px);
+		padding-right: rem(10px);
+		padding-bottom: rem(10px);
+		border-bottom: 1px solid #c5c5c5;
+
+		@include ocl-respond-to(small) {
+			padding-right: rem(25px);
+		}
+	}
+
+	&__help {
+		flex: .5;
+		text-align: right;
+
+		.fa {
+			margin-right: 5px;
+			font-size: 20px;
+			vertical-align: middle;
+		}
+	}
+
+	&__meter-list-item {
+		margin-top: rem(20px);
+	}
+
+	&__title {
+		flex: 1.5;
+		margin-top: 0;
+		margin-bottom: 0;
+		color: #ac405e;
+		font-weight: 500;
+		text-align: left;
+	}
+
+	&__categories {
+		display: flex;
+		flex-wrap: wrap;
+
+		.ocl-skill-progress {
+			flex-basis: 100%;
+			margin-bottom: rem(20px);
+
+			@include ocl-respond-to(small) {
+				flex: 1;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__meter-list {
+		@include ocl-styleless-list;
+	}
+
+	&__detail {
+		display: none;
+
+		&--active {
+			display: block;
+		}
+	}
 }

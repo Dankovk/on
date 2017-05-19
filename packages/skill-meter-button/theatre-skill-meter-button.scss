@@ -4,5 +4,9 @@
 		top: 50%;
 		left: 50%;
 		transform: translateY(-50%) translateX(-50%);
+
+		&__element {
+			width: 71px;
+		}
 	}
 }
