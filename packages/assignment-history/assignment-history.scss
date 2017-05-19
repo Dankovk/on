@@ -10,10 +10,10 @@
 		margin: 0;
 		padding-top: rem(21px);
 		padding-bottom: rem(9px);
+		border-bottom: 1px solid #c5c5c5;
 		color: #ac405e;
 		font-size: 26px;
 		font-weight: 500;
-		border-bottom: 1px solid #c5c5c5;
 	}
 
 	&__body {
@@ -25,9 +25,6 @@
 		margin: 0;
 		font-size: 16px;
 		font-weight: 500;
-	}
-
-	&__list-item {
 	}
 
 	&__list {
@@ -48,7 +45,6 @@
 }
 
 .ocl-assignment-history-event {
-
 	&__header {
 		display: flex;
 		flex-wrap: wrap;
@@ -77,8 +73,7 @@
 	}
 
 	&__details-list-item {
-		font-weight: 300;
 		font-style: italic;
+		font-weight: 300;
 	}
-
 }
