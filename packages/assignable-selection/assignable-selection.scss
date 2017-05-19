@@ -1,0 +1,47 @@
+@import "@one/typography/functions";
+@import "@one/animation/functions";
+
+.ocl-assignable-selection {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: rem(330px);
+	padding: rem(8px);
+	border-radius: rem(2px);
+	background-color: #d9f0f8;
+
+	&__handle {
+		margin-left: rem(2px);
+		font-size: rem(23px);
+		cursor: pointer;
+
+		.fa-reorder {
+			color: #5ca1b8;
+		}
+	}
+
+	&__title {
+		min-width: rem(265px);
+		max-width: rem(265px);
+		margin: 0 rem(10px);
+		color: #5ca1b8;
+		font-weight: 500;
+		line-height: 1.25;
+		text-align: left;
+	}
+
+	&__remove {
+		width: rem(22px);
+		height: rem(22px);
+		border-radius: 50%;
+		background-color: #999;
+		cursor: pointer;
+
+		.fa-remove {
+			display: block;
+			color: #d9f0f8;
+			font-size: rem(14px);
+			line-height: rem(22px);
+		}
+	}
+}

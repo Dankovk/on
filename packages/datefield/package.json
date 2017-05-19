@@ -1,0 +1,21 @@
+{
+  "name": "@one/datefield",
+  "description": "The static One component for a date input field",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "one": {
+	"name": "datefield",
+	"type": "static",
+	"pattern": "molecule"
+  },
+  "repository": {
+	"type": "git",
+	"url": ""
+  },
+  "dependencies": {
+	"@one/fieldlabel": "^0.1.0",
+	"@one/fielderror": "^0.1.0",
+	"@one/textfield": "^0.1.0",
+	"@one/icon": "^0.1.0"
+  }
+}

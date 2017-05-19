@@ -1,0 +1,25 @@
+---
+template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-assignable-selection"'
+  handle:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-assignable-selection__handle"'
+    body: '<i class="fa fa-reorder" aria-hidden="true"></i>'
+  title:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-assignable-selection__title"'
+    body: 'Anatomy and Piano Playing'
+  remove:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-assignable-selection__remove"'
+    body: '<i class="fa fa-remove" aria-hidden="true"></i>'
+  state: {}

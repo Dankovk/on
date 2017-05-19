@@ -1,0 +1,55 @@
+@import "@one/typography/functions";
+@import "@one/animation/functions";
+
+.ocl-checkbox {
+	position: relative;
+	padding-right: rem(32px);
+	line-height: 1.25;
+	cursor: pointer;
+
+	&__input {
+		display: none;
+
+		&--checked + .ocl-checkbox__toggle,
+		&:checked + .ocl-checkbox__toggle {
+			.fa-check {
+				margin-top: rem(4px);
+				opacity: 1;
+			}
+		}
+	}
+
+	&__toggle {
+		display: block;
+		position: absolute;
+		top: rem(-3px);
+		right: 0;
+		width: rem(25px);
+		height: rem(25px);
+		border: solid 1px #d3d3d3;
+		border-radius: rem(2px);
+		background-color: #fff;
+		content: "";
+
+		.fa-check {
+			margin-top: rem(2px);
+			transition: ocl-animation-exit(opacity, 150ms), ocl-animation-exit(margin-top, 150ms);
+			color: #5ca1b8;
+			opacity: 0;
+		}
+	}
+
+	//&__text {
+	//display: block;
+	//width: rem(140px);
+	//height: rem(35px);
+	//transition: ocl-animation-exit(background-color, 200ms), ocl-animation-exit(border-color, 200ms);
+	//border: solid 1px #d3d3d3;
+	//border-radius: rem(2px);
+	//background-color: #fff;
+	//font-style: italic;
+	//font-weight: 300;
+	//line-height: rem(35px);
+	//cursor: pointer;
+	//}
+}

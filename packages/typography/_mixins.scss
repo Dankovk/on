@@ -39,8 +39,8 @@
 
 /* stylelint-disable indentation */
 @mixin ocl-typography($style, $family: sansserif1, $font-size: true, $font-weight: true,
-                      $letter-spacing: true, $line-height: true) {
-/* stylelint-enable indentation */
+											$letter-spacing: true, $line-height: true) {
+	/* stylelint-enable indentation */
 
 	$style-props: map-get($ocl-typography-styles, $style);
 

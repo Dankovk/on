@@ -82,11 +82,11 @@
 }
 
 /**
-	$size = size of the triangle in px, rem and so on
-	$color = background color of triangle
-	$direction = the direction of triangle.
-	 Acceptable values:top, left, right, bottom, top-left, top-right, bottom-left, bottom-right,
-	 inset-top, inset-bottom, inset-right, inset-left
+ * $size = size of the triangle in px, rem and so on
+ * $color = background color of triangle
+ * $direction = the direction of triangle.
+ * Acceptable values:top, left, right, bottom, top-left, top-right, bottom-left, bottom-right,
+ * inset-top, inset-bottom, inset-right, inset-left
  */
 /* stylelint-disable order/properties-order */
 @mixin triangle($size, $color, $direction) {

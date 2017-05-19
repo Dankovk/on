@@ -1,0 +1,20 @@
+{
+  "name": "@one/checkbox",
+  "description": "The static One component for a checkbox",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "one": {
+    "name": "checkbox",
+    "type": "static",
+    "pattern": "atom"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "@one/typography": "^0.1.0",
+    "@one/theme": "^0.1.0",
+    "@one/icon": "^0.1.0"
+  }
+}

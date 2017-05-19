@@ -1,0 +1,15 @@
+---
+template:
+  fieldlabel:
+    elementName: label
+    body: 'Default datafield'
+    attributes:
+    - - class
+      - '"ocl-input-label"'
+  fielderror:
+    elementName: span
+    body: 'Default error massage'
+    attributes:
+    - - class
+      - '"ocl-input-error"'
+state: {}

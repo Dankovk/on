@@ -1,0 +1,18 @@
+---
+template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-datefield"'
+  input:
+    elementName: input
+    attributes:
+    - - class
+      - '"ocl-input ocl-datefield__input"'
+    - - placeholder
+      - '"Default date field"'
+    - - type
+      - '"text"'
+    - - value
+      - '6/4/17'
+state: {}

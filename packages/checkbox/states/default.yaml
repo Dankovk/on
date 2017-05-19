@@ -1,0 +1,25 @@
+---
+template:
+  elementName: label
+  attributes:
+  - - class
+    - '"ocl-checkbox"'
+  input:
+    elementName: input
+    attributes:
+    - - type
+      - '"checkbox"'
+    - - class
+      - '"ocl-checkbox__input"'
+    - - name
+      - '"group"'
+    - - value
+      - '"checkbox"'
+    body: 'Default checkbox'
+  toggle:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-checkbox__toggle"'
+    icon: '<i class="fa fa-check" aria-hidden="true"></i>'
+  state: {}

@@ -1,0 +1,20 @@
+{
+  "name": "@one/assignable-selection",
+  "description": "The static One component for a assignable-selection",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "one": {
+    "name": "assignable-selection",
+    "type": "static",
+    "pattern": "molecule"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "@one/typography": "^0.1.0",
+    "@one/theme": "^0.1.0",
+    "@one/icon": "^0.1.0"
+  }
+}

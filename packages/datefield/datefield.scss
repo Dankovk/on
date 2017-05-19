@@ -1,0 +1,15 @@
+@import "@one/typography/functions";
+@import "@one/animation/functions";
+
+.ocl-datefield {
+	position: relative;
+	width: rem(140px);
+
+	.fa-calendar {
+		position: absolute;
+		top: rem(12px);
+		right: rem(11px);
+		color: #999;
+	 	cursor: pointer;
+	}
+}

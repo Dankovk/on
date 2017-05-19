@@ -80,7 +80,7 @@
 	@return (
 		#{$function-hue}: -($hue),
 		#{$function-saturation}: abs($saturation),
-		#{$function-lightness}: abs($lightness),
+		#{$function-lightness}: abs($lightness)
 	);
 }
 
