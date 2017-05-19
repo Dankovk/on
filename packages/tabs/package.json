@@ -13,6 +13,7 @@
 		"url": ""
 	},
 	"dependencies": {
-
+	  "@one/typography": "^0.1.0",
+	  "@one/theme": "^0.1.0"
 	}
 }

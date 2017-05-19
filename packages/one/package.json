@@ -28,6 +28,7 @@
 	"@one/page-title": "^0.1.0",
 	"@one/checkbox": "^0.1.0",
 	"@one/datefield": "^0.1.0",
-	"@one/assignable-selection": "^0.1.0"
+	"@one/assignable-selection": "^0.1.0",
+	"@one/tabs": "^0.1.0"
   }
 }

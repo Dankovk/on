@@ -1,8 +1,27 @@
-<{{elementName}} {{{attr attributes}}}> <!-- div.ocl-tabs -->
-	<!-- div.ocl-tabs__controls -->
-		<!-- #each tabs -->
-		<!-- input.ocl-tabs__input (type="radio", selected state is the highlighted blue) -->
-	<!-- div.ocl-tabs__panels -->
-		<!-- #each tabs -->
-		<!-- div.ocl-tabs__panel -->
+<{{elementName}} {{{attr attributes}}}>
+
+<{{controls.elementName}} {{{attr controls.attributes}}}>
+	<{{controls.tab-1.elementName}} {{{attr controls.tab-1.attributes}}}>
+		<{{controls.tab-1.input.elementName}} {{{attr controls.tab-1.input.attributes}}}/>
+		<{{controls.tab-1.content.elementName}} {{{attr controls.tab-1.content.attributes}}}> {{{controls.tab-1.content.body}}} </{{controls.tab-1.content.elementName}}>
+	</{{controls.tab-1.elementName}}>
+
+	<{{controls.tab-2.elementName}} {{{attr controls.tab-2.attributes}}}>
+		<{{controls.tab-2.input.elementName}} {{{attr controls.tab-2.input.attributes}}}/>
+		<{{controls.tab-2.content.elementName}} {{{attr controls.tab-2.content.attributes}}}> {{{controls.tab-2.content.body}}} </{{controls.tab-2.content.elementName}}>
+	</{{controls.tab-2.elementName}}>
+</{{controls.elementName}}>
+
+
+
+<{{panels.elementName}} {{{attr panels.attributes}}}>
+	<{{panels.tab-1.elementName}} {{{attr panels.tab-1.attributes}}}>
+		{{{panels.tab-1.body}}}
+	</{{panels.tab-1.elementName}}>
+
+	<{{panels.tab-2.elementName}} {{{attr panels.tab-2.attributes}}}>
+		{{{panels.tab-2.body}}}
+	</{{panels.tab-1.elementName}}>
+</{{panels.elementName}}>
+
 </{{elementName}}>
