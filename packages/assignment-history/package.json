@@ -13,6 +13,11 @@
 		"url": ""
 	},
 	"dependencies": {
-
+		"@one/typography": "^0.1.0",
+		"@one/card": "^0.1.0",
+		"@one/layout": "^0.1.0",
+		"@one/theme": "^0.1.0",
+		"@one/button": "^0.1.0",
+		"@one/icon": "^0.1.0"
 	}
 }

@@ -1,3 +1,34 @@
 ---
 template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-card ocl-card--flat ocl-assignment-history"'
+  day:
+    -
+      heading: 6/12/17
+      events:
+        -
+          heading: Quiz Attempt
+          details: true
+          icon: <i class="fa fa-question-circle"></i>
+
+    -
+          heading: 5/12/17
+          events:
+            -
+              heading: Video Watched
+              icon: <i class="fa fa-eye"></i>
+    -
+              heading: 5/12/17
+              events:
+                -
+                  heading: Assignment Updated
+                  icon: <i class="fa fa-pencil"></i>
+    -
+              heading: 5/12/17
+              events:
+                -
+                  heading: Assignment Created
+                  icon: <i class="fa fa-check-circle"></i>
 state: {}

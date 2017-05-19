@@ -1,5 +1,84 @@
 @import "./variables";
+@import "@one/typography/functions";
+@import "@one/layout/mixins";
 
 .ocl-assignment-history {
+	background-color: #ededed;
+	text-align: left;
+
+	&__title {
+		margin: 0;
+		padding-top: rem(21px);
+		padding-bottom: rem(9px);
+		color: #ac405e;
+		font-size: 26px;
+		font-weight: 500;
+		border-bottom: 1px solid #c5c5c5;
+	}
+
+	&__body {
+		padding-top: rem(29px);
+		padding-bottom: rem(29px);
+	}
+
+	&-day__heading {
+		margin: 0;
+		font-size: 16px;
+		font-weight: 500;
+	}
+
+	&__list-item {
+	}
+
+	&__list {
+		@include ocl-styleless-list;
+	}
+
+	&-event__details-list {
+		@include ocl-styleless-list;
+	}
+}
+
+.ocl-assignment-history-day {
+	margin-top: rem(35px);
+
+	&:first-of-type {
+		margin-top: 0;
+	}
+}
+
+.ocl-assignment-history-event {
+
+	&__header {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		font-size: 24px;
+
+		.fa {
+			margin-right: rem(10px);
+			color: #84052f;
+		}
+	}
+
+	&__more {
+		margin-left: rem(10px);
+		font-size: 14px;
+		font-style: italic;
+	}
+
+	&__heading {
+		margin: 0;
+		font-weight: 300;
+	}
+
+	&__details {
+		padding-left: rem(32px);
+	}
+
+	&__details-list-item {
+		font-weight: 300;
+		font-style: italic;
+	}
 
 }
