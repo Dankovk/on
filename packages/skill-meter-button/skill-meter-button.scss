@@ -1,13 +1,19 @@
+@import "@one/layout/mixins";
 @import "@one/layout/functions";
 
 .ocl-skill-meter-button {
+	position: relative;
 	color: #444;
 
 	&__element {
-		height: 15px;
+		min-height: 25px;
 		border: none;
 		outline: none;
 		background-color: #e9c6b4;
+
+		@include ocl-respond-to(small) {
+			min-height: 15px;
+		}
 
 		&--active {
 			background-color: #ea9164;
@@ -16,10 +22,21 @@
 
 	&__label {
 		display: none;
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: #fff;
 		font-size: 14px;
 		font-style: italic;
 		font-weight: 300;
 		line-height: 12px;
+
+		@include ocl-respond-to(small) {
+			position: static;
+			transform: none;
+			color: inherit;
+		}
 
 		&--combined {
 			display: block;

@@ -1,5 +1,79 @@
-@import "./variables";
+@import "@one/layout/mixins";
+@import "@one/typography/functions";
 
 .ocl-skill-progress {
+	&__radio-label {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
 
+	&__radio {
+		display: none;
+	}
+
+	&__label {
+		flex: 1;
+		min-width: 102px;
+		font-size: 18px;
+		text-align: left;
+
+		@include ocl-respond-to(small) {
+			flex-basis: 100%;
+			min-width: 100%;
+			margin-bottom: rem(14px);
+			text-align: center;
+		}
+	}
+
+	&__circle {
+		flex: 1;
+
+		&::before {
+			display: block;
+			width: 50px;
+			height: 50px;
+			margin: 0 auto;
+			border-radius: 50%;
+			background-color: #c5c7c9;
+			content: "";
+		}
+
+		@include ocl-respond-to(small) {
+			flex-basis: 100%;
+			min-width: 100%;
+
+			&::before {
+				width: 100px;
+				height: 100px;
+			}
+		}
+	}
+
+	&--active {
+		.ocl-skill-progress__label {
+			color: #ea9164;
+		}
+
+		.ocl-skill-progress__circle {
+			&::before {
+				background-color: #ea9164;
+			}
+		}
+	}
+
+	.fa {
+		display: inline-block;
+		padding-right: rem(23px);
+		color: #5ca1b8;
+		font-size: 20px;
+		vertical-align: middle;
+
+		@include ocl-respond-to(small) {
+			margin-top: rem(18px);
+			padding-right: 0;
+		}
+	}
 }

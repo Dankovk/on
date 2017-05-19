@@ -1,3 +1,37 @@
 ---
 template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-card ocl-card--flat ocl-skill-profile"'
+  profile-category:
+    -
+      title: Foundations
+      active: true
+      skillMeters:
+      -
+        tittle: Sitting Position
+        showingMore: true
+      -
+        tittle: Anatomy and Piano playing
+      -
+        title: Hand Position and th Sound point
+    -
+      title: Intermediate
+      skillMeters:
+      -
+        tittle: Sitting Position
+      -
+        tittle: Anatomy and Piano playing
+      -
+        title: Hand Position and th Sound point
+    -
+      title: Advanced
+      skillMeters:
+      -
+        tittle: Sitting Position
+      -
+        tittle: Anatomy and Piano playing
+      -
+        title: Hand Position and th Sound point
 state: {}

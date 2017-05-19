@@ -1,11 +1,14 @@
-@import "./variables";
 @import "@one/layout/functions";
 @import "@one/layout/mixins";
 
 .ocl-skill-meter {
-
 	&__label {
+		margin-bottom: 5px;
 		font-size: 18px;
+
+		@include ocl-respond-to(small) {
+			margin-bottom: 0;
+		}
 	}
 
 	&__title {
@@ -22,10 +25,10 @@
 		}
 
 		.ocl-skill-meter-more__list-item {
-			text-align: left;
 			font-size: 14px;
-			font-weight: 300;
 			font-style: italic;
+			font-weight: 300;
+			text-align: left;
 		}
 	}
 
@@ -42,8 +45,8 @@
 
 		.ocl-button {
 			font-size: 14px;
-			font-weight: 300;
 			font-style: italic;
+			font-weight: 300;
 		}
 
 		@include ocl-respond-to(small) {
@@ -53,10 +56,21 @@
 
 	.ocl-skill-meter-button__list-item {
 		flex: 1;
+		min-width: 30%;
 		margin-right: 2px;
+
+		@include ocl-respond-to(small) {
+			min-width: 1px;
+		}
 	}
 
-	.ocl-skill-meter-button-list-item--more {
+	.ocl-skill-meter-button__list-item--more {
+		.ocl-button {
+			font-size: 14px;
+			font-style: italic;
+			font-weight: 300;
+		}
+
 		@include ocl-respond-to(small) {
 			display: none;
 		}
