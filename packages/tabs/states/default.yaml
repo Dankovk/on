@@ -1,3 +1,79 @@
 ---
 template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-tabs"'
+  controls:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-tabs__controls"'
+    tab-1:
+      elementName: label
+      attributes:
+      - - class
+        - '"ocl-tabs__controls__label--wrap"'
+      content:
+        elementName: div
+        attributes:
+        - - class
+          - '"ocl-tabs__controls__label ocl-tabs__controls__label--checked"'
+        body: 'Assignments'
+      input:
+        elementName: input
+        attributes:
+        - - type
+          - '"radio"'
+        - - class
+          - '"ocl-tabs__controls__input ocl-tabs__input--checked"'
+        - - name
+          - '"tab-input-name"'
+        - - checked
+          - '"cheched"'
+        - - data-tab-control-name
+          - '"tab-1"'
+    tab-2:
+      elementName: label
+      attributes:
+      - - class
+        - '"ocl-tabs__controls__label--wrap"'
+      content:
+        elementName: div
+        attributes:
+        - - class
+          - '"ocl-tabs__controls__label"'
+        body: 'Skill Profile'
+      input:
+        elementName: input
+        attributes:
+        - - type
+          - '"radio"'
+        - - class
+          - '"ocl-tabs__controls__input"'
+        - - name
+          - '"tab-input-name"'
+        - - data-tab-control-name
+          - '"tab-2"'
+  panels:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-tabs__panels"'
+    tab-1:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-tabs__panel ocl-tabs__panel--checked"'
+      - - data-tab-control-name
+        - '"tab-1"'
+      body: 'Tab 1 content'
+    tab-2:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-tabs__panel"'
+      - - data-tab-control-name
+        - '"tab-2"'
+      body: 'Tab 2 content'
 state: {}

@@ -32,6 +32,7 @@
     "@one/skill-meter": "^0.1.0",
     "@one/skill-meter-button": "^0.1.0",
     "@one/skill-profile": "^0.1.0",
-    "@one/skill-progress": "^0.1.0"
+    "@one/skill-progress": "^0.1.0",
+	"@one/tabs": "^0.1.0"
   }
 }
