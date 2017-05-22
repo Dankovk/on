@@ -122,33 +122,6 @@
 	}
 }
 
-.ocl-assignment-progress {
-	width: 20px;
-	height: 20px;
-	margin-top: 1px;
-	clip: rect(0, 10px, 20px, 0);
-	border: 1px solid #55b847;
-	border-radius: 50%;
-	background-color: #fff;
-
-	&__mask {
-		position: absolute;
-		width: 120px;
-		height: 120px;
-		clip: rect(0, 20px, 20px, 10px);
-	}
-
-	&__fill {
-		position: absolute;
-		width: 20px;
-		height: 20px;
-		transform: rotate(120deg);
-		border-radius: 50%;
-		background-color: #55b847;
-		clip: rect(0, 10px, 20px, 0);
-	}
-}
-
 .ocl-assignment-card__list {
 	@include ocl-styleless-list;
 }

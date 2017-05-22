@@ -10,23 +10,26 @@
          <div class="ocl-skill-profile__categories">
              {{#each profile-category}}
                  {{#if this.active}}
-                     <div class="ocl-skill-progress ocl-skill-progress--active">
-                         <input type="radio" class="ocl-skill-progress__radio" id="radio">
-
-                         <label for="radio" class="ocl-skill-progress__radio-label">
-                             <span class="ocl-skill-progress__label">{{this.title}}</span>
-                             <div class="ocl-skill-progress__circle"></div>
+                     <div class="ocl-skill-profile-category ocl-skill-profile-category--active">
+                         <input type="radio" class="ocl-skill-profile-category__radio" id="radio">
+                         <label for="radio" class="ocl-skill-profile-category__radio-label">
+                             <span class="ocl-skill-profile-category__label">{{this.title}}</span>
+                             <div class="ocl-skill-progress ocl-skill-progress--active">
+                                 <div class="ocl-skill-progress__circle"></div>
+                             </div>
                              <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
                          </label>
                      </div>
                  {{else}}
-                     <div class="ocl-skill-progress">
-                         <input type="radio" class="ocl-skill-progress__radio" id="radio">
-                         <label for="radio" class="ocl-skill-progress__radio-label">
-                             <span class="ocl-skill-progress__label">{{this.title}}</span>
-                             <div class="ocl-skill-progress__circle"></div>
-                             <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
-                         </label>
+                     <div class="ocl-skill-profile-category">
+                             <input type="radio" class="ocl-skill-profile-category__radio" id="radio">
+                             <label for="radio" class="ocl-skill-profile-category__radio-label">
+                                 <span class="ocl-skill-profile-category__label">{{this.title}}</span>
+                                 <div class="ocl-skill-progress ocl-skill-progress">
+                                     <div class="ocl-skill-progress__circle"></div>
+                                 </div>
+                                 <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                             </label>
                      </div>
                  {{/if}}
              {{/each}}
