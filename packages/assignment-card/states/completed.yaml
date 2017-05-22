@@ -5,17 +5,12 @@ template:
     attributes:
     - - class
       - '"ocl-assignment-card__date ocl-assignment-card__date--completed"'
-    body: "Completed: 11/22/17"
-  title:
-    elementName: h2
-    attributes:
-    - - class
-      - '"ocl-assignment-card__title"'
+    body: "Completed 17/05/13"
   buttons:
     left:
       -
         title: Reassign
         attributes:
         - - class
-          - '"ocl-assignment-card__unassign"'
+          - '"ocl-button ocl-button--link-style ocl-assignment-card__reassign ocl-assignment-card__footer-item"'
 state: {}
