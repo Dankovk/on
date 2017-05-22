@@ -1,0 +1,17 @@
+{
+  "name": "@one/module-card",
+  "description": "The static One component for a module list card",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "one": {
+    "name": "module-card",
+    "type": "static",
+    "pattern": "organism"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+  }
+}

@@ -13,36 +13,35 @@ template:
       elementName: label
       attributes:
       - - class
-        - '"ocl-tabs__controls__label--wrap"'
+        - '"ocl-tabs__label"'
       content:
         elementName: div
         attributes:
         - - class
-          - '"ocl-tabs__controls__label ocl-tabs__controls__label--checked"'
+          - '"ocl-tabs__label-content"'
         body: 'Assignments'
       input:
         elementName: input
         attributes:
+        - checked
         - - type
           - '"radio"'
         - - class
-          - '"ocl-tabs__controls__input ocl-tabs__input--checked"'
+          - '"ocl-tabs__input"'
         - - name
           - '"tab-input-name"'
-        - - checked
-          - '"cheched"'
         - - data-tab-control-name
           - '"tab-1"'
     tab-2:
       elementName: label
       attributes:
       - - class
-        - '"ocl-tabs__controls__label--wrap"'
+        - '"ocl-tabs__label"'
       content:
         elementName: div
         attributes:
         - - class
-          - '"ocl-tabs__controls__label"'
+          - '"ocl-tabs__label-content"'
         body: 'Skill Profile'
       input:
         elementName: input
@@ -50,7 +49,7 @@ template:
         - - type
           - '"radio"'
         - - class
-          - '"ocl-tabs__controls__input"'
+          - '"ocl-tabs__input"'
         - - name
           - '"tab-input-name"'
         - - data-tab-control-name
@@ -64,7 +63,7 @@ template:
       elementName: div
       attributes:
       - - class
-        - '"ocl-tabs__panel ocl-tabs__panel--checked"'
+        - '"ocl-tabs__panel ocl-tabs__panel--selected"'
       - - data-tab-control-name
         - '"tab-1"'
       body: 'Tab 1 content'

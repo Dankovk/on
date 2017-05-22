@@ -1,0 +1,17 @@
+{
+  "name": "@one/quiz-question-option-card",
+  "description": "The static One component for a quiz question option card",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "one": {
+    "name": "quiz-question-option-card",
+    "type": "static",
+    "pattern": "organism"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+  }
+}

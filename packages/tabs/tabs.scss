@@ -3,64 +3,62 @@
 @import "./variables";
 
 .ocl-tabs {
-	margin: 20px;
-
 	&__controls {
 		display: flex;
+	}
 
-		&__label--wrap {
-			flex-grow: 1;
+	&__label {
+		flex-grow: 1;
 
-			&:first-of-type .ocl-tabs__controls__label {
-				border-top-left-radius: rem(3px);
-				border-bottom-left-radius: rem(3px);
-			}
-
-			&:last-of-type .ocl-tabs__controls__label {
-				border-top-right-radius: rem(3px);
-				border-bottom-right-radius: rem(3px);
-			}
+		&:first-of-type .ocl-tabs__label-content {
+			border-top-left-radius: rem(3px);
+			border-bottom-left-radius: rem(3px);
 		}
 
-		&__input {
+		&:last-of-type .ocl-tabs__label-content {
+			border-top-right-radius: rem(3px);
+			border-bottom-right-radius: rem(3px);
+		}
+	}
+
+	&__input {
+		display: none;
+
+		&:checked + .ocl-tabs__label-content {
+			border-color: #5ca1b8;
+			z-index: 5;
+		}
+
+		&:checked + .ocl-tabs__label-content::after {
+			display: block;
+		}
+	}
+
+	&__label-content {
+		position: relative;
+		margin-left: rem(-2px);
+		padding: rem(12px);
+		border: solid rem(2px) #d2d2d2;
+		color: #5ca1b8;
+		font-size: rem(18px);
+		font-weight: 500;
+		line-height: 1.11;
+		text-align: center;
+		cursor: pointer;
+
+		&::after {
 			display: none;
-
-			&:checked + .ocl-tabs__controls__label {
-				border-color: #5ca1b8;
-				z-index: 5;
-			}
-
-			&:checked + .ocl-tabs__controls__label::after {
-				display: block;
-			}
-		}
-
-		&__label {
-			position: relative;
-			margin-left: rem(-2px);
-			padding: rem(12px);
-			border: solid rem(2px) #d2d2d2;
-			color: #5ca1b8;
-			font-size: rem(18px);
-			font-weight: 500;
-			line-height: 1.11;
-			text-align: center;
-			cursor: pointer;
-
-			&::after {
-				display: none;
-				position: absolute;
-				bottom: -10px;
-				left: 50%;
-				width: 15px;
-				height: 15px;
-				margin-left: -10px;
-				transform: rotate(45deg);
-				border-right: solid rem(2px) #5ca1b8;
-				border-bottom: solid rem(2px) #5ca1b8;
-				background-color: #fff;
-				content: "";
-			}
+			position: absolute;
+			bottom: -10px;
+			left: 50%;
+			width: 15px;
+			height: 15px;
+			margin-left: -10px;
+			transform: rotate(45deg);
+			border-right: solid rem(2px) #5ca1b8;
+			border-bottom: solid rem(2px) #5ca1b8;
+			background-color: #fff;
+			content: "";
 		}
 	}
 }

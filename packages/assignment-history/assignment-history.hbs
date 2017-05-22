@@ -1,50 +1,50 @@
 <{{elementName}} {{{attr attributes}}}>
-	 <div class="ocl-card__header ocl-card__header--full-width ocl-assignment-history__header">
-         <h2 class="ocl-assignment-history__title">Assignment Activity</h2>
-     </div>
-	 <div class="ocl-card__body ocl-assignment-history__body">
-         {{#each day}}
-             <div class="ocl-assignment-history-day">
-                 <h3 class="ocl-assignment-history-day__heading">
-                     {{this.heading}}
-                 </h3>
-                 <ul class="ocl-assignment-history__list">
-                     {{#each this.events}}
-                         <li class="ocl-assignment-history__list-item">
-                             <div class="ocl-assignment-history-event__header">
-                                 {{{this.icon}}}
-                                 <h4 class="ocl-assignment-history-event__heading">{{this.heading}}</h4>
-                                 {{#if this.details}}
-                                     <button class="ocl-button ocl-button--link-style ocl-assignment-history-event__more">
-                                         <span>Show more</span>
-                                     </button>
-                                 {{/if}}
-                             </div>
-                             {{#if this.details}}
-                                 <div class="ocl-assignment-history-event__details">
-                                     <ul class="ocl-assignment-history-event__details-list">
-                                         <li class="ocl-assignment-history-event__details-list-item">
-                                             Answered: 10/10
-                                         </li>
-                                         <li class="ocl-assignment-history-event__details-list-item">
-                                             Correct:8
-                                         </li>
-                                         <li class="ocl-assignment-history-event__details-list-item">
-                                             Incorrect: 2
-                                         </li>
-                                         <li class="ocl-assignment-history-event__details-list-item">
-                                             Quiz Time: 3mins
-                                         </li>
-                                         <li class="ocl-assignment-history-event__details-list-item">
-                                             ​​​​​​​*Watched videos during quiz taking
-                                         </li>
-                                     </ul>
-                                 </div>
-                             {{/if}}
-                         </li>
-                     {{/each}}
-                 </ul>
-             </div>
-         {{/each}}
-     </div>
+	<div class="ocl-card__header ocl-card__header--full-width ocl-assignment-history__header">
+		<h2 class="ocl-assignment-history__title">Assignment Activity</h2>
+	</div>
+	<div class="ocl-card__body ocl-assignment-history__body">
+		{{#each day}}
+		<div class="ocl-assignment-history-day">
+			<h3 class="ocl-assignment-history-day__heading">
+				{{this.heading}}
+			</h3>
+			<ul class="ocl-assignment-history__list">
+				{{#each this.events}}
+				<li class="ocl-assignment-history__list-item">
+					<div class="ocl-assignment-history-event__header">
+						{{{this.icon}}}
+						<h4 class="ocl-assignment-history-event__heading">{{this.heading}}</h4>
+						{{#if this.details}}
+						<button class="ocl-button ocl-button--link-style ocl-assignment-history-event__more">
+							<span>Show more</span>
+						</button>
+						{{/if}}
+					</div>
+					{{#if this.details}}
+					<div class="ocl-assignment-history-event__details">
+						<ul class="ocl-assignment-history-event__details-list">
+							<li class="ocl-assignment-history-event__details-list-item">
+								Answered: 10/10
+							</li>
+							<li class="ocl-assignment-history-event__details-list-item">
+								Correct:8
+							</li>
+							<li class="ocl-assignment-history-event__details-list-item">
+								Incorrect: 2
+							</li>
+							<li class="ocl-assignment-history-event__details-list-item">
+								Quiz Time: 3mins
+							</li>
+							<li class="ocl-assignment-history-event__details-list-item">
+								​​​​​​​*Watched videos during quiz taking
+							</li>
+						</ul>
+					</div>
+					{{/if}}
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		{{/each}}
+	</div>
 </{{elementName}}>

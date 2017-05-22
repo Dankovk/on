@@ -1,150 +1,134 @@
 <{{elementName}} {{{attr attributes}}}>
-	<div class="ocl-card__header ocl-card__header--full-width ocl-skill-profile__header">
-        <h2 class="ocl-skill-profile__title">Skill Profile</h2>
-        <a href="#" class="ocl-skill-profile__help">
-            <i class="fa fa-question-circle"></i>
-            Help
-        </a>
+<div class="ocl-card__header ocl-card__header--full-width ocl-skill-profile__header">
+    <h2 class="ocl-skill-profile__title">Skill Profile</h2>
+    <a href="#" class="ocl-skill-profile__help">
+        <i class="fa fa-question-circle"></i>
+        Help
+    </a>
+</div>
+<div class="ocl-card__body ocl-skill-profile__body">
+    <div class="ocl-skill-profile__categories">
+        {{#each profile-category}}
+            {{#if this.active}}
+                <div class="ocl-skill-profile-category ocl-skill-profile-category--active">
+                    <input type="radio" class="ocl-skill-profile-category__radio" id="radio">
+                    <label for="radio" class="ocl-skill-profile-category__radio-label">
+                        <span class="ocl-skill-profile-category__label">{{this.title}}</span>
+                        <div class="ocl-skill-progress ocl-skill-progress--active">
+                            <div class="ocl-skill-progress__circle"></div>
+                        </div>
+                        <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                    </label>
+                </div>
+            {{else}}
+                <div class="ocl-skill-profile-category">
+                    <input type="radio" class="ocl-skill-profile-category__radio" id="radio">
+                    <label for="radio" class="ocl-skill-profile-category__radio-label">
+                        <span class="ocl-skill-profile-category__label">{{this.title}}</span>
+                        <div class="ocl-skill-progress ocl-skill-progress">
+                            <div class="ocl-skill-progress__circle"></div>
+                        </div>
+                        <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+                    </label>
+                </div>
+            {{/if}}
+        {{/each}}
     </div>
-	 <div class="ocl-card__body ocl-skill-profile__body">
-         <div class="ocl-skill-profile__categories">
-             {{#each profile-category}}
-                 {{#if this.active}}
-                     <div class="ocl-skill-profile-category ocl-skill-profile-category--active">
-                         <input type="radio" class="ocl-skill-profile-category__radio" id="radio">
-                         <label for="radio" class="ocl-skill-profile-category__radio-label">
-                             <span class="ocl-skill-profile-category__label">{{this.title}}</span>
-                             <div class="ocl-skill-progress ocl-skill-progress--active">
-                                 <div class="ocl-skill-progress__circle"></div>
-                             </div>
-                             <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
-                         </label>
-                     </div>
-                 {{else}}
-                     <div class="ocl-skill-profile-category">
-                             <input type="radio" class="ocl-skill-profile-category__radio" id="radio">
-                             <label for="radio" class="ocl-skill-profile-category__radio-label">
-                                 <span class="ocl-skill-profile-category__label">{{this.title}}</span>
-                                 <div class="ocl-skill-progress ocl-skill-progress">
-                                     <div class="ocl-skill-progress__circle"></div>
-                                 </div>
-                                 <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
-                             </label>
-                     </div>
-                 {{/if}}
-             {{/each}}
-         </div>
-         <div class="ocl-skill-profile__details">
-             {{#each profile-category}}
-                 {{#if this.active}}
-                    <div class="ocl-skill-profile__detail ocl-skill-profile__detail--active">
-                 {{else}}
-                    <div class="ocl-skill-profile__detail">
-                 {{/if}}
-                        <ul class="ocl-skill-profile__meter-list">
-                            {{#each this.skillMeters}}
-                                <li class="ocl-skill-profile__meter-list-item">
+    <div class="ocl-skill-profile__details">
+        {{#each profile-category}}
+            {{#if this.active}}
+            <div class="ocl-skill-profile__detail ocl-skill-profile__detail--active">
+            {{else}}
+            <div class="ocl-skill-profile__detail">
+            {{/if}}
+            <ul class="ocl-skill-profile__meter-list">
+                {{#each this.skillMeters}}
+                    <li class="ocl-skill-profile__meter-list-item">
+                        {{#if this.showingMore}}
+                        <div class="ocl-skill-meter ocl-skill-meter--showing-more">
+                        {{else}}
+                        <div class="ocl-skill-meter">
+                        {{/if}}
+                        <div class="ocl-skill-meter__title">
+                            <label class="ocl-skill-meter__label">Skill meter Label</label>
+                            <div class="ocl-skill-meter-button__more">
+                                <button class="ocl-button ocl-button--link-style ocl-skill-meter-button__more-toggle">
+                                    <span>Show more</span>
+                                </button>
+                            </div>
+                        </div>
+                        <ul class="ocl-skill-meter__button-list">
+                            <li class="ocl-skill-meter-button__list-item">
+                                <div class="ocl-skill-meter-button">
+                                    <button class="ocl-skill-meter-button__element ocl-skill-meter-button__element--active"></button>
                                     {{#if this.showingMore}}
-                                    <div class="ocl-skill-meter ocl-skill-meter--showing-more">
+                                        <label class="ocl-skill-meter-button__label ocl-skill-meter-button__label--combined">Started</label>
                                     {{else}}
-                                    <div class="ocl-skill-meter">
+                                        <label class="ocl-skill-meter-button__label">Started</label>
                                     {{/if}}
-                                         <div class="ocl-skill-meter__title">
-                                             <label class="ocl-skill-meter__label">Skill meter Label</label>
-                                             <div class="ocl-skill-meter-button__more">
-                                                 <button class="ocl-button ocl-button--link-style ocl-skill-meter-button__more-toggle">
-                                                     <span>Show more</span>
-                                                 </button>
-                                             </div>
-                                         </div>
-                                         <ul class="ocl-skill-meter__button-list">
-                                             <li class="ocl-skill-meter-button__list-item">
-                                                 <div class="ocl-skill-meter-button">
-                                                     <button class="ocl-skill-meter-button__element ocl-skill-meter-button__element--active"></button>
-                                                    {{#if this.showingMore}}
-                                                        <label  class="ocl-skill-meter-button__label ocl-skill-meter-button__label--combined">Started</label>
-                                                    {{else}}
-                                                        <label  class="ocl-skill-meter-button__label">Started</label>
-                                                    {{/if}}
-                                                 </div>
-                                             </li>
-                                             <li class="ocl-skill-meter-button__list-item">
-                                                 <div class="ocl-skill-meter-button">
-                                                     <button class="ocl-skill-meter-button__element ocl-skill-meter-button__element--active"></button>
-                                                     {{#if this.showingMore}}
-                                                         <label  class="ocl-skill-meter-button__label ocl-skill-meter-button__label--combined">Progressing</label>
-                                                     {{else}}
-                                                         <label  class="ocl-skill-meter-button__label">Progressing</label>
-                                                     {{/if}}                                                 </div>
-                                             </li>
-                                             <li class="ocl-skill-meter-button__list-item">
-                                                 <div class="ocl-skill-meter-button">
-                                                     <button class="ocl-skill-meter-button__element ocl-skill-meter-button__element--active"></button>
-                                                     {{#if this.showingMore}}
-                                                         <label  class="ocl-skill-meter-button__label ocl-skill-meter-button__label--combined">Capable</label>
-                                                     {{else}}
-                                                         <label  class="ocl-skill-meter-button__label">Capable</label>
-                                                     {{/if}}                                                 </div>
-                                             </li>
-                                             <li class="ocl-skill-meter-button__list-item">
-                                                 <div class="ocl-skill-meter-button">
-                                                     <button class="ocl-skill-meter-button__element"></button>
-                                                     {{#if this.showingMore}}
-                                                         <label  class="ocl-skill-meter-button__label ocl-skill-meter-button__label--combined">Proficent</label>
-                                                     {{else}}
-                                                         <label  class="ocl-skill-meter-button__label">Proficent</label>
-                                                     {{/if}}                                                 </div>
-                                             </li>
-                                             <li class="ocl-skill-meter-button__list-item">
-                                                 <div class="ocl-skill-meter-button">
-                                                     <button class="ocl-skill-meter-button__element"></button>
-                                                     {{#if this.showingMore}}
-                                                         <label  class="ocl-skill-meter-button__label ocl-skill-meter-button__label--combined">Excelling</label>
-                                                     {{else}}
-                                                         <label  class="ocl-skill-meter-button__label">Excelling</label>
-                                                     {{/if}}                                                 </div>
-                                             </li>
-                                             <li class="ocl-skill-meter-button__list-item ocl-skill-meter-button__list-item--more">
-                                                 <button class="ocl-button ocl-button--link-style ocl-skill-meter-button__more-toggle">
-                                                     <span>Show more</span>
-                                                 </button>
-                                             </li>
-                                         </ul>
-                                         <div class="ocl-skill-meter__more">
-                                             <ul class="ocl-skill-meter-more__list">
-                                                 <li class="ocl-skill-meter-more__list-item">
-                                                     10/14/16 - Started
-                                                 </li>
-                                                 <li class="ocl-skill-meter-more__list-item">
-                                                     10/21/16 - Processing
-                                                 </li>
-                                                 <li class="ocl-skill-meter-more__list-item">
-                                                     10/28/16 - Capable
-                                                 </li>
-                                             </ul>
-                                         </div>
-                                     </div>
-                                 </li>
-                             {{/each}}
-                         </ul>
-                 </div>
-             {{/each}}
-         </div>
-     </div>
-
-
-
-			<!-- radio.ocl-skill-profile-category-button -->
-				<!-- span.ocl-skill-profile-category-button__title -->
-				<!-- > skill-progress -->
-				<!-- icon -->
-			<!-- /each -->
-		<!-- div.ocl-skill-profile-details -->
-			<!-- #each profile-category -->
-			<!-- div.ocl-skill-profile-detail (these are all hidden, but for one, like tabs, only the one corresponding to the selected button above is visible) -->
-				<!-- div.ocl-skill-profile-detail -->
-					<!-- ul.ocl-skill-profile-meter-list -->
-						<!-- #each profile-category.skill-meters -->
-						<!-- li.ocl-skill-profile-meter-list-item -->
-							<!-- > skill-meter -->
+                                </div>
+                            </li>
+                            <li class="ocl-skill-meter-button__list-item">
+                                <div class="ocl-skill-meter-button">
+                                    <button class="ocl-skill-meter-button__element ocl-skill-meter-button__element--active"></button>
+                                    {{#if this.showingMore}}
+                                        <label class="ocl-skill-meter-button__label ocl-skill-meter-button__label--combined">Progressing</label>
+                                    {{else}}
+                                        <label class="ocl-skill-meter-button__label">Progressing</label>
+                                    {{/if}}                                                 </div>
+                            </li>
+                            <li class="ocl-skill-meter-button__list-item">
+                                <div class="ocl-skill-meter-button">
+                                    <button class="ocl-skill-meter-button__element ocl-skill-meter-button__element--active"></button>
+                                    {{#if this.showingMore}}
+                                        <label class="ocl-skill-meter-button__label ocl-skill-meter-button__label--combined">Capable</label>
+                                    {{else}}
+                                        <label class="ocl-skill-meter-button__label">Capable</label>
+                                    {{/if}}                                                 </div>
+                            </li>
+                            <li class="ocl-skill-meter-button__list-item">
+                                <div class="ocl-skill-meter-button">
+                                    <button class="ocl-skill-meter-button__element"></button>
+                                    {{#if this.showingMore}}
+                                        <label class="ocl-skill-meter-button__label ocl-skill-meter-button__label--combined">Proficent</label>
+                                    {{else}}
+                                        <label class="ocl-skill-meter-button__label">Proficent</label>
+                                    {{/if}}                                                 </div>
+                            </li>
+                            <li class="ocl-skill-meter-button__list-item">
+                                <div class="ocl-skill-meter-button">
+                                    <button class="ocl-skill-meter-button__element"></button>
+                                    {{#if this.showingMore}}
+                                        <label class="ocl-skill-meter-button__label ocl-skill-meter-button__label--combined">Excelling</label>
+                                    {{else}}
+                                        <label class="ocl-skill-meter-button__label">Excelling</label>
+                                    {{/if}}                                                 </div>
+                            </li>
+                            <li class="ocl-skill-meter-button__list-item ocl-skill-meter-button__list-item--more">
+                                <button class="ocl-button ocl-button--link-style ocl-skill-meter-button__more-toggle">
+                                    <span>Show more</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="ocl-skill-meter__more">
+                            <ul class="ocl-skill-meter-more__list">
+                                <li class="ocl-skill-meter-more__list-item">
+                                    10/14/16 - Started
+                                </li>
+                                <li class="ocl-skill-meter-more__list-item">
+                                    10/21/16 - Processing
+                                </li>
+                                <li class="ocl-skill-meter-more__list-item">
+                                    10/28/16 - Capable
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+        {{/each}}
+    </div>
+    </div>
 </{{elementName}}>
