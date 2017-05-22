@@ -6,6 +6,15 @@
 	background-color: #ededed;
 	text-align: left;
 
+	&__header {
+		padding: 0;
+
+		@include ocl-respond-to(small) {
+			padding-left: 1.875rem;
+			padding-right: 1.875rem;
+		}
+	}
+
 	&__title {
 		margin: 0;
 		padding-top: rem(21px);
@@ -14,6 +23,11 @@
 		color: #ac405e;
 		font-size: 26px;
 		font-weight: 500;
+		text-align: center;
+
+		@include ocl-respond-to(small) {
+			text-align: left;
+		}
 	}
 
 	&__body {

@@ -1,9 +1,14 @@
+@import "@one/layout/mixins";
+
 .theatre__stage-iframe {
 	.ocl-assignment-history {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: 420px;
 		transform: translate(-50%, -50%);
+		width: 100%;
+		@include ocl-respond-to(small) {
+			width: 420px;
+		}
 	}
 }
