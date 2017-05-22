@@ -1,0 +1,17 @@
+{
+  "name": "@one/quiz-question",
+  "description": "The static One component for a quiz question",
+  "version": "0.1.0",
+  "license": "UNLICENSED",
+  "one": {
+    "name": "quiz-question",
+    "type": "static",
+    "pattern": "organism"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+  }
+}
