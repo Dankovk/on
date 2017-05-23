@@ -13,8 +13,6 @@
 
 	&__list {
 		position: relative;
-		padding-right: rem(15px);
-		padding-left: rem(15px);
 		background-color: #fff;
 		z-index: 3;
 	}
@@ -24,8 +22,7 @@
 		@include ocl-link-theme-style;
 
 		display: block;
-		padding-top: rem(12px);
-		padding-bottom: rem(12px);
+		padding: rem(12px) rem(15px);
 		border-bottom: 1px solid #c4c4c4;
 		color: #5ca1b8;
 		font-size: rem(16px);
@@ -77,6 +74,18 @@
 		outline: none;
 		background-color: #fff;
 		z-index: 5;
+	}
+
+	&--padded {
+		.ocl-popover__list {
+			padding-right: rem(15px);
+			padding-left: rem(15px);
+		}
+
+		.ocl-popover__link {
+			padding-right: 0;
+			padding-left: 0;
+		}
 	}
 
 	&__arrow {

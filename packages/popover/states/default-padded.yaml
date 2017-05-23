@@ -1,0 +1,5 @@
+---
+template:
+  attributes:
+  - - class
+    - '"ocl-popover ocl-popover--padded"'
