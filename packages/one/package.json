@@ -35,6 +35,7 @@
     "@one/skill-progress": "^0.1.0",
 	"@one/tabs": "^0.1.0",
     "@one/assignment-progress": "^0.1.0",
-    "@one/module-card": "^0.1.0"
+    "@one/module-card": "^0.1.0",
+    "@one/quiz-question-option-card": "^0.1.0"
   }
 }
