@@ -1,3 +1,6 @@
 ---
 template:
+  attributes:
+  - - class
+    - '"ocl-card ocl-module-card ocl-module-card--tooltip-visible ocl-card--full-width-header"'
 state: {}

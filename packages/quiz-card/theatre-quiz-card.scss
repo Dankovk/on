@@ -1,3 +1,9 @@
 .theatre__stage-quiz-card {
-
+	.ocl-quiz-card {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 244px;
+		transform: translate(-50%, -50%);
+	}
 }

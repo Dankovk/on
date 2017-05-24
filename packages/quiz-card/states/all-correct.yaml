@@ -1,3 +1,9 @@
 ---
 template:
+  details:
+      elementName: span
+      body: '<i class="fa fa-check-circle"></i>10/15/16: All correct'
+      attributes:
+      - - class
+        - '"ocl-module-card__detail ocl-module-card__detail--all-correct"'
 state: {}

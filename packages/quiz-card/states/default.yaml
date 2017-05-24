@@ -1,3 +1,13 @@
 ---
 template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-card ocl-card--square-top ocl-module-card ocl-quiz-card ocl-card--full-width-header"'
+  details:
+    elementName: span
+    body: '<i class="fa fa-clock-o"></i> Not yet taken'
+    attributes:
+    - - class
+      - '"ocl-module-card__detail"'
 state: {}

@@ -1,3 +1,9 @@
 ---
 template:
+  details:
+      elementName: span
+      body: '<i class="fa fa-exclamation-triangle"></i>10/15/16: 2 incorrect'
+      attributes:
+      - - class
+        - '"ocl-module-card__detail ocl-module-card__detail--some-correct"'
 state: {}
