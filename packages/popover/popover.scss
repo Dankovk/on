@@ -19,15 +19,13 @@
 	}
 
 	&__link {
-		@include ocl-font-family--regular;
-		@include ocl-link-theme-style;
+		@include ocl-link-theme-style(false);
 
 		display: block;
 		padding: rem(12px) rem(15px);
 		border-bottom: 1px solid #c4c4c4;
-		color: #5ca1b8;
 		font-size: rem(16px);
-		font-weight: bold;
+		font-weight: 500;
 		line-height: 20px;
 		text-align: left;
 		text-decoration: none;

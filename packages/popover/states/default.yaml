@@ -17,7 +17,7 @@ template:
       - '"ocl-popover__close"'
   link:
       elementName: a
-      body: <span>Link in pop</span>
+      body: Link in pop
       attributes:
       - - class
         - '"ocl-popover__link"'
