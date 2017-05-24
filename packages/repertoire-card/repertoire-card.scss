@@ -1,3 +1,27 @@
-.ocl-repertoire-card {
+@import "@one/layout/mixins";
+@import "@one/typography/functions";
 
+.ocl-repertoire-card {
+	&__footer {
+		display: flex;
+		flex-wrap: wrap;
+		padding: rem(10px);
+		padding-right: rem(5px);
+		background-color: #ededed;
+		color: #5ca1b8;
+		text-align: left;
+
+		.fa {
+			margin-right: rem(5px);
+			font-size: 20px;
+		}
+
+		.ocl-repertoire-card__tags {
+			flex: 1;
+			font-size: 14px;
+			font-style: italic;
+			font-weight: 300;
+			line-height: 17px;
+		}
+	}
 }
