@@ -10,8 +10,8 @@
 		padding: 0;
 
 		@include ocl-respond-to(small) {
-			padding-left: 1.875rem;
 			padding-right: 1.875rem;
+			padding-left: 1.875rem;
 		}
 	}
 
@@ -31,8 +31,8 @@
 	}
 
 	&__body {
-			@include ocl-horizontal-whitespace(rem(15px));
-			@include ocl-vertical-whitespace(rem(15px));
+		@include ocl-horizontal-whitespace(rem(15px));
+		@include ocl-vertical-whitespace(rem(15px));
 
 		@include ocl-respond-to(small) {
 			@include ocl-horizontal-whitespace(rem(30px));
