@@ -89,7 +89,7 @@
 	}
 
 	.ocl-button {
-		.fa {
+		.fa:not(.fa-trash) {
 			display: none;
 			margin-bottom: 2px;
 			margin-left: 5px;
@@ -108,16 +108,10 @@
 		padding-bottom: 10px;
 		background-color: #f2f2f2;
 
-		@include ocl-horizontal-whitespace(rem(5px));
+		@include ocl-horizontal-whitespace(rem(10px));
 
 		@include ocl-respond-to(small) {
 			@include ocl-horizontal-whitespace(rem(30px));
-
-			display: block;
-		}
-
-		&-item {
-			flex: 1;
 		}
 	}
 }
@@ -140,8 +134,7 @@
 }
 
 .ocl-assignment-card__footer-trash {
-	flex: .3;
-	float: right;
+	margin-left: auto;
 	text-align: center;
 
 	.fa {
