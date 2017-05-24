@@ -31,8 +31,13 @@
 	}
 
 	&__body {
-		padding-top: rem(29px);
-		padding-bottom: rem(29px);
+			@include ocl-horizontal-whitespace(rem(15px));
+			@include ocl-vertical-whitespace(rem(15px));
+
+		@include ocl-respond-to(small) {
+			@include ocl-horizontal-whitespace(rem(30px));
+			@include ocl-vertical-whitespace(rem(25px));
+		}
 	}
 
 	&-day__heading {
