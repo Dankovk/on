@@ -1,3 +1,94 @@
-.ocl-module-card {
+@import "@one/theme/mixins";
+@import "@one/layout/mixins";
+@import "@one/typography/functions";
 
+.ocl-module-card {
+	@include ocl-link-theme-style;
+
+	color: #444;
+
+	&__title {
+		margin-top: 0;
+		margin-bottom: 0;
+		font-size: 21px;
+		font-weight: 500;
+		text-align: left;
+	}
+
+	&__body {
+		padding: rem(12px);
+	}
+
+	&__image {
+		display: block;
+		position: relative;
+		height: 138px;
+		background-image: url(http://placehold.it/350x150);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+
+		&::before {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: rem(25px);
+			height: rem(25px);
+			transform: translate(-50%, -50%);
+			background-color: #fff;
+			content: "";
+		}
+
+		.fa {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 50px;
+		}
+	}
+
+	&__detail {
+		display: flex;
+		position: relative;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-top: rem(19px);
+		text-align: left;
+
+		&-text {
+			flex: 1;
+			font-style: italic;
+			font-weight: 300;
+		}
+	}
+
+	.ocl-module-card__addto {
+		flex: .5;
+		padding: 0;
+		border: none;
+		outline: none;
+		background-color: transparent;
+		color: #5fa1b7;
+		font-size: 25px;
+		text-align: right;
+
+		.fa {
+			margin-right: rem(3px);
+		}
+	}
+
+	.ocl-popover {
+		display: none;
+		position: absolute;
+		right: rem(-12px);
+		bottom: rem(39px);
+	}
+
+	&--tooltip-visible {
+		.ocl-popover {
+			display: block;
+		}
+	}
 }

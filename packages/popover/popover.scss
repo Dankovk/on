@@ -8,25 +8,24 @@
 	position: relative;
 	width: auto;
 	min-width: 185px;
-	border-radius: 3px;
+	border-radius: 4px;
 	box-shadow: 0 0 6px 0 rgba(136, 136, 136, .5);
 
 	&__list {
 		position: relative;
+		border-radius: 4px;
 		background-color: #fff;
 		z-index: 3;
 	}
 
 	&__link {
-		@include ocl-font-family--regular;
-		@include ocl-link-theme-style;
+		@include ocl-link-theme-style(false);
 
 		display: block;
 		padding: rem(12px) rem(15px);
 		border-bottom: 1px solid #c4c4c4;
-		color: #5ca1b8;
 		font-size: rem(16px);
-		font-weight: bold;
+		font-weight: 500;
 		line-height: 20px;
 		text-align: left;
 		text-decoration: none;

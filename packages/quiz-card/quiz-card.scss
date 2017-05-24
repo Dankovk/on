@@ -1,3 +1,45 @@
-.ocl-quiz-card {
+@import "@one/layout/mixins";
+@import "@one/theme/mixins";
+@import "@one/typography/functions";
+@import "@one/typography/mixins";
 
+.ocl-quiz-card {
+	@include ocl-link-theme-style;
+
+	.ocl-module-card__image {
+		.ocl-button {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&__body {
+		padding: rem(12px);
+		background-color: #444;
+	}
+
+	.ocl-module-card__detail {
+		display: flex;
+		align-items: center;
+		margin-top: rem(39px);
+		color: #fff;
+		font-style: italic;
+		font-weight: 300;
+		text-align: left;
+
+		&--all-correct {
+			color: #50bd4b;
+		}
+
+		&--some-correct {
+			color: #dcc44b;
+		}
+	}
+
+	.fa {
+		margin-right: rem(8px);
+		font-size: 20px;
+	}
 }
