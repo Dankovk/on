@@ -8,11 +8,12 @@
 	position: relative;
 	width: auto;
 	min-width: 185px;
-	border-radius: 3px;
+	border-radius: 4px;
 	box-shadow: 0 0 6px 0 rgba(136, 136, 136, .5);
 
 	&__list {
 		position: relative;
+		border-radius: 4px;
 		background-color: #fff;
 		z-index: 3;
 	}
