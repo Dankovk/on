@@ -1,3 +1,15 @@
 ---
 template:
+  elementName: label
+  attributes:
+  - - class
+    - '"ocl-card ocl-quiz-question-option-card ocl-quiz-question-option-card__selected--incorrect"'
+  content:
+    img:
+      elementName: img
+      attributes:
+      - - class
+        - '"ocl-quiz-question-option-card__img"'
+      - - src
+        - '"http://placehold.it/270x150"'
 state: {}

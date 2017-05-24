@@ -10,8 +10,8 @@
 		padding: 0;
 
 		@include ocl-respond-to(small) {
-			padding-left: 1.875rem;
 			padding-right: 1.875rem;
+			padding-left: 1.875rem;
 		}
 	}
 
