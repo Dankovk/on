@@ -1,0 +1,8 @@
+---
+template:
+  questions-correct:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-quiz-question__wrap"'
+state: {}

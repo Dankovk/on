@@ -5,9 +5,8 @@
 	display: block;
 	position: relative;
 	width: rem(270px);
-	border-radius: rem(4px);
 	box-shadow: none;
-	overflow: hidden;
+	overflow: visible;
 
 	&__selected--correct {
 		&::after {
@@ -18,6 +17,7 @@
 			height: 20px;
 			color: #444;
 			font-size: rem(24px);
+			font-weight: 300;
 			line-height: .83;
 			text-align: center;
 			content: "Correct!";
@@ -108,6 +108,8 @@
 		display: flex;
 		justify-content: space-between;
 		padding: rem(13px);
+		border-top-left-radius: rem(4px);
+		border-top-right-radius: rem(4px);
 		background-color: #dedede;
 
 		&__title {
@@ -160,6 +162,8 @@
 
 	&__footer {
 		padding-bottom: rem(15px);
+		border-bottom-left-radius: rem(4px);
+		border-bottom-right-radius: rem(4px);
 		background-color: #ededed;
 
 		&__indicator {
