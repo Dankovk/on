@@ -2,5 +2,5 @@
 template:
   attributes:
   - - class
-    - '"ocl-card ocl-module-card ocl-card--full-width-header"'
+    - '"ocl-card ocl-module-card ocl-card--full-width-header ocl-card--square-top"'
 state: {}
