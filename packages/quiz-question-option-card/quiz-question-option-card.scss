@@ -40,7 +40,7 @@
 				background-color: #c2f0ff;
 			}
 
-			&__footer-indicator {
+			&__footer__indicator {
 				border-color: #5ca1b8;
 				background-color: #5ca1b8;
 			}
@@ -67,7 +67,7 @@
 				display: block;
 			}
 
-			&__footer-indicator {
+			&__footer__indicator {
 				border-color: #5ca1b8;
 				background-color: #5ca1b8;
 			}
@@ -77,25 +77,25 @@
 	&__unselected--correct {
 		border: solid 4px #a1dff4;
 
-		.ocl-quiz-question-option-card__content .ocl-quiz-question-option-card__footer-indicator {
+		.ocl-quiz-question-option-card__content .ocl-quiz-question-option-card__footer__indicator {
 			border-color: #bfbfbf;
 			background-color: transparent;
 		}
 	}
 
-	&--hidden {
-		display: none;
-	}
-
 	&__input {
 		display: none;
-
-		//&:checked + .ocl-quiz-question-option-card-content {
-		//	.ocl-quiz-question-option-card__footer-indicator {
+		//
+		//&:checked + .ocl-quiz-question-option-card__content {
+		//	.ocl-quiz-question-option-card__footer__indicator {
 		//		border-color: #5ca1b8;
 		//		background-color: #5ca1b8;
 		//	}
 		//}
+	}
+
+	&--hidden {
+		display: none;
 	}
 
 	&__img {
@@ -129,6 +129,7 @@
 			cursor: pointer;
 
 			.fa-check {
+				margin-left: rem(1px);
 				color: #a1e0f4;
 				line-height: rem(26px);
 			}
@@ -144,6 +145,7 @@
 			cursor: pointer;
 
 			.fa-close {
+				margin-left: rem(1px);
 				color: #dedede;
 				font-size: rem(18px);
 				line-height: rem(26px);
@@ -166,7 +168,7 @@
 		border-bottom-right-radius: rem(4px);
 		background-color: #ededed;
 
-		&-indicator {
+		&__indicator {
 			display: block;
 			width: 25px;
 			height: 25px;

@@ -20,5 +20,5 @@ template:
       attributes:
       - - class
         - '"ocl-quiz-question__answer__detales"'
-      body: 'While fingers must have enough independence to play different notes, our goal is to use them interdependently with the rest of the body. The correct answer is b)--fingers should be <b>gently curved from the large knuckles</b>, to allow for free motion from that joint.'
+      body: 'While fingers must have enough independence to play different notes, our goal is to use them interdependently with the rest of the body. The correct answer is b)--fingers should be <span class="bold">gently curved from the large knuckles</span>, to allow for free motion from that joint.'
 state: {}

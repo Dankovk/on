@@ -5,11 +5,4 @@ template:
     attributes:
     - - class
       - '"ocl-quiz-question__wrap"'
-  img:
-    elementName: img
-    attributes:
-    - - class
-      - '"ocl-quiz-question-option-card__img"'
-    - - src
-      - '"http://placehold.it/270x150"'
 state: {}

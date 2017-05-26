@@ -1,6 +1,6 @@
 ---
 template:
-  questions-correct:
+  questions-clean:
     elementName: div
     attributes:
     - - class

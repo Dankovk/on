@@ -52,5 +52,5 @@ template:
       attributes:
       - - class
         - '"ocl-card__footer ocl-quiz-question-option-card__footer"'
-      body: '<div class="ocl-quiz-question-option-card__footer-indicator"></div>'
+      body: '<div class="ocl-quiz-question-option-card__footer__indicator"></div>'
 state: {}
