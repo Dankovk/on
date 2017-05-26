@@ -1,11 +1,19 @@
-<!-- radio.ocl-quiz-question-option-card --> <!-- Use an :after pseudo element to add the "Correct" and "Incorrect" text -->
-	<!-- div.ocl-card -->
-		<!-- div.ocl-card__header.ocl-quiz-question-option-card__header -->
-			<!-- div.ocl-card__header-content -->
-				<!-- <icon> -->
-		<!-- div.ocl-card__body.ocl-quiz-question-option-card__body -->
-			<!-- div.ocl-card__body-content.ocl-quiz-question-option-card__body-content -->
-				<!-- optional image -->
-		<!-- div.ocl-card__footer.ocl-quiz-question-option-card__footer -->
-			<!-- div.ocl-card__footer-content.ocl-quiz-question-option-card__footer-content -->
+<{{elementName}} {{{attr attributes}}}>
+	<{{input.elementName}} {{{attr input.attributes}}}/>
+	<{{content.elementName}} {{{attr content.attributes}}}>
+
+		<{{content.header.elementName}} {{{attr content.header.attributes}}}>
+			<{{content.header.title.elementName}} {{{attr content.header.title.attributes}}}>{{{content.header.title.body}}}</{{content.header.title.elementName}}>
+			<{{content.header.correct.elementName}} {{{attr content.header.correct.attributes}}}>{{{content.header.correct.body}}}</{{content.header.correct.elementName}}>
+			<{{content.header.close.elementName}} {{{attr content.header.close.attributes}}}>{{{content.header.close.body}}}</{{content.header.close.elementName}}>
+		</{{content.header.elementName}}>
+
+		{{#if content.img}}<{{content.img.elementName}} {{{attr content.img.attributes}}}/>{{/if}}
+
+		<{{content.body.elementName}} {{{attr content.body.attributes}}}>{{{content.body.body}}}</{{content.body.elementName}}>
+
+		<{{content.footer.elementName}} {{{attr content.footer.attributes}}}> {{{content.footer.body}}} </{{content.footer.elementName}}>
+
+	</{{content.elementName}}>
+</{{elementName}}>
 

@@ -1,3 +1,7 @@
 ---
 template:
+  elementName: label
+  attributes:
+  - - class
+    - '"ocl-card ocl-quiz-question-option-card ocl-quiz-question-option-card__unselected--correct"'
 state: {}

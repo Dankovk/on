@@ -1,3 +1,56 @@
 ---
 template:
+  elementName: label
+  attributes:
+  - - class
+    - '"ocl-card ocl-quiz-question-option-card"'
+  input:
+    elementName: input
+    attributes:
+    - - type
+      - '"radio"'
+    - - class
+      - '"ocl-quiz-question-option-card__input"'
+    - - name
+      - '"ocl-quiz-question-option-card-name"'
+  content:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-quiz-question-option-card__content"'
+    header:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-card__header ocl-quiz-question-option-card__header"'
+      title:
+        elementName: div
+        attributes:
+        - - class
+          - '"ocl-quiz-question-option-card__header__title"'
+        body: 'A'
+      correct:
+        elementName: div
+        attributes:
+        - - class
+          - '"ocl-quiz-question-option-card__header__correct-icon"'
+        body: '<i class="fa fa-check" aria-hidden="true"></i>'
+      close:
+        elementName: div
+        attributes:
+        - - class
+          - '"ocl-quiz-question-option-card__header__close-icon"'
+        body: '<i class="fa fa-close" aria-hidden="true"></i>'
+    body:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-card__body ocl-quiz-question-option-card__body"'
+      body: 'At the front edge, so that you are almost falling forward'
+    footer:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-card__footer ocl-quiz-question-option-card__footer"'
+      body: '<div class="ocl-quiz-question-option-card__footer__indicator"></div>'
 state: {}
