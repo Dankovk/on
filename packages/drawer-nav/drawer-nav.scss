@@ -1,0 +1,63 @@
+@import "@one/typography/mixins";
+@import "@one/typography/functions";
+@import "@one/theme/mixins";
+@import "@one/layout/mixins";
+
+.ocl-drawer-nav {
+	@include ocl-link-theme-style;
+	@include ocl-horizontal-whitespace(22px);
+	@include ocl-vertical-whitespace(18px);
+
+	width: 320px;
+	background-color: #232323;
+	text-align: left;
+
+	&__user {
+		display: block;
+		margin-bottom: rem(15px);
+		color: #8a8d86;
+	}
+
+	&__primary-list {
+		@include ocl-styleless-list;
+
+		margin-right: rem(-22px);
+		margin-left: rem(-22px);
+	}
+
+	&__primary-list-item {
+		@include ocl-horizontal-whitespace(22px);
+
+		background-color: #303030;
+	}
+
+	&__primary-link {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		height: 50px;
+		margin-bottom: rem(1px);
+	}
+
+	&__link-icon--left {
+		width: 25px;
+		margin-right: rem(8px);
+		font-size: 20px;
+	}
+
+	&__link-icon--right {
+		margin-left: auto;
+	}
+
+	&__secondary-list {
+		@include ocl-styleless-list;
+
+		margin-top: rem(15px);
+	}
+
+	&__secondary-link {
+		@include ocl-vertical-whitespace(5px);
+
+		display: block;
+	}
+}

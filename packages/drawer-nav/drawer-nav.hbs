@@ -1,0 +1,26 @@
+<{{elementName}} {{{attr attributes}}}>
+    <span class="ocl-drawer-nav__user">
+        <!--nbsp didn't work here-->
+        Signed&nbsp;in&nbsp;as:<br>
+        Barbara&nbsp;Thompson
+        <!--so I had no choice but using the <br>-->
+    </span>
+    <ul class="ocl-drawer-nav__primary-list">
+        {{#each primaryLink}}
+            <li class="ocl-drawer-nav__primary-list-item">
+                <a href="" class="ocl-drawer-nav__primary-link">
+                    {{{this.icon}}}
+                    {{{this.text}}}
+                    <i class="fa fa-chevron-right ocl-drawer-nav__link-icon ocl-drawer-nav__link-icon--right" aria-hidden="true"></i>
+                </a>
+            </li>
+        {{/each}}
+    </ul>
+    <ul class="ocl-drawer-nav__secondary-list">
+        {{#each secondaryLink}}
+            <li class="ocl-drawer-nav__secondary-list-item">
+                <a href="" class="ocl-drawer-nav__secondary-link">{{{this.text}}}</a>
+            </li>
+        {{/each}}
+    </ul>
+</{{elementName}}>
