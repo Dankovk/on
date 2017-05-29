@@ -1,0 +1,21 @@
+---
+template:
+  elementName: button
+  body: '<img src="http://placehold.it/50x50" class="ocl-button__image--round" alt="">
+         <span class="ocl-button__label">Skill Library</span>
+         <div class="ocl-button--hex-right"></div>'
+  attributes:
+  - disabled
+  - - class
+    - '"ocl-button ocl-button--large ocl-button--round-left ocl-button--loading ocl-button--add-loader"'
+  loader:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-loader ocl-loader--small"'
+    subElement:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-loader__spinner ocl-loader__spinner--small"'
+state: {}

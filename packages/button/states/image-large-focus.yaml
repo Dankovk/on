@@ -1,0 +1,9 @@
+---
+template:
+  attributes:
+  - - class
+    - '"ocl-button ocl-button--large ocl-button--round-left ocl-button--focus"'
+  body: '<img src="http://placehold.it/50x50" class="ocl-button__image--round" alt="">
+         <span class="ocl-button__label">Skill Library</span>
+         <div class="ocl-button--hex-right"></div>'
+state: {}

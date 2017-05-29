@@ -2,7 +2,7 @@
 @import "@one/animation/functions";
 
 .ocl-quiz-question {
-	&__title {
+	&-title {
 		color: #666;
 		font-size: rem(34px);
 		font-weight: 300;
@@ -11,18 +11,25 @@
 
 	&__wrap {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: flex-start;
 		justify-content: space-between;
 		margin: rem(50px) auto rem(80px);
+
+		&--hidden {
+			display: none;
+		}
 	}
 
 	&__answer {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: flex-start;
 		justify-content: space-between;
 
-		&__detales {
+		&-detail {
 			max-width: rem(570px);
+			margin-bottom: 20px;
 			color: #444;
 			font-size: rem(21px);
 			font-style: italic;
