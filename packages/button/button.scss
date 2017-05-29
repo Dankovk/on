@@ -116,6 +116,7 @@
 		overflow: visible;
 
 		.ocl-button__label {
+			align-self: center;
 			font-size: rem(24px);
 			font-weight: 300;
 			white-space: nowrap;
@@ -140,13 +141,16 @@
 		position: relative;
 		top: rem(-13px);
 		right: rem(-29px);
+		align-self: center;
 		width: rem(62px);
 		height: rem(50px);
 		transform: rotate(60deg);
 		transition: background-color .2s cubic-bezier(.4, 0, 1, 1);
 		border-radius: rem(7px);
 		background-color: #5fa1b7;
-		z-index: -4;
+		z-index: -1;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
 
 		&::after {
 			position: absolute;
