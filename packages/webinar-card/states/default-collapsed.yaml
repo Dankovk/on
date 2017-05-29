@@ -1,0 +1,8 @@
+---
+template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-card ocl-card--flat ocl-webinar-card ocl-webinar-card--collapsed"'
+  icon: <span class="ocl-webinar-card__triangle ocl-webinar-card__triangle--collapsed" aria-hidden="true"></span>
+state: {}
