@@ -3,20 +3,19 @@
 		{{{header.body}}}
 	</{{header.elementName}}>
 
-	{{#if questions-clean}}
-		<{{questions-clean.elementName}} {{{attr questions-clean.attributes}}}>
+		<{{cards.elementName}} {{{attr cards.attributes}}}>
 
 			<label class="ocl-card ocl-quiz-question-option-card">
 				<input type="radio" class="ocl-quiz-question-option-card__input" name="ocl-quiz-question-option-card-name"/>
 			<div class="ocl-quiz-question-option-card__content">
 				<div class="ocl-card__header ocl-quiz-question-option-card__header">
-					<div class="ocl-quiz-question-option-card__header__title">C</div>
-					<div class="ocl-quiz-question-option-card__header__correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
-					<div class="ocl-quiz-question-option-card__header__close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
+					<div class="ocl-quiz-question-option-card__header-title">A</div>
+					<div class="ocl-quiz-question-option-card__header-correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+					<div class="ocl-quiz-question-option-card__header-close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
 				</div>
 				{{#if img}}<{{img.elementName}} {{{attr img.attributes}}}/>{{/if}}
 				<div class="ocl-card__body ocl-quiz-question-option-card__body">All the way back</div>
-				<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer__indicator"></div></div>
+				<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer-indicator"></div></div>
 				</div>
 			</label>
 
@@ -24,13 +23,13 @@
 				<input type="radio" class="ocl-quiz-question-option-card__input" name="ocl-quiz-question-option-card-name"/>
 			<div class="ocl-quiz-question-option-card__content">
 				<div class="ocl-card__header ocl-quiz-question-option-card__header">
-					<div class="ocl-quiz-question-option-card__header__title">C</div>
-					<div class="ocl-quiz-question-option-card__header__correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
-					<div class="ocl-quiz-question-option-card__header__close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
+					<div class="ocl-quiz-question-option-card__header-title">B</div>
+					<div class="ocl-quiz-question-option-card__header-correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+					<div class="ocl-quiz-question-option-card__header-close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
 				</div>
 				{{#if img}}<{{img.elementName}} {{{attr img.attributes}}}/>{{/if}}
 				<div class="ocl-card__body ocl-quiz-question-option-card__body">On the front half</div>
-				<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer__indicator"></div></div>
+				<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer-indicator"></div></div>
 				</div>
 			</label>
 
@@ -38,17 +37,16 @@
 				<input type="radio" class="ocl-quiz-question-option-card__input" name="ocl-quiz-question-option-card-name"/>
 			<div class="ocl-quiz-question-option-card__content">
 				<div class="ocl-card__header ocl-quiz-question-option-card__header">
-					<div class="ocl-quiz-question-option-card__header__title">C</div>
-					<div class="ocl-quiz-question-option-card__header__correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
-					<div class="ocl-quiz-question-option-card__header__close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
+					<div class="ocl-quiz-question-option-card__header-title">C</div>
+					<div class="ocl-quiz-question-option-card__header-correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+					<div class="ocl-quiz-question-option-card__header-close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
 				</div>
 				{{#if img}}<{{img.elementName}} {{{attr img.attributes}}}/>{{/if}}
 				<div class="ocl-card__body ocl-quiz-question-option-card__body">At the front edge, so that you are almost falling forward</div>
-				<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer__indicator"></div></div>
+				<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer-indicator"></div></div>
 				</div>
 			</label>
-		</{{questions-clean.elementName}}>
-	{{/if}}
+		</{{cards.elementName}}>
 
 	{{#if questions-correct}}
 		<{{questions-correct.elementName}} {{{attr questions-correct.attributes}}}>
@@ -56,13 +54,13 @@
 				<input type="radio" class="ocl-quiz-question-option-card__input" name="ocl-quiz-question-option-card-name"/>
 				<div class="ocl-quiz-question-option-card__content">
 					<div class="ocl-card__header ocl-quiz-question-option-card__header">
-						<div class="ocl-quiz-question-option-card__header__title">A</div>
-						<div class="ocl-quiz-question-option-card__header__correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
-						<div class="ocl-quiz-question-option-card__header__close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
+						<div class="ocl-quiz-question-option-card__header-title">A</div>
+						<div class="ocl-quiz-question-option-card__header-correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+						<div class="ocl-quiz-question-option-card__header-close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
 					</div>
 					{{#if img}}<{{img.elementName}} {{{attr img.attributes}}}/>{{/if}}
 					<div class="ocl-card__body ocl-quiz-question-option-card__body">All the way back</div>
-					<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer__indicator"></div></div>
+					<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer-indicator"></div></div>
 				</div>
 			</label>
 
@@ -70,13 +68,13 @@
 				<input type="radio" class="ocl-quiz-question-option-card__input" name="ocl-quiz-question-option-card-name"/>
 				<div class="ocl-quiz-question-option-card__content">
 					<div class="ocl-card__header ocl-quiz-question-option-card__header">
-						<div class="ocl-quiz-question-option-card__header__title">B</div>
-						<div class="ocl-quiz-question-option-card__header__correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
-						<div class="ocl-quiz-question-option-card__header__close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
+						<div class="ocl-quiz-question-option-card__header-title">B</div>
+						<div class="ocl-quiz-question-option-card__header-correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+						<div class="ocl-quiz-question-option-card__header-close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
 					</div>
 					{{#if img}}<{{img.elementName}} {{{attr img.attributes}}}/>{{/if}}
 					<div class="ocl-card__body ocl-quiz-question-option-card__body">On the front half</div>
-					<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer__indicator"></div> </div>
+					<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer-indicator"></div> </div>
 				</div>
 			</label>
 
@@ -84,13 +82,13 @@
 				<input type="radio" class="ocl-quiz-question-option-card__input" name="ocl-quiz-question-option-card-name"/>
 				<div class="ocl-quiz-question-option-card__content">
 					<div class="ocl-card__header ocl-quiz-question-option-card__header">
-						<div class="ocl-quiz-question-option-card__header__title">C</div>
-						<div class="ocl-quiz-question-option-card__header__correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
-						<div class="ocl-quiz-question-option-card__header__close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
+						<div class="ocl-quiz-question-option-card__header-title">C</div>
+						<div class="ocl-quiz-question-option-card__header-correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+						<div class="ocl-quiz-question-option-card__header-close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
 					</div>
 					{{#if img}}<{{img.elementName}} {{{attr img.attributes}}}/>{{/if}}
 					<div class="ocl-card__body ocl-quiz-question-option-card__body">At the front edge, so that you are almost falling forward</div>
-					<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer__indicator"></div></div>
+					<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer-indicator"></div></div>
 				</div>
 			</label>
 		</{{questions-correct.elementName}}>
@@ -102,12 +100,13 @@
 			<input type="radio" class="ocl-quiz-question-option-card__input" name="ocl-quiz-question-option-card-name"/>
 			<div class="ocl-quiz-question-option-card__content">
 				<div class="ocl-card__header ocl-quiz-question-option-card__header">
-					<div class="ocl-quiz-question-option-card__header__title">A</div>
-					<div class="ocl-quiz-question-option-card__header__correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
-					<div class="ocl-quiz-question-option-card__header__close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
+					<div class="ocl-quiz-question-option-card__header-title">A</div>
+					<div class="ocl-quiz-question-option-card__header-correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+					<div class="ocl-quiz-question-option-card__header-close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
 				</div>
+				{{#if img}}<{{img.elementName}} {{{attr img.attributes}}}/>{{/if}}
 				<div class="ocl-card__body ocl-quiz-question-option-card__body">At the front edge, so that you are almost falling forward</div>
-				<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer__indicator"></div> </div>
+				<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer-indicator"></div> </div>
 			</div>
 		</label>
 
@@ -115,12 +114,13 @@
 			<input type="radio" class="ocl-quiz-question-option-card__input" name="ocl-quiz-question-option-card-name"/>
 			<div class="ocl-quiz-question-option-card__content">
 				<div class="ocl-card__header ocl-quiz-question-option-card__header">
-					<div class="ocl-quiz-question-option-card__header__title">A</div>
-					<div class="ocl-quiz-question-option-card__header__correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
-					<div class="ocl-quiz-question-option-card__header__close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
+					<div class="ocl-quiz-question-option-card__header-title">B</div>
+					<div class="ocl-quiz-question-option-card__header-correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+					<div class="ocl-quiz-question-option-card__header-close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
 				</div>
+				{{#if img}}<{{img.elementName}} {{{attr img.attributes}}}/>{{/if}}
 				<div class="ocl-card__body ocl-quiz-question-option-card__body">At the front edge, so that you are almost falling forward</div>
-				<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer__indicator"></div> </div>
+				<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer-indicator"></div> </div>
 			</div>
 		</label>
 
@@ -128,12 +128,13 @@
 			<input type="radio" class="ocl-quiz-question-option-card__input" name="ocl-quiz-question-option-card-name"/>
 			<div class="ocl-quiz-question-option-card__content">
 				<div class="ocl-card__header ocl-quiz-question-option-card__header">
-					<div class="ocl-quiz-question-option-card__header__title">C</div>
-					<div class="ocl-quiz-question-option-card__header__correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
-					<div class="ocl-quiz-question-option-card__header__close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
+					<div class="ocl-quiz-question-option-card__header-title">C</div>
+					<div class="ocl-quiz-question-option-card__header-correct-icon"><i class="fa fa-check" aria-hidden="true"></i></div>
+					<div class="ocl-quiz-question-option-card__header-close-icon"><i class="fa fa-close" aria-hidden="true"></i></div>
 				</div>
+				{{#if img}}<{{img.elementName}} {{{attr img.attributes}}}/>{{/if}}
 				<div class="ocl-card__body ocl-quiz-question-option-card__body">At the front edge, so that you are almost falling forward</div>
-				<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer__indicator"></div></div>
+				<div class="ocl-card__footer ocl-quiz-question-option-card__footer"> <div class="ocl-quiz-question-option-card__footer-indicator"></div></div>
 			</div>
 		</label>
 		</{{questions-incorrect.elementName}}>

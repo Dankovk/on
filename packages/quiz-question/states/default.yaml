@@ -8,8 +8,13 @@ template:
     elementName: h2
     attributes:
     - - class
-      - '"ocl-quiz-question__title"'
+      - '"ocl-quiz-question-title"'
     body: 'Where should you sit on your bench?'
+  cards:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-quiz-question__wrap ocl-quiz-question__wrap"'
   answer:
     elementName: div
     attributes:
@@ -19,6 +24,6 @@ template:
       elementName: div
       attributes:
       - - class
-        - '"ocl-quiz-question__answer__detales"'
+        - '"ocl-quiz-question__answer-detail"'
       body: 'While fingers must have enough independence to play different notes, our goal is to use them interdependently with the rest of the body. The correct answer is b)--fingers should be <span class="bold">gently curved from the large knuckles</span>, to allow for free motion from that joint.'
 state: {}

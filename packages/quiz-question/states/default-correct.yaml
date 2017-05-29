@@ -1,5 +1,10 @@
 ---
 template:
+  cards:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-quiz-question__wrap ocl-quiz-question__wrap--hidden"'
   questions-correct:
     elementName: div
     attributes:
