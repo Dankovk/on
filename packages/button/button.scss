@@ -112,6 +112,7 @@
 	&--large {
 		position: relative;
 		height: rem(100px);
+		margin-right: rem(30px);
 		overflow: visible;
 
 		.ocl-button__label {
@@ -123,8 +124,8 @@
 
 	&__image--round {
 		display: inline-block;
-		min-width: rem(90px);
-		min-height: rem(90px);
+		width: rem(90px);
+		height: rem(90px);
 		margin-right: rem(30px);
 		border-radius: 50%;
 	}
@@ -137,25 +138,25 @@
 
 	&--hex-right {
 		position: relative;
-		top: -13px;
-		right: -29px;
-		min-width: 62px;
-		min-height: 50px;
+		top: rem(-13px);
+		right: rem(-29px);
+		width: rem(62px);
+		height: rem(50px);
 		transform: rotate(60deg);
 		transition: background-color .2s cubic-bezier(.4, 0, 1, 1);
-		border-radius: 7px;
+		border-radius: rem(7px);
 		background-color: #5fa1b7;
 		z-index: -4;
 
 		&::after {
 			position: absolute;
-			top: 8px;
-			left: 14px;
-			min-width: 63px;
-			min-height: 68px;
+			top: rem(8px);
+			left: rem(14px);
+			min-width: rem(63px);
+			min-height: rem(68px);
 			transform: rotate(60deg);
 			transition: background-color .2s cubic-bezier(.4, 0, 1, 1);
-			border-radius: 7px;
+			border-radius: rem(7px);
 			background-color: #5fa1b7;
 			content: "";
 			z-index: -4;
