@@ -3,6 +3,7 @@
 @import "@one/theme/functions";
 @import "@one/animation/functions";
 @import "@one/textfield/variables";
+@import "@one/typography/functions";
 @import "./variables";
 @import "./mixins";
 
@@ -106,6 +107,55 @@
 		}
 	}
 
+	/* LARGE BUTTON */
+
+	&--large {
+		position: relative;
+		height: rem(100px);
+		overflow: visible;
+	}
+
+	&__image--round {
+		display: inline-block;
+		width: rem(90px);
+		height: rem(90px);
+		margin-right: rem(30px);
+		border-radius: 50%;
+	}
+
+	&--round-left {
+		padding: rem(5px);
+		border-top-left-radius: rem(50px);
+		border-bottom-left-radius: rem(50px);
+	}
+
+	&--hex-right {
+		position: relative;
+		top: rem(-13px);
+		right: rem(-28.8px);
+		width: rem(62px);
+		height: rem(50px);
+		transform: rotate(60deg);
+		transition: background-color 0.2s cubic-bezier(.4, 0, 1, 1);
+		border-radius: rem(7px);
+		background-color: #5fa1b7;
+		z-index: -4;
+
+		&::after {
+			position: absolute;
+			top: rem(8px);
+			left: rem(13px);
+			width: rem(64px);
+			height: rem(68px);
+			transform: rotate(60deg);
+			transition: background-color 0.2s cubic-bezier(.4, 0, 1, 1);
+			border-radius: rem(7px);
+			background-color: #5fa1b7;
+			content: "";
+			z-index: -4;
+		}
+	}
+
 	/* KNOCKOUT BUTTON */
 
 	&--knockout {
@@ -139,8 +189,24 @@
 		border-color: $ocl-button-disabled-color;
 		background-color: $ocl-button-disabled-color;
 
+		.ocl-button--hex-right {
+			background-color: $ocl-button-disabled-color;
+		}
+
+		.ocl-button--hex-right::after {
+			background-color: $ocl-button-disabled-color;
+		}
+
 		&:hover {
 			background-color: $ocl-button-disabled-color;
+
+			.ocl-button--hex-right {
+				background-color: $ocl-button-disabled-color;
+			}
+
+			.ocl-button--hex-right::after {
+				background-color: $ocl-button-disabled-color;
+			}
 		}
 	}
 }

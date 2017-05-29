@@ -14,6 +14,14 @@
 
 	&:hover {
 		@include ocl-button-hover;
+
+		.ocl-button--hex-right {
+			@include ocl-button-hover;
+
+			&:after {
+				@include ocl-button-hover;
+			}
+		}
 	}
 }
 
