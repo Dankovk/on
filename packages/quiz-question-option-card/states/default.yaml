@@ -27,19 +27,19 @@ template:
         elementName: div
         attributes:
         - - class
-          - '"ocl-quiz-question-option-card__header__title"'
+          - '"ocl-quiz-question-option-card__header-title"'
         body: 'A'
       correct:
         elementName: div
         attributes:
         - - class
-          - '"ocl-quiz-question-option-card__header__correct-icon"'
+          - '"ocl-quiz-question-option-card__header-correct-icon"'
         body: '<i class="fa fa-check" aria-hidden="true"></i>'
       close:
         elementName: div
         attributes:
         - - class
-          - '"ocl-quiz-question-option-card__header__close-icon"'
+          - '"ocl-quiz-question-option-card__header-close-icon"'
         body: '<i class="fa fa-close" aria-hidden="true"></i>'
     body:
       elementName: div
@@ -52,5 +52,5 @@ template:
       attributes:
       - - class
         - '"ocl-card__footer ocl-quiz-question-option-card__footer"'
-      body: '<div class="ocl-quiz-question-option-card__footer__indicator"></div>'
+      body: '<div class="ocl-quiz-question-option-card__footer-indicator"></div>'
 state: {}

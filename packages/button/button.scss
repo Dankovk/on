@@ -136,7 +136,7 @@
 		width: rem(62px);
 		height: rem(50px);
 		transform: rotate(60deg);
-		transition: background-color 0.2s cubic-bezier(.4, 0, 1, 1);
+		transition: background-color .2s cubic-bezier(.4, 0, 1, 1);
 		border-radius: rem(7px);
 		background-color: #5fa1b7;
 		z-index: -4;
@@ -148,7 +148,7 @@
 			width: rem(64px);
 			height: rem(68px);
 			transform: rotate(60deg);
-			transition: background-color 0.2s cubic-bezier(.4, 0, 1, 1);
+			transition: background-color .2s cubic-bezier(.4, 0, 1, 1);
 			border-radius: rem(7px);
 			background-color: #5fa1b7;
 			content: "";
