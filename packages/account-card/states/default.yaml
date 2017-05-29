@@ -1,0 +1,7 @@
+---
+template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-card ocl-card--flat ocl-account-card"'
+state: {}

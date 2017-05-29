@@ -6,19 +6,19 @@ template:
     - '"ocl-drawer-nav"'
   primaryLink:
   -
-    icon: <i class="fa fa-home ocl-drawer-nav__link-icon ocl-drawer-nav__link-icon--left" aria-hidden="true"></i>
+    icon: <i class="fa fa-home" aria-hidden="true"></i>
     text: Dashboard
   -
-    icon: <i class="fa fa-graduation-cap ocl-drawer-nav__link-icon ocl-drawer-nav__link-icon--left" aria-hidden="true"></i>
+    icon: <i class="fa fa-graduation-cap" aria-hidden="true"></i>
     text: StudentLink
   -
-    icon: <i class="fa fa-bookmark ocl-drawer-nav__link-icon ocl-drawer-nav__link-icon--left" aria-hidden="true"></i>
+    icon: <i class="fa fa-bookmark" aria-hidden="true"></i>
     text: My List
   -
-    icon: <i class="fa fa-hand-lizard-o ocl-drawer-nav__link-icon ocl-drawer-nav__link-icon--left" aria-hidden="true"></i>
+    icon: <i class="fa fa-hand-lizard-o icon-rotated" aria-hidden="true"></i>
     text: Skill Library
   -
-    icon: <i class="fa fa-book ocl-drawer-nav__link-icon ocl-drawer-nav__link-icon--left" aria-hidden="true"></i>
+    icon: <i class="fa fa-book" aria-hidden="true"></i>
     text: Repertoire Library
   secondaryLink:
     -
