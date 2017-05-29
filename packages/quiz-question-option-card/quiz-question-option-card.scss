@@ -4,7 +4,10 @@
 .ocl-quiz-question-option-card {
 	display: block;
 	position: relative;
-	width: rem(270px);
+	width: rem(280px);
+	min-width: rem(280px);
+	margin: 0 auto;
+	padding: 5px;
 	box-shadow: none;
 	overflow: visible;
 

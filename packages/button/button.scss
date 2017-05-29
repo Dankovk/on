@@ -113,12 +113,18 @@
 		position: relative;
 		height: rem(100px);
 		overflow: visible;
+
+		.ocl-button__label {
+			font-size: rem(24px);
+			font-weight: 300;
+			white-space: nowrap;
+		}
 	}
 
 	&__image--round {
 		display: inline-block;
-		width: rem(90px);
-		height: rem(90px);
+		min-width: rem(90px);
+		min-height: rem(90px);
 		margin-right: rem(30px);
 		border-radius: 50%;
 	}
@@ -131,25 +137,25 @@
 
 	&--hex-right {
 		position: relative;
-		top: rem(-13px);
-		right: rem(-28.8px);
-		width: rem(62px);
-		height: rem(50px);
+		top: -13px;
+		right: -29px;
+		min-width: 62px;
+		min-height: 50px;
 		transform: rotate(60deg);
 		transition: background-color .2s cubic-bezier(.4, 0, 1, 1);
-		border-radius: rem(7px);
+		border-radius: 7px;
 		background-color: #5fa1b7;
 		z-index: -4;
 
 		&::after {
 			position: absolute;
-			top: rem(8px);
-			left: rem(13px);
-			width: rem(64px);
-			height: rem(68px);
+			top: 8px;
+			left: 14px;
+			min-width: 63px;
+			min-height: 68px;
 			transform: rotate(60deg);
 			transition: background-color .2s cubic-bezier(.4, 0, 1, 1);
-			border-radius: rem(7px);
+			border-radius: 7px;
 			background-color: #5fa1b7;
 			content: "";
 			z-index: -4;
