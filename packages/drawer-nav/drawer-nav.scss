@@ -43,6 +43,11 @@
 		width: 25px;
 		margin-right: rem(8px);
 		font-size: 20px;
+		text-align: center;
+
+		.icon-rotated {
+			transform: rotate(-45deg);
+		}
 	}
 
 	&__link-icon--right {
