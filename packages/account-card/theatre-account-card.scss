@@ -1,9 +1,15 @@
+@import "@one/layout/mixins";
+
 .theatre__stage-account-card {
 	.ocl-account-card {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: 420px;
+		width: 100%;
 		transform: translate(-50%, -50%);
+
+		@include ocl-respond-to(small) {
+			width: 420px;
+		}
 	}
 }

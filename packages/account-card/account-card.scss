@@ -10,12 +10,26 @@
 		padding-bottom: rem(9px);
 	}
 
+	&__header {
+		padding: 0;
+
+		@include ocl-respond-to(small) {
+			padding-right: 1.875rem;
+			padding-left: 1.875rem;
+		}
+	}
+
 	&__title {
 		margin-top: 0;
 		margin-bottom: 0;
 		color: #ac405e;
 		font-size: 26px;
 		font-weight: 500;
+		text-align: center;
+
+		@include ocl-respond-to(small) {
+			text-align: left;
+		}
 	}
 
 	&__level-title {
@@ -31,6 +45,14 @@
 		font-size: 16px;
 		font-style: italic;
 		font-weight: 300;
+	}
+
+	&__body {
+		@include ocl-horizontal-whitespace(rem(15px));
+
+		@include ocl-respond-to(small) {
+			@include ocl-horizontal-whitespace(rem(30px));
+		}
 	}
 
 	&__current-level {
@@ -77,5 +99,17 @@
 
 	&__change-level-select {
 		margin-bottom: rem(25px);
+	}
+
+	.ocl-button {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+
+		@include ocl-respond-to(small) {
+			display: inline-flex;
+			width: auto;
+			margin-left: 0;
+		}
 	}
 }
