@@ -3,10 +3,10 @@
 .theatre__stage-webinar-card {
 	.ocl-webinar-card {
 		position: absolute;
-		top: 50%;
+		top: 30px;
 		left: 50%;
 		width: 90%;
-		transform: translate(-50%, -50%);
+		transform: translateX(-50%);
 
 		@include ocl-respond-to(small) {
 			width: 420px;
