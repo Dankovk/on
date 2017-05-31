@@ -8,11 +8,12 @@ import { UtilityService } from '../core/utils/utility.service';
 @Injectable()
 export class IframeService {
 	@select(['json', 'loaded']) readonly loaded: Observable<boolean>;
+	private sub: any;
 
 	constructor(private actions: JsonActions, private utils: UtilityService) {}
 
 	pickComponentAccordingToRoute(route) {
-		this.loaded.subscribe((loaded) => {
+		this.sub = this.loaded.subscribe((loaded) => {
 			if(loaded) {
 				const { type, pattern, component, state, demo } = route;
 				const patternSingular = this.utils.depluralize(pattern);
@@ -31,6 +32,7 @@ export class IframeService {
 				if (state) {
 					this.actions.demoSelected(patternSingular, component, 'state', state, type);
 				}
+				this.sub.unsubscribe();
 			}
 		});
 	};
