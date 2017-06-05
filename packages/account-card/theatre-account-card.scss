@@ -8,8 +8,8 @@
 		width: 100%;
 		transform: translateX(-50%);
 
-		@include ocl-respond-to(small) {
-			width: 421px;
+		@include ocl-respond-to(420px) {
+			width: 420px;
 		}
 	}
 }
