@@ -64,6 +64,23 @@ template:
         attributes:
         - - class
           - '"ocl-loader__spinner ocl-loader__spinner"'
+  loading-large:
+    elementName: button
+    body: '<img src="http://placehold.it/50x50" class="ocl-button__image--round" alt="">
+           <span class="ocl-button__label">Click to load</span>'
+    attributes:
+    - - class
+      - '"js-ocl-loading-button ocl-button ocl-button--large ocl-button--round-left ocl-button--hex-right ocl-button--add-loader"'
+    loader:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-loader ocl-loader"'
+      subElement:
+        elementName: div
+        attributes:
+        - - class
+          - '"ocl-loader__spinner ocl-loader__spinner"'
   loading-knockout:
     elementName: button
     body: <span class="ocl-button__label">Click to load</span>

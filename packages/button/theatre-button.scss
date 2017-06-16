@@ -34,30 +34,18 @@
 		top: 50%;
 		left: 50%;
 		transform: translateY(-50%) translateX(-50%);
-
-		// .ocl-button {
-		// 	margin-right: 10px;
-		// }
 	}
-
-	// .ocl-button {
-	// 	position: relative;
-	// 	top: auto;
-	// 	left: auto;
-	// 	transform: none;
-	// }
 }
 
 .ocl-button--hover {
 	@include ocl-button-hover;
 
-	.ocl-button--hex-right {
-		@include ocl-button-hover;
-
-		&::after {
-			@include ocl-button-hover;
+		&.ocl-button--hex-right {
+			&::after,
+			&::before {
+				@include ocl-button-hover;
+			}
 		}
-	}
 }
 
 // When/if buttons have an :active state, place that style here

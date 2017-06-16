@@ -112,6 +112,7 @@
 	&--large {
 		position: relative;
 		height: rem(100px);
+		// forces width to match the --hex-right specs
 		margin-right: rem(30px);
 		overflow: visible;
 
@@ -120,6 +121,13 @@
 			font-size: rem(24px);
 			font-weight: 300;
 			white-space: nowrap;
+			padding-right: rem(20px);
+		}
+
+		&.ocl-button--loading {
+			.ocl-button__label {
+				padding-right: 4.25rem;
+			}
 		}
 	}
 
@@ -138,27 +146,30 @@
 	}
 
 	&--hex-right {
-		position: relative;
-		top: rem(-13px);
-		right: rem(-29px);
-		align-self: center;
-		width: rem(62px);
-		height: rem(50px);
-		transform: rotate(60deg);
-		transition: background-color .2s cubic-bezier(.4, 0, 1, 1);
-		border-radius: rem(7px);
-		background-color: #5fa1b7;
-		z-index: -1;
-		-webkit-backface-visibility: hidden;
-		backface-visibility: hidden;
+		&::before {
+			position: absolute;
+			top: rem(12px);
+			right: rem(-26px);
+			align-self: center;
+			width: rem(62px);
+			height: rem(50px);
+			transform: rotate(60deg);
+			transition: background-color .2s cubic-bezier(.4, 0, 1, 1);
+			border-radius: rem(7px);
+			background-color: #5fa1b7;
+			content: "";
+			z-index: -1;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
 
 		&::after {
 			position: absolute;
-			top: rem(8px);
-			left: rem(14px);
+			top: rem(24px);
+			right: rem(-19px);
 			min-width: rem(63px);
 			min-height: rem(68px);
-			transform: rotate(60deg);
+			transform: rotate(-60deg);
 			transition: background-color .2s cubic-bezier(.4, 0, 1, 1);
 			border-radius: rem(7px);
 			background-color: #5fa1b7;
@@ -200,22 +211,16 @@
 		border-color: $ocl-button-disabled-color;
 		background-color: $ocl-button-disabled-color;
 
-		.ocl-button--hex-right {
-			background-color: $ocl-button-disabled-color;
-		}
-
-		.ocl-button--hex-right::after {
+		&.ocl-button--hex-right::before,
+		&.ocl-button--hex-right::after {
 			background-color: $ocl-button-disabled-color;
 		}
 
 		&:hover {
 			background-color: $ocl-button-disabled-color;
 
-			.ocl-button--hex-right {
-				background-color: $ocl-button-disabled-color;
-			}
-
-			.ocl-button--hex-right::after {
+			&.ocl-button--hex-right::before,
+			&.ocl-button--hex-right::after {
 				background-color: $ocl-button-disabled-color;
 			}
 		}
