@@ -8,6 +8,7 @@
 
 	&__label {
 		flex-grow: 1;
+		background-color: #fff;
 
 		&:first-of-type .ocl-tabs__label-content {
 			border-top-left-radius: rem(3px);
@@ -30,6 +31,11 @@
 
 		&:checked + .ocl-tabs__label-content::after {
 			display: block;
+		}
+
+		&:disabled + .ocl-tabs__label-content,
+		&[disabled] + .ocl-tabs__label-content {
+			color: #999;
 		}
 	}
 

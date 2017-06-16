@@ -9,8 +9,8 @@ template:
     attributes:
     - - class
       - '"ocl-tabs__controls"'
-    tab-1:
-      elementName: label
+    tabs:
+    - elementName: label
       attributes:
       - - class
         - '"ocl-tabs__label"'
@@ -32,8 +32,7 @@ template:
           - '"tab-input-name"'
         - - data-tab-control-name
           - '"tab-1"'
-    tab-2:
-      elementName: label
+    - elementName: label
       attributes:
       - - class
         - '"ocl-tabs__label"'
@@ -54,25 +53,53 @@ template:
           - '"tab-input-name"'
         - - data-tab-control-name
           - '"tab-2"'
+    - elementName: label
+      attributes:
+      - - class
+        - '"ocl-tabs__label"'
+      content:
+        elementName: div
+        attributes:
+        - - class
+          - '"ocl-tabs__label-content"'
+        body: 'Disabled'
+      input:
+        elementName: input
+        attributes:
+        - - type
+          - '"radio"'
+        - - class
+          - '"ocl-tabs__input"'
+        - - name
+          - '"tab-input-name"'
+        - disabled
+        - - data-tab-control-name
+          - '"tab-3"'
   panels:
     elementName: div
     attributes:
     - - class
       - '"ocl-tabs__panels"'
-    tab-1:
-      elementName: div
+    panels:
+    - elementName: div
       attributes:
       - - class
         - '"ocl-tabs__panel ocl-tabs__panel--selected"'
       - - data-tab-control-name
         - '"tab-1"'
       body: 'Tab 1 content'
-    tab-2:
-      elementName: div
+    - elementName: div
       attributes:
       - - class
         - '"ocl-tabs__panel"'
       - - data-tab-control-name
         - '"tab-2"'
       body: 'Tab 2 content'
+    - elementName: div
+      attributes:
+      - - class
+        - '"ocl-tabs__panel"'
+      - - data-tab-control-name
+        - '"tab-3"'
+      body: 'Tab 3 content'
 state: {}
