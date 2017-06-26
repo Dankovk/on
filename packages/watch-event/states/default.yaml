@@ -1,0 +1,32 @@
+---
+template:
+ elementName: div
+ attributes:
+ - - class
+   - '"ocl-watch-event"'
+ img:
+    elementName: img
+    attributes:
+    - - class
+      - '"ocl-watch-event__image"'
+    - - src
+      - '"http://placehold.it/188x106"'
+ title:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-watch-event__title"'
+    body: 'One-Octave Arpeggios: Overview, Part 5'
+ subtitle:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-watch-event__subtitle"'
+    body: '3-Dimensional Movement'
+ detail:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-watch-event__detail"'
+    body: 'Watched for 56 seconds'
+state: {}

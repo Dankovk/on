@@ -1,0 +1,39 @@
+@import "@one/typography/functions";
+@import "@one/animation/functions";
+
+.ocl-watch-event {
+  display: flex;
+  margin-bottom: rem(35px);
+
+  &__image {
+	width: rem(188px);
+	height: rem(106px);
+  }
+
+  &__content {
+	padding-left: rem(15px);
+	text-align: left;
+  }
+
+  &__title {
+	margin-bottom: 13px;
+	font-size: rem(21px);
+	font-weight: 300;
+	line-height: 1.14;
+	color: #5ca1b8;
+  }
+
+  &__subtitle {
+	margin-bottom: 7px;
+	font-size: rem(16px);
+	font-weight: 500;
+	line-height: 1.25;
+	color: #5ca1b8;
+  }
+
+  &__detail {
+	font-size: rem(13px);
+	line-height: 1.54;
+	color: #444;
+  }
+}
