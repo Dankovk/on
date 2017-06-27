@@ -1,0 +1,54 @@
+---
+template:
+  elementName: div
+  attributes:
+  - - class
+    - '"ocl-card ocl-card--full-width-header ocl-assignment-card"'
+  assigned:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-assignment-card__date ocl-assignment-card__date--assigned"'
+    body: "Assigned: 11/22/17"
+  due:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-assignment-card__date ocl-assignment-card__date--due"'
+    body: "Due: 11/22/17"
+  completed:
+    elementName: div
+    attributes:
+    - - class
+      - '"ocl-assignment-card__date ocl-assignment-card__date--completed"'
+    body: "Not Complete"
+  title:
+    elementName: h2
+    attributes:
+    - - class
+      - '"ocl-assignment-card__title"'
+  assignment-list:
+    one:
+      icon: <i class="icon fa fa-check-circle" aria-hidden="true"></i>
+      title: Anatomy and Piano Playing
+    two:
+      icon: <div class="icon ocl-assignment-progress" data-complete="65"><div class="ocl-assignment-progress__mask"><div class="ocl-assignment-progress__fill"></div></div></div>
+      title: Sitting Position
+  buttons:
+    left:
+      -
+        title: View/Edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        attributes:
+        - - class
+          - '"ocl-button ocl-button--link-style ocl-assignment-card__unassign ocl-assignment-card__footer-item"'
+      -
+        title: Reassign
+        attributes:
+        - - class
+          - '"ocl-button ocl-button--link-style ocl-assignment-card__reassign ocl-assignment-card__footer-item"'
+      -
+        title: Unassign
+        attributes:
+        - - class
+          - '"ocl-button ocl-button--link-style ocl-assignment-card__unassign ocl-assignment-card__footer-item"'
+state: {}
