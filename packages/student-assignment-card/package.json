@@ -1,10 +1,10 @@
 {
-  "name": "@one/assignment-card",
-  "description": "The static One component for assignment card",
+  "name": "@one/student-assignment-card",
+  "description": "The static One component for student assignment card",
   "version": "0.1.0",
   "license": "UNLICENSED",
   "one": {
-    "name": "assignment-card",
+    "name": "student-assignment-card",
     "type": "static",
     "pattern": "organism"
   },
@@ -19,6 +19,7 @@
     "@one/card": "^0.1.0",
     "@one/icon": "^0.1.0",
     "@one/button": "^0.1.0",
-    "@one/assignment-progress": "^0.1.0"
+    "@one/assignment-progress": "^0.1.0",
+    "@one/assignment-card": "^0.1.0"
   }
 }

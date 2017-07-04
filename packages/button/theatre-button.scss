@@ -40,12 +40,12 @@
 .ocl-button--hover {
 	@include ocl-button-hover;
 
-		&.ocl-button--hex-right {
-			&::after,
-			&::before {
-				@include ocl-button-hover;
-			}
+	&.ocl-button--hex-right {
+		&::after,
+		&::before {
+			@include ocl-button-hover;
 		}
+	}
 }
 
 // When/if buttons have an :active state, place that style here

@@ -23,6 +23,7 @@
     "@one/account-menu": "^0.1.0",
     "@one/student-link-filter": "^0.1.0",
     "@one/student-link-card": "^0.1.0",
+    "@one/student-assignment-card": "^0.1.0",
     "@one/search": "^0.1.0",
     "@one/filter-toggle": "^0.1.0",
     "@one/page-title": "^0.1.0",

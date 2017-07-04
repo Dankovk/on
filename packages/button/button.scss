@@ -118,10 +118,10 @@
 
 		.ocl-button__label {
 			align-self: center;
+			padding-right: rem(20px);
 			font-size: rem(24px);
 			font-weight: 300;
 			white-space: nowrap;
-			padding-right: rem(20px);
 		}
 
 		&.ocl-button--loading {

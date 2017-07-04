@@ -3,7 +3,7 @@ template:
   elementName: div
   attributes:
   - - class
-    - '"ocl-card ocl-card--full-width-header ocl-assignment-card"'
+    - '"ocl-card ocl-card--full-width-header ocl-assignment-card ocl-student-assignment-card"'
   assigned:
     elementName: div
     attributes:
@@ -15,40 +15,31 @@ template:
     attributes:
     - - class
       - '"ocl-assignment-card__date ocl-assignment-card__date--due"'
-    body: "Due: 11/22/17"
-  completed:
-    elementName: div
-    attributes:
-    - - class
-      - '"ocl-assignment-card__date ocl-assignment-card__date--completed"'
-    body: "Not Complete"
-  title:
-    elementName: h2
-    attributes:
-    - - class
-      - '"ocl-assignment-card__title"'
+    body: "Due: 11/29/17"
   assignment-list:
     one:
       icon: <i class="icon fa fa-check-circle" aria-hidden="true"></i>
       title: Anatomy and Piano Playing
+      details: '3 Videos (4:46)'
     two:
       icon: <div class="icon ocl-assignment-progress" data-complete="65"><div class="ocl-assignment-progress__mask"><div class="ocl-assignment-progress__fill"></div></div></div>
-      title: Sitting Position
-  buttons:
-    left:
-      -
-        title: View/Edit <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-        attributes:
-        - - class
-          - '"ocl-button ocl-button--link-style ocl-assignment-card__unassign ocl-assignment-card__footer-item"'
-      -
-        title: Reassign
-        attributes:
-        - - class
-          - '"ocl-button ocl-button--link-style ocl-assignment-card__reassign ocl-assignment-card__footer-item"'
-      -
-        title: Unassign
-        attributes:
-        - - class
-          - '"ocl-button ocl-button--link-style ocl-assignment-card__unassign ocl-assignment-card__footer-item"'
+      title: Hand Position and the Sound Point
+      details: '3 Videos (4:46)'
+    three:
+      icon: <div class="icon ocl-assignment-progress ocl-assignment-progress__unstarted"></div>
+      title: 'Whole-Body Technique: Combining Alignment, Freedom and Support'
+      details: '3 Videos (4:46)'
+  footer:
+    title:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-student-assignment-card__footer-title"'
+      body: 'Notes from your teacher:'
+    content:
+      elementName: div
+      attributes:
+      - - class
+        - '"ocl-student-assignment-card__footer-content"'
+      body: '"Mime" the up-down movement of the wrist, as you allow your fingers to stay at rest while your upper arm moves slightly forward and backward.  This is an extension of the basic, natural hand position found when you draw your hand up from your side.'
 state: {}

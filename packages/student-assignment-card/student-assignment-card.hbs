@@ -2,7 +2,6 @@
 	<div class="ocl-card__header ocl-assignment-card__header">
 		<{{assigned.elementName}} {{{attr assigned.attributes}}}>{{assigned.body}}</{{assigned.elementName}}>
 		<{{due.elementName}} {{{attr due.attributes}}}>{{due.body}}</{{due.elementName}}>
-		<{{completed.elementName}} {{{attr completed.attributes}}}>{{completed.body}}</{{completed.elementName}}>
 	</div>
 	<div class="ocl-card__body ocl-assignment-card__body">
 		{{#if title}}
@@ -12,18 +11,18 @@
 		<ul class="ocl-assignment-card__list">
 		{{#each assignment-list}}
 			<li class="ocl-assignment-card__list-item">
-				{{{icon}}}<h3 class="ocl-assignment-card__list-item-title">{{title}}</h3>
+				{{{icon}}}
+				<div class="ocl-assignment-card-list-item-title__content">
+					<h3 class="ocl-assignment-card__list-item-title">{{title}}</h3>
+					<div class="ocl-assignment-card__list-item-details">{{details}}</div>
+				</div>
 			</li>
 		{{/each}}
 		</ul>
 		{{/if}}
 	</div>
-	<div class="ocl-card__footer ocl-assignment-card__footer">
-		{{#each buttons.left}}
-			<button {{{attr this.attributes}}}><span>{{{this.title}}}</span></button>
-		{{/each}}
-		<button class="ocl-button ocl-button--link-style ocl-assignment-card__footer-item ocl-assignment-card__footer-trash">
-            <span><i class="fa fa-trash" aria-hidden="true"></i></span>
-        </button>
+	<div class="ocl-card__footer ocl-assignment-card__footer ocl-student-assignment-card__footer">
+		<{{footer.title.elementName}} {{{attr footer.title.attributes}}}>{{footer.title.body}}</{{footer.title.elementName}}>
+		<{{footer.content.elementName}} {{{attr footer.content.attributes}}}>{{footer.content.body}}</{{footer.content.elementName}}>
 	</div>
 </{{elementName}}>

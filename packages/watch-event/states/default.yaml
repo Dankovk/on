@@ -12,19 +12,23 @@ template:
     - - src
       - '"http://placehold.it/188x106"'
  title:
-    elementName: div
+    elementName: a
     attributes:
     - - class
       - '"ocl-watch-event__title"'
+    - - href
+      - '"#"'
     body: 'One-Octave Arpeggios: Overview, Part 5'
  subtitle:
-    elementName: div
+    elementName: a
     attributes:
     - - class
       - '"ocl-watch-event__subtitle"'
+    - - href
+      - '"#"'
     body: '3-Dimensional Movement'
  detail:
-    elementName: div
+    elementName: span
     attributes:
     - - class
       - '"ocl-watch-event__detail"'
