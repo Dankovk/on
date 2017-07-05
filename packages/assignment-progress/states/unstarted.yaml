@@ -1,0 +1,7 @@
+---
+template:
+  elementName: div
+  attributes:
+  - - class
+    - '"icon ocl-assignment-progress ocl-assignment-progress--unstarted"'
+state: {}

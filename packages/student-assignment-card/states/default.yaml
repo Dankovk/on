@@ -26,7 +26,7 @@ template:
       title: Hand Position and the Sound Point
       details: '3 Videos (4:46)'
     three:
-      icon: <div class="icon ocl-assignment-progress ocl-assignment-progress__unstarted"></div>
+      icon: <div class="icon ocl-assignment-progress ocl-assignment-progress--unstarted"></div>
       title: 'Whole-Body Technique: Combining Alignment, Freedom and Support'
       details: '3 Videos (4:46)'
   footer:

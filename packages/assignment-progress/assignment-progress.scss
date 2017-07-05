@@ -24,8 +24,12 @@
 		clip: rect(0, 10px, 20px, 0);
 	}
 
-	&__unstarted {
+	&--unstarted {
 		background-color: #dedede;
+
+		.ocl-assignment-progress__fill {
+			display: none;
+		}
 	}
 }
 
